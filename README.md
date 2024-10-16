@@ -1,3 +1,5 @@
 # creeperkatze.github.io
 
-This website will primarily be used to host browser versions of my itch.io games
+# This website will be used to
+- Host mirror versions of my itch.io games
+- Host static images used inside my games
