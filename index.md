@@ -2,6 +2,9 @@
 layout: default
 ---
 
-# 👋 Hello, <br/> I'm Creeperkatze.
+# 👋 Hello, I'm Creeperkatze.
 
-### I'm a Unity game developer from germany, with my current big project being [Superslide](./superslide.md).
+### I'm a Unity game developer from germany.
+
+# My Projects:
+- [Superslide](./superslide.md)
