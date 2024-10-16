@@ -3,6 +3,6 @@ layout: default
 title: Superslide
 ---
 
-# Mirror version of the game on itch.io coming here soon
+# Mirror version of the itch.io game coming here soon
 
 ### [Home](./index.md)
