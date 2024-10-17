@@ -4,16 +4,14 @@ useHead({
 })
 </script>
 <template>
-    <div class="content">
-        <img src="~assets/images/index/LogoBanner.png" width="800" class="center pixelated">
-        <p>
-            Hello! I'm Creeperkatze
-            <br>A Unity game developer from Germany, with my current big project being Superslide.
-        </p>
+    <img src="~assets/images/index/LogoBanner.png" width="800" class="center pixelated">
+    <p>
+        Hello! I'm Creeperkatze
+        <br>A Unity game developer from Germany, with my current big project being Superslide.
+    </p>
 
-        <h2>My projects</h2>
-        <ul>
-            <li><a href="/superslide">Superslide</a></li>
-        </ul>
-    </div>
+    <h2>My projects</h2>
+    <ul>
+        <li><a href="/superslide">Superslide</a></li>
+    </ul>
 </template>
