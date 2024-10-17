@@ -3,13 +3,19 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxtjs/google-fonts'],
+  modules: [
+    ['@nuxtjs/google-fonts', {
+        families: {
+          Lexend: true,
+        }
+    }],
+  ],
   googleFonts: {
     download: false
   },
   app: {
     head: {
-      title: 'Creeperkatze | Unknown',
+      title: 'Creeperkatze |',
     },
   },
 })

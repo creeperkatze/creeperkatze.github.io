@@ -2,7 +2,8 @@
 {
     margin: auto;
     text-align: center;
-    font-family: "Helvetica";
+    font-family: "Lexend";
+    font-weight: 700;
 }
 
 p 
@@ -10,10 +11,11 @@ p
     font-size: larger;
 }
 
-.list
+ul
 {
     list-style-position: inside;
-    font-size: large;
+    font-size: larger;
+    padding: 0;
 }
 
 .center
