@@ -1,3 +1,8 @@
+<script setup lang="ts">
+useHead({
+  title: 'Creeperkatze | Superslide',
+})
+</script>
 <template>
     <div class="content">
         <img src="~assets/images/superslide/GameTitle1024.png" width="800" class="center">

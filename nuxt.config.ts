@@ -6,5 +6,10 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/google-fonts'],
   googleFonts: {
     download: false
-  }
+  },
+  app: {
+    head: {
+      title: 'Creeperkatze | Unknown',
+    },
+  },
 })

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+useHead({
+  title: 'Creeperkatze | Home',
+})
+</script>
 <template>
     <div class="content center">
         <img src="~assets/images/index/LogoBanner.png" width="800" class="center pixelated">

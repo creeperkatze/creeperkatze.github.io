@@ -1,3 +1,8 @@
+<script setup lang="ts">
+useHead({
+  title: 'Creeperkatze | 404',
+})
+</script>
 <template>
     <div class="content">
         <h1>Even this cute cat couldn't find the page you were looking for ;(</h1>
