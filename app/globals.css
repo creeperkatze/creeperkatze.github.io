@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root
+{
+    --background: #ffffff;
+    --foreground: #171717;
+    --li-marker: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --background: #ffffff;
+        --foreground: #171717;
+        --li-marker: #171717;
+    }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+body
+{
+    color: var(--foreground);
+    background: var(--background);
+    height: 100%;
+    /* Set the height of the html and body to 100% */
+    margin: 0;
+    /* Remove default margin */
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    text-align: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a
+{
+    @apply underline text-green-600 hover:text-green-800;
+}
+
+@layer utilities
+{
+    .text-balance
+    {
+        text-wrap: balance;
+    }
+}
+
+@layer base
+{
+    p
+    {
+        @apply text-lg;
+    }
+
+    h1
+    {
+        @apply text-4xl;
+    }
+
+    h2
+    {
+        @apply text-3xl;
+    }
+
+    h3
+    {
+        @apply text-2xl;
+    }
+
+    h4
+    {
+        @apply text-xl;
+    }
+
+    h5
+    {
+        @apply text-lg;
+    }
+
+    h6
+    {
+        @apply text-sm;
+    }
+
+    li
+    {
+        list-style-position: inside;
+    }
+
+    li::marker
+    {
+        color: var(--li-marker);
+        /* Set the marker color */
+    }
 }
