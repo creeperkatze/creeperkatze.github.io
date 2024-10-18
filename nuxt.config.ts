@@ -4,18 +4,18 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ['~/assets/css/main.css'],
     modules: [
-      ['@nuxtjs/google-fonts', {
-          families: {
-            Lexend: true,
-          }
-      }],
+        ['@nuxtjs/google-fonts', {
+            families: {
+                Lexend: true,
+            }
+        }],
     ],
     googleFonts: {
-      download: false
+        download: false
     },
     app: {
-      head: {
-        title: 'Creeperkatze |',
-      },
+        head: {
+            title: 'Creeperkatze |',
+        },
     },
-  })
+})
