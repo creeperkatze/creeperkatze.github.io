@@ -5,7 +5,7 @@ useHead({
 </script>
 <template>
     <div class="content">
-        <img src="~assets/images/LogoBanner.png" width="800" class="center pixelated mb-5">
+        <img src="~/assets/images/LogoBanner.png" width="800" class="center pixelated mb-5">
         <p class="mb-5">
             Hello! I'm Creeperkatze<br>
             A Unity game developer from Germany, with my current big project being Superslide.<br>
