@@ -2,11 +2,11 @@
 {
     margin: auto;
     text-align: center;
+    justify-content: center;
     font-family: "Lexend";
-    font-weight: 700;
 }
 
-p 
+p
 {
     font-size: larger;
 }
@@ -28,4 +28,10 @@ ul
 .pixelated
 {
     image-rendering: pixelated;
+}
+
+img
+{
+    width: 100%;
+    max-width: 800px;
 }
