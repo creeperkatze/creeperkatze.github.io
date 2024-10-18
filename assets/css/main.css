@@ -1,21 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .content
 {
     margin: auto;
     text-align: center;
     justify-content: center;
     font-family: "Lexend";
+    font-weight: bold;
+}
+
+a
+{
+    @apply underline text-green-600 hover:text-green-800;
+}
+
+img
+{
+    width: 100%;
+    max-width: 800px;
 }
 
 p
 {
-    font-size: larger;
+    @apply text-lg;
 }
 
-ul
+h1
+{
+    @apply text-4xl;
+}
+
+h2
+{
+    @apply text-3xl;
+}
+
+h3
+{
+    @apply text-2xl;
+}
+
+h4
+{
+    @apply text-xl;
+}
+
+h5
+{
+    @apply text-lg;
+}
+
+h6
+{
+    @apply text-sm;
+}
+
+li
 {
     list-style-position: inside;
-    font-size: larger;
-    padding: 0;
+}
+
+.navbar-element 
+{
+    @apply no-underline text-white hover:text-gray-400;
+}
+
+.navbar-social-media-icon
+{
+    @apply transition-transform duration-200 hover:scale-110 fill-white hover:fill-gray-400;
 }
 
 .center
@@ -28,10 +82,4 @@ ul
 .pixelated
 {
     image-rendering: pixelated;
-}
-
-img
-{
-    width: 100%;
-    max-width: 800px;
 }

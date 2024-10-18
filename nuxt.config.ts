@@ -4,17 +4,14 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ['~/assets/css/main.css'],
     modules:
-        [
-            ['@nuxtjs/google-fonts',
+        [['@nuxtjs/google-fonts',
+            {
+                families:
                 {
-                    families:
-                    {
-                        Lexend: true,
-                    }
+                    Lexend: true,
                 }
-            ],
-            '@nuxtjs/tailwindcss'
-        ],
+            }
+        ], '@nuxtjs/tailwindcss'],
 
     googleFonts:
     {
