@@ -11,7 +11,7 @@ export default function Page()
         <div>
             <Image
                 src="/images/index/LogoBanner128.png"
-                alt="Next.js logo"
+                alt="CREEPERKATZE"
                 width={800}
                 height={0}
                 className="mx-auto"
