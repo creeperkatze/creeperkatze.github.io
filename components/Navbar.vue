@@ -15,13 +15,13 @@
             <!-- Social Media Icons on Right (SVG) -->
             <div class="flex space-x-4"> <!-- Added a flex container for spacing -->
                 <a href="https://www.instagram.com/creeperkatze/" target="_blank" class="navbar-social-media-icon">
-                    <img src="public/svg/instagram.svg" class="w-8 h-8"/>
+                    <img src="~assets/images/external/instagram.svg" class="w-8 h-8"/>
                 </a>
                 <a href="https://creeperkatze.itch.io/" target="_blank" class="navbar-social-media-icon">
-                    <img src="public/svg/itchio.svg" class="w-8 h-8" />
+                    <img src="~/assets/images/external/itchio.svg" class="w-8 h-8" />
                 </a>
                 <a href="https://github.com/Creeperkatze" target="_blank" class="navbar-social-media-icon">
-                    <img src="public/svg/github.svg" class="w-8 h-8" />
+                    <img src="~/assets/images/external/github.svg" class="w-8 h-8" />
                 </a>
             </div>
         </div>

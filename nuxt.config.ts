@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import svgLoader from "vite-svg-loader"
+
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
@@ -37,4 +39,10 @@ export default defineNuxtConfig({
                 ],
         },
     },
+    vite:
+    {
+        plugins: [svgLoader({
+            defaultImport: "url"
+        })]
+    }
 })
