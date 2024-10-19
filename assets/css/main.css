@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.content
+body
 {
     margin: auto;
     text-align: center;
@@ -20,6 +20,27 @@ img
 {
     width: 100%;
     max-width: 800px;
+}
+
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+
+body
+{
+    margin-bottom: 150px;
+    /* Height of footer*/
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px
 }
 
 p
@@ -62,20 +83,30 @@ li
     list-style-position: inside;
 }
 
-.navbar-element 
+.navbar-element
 {
-    @apply no-underline text-white hover:text-gray-400;
+    @apply no-underline text-white hover:text-gray-500;
 }
 
-.navbar-element.active {
-    font-weight: bold;
+.navbar-element.active
+{
     @apply text-green-600;
     text-decoration: underline;
 }
 
 .navbar-social-media-icon
 {
-    @apply transition-transform duration-200 hover:scale-110 fill-white hover:fill-gray-400;
+    @apply transition-transform duration-200 hover:scale-110;
+}
+
+.navbar-social-media-icon:hover
+{
+    filter: invert(46%) sepia(71%) saturate(4019%) hue-rotate(119deg) brightness(95%) contrast(83%);
+}
+
+.footer-text
+{
+    @apply no-underline text-white;
 }
 
 .center
