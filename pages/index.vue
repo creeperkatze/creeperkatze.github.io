@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-    title: 'Creeperkatze | Home',
+    title: 'Home | Creeperkatze',
 })
 </script>
 <template>

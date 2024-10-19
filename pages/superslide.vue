@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-    title: 'Creeperkatze | Superslide',
+    title: 'Superslide | Creeperkatze',
 })
 </script>
 <template>

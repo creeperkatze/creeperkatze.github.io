@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-    title: 'Creeperkatze | 404',
+    title: '404 | Creeperkatze',
 })
 </script>
 <template>
