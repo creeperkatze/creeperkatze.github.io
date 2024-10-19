@@ -67,6 +67,12 @@ li
     @apply no-underline text-white hover:text-gray-400;
 }
 
+.navbar-element.active {
+    font-weight: bold;
+    @apply text-green-600;
+    text-decoration: underline;
+}
+
 .navbar-social-media-icon
 {
     @apply transition-transform duration-200 hover:scale-110 fill-white hover:fill-gray-400;
