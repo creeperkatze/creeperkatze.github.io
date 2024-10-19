@@ -2,7 +2,7 @@
     <nav class="bg-black p-4 mb-5" >
         <div class="container mx-auto flex items-center justify-between">
             <!-- Left Element -->
-            <a href="/">
+            <a href="/" class="ml-20">
                 <img src="~assets/images/LogoBanner.png" class="pixelated">
             </a>
 
@@ -13,7 +13,7 @@
             </div>
 
             <!-- Social Media Icons on Right (SVG) -->
-            <div class="flex space-x-4"> <!-- Added a flex container for spacing -->
+            <div class="flex space-x-4 mr-20"> <!-- Added a flex container for spacing -->
                 <a href="https://www.instagram.com/creeperkatze/" target="_blank" class="navbar-social-media-icon">
                     <img src="~assets/images/external/instagram.svg" class="w-8 h-8"/>
                 </a>
