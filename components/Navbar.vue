@@ -33,15 +33,17 @@
     </nav>
 </template>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.navbar-element');
-        
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            }
-        });
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar-element');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
     });
+})
 </script>
