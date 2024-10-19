@@ -17,18 +17,18 @@ useHead({
     link: [
         {
             rel: 'icon',
-            type: 'image/png',
-            href: '/favicon.png'
+            type: 'image/ico',
+            href: '/favicon.ico'
         }
     ]
 })
+
 useSeoMeta({
-    title: "Creeperkatze",
+    title: "404 | Creeperkatze",
     description: "Creeperkatze's website",
     ogTitle: "Creeperkatze",
     ogDescription: "Creeperkatze's website",
     ogImage: "/seo/Logo128.png",
-    ogUrl: '[og:url]',
     twitterTitle: "Creeperkatze",
     twitterDescription: "Creeperkatze's website",
     twitterImage: "/seo/Logo128.png",

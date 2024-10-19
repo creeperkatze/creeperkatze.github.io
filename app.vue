@@ -18,6 +18,7 @@ useHead({
         }
     ]
 })
+
 useSeoMeta({
     title: "Creeperkatze",
     description: "Creeperkatze's website",
