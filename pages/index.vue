@@ -7,7 +7,7 @@
     </p>
     <h2 class="mb-5">My projects</h2>
     <div class="grid grid-cols-2 gap-2 justify-center bg-center max-w-4xl mx-auto">
-        <div class="rounded-lg bg-black">
+        <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2">
             <a href="/superslide">
                 <img class="rounded-t-lg" src="~/assets/images/superslide/SplashBackgroundGameTitle.png" alt="SUPERSLIDE" />
             </a>
@@ -18,7 +18,7 @@
                 <p class="mb-3 text-white">Slide through epic levels, spend your time in endless mode and climb the leaderboards!</p>
             </div>
         </div>
-        <div class="rounded-lg bg-black">
+        <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
                 <img class="rounded-t-lg" src="~/assets/images/CardComingSoon.png" alt="Coming Soon"/>
             </a>
