@@ -1,34 +1,34 @@
 <template>
-        <div class="bg-black mx-auto flex items-center justify-between p-4 mb-5">
-            <!-- Left Element -->
-            <a href="/" class="lg:ml-80 ml-0">
-                <picture>
-                    <!-- Fallback for very small screens -->
-                    <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)" />
-                    <!-- Default Logo Banner -->
-                    <img src="~/assets/images/LogoBanner.png" class="pixelated">
-                </picture>
-            </a>
+    <div class="bg-black mx-auto flex items-center justify-between p-4 mb-5">
+        <!-- Left Element -->
+        <a href="/" class="lg:ml-80 ml-0">
+            <picture>
+                <!-- Fallback for very small screens -->
+                <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)" />
+                <!-- Default Logo Banner -->
+                <img src="~/assets/images/LogoBanner.png" class="pixelated">
+            </picture>
+        </a>
 
-            <!-- Middle Elements -->
-            <div class="md:flex space-x-6">
-                <a href="/" class="navbar-element">Home</a>
-                <a href="/superslide" class="navbar-element">Superslide</a>
-            </div>
-
-            <!-- Social Media Icons on Right (SVG) -->
-            <div class="flex space-x-4 lg:mr-80 mr-0"> <!-- Added a flex container for spacing -->
-                <a href="https://www.instagram.com/creeperkatze/" target="_blank" class="navbar-social-media-icon">
-                    <img src="~assets/images/external/instagram.svg" class="w-8 h-8" />
-                </a>
-                <a href="https://creeperkatze.itch.io/" target="_blank" class="navbar-social-media-icon">
-                    <img src="~assets/images/external/itchio.svg" class="w-8 h-8" />
-                </a>
-                <a href="https://github.com/Creeperkatze" target="_blank" class="navbar-social-media-icon">
-                    <img src="~assets/images/external/github.svg" class="w-8 h-8" />
-                </a>
-            </div>
+        <!-- Middle Elements -->
+        <div class="md:flex space-x-6">
+            <a href="/" class="navbar-element">Home</a>
+            <a href="/superslide" class="navbar-element">Superslide</a>
         </div>
+
+        <!-- Social Media Icons on Right (SVG) -->
+        <div class="flex space-x-4 lg:mr-80 mr-0"> <!-- Added a flex container for spacing -->
+            <a href="https://www.instagram.com/creeperkatze/" target="_blank" class="navbar-social-media-icon">
+                <img src="~assets/images/external/instagram.svg" class="w-8 h-8" />
+            </a>
+            <a href="https://creeperkatze.itch.io/" target="_blank" class="navbar-social-media-icon">
+                <img src="~assets/images/external/itchio.svg" class="w-8 h-8" />
+            </a>
+            <a href="https://github.com/Creeperkatze" target="_blank" class="navbar-social-media-icon">
+                <img src="~assets/images/external/github.svg" class="w-8 h-8" />
+            </a>
+        </div>
+    </div>
 </template>
 
 <script setup>
@@ -36,15 +36,15 @@ import { onMounted } from 'vue'
 
 onMounted(() =>
 {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar-element');
+const currentPath = window.location.pathname;
+const navLinks = document.querySelectorAll('.navbar-element');
 
-    navLinks.forEach(link =>
+navLinks.forEach(link =>
+{
+    if (link.getAttribute('href') === currentPath)
     {
-        if (link.getAttribute('href') === currentPath)
-        {
-            link.classList.add('active');
-        }
-    });
+        link.classList.add('active');
+    }
+});
 })
 </script>
