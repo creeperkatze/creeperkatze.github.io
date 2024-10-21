@@ -17,6 +17,7 @@
                 </a>
                 <p class="mb-3 text-white">Slide through epic levels, spend your time in endless mode and climb the leaderboards!</p>
             </div>
+            
         </div>
         <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
