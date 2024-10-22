@@ -1,7 +1,5 @@
 <template>
-    <div class="h-screen">
-        <Navbar />
-        <NuxtPage />
-        <Footer />
-    </div>
+    <Navbar />
+    <NuxtPage />
+    <Footer />
 </template>

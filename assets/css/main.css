@@ -9,6 +9,7 @@ body
     justify-content: center;
     font-family: "Lexend";
     font-weight: bold;
+    overflow-y: overlay;
 }
 
 a
@@ -101,10 +102,7 @@ li
     image-rendering: pixelated;
 }
 
-.wrapper {
-    @apply max-w-screen-xl mx-auto
+.ignore-scrollbar
+{
+    padding-left: calc(100vw - 100%);
 }
-
-.wrapper-small {
-    @apply max-w-screen-lg mx-auto px-6;
-  }

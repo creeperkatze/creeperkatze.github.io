@@ -1,5 +1,5 @@
 <template>
-    <div class="dark:bg-black">
+    <div class="dark:bg-black ignore-scrollbar">
         <div class="wrapper flex items-center justify-between p-4 mb-5">
             <!-- Logo -->
             <nuxt-link href="/">
@@ -52,6 +52,12 @@ onMounted(() =>
 </script>
 
 <style>
+.wrapper
+{
+    @apply max-w-screen-xl mx-auto
+}
+
+
 .navbar-element
 {
     @apply no-underline text-black dark:text-white hover:text-gray-500;
