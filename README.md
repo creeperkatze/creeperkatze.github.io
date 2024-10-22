@@ -1,3 +1,5 @@
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/creeperkatze/creeperkatze.github.io/main?display_timestamp=author&logo=github)
+![GitHub last commit (branch)](https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github")
 # creeperkatze.github.io
 
 # This website will be used to
