@@ -22,10 +22,10 @@
                 <a href="https://www.instagram.com/creeperkatze/" target="_blank">
                     <IconInstagram class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
-                <a href="https://github.com/Creeperkatze" target="_blank">
+                <a href="https://creeperkatze.itch.io/" target="_blank">
                     <IconItch class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
-                <a href="https://creeperkatze.itch.io/" target="_blank">
+                <a href="https://github.com/Creeperkatze" target="_blank">
                     <IconGitHub class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
             </div>
