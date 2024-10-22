@@ -1,32 +1,34 @@
 <template>
-    <div class="bg-black mx-auto flex items-center justify-between p-4 mb-5">
-        <!-- Left Element -->
-        <a href="/" class="lg:ml-80 ml-0">
-            <picture>
-                <!-- Fallback for very small screens -->
-                <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)" />
-                <!-- Default Logo Banner -->
-                <img src="~/assets/images/LogoBanner.png" class="pixelated">
-            </picture>
-        </a>
+    <div class="dark:bg-black">
+        <div class="wrapper flex items-center justify-between p-4 mb-5">
+            <!-- Logo -->
+            <nuxt-link href="/">
+                <picture>
+                    <!-- Fallback for very small screens -->
+                    <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)" />
+                    <!-- Default Logo Banner -->
+                    <img src="~/assets/images/LogoBanner.png" class="pixelated">
+                </picture>
+            </nuxt-link>
 
-        <!-- Middle Elements -->
-        <div class="md:flex space-x-6">
-            <a href="/" class="navbar-element">Home</a>
-            <a href="/superslide" class="navbar-element">Superslide</a>
-        </div>
+            <!-- Links -->
+            <div class="space-x-4">
+                <a href="/" class="navbar-element">Home</a>
+                <a href="/superslide" class="navbar-element">Superslide</a>
+            </div>
 
-        <!-- Social Media Icons on Right (SVG) -->
-        <div class="flex space-x-4 lg:mr-80 mr-0"> <!-- Added a flex container for spacing -->
-            <a href="https://www.instagram.com/creeperkatze/" target="_blank" class="navbar-social-media-icon">
-                <img src="~assets/images/external/instagram.svg" class="w-8 h-8" />
-            </a>
-            <a href="https://creeperkatze.itch.io/" target="_blank" class="navbar-social-media-icon">
-                <img src="~assets/images/external/itchio.svg" class="w-8 h-8" />
-            </a>
-            <a href="https://github.com/Creeperkatze" target="_blank" class="navbar-social-media-icon">
-                <img src="~assets/images/external/github.svg" class="w-8 h-8" />
-            </a>
+            <!-- Buttons -->
+            <div class="flex flex-row space-x-4"> <!-- Added a flex container for spacing -->
+                <a href="https://www.instagram.com/creeperkatze/" target="_blank">
+                    <IconInstagram class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                </a>
+                <a href="https://github.com/Creeperkatze" target="_blank">
+                    <IconItch class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                </a>
+                <a href="https://creeperkatze.itch.io/" target="_blank">
+                    <IconGitHub class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -36,15 +38,38 @@ import { onMounted } from 'vue'
 
 onMounted(() =>
 {
-const currentPath = window.location.pathname;
-const navLinks = document.querySelectorAll('.navbar-element');
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar-element');
 
-navLinks.forEach(link =>
-{
-    if (link.getAttribute('href') === currentPath)
+    navLinks.forEach(link =>
     {
-        link.classList.add('active');
-    }
-});
+        if (link.getAttribute('href') === currentPath)
+        {
+            link.classList.add('active');
+        }
+    });
 })
 </script>
+
+<style>
+.navbar-element
+{
+    @apply no-underline text-black dark:text-white hover:text-gray-500;
+}
+
+.navbar-element.active
+{
+    @apply text-green-600;
+    text-decoration: underline;
+}
+
+.navbar-social-media-icon
+{
+    @apply transition-transform duration-200 hover:scale-110 fill-black;
+}
+
+.navbar-social-media-icon:hover
+{
+    filter: invert(46%) sepia(71%) saturate(4019%) hue-rotate(119deg) brightness(95%) contrast(83%);
+}
+</style>
