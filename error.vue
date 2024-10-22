@@ -1,5 +1,5 @@
 <template>
-    <Navbar />
+    <NuxtLayout />
     <h1>{{ error?.statusCode }}</h1>
     <h4 class="mb-5">{{ error?.statusMessage }}</h4>
     <h2 v-if="error?.statusCode === 404" class="mb-5">
@@ -10,7 +10,6 @@
     </h2>
     <img src="~/assets/images/error/soggy-cat-cat.gif" class="center w-[400px] mb-5" />
     <NuxtLink to="/" class="no-outline"><UIButton class="text-white bg-green-600 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition-transform duration-200 hover:bg-green-800">Home</UIButton></NuxtLink>
-    <Footer />
 </template>
 
 <script setup lang="ts">
@@ -19,31 +18,5 @@ import type { NuxtError } from '#app'
 
 const props = defineProps({
   error: Object as () => NuxtError
-})
-
-useHead({
-    title: 'Error | Creeperkatze',
-    htmlAttrs: {
-        lang: 'en'
-    },
-    link: [
-        {
-            rel: 'icon',
-            type: 'image/ico',
-            href: '/favicon.ico'
-        }
-    ]
-})
-
-useSeoMeta({
-    title: "404 | Creeperkatze",
-    description: "Creeperkatze's website",
-    ogTitle: "Creeperkatze",
-    ogDescription: "Creeperkatze's website",
-    ogImage: "/seo/Logo128.png",
-    twitterTitle: "Creeperkatze",
-    twitterDescription: "Creeperkatze's website",
-    twitterImage: "/seo/Logo128.png",
-    twitterCard: 'summary'
 })
 </script>

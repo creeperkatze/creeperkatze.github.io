@@ -1,5 +1,3 @@
 <template>
-    <Navbar />
-    <NuxtPage />
-    <Footer />
+    <NuxtLayout />
 </template>
