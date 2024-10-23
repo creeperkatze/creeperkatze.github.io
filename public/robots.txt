@@ -62,3 +62,5 @@
 # Allow all
 User-agent: *
 Allow: /
+
+Sitemap: https://creeperkatze.github.io/sitemap.xml
