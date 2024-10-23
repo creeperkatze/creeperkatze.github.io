@@ -18,13 +18,13 @@
                 <NuxtLink to="/" class="navbar-element">Home</NuxtLink>
                 <div class="m-1 dropdown relative inline-flex">
                     <NuxtLink to="/projects" id="dropdown-hover-event" type="button"
-                        class="inline-flex navbar-element" aria-haspopup="menu"
+                        class="inline-flex navbar-element items-center" aria-haspopup="menu"
                         aria-expanded="false" aria-label="Dropdown">
                         Projects
-                        <IconArrowDown class="dropdown-open:rotate-180 size-4"/>
+                        <IconArrowDown class="size-4"/>
                     </NuxtLink>
 
-                    <div class="dropdown-menu transition duration-100 opacity-0 dropdown-open:opacity-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+                    <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
                         role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
                         <div class="p-1 pl-1 text-left text-nowrap">
                             <NuxtLink to="/projects/superslide" class="navbar-element">Superslide</NuxtLink>
@@ -95,3 +95,18 @@ nav,
     overflow: visible;
 }
 </style>
+
+<script>
+export default {
+    data() {
+        return {
+            dropdownOpen: false // State to track dropdown visibility
+        };
+    },
+    methods: {
+        toggleDropdown() {
+            this.dropdownOpen = !this.dropdownOpen; // Toggle dropdown state
+        }
+    }
+};
+</script>

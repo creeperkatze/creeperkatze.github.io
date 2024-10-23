@@ -28,6 +28,6 @@ export default defineNuxtConfig({
 
     site: {
         url: "https://creeperkatze.github.io",
-        name: "Creeperkatze's Website"
+        name: "Creeperkatze"
       },
 });
