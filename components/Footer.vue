@@ -1,5 +1,5 @@
 <template>
-    <footer class="dark:bg-black items-center ignore-scrollbar">
+    <footer class="bg-black items-center ignore-scrollbar">
         <p class="text-white mt-4 mx-4 text-center">©<span v-text="new Date().getFullYear()"></span> Creeperkatze</p>
         <p class="text-white mb-2 mx-4 text-center text-xm sm:text-base">Built with <a href="https://nuxt.com/"
                 target="_blank">Nuxt</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>. Source
