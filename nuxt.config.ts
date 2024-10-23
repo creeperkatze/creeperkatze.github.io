@@ -25,4 +25,9 @@ export default defineNuxtConfig({
             defaultImport: "url"
         })]
     },
+
+    site: {
+        url: "https://creeperkatze.github.io",
+        name: "Creeperkatze's Website"
+      },
 });
