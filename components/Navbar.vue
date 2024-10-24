@@ -14,7 +14,7 @@
             </NuxtLink>
 
             <!-- Links -->
-            <div class="space-x-4">
+            <div class="px-4 space-x-4">
                 <NuxtLink to="/" class="navbar-element">Home</NuxtLink>
                 <div class="m-1 dropdown relative inline-flex">
                     <NuxtLink to="/projects" id="dropdown-hover-event" type="button"
