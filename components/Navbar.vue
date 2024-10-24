@@ -7,16 +7,16 @@
             <NuxtLink to="/">
                 <picture>
                     <!-- Fallback for very small screens -->
-                    <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)" />
+                    <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)"/>
                     <!-- Default Logo Banner -->
-                    <img src="~/assets/images/LogoBanner.png" class="pixelated">
+                    <img src="~/assets/images/LogoBanner.png" class="pixelated shrink-0 min-w-8 min-h-8">
                 </picture>
             </NuxtLink>
 
             <!-- Links -->
-            <div class="px-4 space-x-4">
+            <div class="flex flex-wrap justify-start gap-4 mx-4">
                 <NuxtLink to="/" class="navbar-element">Home</NuxtLink>
-                <div class="m-1 dropdown relative inline-flex">
+                <div class="dropdown relative inline-flex">
                     <NuxtLink to="/projects" id="dropdown-hover-event" type="button"
                         class="inline-flex navbar-element items-center" aria-haspopup="menu"
                         aria-expanded="false" aria-label="Dropdown">
@@ -38,7 +38,7 @@
             </div>
 
             <!-- Buttons -->
-            <div class="flex flex-row space-x-4"> <!-- Added a flex container for spacing -->
+            <div class="flex flex-row gap-4"> <!-- Added a flex container for spacing -->
                 <a href="https://www.instagram.com/creeperkatze/" target="_blank">
                     <IconInstagram
                         class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
@@ -78,7 +78,7 @@
     @apply transition-transform duration-200 hover:scale-110 fill-black;
 }
 
-/* Show the dropdown on hover */
+
 .dropdown:hover .dropdown-menu
 {
     display: block;
@@ -87,7 +87,6 @@
     margin-top: 30px;
 }
 
-/* Ensure that parent elements don't restrict overflow */
 nav,
 .navbar,
 .navbar-container

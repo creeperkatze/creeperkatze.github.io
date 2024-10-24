@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-wrap justify-center gap-4 justify-items-center mx-auto max-w-[1000px]">
+    <div class="flex flex-wrap justify-start gap-4 justify-items-center mx-auto max-w-[1000px]">
         <NuxtLink to="/projects/superslide" class="no-underline">
             <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2 max-w-[450px] h-[400px]">
                 <img class="rounded-t-lg object-cover w-full"
