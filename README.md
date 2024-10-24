@@ -2,8 +2,9 @@
 [![Build Passing](https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github")](https://github.com/Creeperkatze/creeperkatze.github.io/actions)
 # creeperkatze.github.io
 
-# This website will be used to
-- Host mirror versions of my itch.io games
-- Host static images used inside my games
+# This website will be used
+- As a personal portfolio
+- To host mirror versions of my itch.io games
+- To host static images used inside my games
 
 *Currently work in progress*
