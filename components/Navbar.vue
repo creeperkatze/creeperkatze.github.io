@@ -2,7 +2,7 @@
 
 <template>
     <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4">
-        <div class="wrapper flex items-center justify-between">
+        <div class="wrapper flex items-center justify-between px-4">
             <!-- Logo -->
             <NuxtLink to="/">
                 <picture>
