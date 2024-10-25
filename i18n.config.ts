@@ -4,7 +4,7 @@ export default defineI18nConfig(() => ({
     locale: "en",
     messages: {
       en: {
-        welcome: "Hello! I'm Creeperkatze. A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
+        welcome: "Hello! I'm Creeperkatze.\nA Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
         navbar: {
             home: "Home",
             projects: "Projects",
