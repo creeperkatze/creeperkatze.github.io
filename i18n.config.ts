@@ -4,7 +4,6 @@ export default defineI18nConfig(() => ({
     locale: "en",
     messages: {
       en: {
-        welcome: "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
         navbar: {
             home: "Home",
             projects: "Projects",
@@ -27,14 +26,16 @@ export default defineI18nConfig(() => ({
         },
 
         index: {
-            title_projects: "My Projects",
+            introduction: "Hello! I'm Creeperkatze",
             typing_effect: {
                 unity_dev: "Unity Game Developer",
                 mobile_game_dev: "Mobile Game Developer",
                 web_dev: "Web Developer",
                 pixel_artist: "Pixel Artist",
                 superslide_dev: "Creator of Superslide",
-            }
+            },
+            welcome: "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
+            title_projects: "My Projects",
         },
     
         superslide: {
@@ -47,8 +48,6 @@ export default defineI18nConfig(() => ({
         },
       },
       de: {
-        welcome: "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
-        
         navbar: {
             home: "Home",
             projects: "Projekte",
@@ -71,14 +70,16 @@ export default defineI18nConfig(() => ({
         },
    
         index: {
-            title_projects: "Meine Projekte",
+            introduction: "Hallo! Ich bin Creeperkatze",
             typing_effect: {
                 unity_dev: "Unity Spieleentwickler",
                 mobile_game_dev: "Handyspiel-Entwickler",
                 web_dev: "Web-Entwickler",
                 pixel_artist: "Pixelartist",
                 superslide_dev: "Ersteller von Superslide",
-            }
+            },
+            welcome: "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+            title_projects: "Meine Projekte",
         },
 
         superslide: {
