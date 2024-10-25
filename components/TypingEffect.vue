@@ -1,5 +1,5 @@
 <template>
-    <span class="text-green-600 stripes">&zwnj; {{ displayedPhrase }}</span>
+    <span class="text-green-600 fancy-shadow">&zwnj; {{ displayedPhrase }}</span>
 </template>
 
 <script>
@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style>
-.stripes
+.fancy-shadow
 {
     text-shadow: 1px 3px 0 black, 0px 10px 4px #aba8a8;
 }
