@@ -8,6 +8,6 @@ const availableLocales = computed(() => {
 
 <template>
   <a href="#" v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="setLocale(locale.code)" class="self-center">
-    <NuxtImg :src="`/images/lang/${locale.code}.svg`" class="w-8 rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125"/>
+    <NuxtImg :src="`/images/lang/${locale.code}.svg`" format="webp" class="w-8 rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125"/>
   </a>
 </template>
