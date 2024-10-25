@@ -11,6 +11,15 @@ export default defineI18nConfig(() => ({
             skills: "Skills"
         },
 
+        footer: {
+            text_part1: "Built with ",
+            text_part2: " and ",
+            text_part3: ". Source available on ",
+            link_nuxt: "Nuxt",
+            link_tailwind: "Tailwind",
+            link_github: "Github",
+        },
+
         project_descriptions: {
             superslide: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
             flappy_christmas: "Jump through the chimneys!",
@@ -28,15 +37,24 @@ export default defineI18nConfig(() => ({
         skills: {
             title_software: "Software",
             title_technologies: "Technologies & Frameworks",
-        }
-
+        },
       },
       de: {
         welcome: "Hallo! Ich bin Creeperkatze.\nEin Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+        
         navbar: {
             home: "Home",
             projects: "Projekte",
             skills: "Skills"
+        },
+
+        footer: {
+            text_part1: "Erstellt mit ",
+            text_part2: " und ",
+            text_part3: ". Quelle verfügbar auf ",
+            link_nuxt: "Nuxt",
+            link_tailwind: "Tailwind",
+            link_github: "Github",
         },
 
         project_descriptions: {
@@ -56,7 +74,7 @@ export default defineI18nConfig(() => ({
         skills: {
             title_software: "Programme",
             title_technologies: "Technologien & Frameworks",
-        }
+        },
       }
     }
   }))
