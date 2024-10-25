@@ -12,7 +12,7 @@ export default defineNuxtConfig({
                     Lexend: true,
                 }
             }
-        ], "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n"],
+        ], "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image"],
 
     googleFonts:
     {
