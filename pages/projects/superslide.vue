@@ -4,7 +4,7 @@
         src="https://itch.io/embed/2402263?bg_color=ffffff&amp;fg_color=222222&amp;link_color=327345&amp;border_color=bebebe"
         width="552" height="167"><a href="https://creeperkatze.itch.io/superslide">Superslide by
             Creeperkatze</a></iframe>
-    <p class="center mt-5">Mirror version coming here soon...</p>
+    <p class="center mt-5">{{ $t("superslide.mirror_reminder") }}</p>
 </template>
 
 <script setup lang="ts">

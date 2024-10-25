@@ -31,4 +31,6 @@ useSeoMeta({
     twitterImage: "/seo/Logo128.png",
     twitterCard: 'summary'
 })
+
+const { locale, setLocale } = useI18n()
 </script>

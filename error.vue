@@ -16,6 +16,10 @@
 
 import type { NuxtError } from '#app'
 
+useHead({
+    title: '404| Creeperkatze',
+})
+
 const props = defineProps({
   error: Object as () => NuxtError
 })

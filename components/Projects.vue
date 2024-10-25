@@ -6,8 +6,7 @@
                     src="~/assets/images/superslide/SplashBackgroundGameTitle.png" alt="SUPERSLIDE" />
                 <div class="p-5">
                     <h3 class="mb-2 font-bold text-white">Superslide</h3>
-                    <p class="mb-3 text-white">Slide through epic levels, spend your time in endless mode and climb the
-                        leaderboards!</p>
+                    <p class="mb-3 text-white">{{ $t("project_descriptions.superslide")}}</p>
                 </div>
             </div>
         </NuxtLink>
@@ -17,7 +16,7 @@
                     src="~/assets/images/flappy-christmas/Cover.png" alt="SUPERSLIDE" />
                 <div class="p-5">
                     <h3 class="mb-2 font-bold text-white">Flappy Christmas</h3>
-                    <p class="mb-3 text-white">Jump through the chimneys!</p>
+                    <p class="mb-3 text-white">{{ $t("project_descriptions.flappy_christmas")}}</p>
                 </div>
             </div>
         </NuxtLink>
@@ -27,7 +26,7 @@
                 <img class="rounded-t-lg object-cover w-full"
                     src="~/assets/images/CardComingSoon.png" alt="Coming Soon" />
                 <div class="p-5">
-                    <h3 class="mb-2 font-bold text-white">Coming Soon</h3>
+                    <h3 class="mb-2 font-bold text-white">{{ $t("project_descriptions.coming_soon")}}</h3>
                 </div>
             </div>
         </a>

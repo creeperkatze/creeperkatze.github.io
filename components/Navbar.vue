@@ -7,7 +7,7 @@
             <NuxtLink to="/">
                 <picture>
                     <!-- Fallback for very small screens -->
-                    <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)"/>
+                    <source srcset="~/assets/images/Logo.png" media="(max-width: 640px)" />
                     <!-- Default Logo Banner -->
                     <img src="~/assets/images/LogoBanner.png" class="pixelated shrink-0 min-w-8 min-h-8">
                 </picture>
@@ -15,13 +15,13 @@
 
             <!-- Links -->
             <div class="flex flex-wrap justify-start gap-4 mx-4">
-                <NuxtLink to="/" class="navbar-element">Home</NuxtLink>
+                <NuxtLink to="/" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                 <div class="dropdown relative inline-flex">
                     <NuxtLink to="/projects" id="dropdown-hover-event" type="button"
-                        class="inline-flex navbar-element items-center" aria-haspopup="menu"
-                        aria-expanded="false" aria-label="Dropdown">
-                        Projects
-                        <IconArrowDown class="size-4"/>
+                        class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
+                        aria-label="Dropdown">
+                        {{ $t('navbar.projects') }}
+                        <IconArrowDown class="size-4" />
                     </NuxtLink>
 
                     <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <NuxtLink to="/skills" class="navbar-element">Skills</NuxtLink>
+                <NuxtLink to="/skills" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
             </div>
 
             <!-- Buttons -->
@@ -51,6 +51,7 @@
                     <IconGitHub
                         class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
+                <LangSwitcher />
             </div>
         </div>
     </div>
@@ -97,13 +98,15 @@ nav,
 
 <script>
 export default {
-    data() {
+    data()
+    {
         return {
             dropdownOpen: false // State to track dropdown visibility
         };
     },
     methods: {
-        toggleDropdown() {
+        toggleDropdown()
+        {
             this.dropdownOpen = !this.dropdownOpen; // Toggle dropdown state
         }
     }
