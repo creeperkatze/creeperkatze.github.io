@@ -9,7 +9,7 @@
                     <!-- Fallback for very small screens -->
                     <source srcset="/images/Logo.png" media="(max-width: 640px)" />
                     <!-- Default Logo Banner -->
-                    <img src="/images/LogoBanner.png" class="pixelated shrink-0 min-w-8 min-h-8">
+                    <img src="/images/LogoBanner.png" alt="Creeperkatze" class="pixelated shrink-0 min-w-8 min-h-8">
                 </picture>
             </NuxtLink>
 

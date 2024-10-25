@@ -1,5 +1,5 @@
 <template>
-    <NuxtImg src="/images/LogoBanner.png" width="800" class="center pixelated mb-5" />
+    <NuxtImg src="/images/LogoBanner.png" alt="Creeperkatze" width="800" class="center pixelated mb-5" />
     <p class="mb-5 whitespace-pre-line">
         {{ $t("welcome") }}
     </p>
