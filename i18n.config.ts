@@ -4,7 +4,7 @@ export default defineI18nConfig(() => ({
     locale: "en",
     messages: {
       en: {
-        welcome: "Hello! I'm Creeperkatze A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
+        welcome: "Hello! I'm Creeperkatze. A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
         navbar: {
             home: "Home",
             projects: "Projects",
@@ -32,10 +32,10 @@ export default defineI18nConfig(() => ({
 
       },
       de: {
-        welcome: "Hallo! Ich bin Creeperkatze\nEin Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+        welcome: "Hallo! Ich bin Creeperkatze.\nEin Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
         navbar: {
             home: "Home",
-            projects: "Projects",
+            projects: "Projekte",
             skills: "Skills"
         },
 
