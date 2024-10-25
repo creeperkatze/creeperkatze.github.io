@@ -8,7 +8,7 @@
     <h2 v-else class="mb-5">
         This cute cat is puzzled. An error occured ;(
     </h2>
-    <NuxtImg src="/images/error/soggy-cat-cat.gif" format="webp" :modifiers="{ animated: true }" class="center w-[400px] mb-5" />
+    <img src="/images/error/soggy-cat-cat.gif" class="center w-[400px] mb-5" />
     <NuxtLink to="/" class="no-outline"><UIButton class="text-white bg-green-600 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition-transform duration-200 hover:bg-green-800">Home</UIButton></NuxtLink>
 </template>
 
