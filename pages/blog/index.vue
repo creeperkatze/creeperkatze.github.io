@@ -1,9 +1,9 @@
 <template>
     <h1>{{ $t("blog.title") }}</h1>
-    <div class="flex center items-justify-center mt-4 w-max">
+    <div class="flex center items-justify-center mt-4 max-w-[800px]">
         <ContentList path="/blog/" v-slot="{ list }">
             <NuxtLink v-for="article in list" :key="article._path" :to="article._path">
-                <div class="text-left mb-4 p-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-green-600 max-w-screen">
+                <div class="text-left mb-4 p-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-green-600">
                     <div class="flex items-center justify-between">
                         <h2>{{ article.title }}</h2>
                         <p class="text-gray-400 ml-4">{{ article.date }}</p>
