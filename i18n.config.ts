@@ -7,7 +7,8 @@ export default defineI18nConfig(() => ({
         navbar: {
             home: "Home",
             projects: "Projects",
-            skills: "Skills"
+            skills: "Skills",
+            blog: "Blog",
         },
 
         footer: {
@@ -46,12 +47,23 @@ export default defineI18nConfig(() => ({
             title_software: "Software",
             title_technologies: "Technologies & Frameworks",
         },
+
+        blog: {
+            title: "My Blog"
+        },
+
+        button: {
+            default: "Button",
+            home: "Home",
+            back: "Back",
+        },
       },
       de: {
         navbar: {
             home: "Home",
             projects: "Projekte",
-            skills: "Skills"
+            skills: "Skills",
+            blog: "Blog",
         },
 
         footer: {
@@ -89,6 +101,16 @@ export default defineI18nConfig(() => ({
         skills: {
             title_software: "Programme",
             title_technologies: "Technologien & Frameworks",
+        },
+
+        blog: {
+            title: "Mein Blog"
+        },
+
+        button: {
+            default: "Knopf",
+            home: "Home",
+            back: "Zurück",
         },
       }
     }

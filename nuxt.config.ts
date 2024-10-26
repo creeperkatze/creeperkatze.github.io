@@ -12,7 +12,7 @@ export default defineNuxtConfig({
                     Lexend: true,
                 }
             }
-        ], "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image"],
+        ], "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image", "@nuxt/content"],
 
     googleFonts:
     {
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
                 code: "en",
                 language: "en-US",
                 name: "English",
-                
+
             },
             {
                 code: "de",
@@ -51,5 +51,9 @@ export default defineNuxtConfig({
                 name: "Deutsch"
             }
         ]
+    },
+
+    content: {
+        contentHead: false
     }
 });

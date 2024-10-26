@@ -1,5 +1,5 @@
 <template>
-    <span class="text-green-600 fancy-shadow">&zwnj; {{ displayedPhrase }}</span>
+    <span class="text-green-600 fancy-shadow">&zwnj; {{ displayedPhrase }}</span><span class="blinking-cursor text-black">|</span>
 </template>
 
 <script>
@@ -91,5 +91,16 @@ export default {
 .fancy-shadow
 {
     text-shadow: 1px 3px 0 black, 0px 10px 4px #aba8a8;
+}
+
+.blinking-cursor
+{
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 </style>
