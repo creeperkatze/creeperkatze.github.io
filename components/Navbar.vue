@@ -35,6 +35,7 @@
                     </div>
                 </div>
                 <NuxtLink to="/skills" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
+                <NuxtLink to="/blog" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
             </div>
 
             <!-- Buttons -->
@@ -66,7 +67,7 @@
 
 .navbar-element
 {
-    @apply no-underline text-white hover:text-gray-500;
+    @apply no-underline text-white hover:text-gray-400;
 }
 
 .navbar-element.router-link-active
