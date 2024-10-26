@@ -1,5 +1,5 @@
 <template>
-    <span class="text-green-600 fancy-shadow">&zwnj; {{ displayedPhrase }}</span><span class="blinking-cursor text-black">|</span>
+    <span class="text-green-600 fancy-shadow">{{ displayedPhrase }}</span><span class="blinking-cursor text-black">|</span>
 </template>
 
 <script>
