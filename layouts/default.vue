@@ -17,6 +17,9 @@ useHead({
             type: 'image/ico',
             href: '/favicon.ico'
         }
+    ],
+    meta: [
+        { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' }
     ]
 })
 
