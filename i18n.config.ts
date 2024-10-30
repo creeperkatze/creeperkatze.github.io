@@ -53,6 +53,11 @@ export default defineI18nConfig(() => ({
             title: "My Blog"
         },
 
+        error: {
+            404: "Even this cute cat couldn't find the page you were looking for ;(",
+            else: "This cute cat is puzzled. An error occured ;(",
+        },
+
         button: {
             default: "Button",
             home: "Home",
@@ -107,6 +112,11 @@ export default defineI18nConfig(() => ({
 
         blog: {
             title: "Mein Blog"
+        },
+
+        error: {
+            404: "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
+            else: "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",
         },
 
         button: {
