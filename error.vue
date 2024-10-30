@@ -20,6 +20,15 @@ useHead({
     title: '404 | Creeperkatze',
 })
 
+useSeoMeta({
+    title: "404 | Creeperkatze",
+    ogTitle: "404 | Creeperkatze",
+    twitterTitle: "404 | Creeperkatze",
+    description: "Even this cute cat couldn't find the page you were looking for ;(",
+    ogDescription: "Even this cute cat couldn't find the page you were looking for ;(",
+    twitterDescription: "Even this cute cat couldn't find the page you were looking for ;(",
+})
+
 defineProps({
     error: Object as () => NuxtError
 })
