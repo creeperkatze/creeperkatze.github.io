@@ -1,14 +1,15 @@
-#imports
-
 <template>
     <div v-if="showBanner" class="relative flex items-center bg-green-600 overflow-hidden">
         <NuxtLink to="/projects/superslide" class="flex-grow">
             <p class="scrolling-text text-white text-left whitespace-nowrap overflow-visible">
-                Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released
+                Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide
+                0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21
+                Released
             </p>
         </NuxtLink>
         <!-- Close icon with absolute positioning -->
-        <IconClose @click.stop="showBanner = false" class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" />
+        <IconClose @click.stop="showBanner = false"
+            class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" />
     </div>
     <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4">
         <div class="wrapper flex items-center justify-between px-4">

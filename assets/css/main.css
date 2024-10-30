@@ -10,7 +10,7 @@ body
     font-family: "Lexend";
     font-weight: bold;
     overflow-y: overlay;
-    background-image: url("images/bg.jpg");
+    background-image: url("/images/bg.jpg");
     background-size: 250px;
 }
 
