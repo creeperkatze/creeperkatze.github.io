@@ -20,7 +20,7 @@ useHead({
     title: '404| Creeperkatze',
 })
 
-const props = defineProps({
-  error: Object as () => NuxtError
+defineProps({
+    error: Object as () => NuxtError
 })
 </script>

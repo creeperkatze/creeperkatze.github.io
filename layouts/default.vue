@@ -25,12 +25,12 @@ useHead({
 
 useSeoMeta({
     title: "Creeperkatze",
-    description: "Creeperkatze's website",
+    description: "Creeperkatze's Website",
     ogTitle: "Creeperkatze",
-    ogDescription: "Creeperkatze's website",
+    ogDescription: "Creeperkatze's Website",
     ogImage: "/seo/Logo128.png",
     twitterTitle: "Creeperkatze",
-    twitterDescription: "Creeperkatze's website",
+    twitterDescription: "Creeperkatze's Website",
     twitterImage: "/seo/Logo128.png",
     twitterCard: 'summary'
 })

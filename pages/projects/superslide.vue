@@ -11,8 +11,13 @@
 useHead({
     title: 'Superslide | Creeperkatze',
 })
+
 useSeoMeta({
     ogImage: "/seo/GameIcon.png",
     twitterImage: "/seo/GameIcon.png",
+    description: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
+    ogDescription: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
+    twitterDescription: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
 })
+
 </script>

@@ -4,7 +4,17 @@
 </template>
 
 <script setup lang="ts">
+
 useHead({
     title: 'Flappy Christmas | Creeperkatze',
 })
+
+useSeoMeta({
+    ogImage: "/seo/Icon.png",
+    twitterImage: "/seo/Icon.png",
+    description: "Jump through the chimneys!",
+    ogDescription: "Jump through the chimneys!",
+    twitterDescription: "Jump through the chimneys!",
+})
+
 </script>

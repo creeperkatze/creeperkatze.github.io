@@ -25,8 +25,15 @@
 </template>
 
 <script setup lang="ts">
+
 useHead({
     title: 'Skills | Creeperkatze',
+})
+
+useSeoMeta({
+    description: "Creeperkatze's Skills",
+    ogDescription: "Creeperkatze's Skills",
+    twitterDescription: "Creeperkatze's Skills",
 })
 
 const softwareItems = [

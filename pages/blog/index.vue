@@ -17,7 +17,15 @@
 </template>
 
 <script setup lang="ts">
+
 useHead({
     title: "Blog | Creeperkatze",
 })
+
+useSeoMeta({
+    description: "Creeperkatze's Blog",
+    ogDescription: "Creeperkatze's Blog",
+    twitterDescription: "Creeperkatze's Blog",
+})
+
 </script>

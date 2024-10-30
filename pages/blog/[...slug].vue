@@ -24,6 +24,7 @@
 </template>
 
 <script setup lang="ts">
+
 const currentPath = useRoute().path; // Get the current route path dynamically
 const { data: page } = await useAsyncData(`current-page-${currentPath}`, () =>
     queryContent(currentPath).findOne()
@@ -32,5 +33,11 @@ const { data: page } = await useAsyncData(`current-page-${currentPath}`, () =>
 useHead({
     title: `${page.value?.title} | Blog | Creeperkatze`
 });
+
+useSeoMeta({
+    description: page.value?.description,
+    ogDescription: page.value?.description,
+    twitterDescription: page.value?.description,
+})
 
 </script>
