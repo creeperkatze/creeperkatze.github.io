@@ -17,10 +17,11 @@
 import type { NuxtError } from '#app'
 
 useHead({
-    title: '404| Creeperkatze',
+    title: '404 | Creeperkatze',
 })
 
 defineProps({
     error: Object as () => NuxtError
 })
+
 </script>

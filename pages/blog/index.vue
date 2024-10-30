@@ -23,6 +23,9 @@ useHead({
 })
 
 useSeoMeta({
+    title: "Blog | Creeperkatze",
+    ogTitle: "Blog | Creeperkatze",
+    twitterTitle: "Blog | Creeperkatze",
     description: "Creeperkatze's Blog",
     ogDescription: "Creeperkatze's Blog",
     twitterDescription: "Creeperkatze's Blog",

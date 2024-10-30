@@ -9,6 +9,9 @@ useHead({
 })
 
 useSeoMeta({
+    title: "Projects | Creeperkatze",
+    ogTitle: "Projects | Creeperkatze",
+    twitterTitle: "Projects | Creeperkatze",
     description: "Creeperkatze's Projects",
     ogDescription: "Creeperkatze's Projects",
     twitterDescription: "Creeperkatze's Projects",

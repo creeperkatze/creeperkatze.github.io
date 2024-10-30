@@ -31,6 +31,9 @@ useHead({
 })
 
 useSeoMeta({
+    title: "Skills | Creeperkatze",
+    ogTitle: "Skills | Creeperkatze",
+    twitterTitle: "Skills | Creeperkatze",
     description: "Creeperkatze's Skills",
     ogDescription: "Creeperkatze's Skills",
     twitterDescription: "Creeperkatze's Skills",

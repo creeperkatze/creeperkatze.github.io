@@ -10,11 +10,14 @@ useHead({
 })
 
 useSeoMeta({
-    ogImage: "/seo/Icon.png",
-    twitterImage: "/seo/Icon.png",
+    title: "Flappy Christmas | Creeperkatze",
+    ogTitle: "Flappy Christmas | Creeperkatze",
+    twitterTitle: "Flappy Christmas | Creeperkatze",
     description: "Jump through the chimneys!",
     ogDescription: "Jump through the chimneys!",
     twitterDescription: "Jump through the chimneys!",
+    ogImage: "/seo/Icon.png",
+    twitterImage: "/seo/Icon.png",
 })
 
 </script>

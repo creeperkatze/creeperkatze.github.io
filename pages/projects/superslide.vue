@@ -13,11 +13,14 @@ useHead({
 })
 
 useSeoMeta({
-    ogImage: "/seo/GameIcon.png",
-    twitterImage: "/seo/GameIcon.png",
+    title: "Superslide | Creeperkatze",
+    ogTitle: "Superslide | Creeperkatze",
+    twitterTitle: "Superslide | Creeperkatze",
     description: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
     ogDescription: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
     twitterDescription: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
+    ogImage: "/seo/GameIcon.png",
+    twitterImage: "/seo/GameIcon.png",
 })
 
 </script>
