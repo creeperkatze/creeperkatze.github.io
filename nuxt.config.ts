@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 
     googleFonts:
     {
+        // Never change this, it is illegal in germany if fonts are loaded from google at runtime🤦
         download: true
     },
 
