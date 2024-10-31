@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 
     googleFonts:
     {
-        download: false
+        download: true
     },
 
     vite:
