@@ -8,9 +8,6 @@ const availableLocales = computed(() =>
 </script>
 
 <template>
-    <link rel="preload" href="/images/flags/de.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="/images/flags/en.svg" as="image" type="image/svg+xml" />
-
     <div v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="setLocale(locale.code)"
         class="self-center hover:cursor-pointer">
         <img :src="`/images/flags/${locale.code}.svg`" alt="Language"
