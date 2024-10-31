@@ -60,7 +60,6 @@
 #                                                                        @@@@                                                    
 
 User-agent: *
-Disallow: /images/lang
-Disallow: /seo
+Disallow:
 
 Sitemap: https://creeperkatze.github.io/sitemap.xml

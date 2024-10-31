@@ -16,8 +16,8 @@ useSeoMeta({
     description: "Jump through the chimneys!",
     ogDescription: "Jump through the chimneys!",
     twitterDescription: "Jump through the chimneys!",
-    ogImage: "/seo/Icon.png",
-    twitterImage: "/seo/Icon.png",
+    ogImage: "/images/flappy-christmas/Icon.png",
+    twitterImage: "/images/flappy-christmas/Icon.png",
 })
 
 </script>

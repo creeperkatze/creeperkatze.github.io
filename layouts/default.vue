@@ -28,10 +28,10 @@ useSeoMeta({
     description: "Creeperkatze's Website",
     ogTitle: "Creeperkatze",
     ogDescription: "Creeperkatze's Website",
-    ogImage: "/seo/Logo128.png",
+    ogImage: "/images/Logo128.png",
     twitterTitle: "Creeperkatze",
     twitterDescription: "Creeperkatze's Website",
-    twitterImage: "/seo/Logo128.png",
+    twitterImage: "/images/Logo128.png",
     twitterCard: 'summary'
 })
 
