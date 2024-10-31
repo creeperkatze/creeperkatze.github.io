@@ -26,10 +26,6 @@ export default defineNuxtConfig({
         })]
     },
 
-    sitemap:{
-        sitemapName: "sitemap2.xml"
-    },
-
     site: {
         url: "https://creeperkatze.github.io",
         name: "Creeperkatze"
