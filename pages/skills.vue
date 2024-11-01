@@ -34,9 +34,9 @@ useSeoMeta({
     title: "Skills | Creeperkatze",
     ogTitle: "Skills | Creeperkatze",
     twitterTitle: "Skills | Creeperkatze",
-    description: "Creeperkatze's Skills",
-    ogDescription: "Creeperkatze's Skills",
-    twitterDescription: "Creeperkatze's Skills",
+    description: "My skills, including both software I'm working with and which technologies & frameworks I am using",
+    ogDescription: "My skills, including both software I'm working with and which technologies & frameworks I am using",
+    twitterDescription: "My skills, including both software I'm working with and which technologies & frameworks I am using",
 })
 
 const softwareItems = [

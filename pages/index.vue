@@ -18,6 +18,9 @@ useSeoMeta({
     title: "Home | Creeperkatze",
     ogTitle: "Home | Creeperkatze",
     twitterTitle: "Home | Creeperkatze",
+    description: "I'm Creeperkatze, a Unity game developer from Germany, with my current big project being Superslide. Currently also stumbling into web development.",
+    ogDescription: "I'm Creeperkatze, a Unity game developer from Germany, with my current big project being Superslide. Currently also stumbling into web development.",
+    twitterDescription: "I'm Creeperkatze, a Unity game developer from Germany, with my current big project being Superslide. Currently also stumbling into web development.",
 })
 
 </script>

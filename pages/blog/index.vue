@@ -26,9 +26,9 @@ useSeoMeta({
     title: "Blog | Creeperkatze",
     ogTitle: "Blog | Creeperkatze",
     twitterTitle: "Blog | Creeperkatze",
-    description: "Creeperkatze's Blog",
-    ogDescription: "Creeperkatze's Blog",
-    twitterDescription: "Creeperkatze's Blog",
+    description: "My blog, consisting of articles about Unity game developement, web developement, and more!",
+    ogDescription: "My blog, consisting of articles about Unity game developement, web developement, and more!",
+    twitterDescription: "My blog, consisting of articles about Unity game developement, web developement, and more!",
 })
 
 </script>
