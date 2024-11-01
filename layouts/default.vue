@@ -23,8 +23,6 @@ useHead({
     ]
 })
 
-const currentUrl = `${process.env.BASE_URL}${useRoute().path}`; // Get the current URL
-
 useSeoMeta({
     title: "Creeperkatze",
     description: "Creeperkatze's Website",
@@ -35,7 +33,6 @@ useSeoMeta({
     twitterDescription: "Creeperkatze's Website",
     twitterImage: "/images/Logo128.png",
     twitterCard: 'summary',
-    ogUrl: currentUrl,
     ogSiteName: "Creeperkatze"
 })
 
