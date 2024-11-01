@@ -61,8 +61,4 @@ export default defineNuxtConfig({
     content: {
         contentHead: false
     },
-
-    image: {
-        provider: 'ipx'
-    },
 });

@@ -11,7 +11,7 @@ const availableLocales = computed(() =>
 <template>
     <div v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="() => setLocale(locale.code)"
         class="self-center hover:cursor-pointer">
-        <NuxtImg :src="`/images/flags/${locale.code}.svg`" alt="Language"
+        <NuxtImg :src="`images/flags/${locale.code}.svg`" alt="Language"
         class="w-8 rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125"/>
     </div>
 </template>
