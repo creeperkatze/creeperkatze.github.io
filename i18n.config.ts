@@ -63,6 +63,11 @@ export default defineI18nConfig(() => ({
             home: "Home",
             back: "Back",
         },
+
+        consent_panel: {
+            text: "This website uses content from third-party sources (e.g. Itch.io), which may transmit data to external servers. Please agree to load this content.",
+            button: "Load content",
+        }
       },
       de: {
         navbar: {
@@ -124,6 +129,11 @@ export default defineI18nConfig(() => ({
             home: "Home",
             back: "Zurück",
         },
+
+        consent_panel: {
+            text: "Diese Website verwendet Inhalte von Drittanbietern (z. B. Itch.io), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
+            button: "Inhalt laden",
+        }
       }
     }
   }))
