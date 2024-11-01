@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     },
 
     site: {
-        url: "https://creeperkatze.github.io",
+        url: process.env.BASE_URL,
         name: "Creeperkatze"
     },
 

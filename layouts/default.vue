@@ -23,6 +23,8 @@ useHead({
     ]
 })
 
+const currentUrl = `${process.env.BASE_URL}${useRoute().path}`; // Get the current URL
+
 useSeoMeta({
     title: "Creeperkatze",
     description: "Creeperkatze's Website",
@@ -32,7 +34,9 @@ useSeoMeta({
     twitterTitle: "Creeperkatze",
     twitterDescription: "Creeperkatze's Website",
     twitterImage: "/images/Logo128.png",
-    twitterCard: 'summary'
+    twitterCard: 'summary',
+    ogUrl: currentUrl,
+    ogSiteName: "Creeperkatze"
 })
 
 const { locale, setLocale } = useI18n()
