@@ -5,14 +5,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ["~/assets/css/main.css"],
     modules:
-        [["@nuxtjs/google-fonts",
-            {
-                families:
-                {
-                    Lexend: true,
-                }
-            }
-        ], "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image", "@nuxt/content"],
+        ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image", "@nuxt/content"],
 
     googleFonts:
     {
