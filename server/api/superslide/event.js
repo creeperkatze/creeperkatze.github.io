@@ -7,6 +7,7 @@ export default defineEventHandler((event) =>
             startDay: 15,
             endMonth: 4,
             endDay: 29,
+            color: "#FFB6C1",
         },
         {
             name: "summer",
@@ -17,14 +18,6 @@ export default defineEventHandler((event) =>
             color: "#FFFF00",
         },
         {
-            name: "anniversary",
-            startMonth: 10,
-            startDay: 24,
-            endMonth: 10,
-            endDay: 25,
-            color: "#00ff00",
-        },
-        {
             name: "halloween",
             startMonth: 10,
             startDay: 31,
@@ -33,11 +26,20 @@ export default defineEventHandler((event) =>
             color: "#EB6123",
         },
         {
+            name: "anniversary",
+            startMonth: 10,
+            startDay: 24,
+            endMonth: 10,
+            endDay: 25,
+            color: "#00ff00",
+        },
+        {
             name: "christmas",
             startMonth: 12,
             startDay: 1,
             endMonth: 1,
             endDay: 1,
+            color: "#FF0000",
         },
     ];
 

@@ -9,9 +9,9 @@ const availableLocales = computed(() =>
 </script>
 
 <template>
-    <div v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="() => setLocale(locale.code)"
-        class="self-center hover:cursor-pointer">
+    <button v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="() => setLocale(locale.code)"
+        class="self-center min-w-8 min-h-8">
         <img :src="`/images/flags/${locale.code}.svg`" alt="Language"
-            class="w-8 rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125" />
-    </div>
+            class="rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125" />
+    </button>
 </template>

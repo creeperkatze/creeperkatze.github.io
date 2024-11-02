@@ -90,7 +90,7 @@ export default {
 <style>
 .fancy-shadow
 {
-    text-shadow: 1px 3px 0 black, 0px 10px 4px #aba8a8;
+    text-shadow: 0px 3px 0 black, 0px 10px 4px #aba8a8;
 }
 
 .blinking-cursor

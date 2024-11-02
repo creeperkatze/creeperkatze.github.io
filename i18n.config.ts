@@ -120,7 +120,7 @@ export default defineI18nConfig(() => ({
                 summer: "Sommer",
                 anniversary: "Jubiläum",
                 halloween: "Halloween",
-                christmas: "Weihachten",
+                christmas: "Weihnachten",
             },
         },
 
