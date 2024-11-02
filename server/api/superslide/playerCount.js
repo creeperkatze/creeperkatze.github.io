@@ -1,34 +1,31 @@
-let activePlayers = 0;
+let playerCount = 0;
 
-export default function handler(req, res)
-{
-    if (req.method === 'POST')
-    {
-        const { action } = req.body;
+export default function (req, res) {
+  // Handle GET request to get the current player count
+  if (req.method === 'GET') {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ count: playerCount }));
+  }
 
-        if (action === 'increment')
-        {
-            activePlayers++;
-            res.status(200).json({ count: activePlayers, message: 'Player count incremented' });
-        } else if (action === 'decrement')
-        {
-            if (activePlayers > 0)
-            {
-                activePlayers--;
-                res.status(200).json({ count: activePlayers, message: 'Player count decremented' });
-            } else
-            {
-                res.status(400).json({ count: activePlayers, message: 'Player count cannot be negative' });
-            }
-        } else
-        {
-            res.status(400).json({ message: 'Invalid action' });
-        }
-    } else if (req.method === 'GET')
-    {
-        res.status(200).json({ count: activePlayers });
-    } else
-    {
-        res.status(405).json({ message: 'Method not allowed' });
+  // Handle POST request to increment player count
+  else if (req.method === 'POST' && req.url === '/increment') {
+    playerCount += 1;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ count: playerCount }));
+  }
+
+  // Handle POST request to decrement player count
+  else if (req.method === 'POST' && req.url === '/decrement') {
+    if (playerCount > 0) {
+      playerCount -= 1;
     }
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ count: playerCount }));
+  }
+
+  // If the method is not allowed
+  else {
+    res.statusCode = 405; // Method Not Allowed
+    res.end(JSON.stringify({ message: 'Method Not Allowed' }));
+  }
 }
