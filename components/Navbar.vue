@@ -34,7 +34,7 @@
                         <IconArrowDown class="size-4" />
                     </NuxtLink>
 
-                    <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+                    <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-10"
                         role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
                         <div class="p-1 pl-1 text-left text-nowrap">
                             <NuxtLink to="/projects/superslide" class="navbar-element">Superslide</NuxtLink>

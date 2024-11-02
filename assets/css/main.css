@@ -18,12 +18,6 @@ a
     @apply text-green-600 hover:text-green-800;
 }
 
-img
-{
-    width: 100%;
-    max-width: 800px;
-}
-
 html
 {
     position: relative;

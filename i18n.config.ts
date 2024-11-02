@@ -42,6 +42,13 @@ export default defineI18nConfig(() => ({
     
         superslide: {
             mirror_reminder: "Mirror version coming here soon...",
+            event: {
+                easter: "Easter",
+                summer: "Summer",
+                anniversary: "Anniversary",
+                halloween: "Halloween",
+                christmas: "Christmas",
+            },
         },
 
         skills: {
@@ -108,6 +115,13 @@ export default defineI18nConfig(() => ({
 
         superslide: {
             mirror_reminder: "Hier erscheint bald eine Mirror-Version...",
+            event: {
+                easter: "Ostern",
+                summer: "Sommer",
+                anniversary: "Jubiläum",
+                halloween: "Halloween",
+                christmas: "Weihachten",
+            },
         },
 
         skills: {
