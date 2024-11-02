@@ -1,5 +1,7 @@
 export default defineEventHandler((event) =>
 {
+    const killswitch = true;
+
     const events = [
         {
             name: "easter",
@@ -59,7 +61,7 @@ export default defineEventHandler((event) =>
     });
 
     // Prepare the response
-    if (currentEvent)
+    if (currentEvent && !killswitch)
     {
         return {
             name: currentEvent.name,
