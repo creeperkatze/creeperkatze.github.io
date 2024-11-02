@@ -1,31 +1,20 @@
-// In-memory variable to keep track of player count
-let playerCount = 0;
+let playerCount = 0; // In-memory variable to keep track of player count
 
-export default function handler(req, res) {
-  switch (req.method) {
-    case 'GET':
-      // Respond with the current player count
-      res.status(200).json({ count: playerCount });
-      break;
+export default defineEventHandler((event) => {
+    const { method } = event.node; // Get the HTTP method
 
-    case 'POST':
-      if (req.body.action === 'increment') {
-        playerCount += 1;
-        res.status(200).json({ count: playerCount });
-      } else if (req.body.action === 'decrement') {
-        if (playerCount > 0) {
-          playerCount -= 1;
+    // Handle POST requests to modify the player count
+    if (method === 'POST') {
+        const body = readBody(event); // Read the body of the request
+
+        if (body.action === 'increment') {
+            playerCount += 1; // Increment player count
+        } else if (body.action === 'decrement') {
+            playerCount = Math.max(0, playerCount - 1); // Decrement player count, ensuring it doesn't go below 0
         }
-        res.status(200).json({ count: playerCount });
-      } else {
-        res.status(400).json({ message: 'Invalid action' });
-      }
-      break;
 
-    default:
-      // Handle method not allowed
-      res.setHeader('Allow', ['GET', 'POST']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
-      break;
-  }
-}
+        return { count: playerCount }; // Return the updated player count
+    }
+
+    return { count: playerCount };
+});
