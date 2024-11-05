@@ -46,6 +46,7 @@
                 </div>
                 <NuxtLink to="/skills" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
                 <NuxtLink to="/blog" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
+                <NuxtLink to="/joke" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
             </div>
 
             <!-- Buttons -->

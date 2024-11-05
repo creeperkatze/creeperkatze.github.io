@@ -9,6 +9,7 @@ export default defineI18nConfig(() => ({
             projects: "Projects",
             skills: "Skills",
             blog: "Blog",
+            joke: "Joke",
         },
 
         footer: {
@@ -69,11 +70,16 @@ export default defineI18nConfig(() => ({
             default: "Button",
             home: "Home",
             back: "Back",
+            new_joke: "Another one!",
         },
 
         consent_panel: {
             text: "This website uses content from third-party sources (e.g. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), which may transmit data to external servers. Please agree to load this content.",
             button: "Load content",
+        },
+
+        joke: {
+            credits: "Jokes by <a href='https://witzapi.de/' target='_blank'>WitzAPI</a>"
         }
       },
       de: {
@@ -82,6 +88,7 @@ export default defineI18nConfig(() => ({
             projects: "Projekte",
             skills: "Skills",
             blog: "Blog",
+            joke: "Witz",
         },
 
         footer: {
@@ -142,12 +149,17 @@ export default defineI18nConfig(() => ({
             default: "Knopf",
             home: "Home",
             back: "Zurück",
+            new_joke: "Noch einer!",
         },
 
         consent_panel: {
             text: "Diese Website verwendet Inhalte von Drittanbietern (z. B. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
             button: "Inhalt laden",
-        }
+        },
+
+        joke: {
+            credits: "Witze von <a href='https://witzapi.de/' target='_blank'>WitzAPI</a>"
+        },
       }
     }
   }))
