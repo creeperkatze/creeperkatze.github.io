@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-wrap flex-row gap-4 max-w-screen-lg mx-auto justify-center">
+    <div class="flex flex-wrap flex-row gap-4 max-w-[920px] mx-auto">
         <NuxtLink to="/projects/superslide" class="no-underline relative">
             <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2 max-w-[450px] h-[400px]">
                 <NuxtImg src="/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
