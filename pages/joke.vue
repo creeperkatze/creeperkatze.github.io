@@ -20,6 +20,19 @@
 
 
 <script setup lang="ts">
+useHead({
+    title: "Joke | Creeperkatze",
+})
+
+useSeoMeta({
+    title: "Joke | Creeperkatze",
+    ogTitle: "Joke | Creeperkatze",
+    twitterTitle: "Joke| Creeperkatze",
+    description: "Generate a random joke using JokeAPI.",
+    ogDescription: "Generate a random joke using JokeAPI.",
+    twitterDescription: "Generate a random joke using JokeAPI.",
+})
+
 import { useJoke } from '~/composables/useJoke';
 
 const { locale } = useI18n()

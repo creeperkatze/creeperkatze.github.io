@@ -11,7 +11,7 @@ export default {
     props: {
         link: {
             type: String,
-            default: '/blog' // Default link
+            default: '/' // Default link
         },
         buttonTextKey: {
             type: String,
