@@ -1,19 +1,37 @@
 <template>
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center mx-4">
         <div class="rounded-lg border-gray-300 border-2 p-4 max-w-screen-sm">
-            <h1>{{ joke }}</h1>
-            <p class="mb-4" v-html="$t('joke.credits')"></p>
-            <Button link="/joke" @click="fetchJoke" buttonTextKey="button.new_joke" :rainbowBackground="true"/>
+            <div v-if="joke" class="mb-4">
+                <h1 v-if="joke.type === 'single'">{{ joke.joke }}</h1>
+                <div v-else>
+                    <h1 class="mb-4">{{ joke.setup }}</h1>
+                    <h3>{{ joke.delivery }}</h3>
+                </div>
+            </div>
+            <div v-if="error" class="mb-4">
+                <h1>Error: {{ error }}</h1>
+            </div>
+            <hr class="rounded border-1 border-gray-400 mt-4 mb-4">
+            <Button link="/joke" @click="getJoke" buttonTextKey="button.new_joke" :rainbowBackground="true" />
         </div>
+        <p class="mb-4" v-html="$t('joke.credits')"></p>
     </div>
 </template>
-<script setup>
-import { useJoke } from '~/composables/useJoke.ts';
+
+
+<script setup lang="ts">
+import { useJoke } from '~/composables/useJoke';
+
+const { locale } = useI18n()
 
 const { joke, error, fetchJoke } = useJoke();
 
 onMounted(() =>
 {
-    fetchJoke();
+    getJoke();
 });
+const getJoke = async () =>
+{
+    await fetchJoke(locale.value);
+};
 </script>

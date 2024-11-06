@@ -79,7 +79,7 @@ export default defineI18nConfig(() => ({
         },
 
         joke: {
-            credits: "Jokes by <a href='https://witzapi.de/' target='_blank'>WitzAPI</a>"
+            credits: "Jokes by <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>"
         }
       },
       de: {
@@ -158,7 +158,7 @@ export default defineI18nConfig(() => ({
         },
 
         joke: {
-            credits: "Witze von <a href='https://witzapi.de/' target='_blank'>WitzAPI</a>"
+            credits: "Witze von <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>"
         },
       }
     }
