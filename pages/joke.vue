@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div v-if="error" class="mb-4">
-                <h1>Error: {{ error }}</h1>
+                <h1 class="text-red-600">{{ error }}</h1>
             </div>
             <hr class="rounded border-1 border-gray-400 mt-4 mb-4">
             <Button link="/joke" @click="getJoke" buttonTextKey="button.new_joke" :rainbowBackground="true" />

@@ -1,7 +1,6 @@
 <template>
-    <NuxtLink :to="link" class="no-outline">
-        <div
-            :class="['center max-w-fit px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-green-600 border-black hover:bg-green-800', rainbowBackground ? 'rainbow-background' : '']">
+    <NuxtLink :to="link" :class="['no-outline center max-w-fit px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-green-600 border-black hover:bg-green-800', rainbowBackground ? 'rainbow-background' : '']" >
+        <div>
             {{ $t(buttonTextKey) }}
         </div>
     </NuxtLink>
