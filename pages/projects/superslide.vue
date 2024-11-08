@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-multiple-template-root -->
 <template>
     <NuxtImg src="/images/superslide/GameTitle1024.png" alt="Superslide" format="webp" width="800"
         class="center mb-5" />
