@@ -119,7 +119,7 @@ export default {
                 },
                 {
                     text: "Ist es in der Schweiz erlaubt, dass ein Mann die Schwester seiner Witwe heiratet?",
-                    correctAnswers: ["geht nicht", "unmöglich"],
+                    correctAnswers: ["geht nicht", "unmöglich", "nicht möglich"],
                     explanation: "Nein. Der Mann lebt dann nicht mehr.",
                     answer: undefined,
                     isCorrect: undefined,
