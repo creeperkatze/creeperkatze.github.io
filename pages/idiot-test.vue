@@ -77,14 +77,14 @@ export default {
                 },
                 {
                     text: "Du überholst den zweitschnellsten Läufer, auf welchem Platz bist du jetzt?",
-                    correctAnswers: ["platz 2", "2", "2.", "zwei"],
+                    correctAnswers: ["platz 2", "2", "2.", "zwei", "zweiten"],
                     explanation: "Du hast seinen Platz, also den zweiten übernommen.",
                     answer: undefined,
                     isCorrect: undefined,
                 },
                 {
-                    text: "Welche Worte stehen auf dem Rande eines 1 Euro-Stückes?",
-                    correctAnswers: ["nichts", "keine", "kein"],
+                    text: "Welche Worte stehen auf dem Rand eines 1 Euro-Stücks?",
+                    correctAnswers: ["nichts", "keine", "gar nichts"],
                     explanation: "Da stand noch nie was xD.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -125,9 +125,9 @@ export default {
                     isCorrect: undefined,
                 },
                 {
-                    text: "Warum baut man neue Häuser?",
-                    correctAnswers: ["weil man keine alten bauen kann", "weil man keine alten häuser bauen kann", "alte nicht bauen", "man keine alten", "nicht bauen kann"],
-                    explanation: "Weil man keine alten bauen kann.",
+                    text: "Du hast eine Streichholzschachtel und betrittst einen Raum, in dem sich nichts als eine Petroleumlampe, ein Kamin und ein Ölofen befinden. Was zündest du zuerst an?",
+                    correctAnswers: ["streichholz", "das streichholz"],
+                    explanation: "Natürlich das Streichholz.",
                     answer: undefined,
                     isCorrect: undefined,
                 },
@@ -203,12 +203,60 @@ export default {
             sound.play();
         },
 
-        validateAnswer(selectedAnswer, correctAnswers)
+        editDistance(s1, s2)
         {
-            return selectedAnswer && correctAnswers.some(correctAnswer =>
-                selectedAnswer.toLowerCase() === correctAnswer.toLowerCase()
-            );
+            const len1 = s1.length;
+            const len2 = s2.length;
+            const dp = Array(len1 + 1).fill().map(() => Array(len2 + 1).fill(0));
+
+            for (let i = 0; i <= len1; i++)
+            {
+                for (let j = 0; j <= len2; j++)
+                {
+                    if (i === 0)
+                    {
+                        dp[i][j] = j;
+                    } else if (j === 0)
+                    {
+                        dp[i][j] = i;
+                    } else if (s1[i - 1] === s2[j - 1])
+                    {
+                        dp[i][j] = dp[i - 1][j - 1];
+                    } else
+                    {
+                        dp[i][j] = Math.min(dp[i - 1][j - 1] + 1, Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1));
+                    }
+                }
+            }
+            return dp[len1][len2];
+        },
+
+        // Function to calculate similarity percentage between two strings
+        calculateSimilarity(s1, s2)
+        {
+            const longer = s1.length > s2.length ? s1 : s2;
+            const shorter = s1.length <= s2.length ? s1 : s2;
+
+            if (longer.length === 0) return 1.0;
+            const dist = this.editDistance(longer, shorter);
+            return (longer.length - dist) / longer.length;
+        },
+
+        // Function to validate if the selected answer is similar enough to any of the correct answers
+        validateAnswer(selectedAnswer, correctAnswers, threshold = 0.8)
+        {
+            if (!selectedAnswer || !correctAnswers || correctAnswers.length === 0)
+            {
+                return false;
+            }
+
+            return correctAnswers.some(correctAnswer =>
+            {
+                const similarity = this.calculateSimilarity(selectedAnswer.toLowerCase(), correctAnswer.toLowerCase());
+                console.log(similarity);
+                return similarity >= threshold; // Returns true if similarity exceeds the threshold
+            });
         }
-    },
+    }
 };
 </script>
