@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <NuxtLink :to="link" :class="['no-outline center max-w-fit px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-green-600 border-black hover:bg-green-800 hover:text-black', rainbowBackground ? 'rainbow-background' : '']" >
+    <NuxtLink :to="link" :class="['no-outline center max-w-fit px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-green-600 border-black hover:bg-green-800 hover:text-black disabled:opacity-50', rainbowBackground ? 'rainbow-background' : '']" >
         <div>
             {{ $t(buttonTextKey) }}
         </div>

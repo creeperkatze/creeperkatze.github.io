@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
-        <div class="rounded-lg border-gray-300 border-2 p-4 max-w-screen-sm">
+        <div class="rounded-lg border-2 p-4 max-w-screen-sm">
             <div v-if="joke" class="mb-4">
                 <h1 v-if="joke.type === 'single'">{{ joke.joke }}</h1>
                 <div v-else>
@@ -11,10 +11,10 @@
             <div v-if="error" class="mb-4">
                 <h1 class="text-red-600">{{ error }}</h1>
             </div>
-            <hr class="rounded border-1 border-gray-400 mt-4 mb-4">
+            <hr class="rounded border-[1px] mt-4 mb-4">
             <Button link="/joke" @click="getJoke" buttonTextKey="button.new_joke" :rainbowBackground="true" />
         </div>
-        <p class="mb-4" v-html="$t('joke.credits')"></p>
+        <p class="mb-4">{{ $t("joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{ $t("joke.credits_part2") }}</a></p>
     </div>
 </template>
 

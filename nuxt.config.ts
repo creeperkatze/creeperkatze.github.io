@@ -63,41 +63,4 @@ export default defineNuxtConfig({
     content: {
         contentHead: false
     },
-
-    sitemap: {
-        urls: [
-          {
-            loc: '/',
-            lastmod: '2024-01-01',
-          },
-          {
-            loc: '/projects',
-            lastmod: '2024-10-18',
-          },
-          {
-            loc: '/projects/superslide',
-            lastmod: '2024-11-01',
-          },
-          {
-            loc: '/projects/flappy-christmas',
-            lastmod: '2024-11-01',
-          },
-          {
-            loc: '/skills',
-            lastmod: '2024-10-24',
-          },
-          {
-            loc: '/blog',
-            lastmod: '2024-10-25',
-          },
-          {
-            loc: '/joke',
-            lastmod: '2024-11-06',
-          },
-          {
-            loc: '/cat',
-            lastmod: '2024-01-01',
-          },
-        ]
-      }
 });

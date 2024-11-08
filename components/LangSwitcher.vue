@@ -1,20 +1,16 @@
 <script setup>
 const { locale, locales, setLocale } = useI18n();
 
-const availableLocales = computed(() => {
-  return locales.value.filter((i) => i.code !== locale.value);
+const availableLocales = computed(() =>
+{
+    return locales.value.filter((i) => i.code !== locale.value);
 });
 </script>
 
 <template>
-  <button
-    v-for="locale in availableLocales"
-    :key="locale.code"
-    @click.prevent.stop="() => setLocale(locale.code)"
-    class="self-center min-w-8 min-h-8">
-    <img
-      :src="`/images/flags/${locale.code}.svg`"
-      alt="Language"
-      class="rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125" />
-  </button>
+    <button v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="() => setLocale(locale.code)"
+        class="self-center min-w-8 min-h-8">
+        <img :src="`/images/flags/${locale.code}.svg`" alt="Language"
+            class="rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125">
+    </button>
 </template>

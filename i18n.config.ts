@@ -3,177 +3,235 @@ export default defineI18nConfig(() => ({
     fallbackLocale: "en",
     locale: "en",
     messages: {
-      en: {
-        navbar: {
-            home: "Home",
-            projects: "Projects",
-            skills: "Skills",
-            blog: "Blog",
-            joke: "Joke",
-            cat: "Cat",
-        },
-
-        footer: {
-            text_part1: "Built with ",
-            text_part2: " and ",
-            text_part3: ". Source available on ",
-            link_nuxt: "Nuxt",
-            link_tailwind: "Tailwind",
-            link_github: "Github",
-        },
-
-        project_descriptions: {
-            superslide: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
-            flappy_christmas: "Jump through the chimneys!",
-            coming_soon: "Coming Soon",
-        },
-
-        index: {
-            introduction: "Hello! I'm Creeperkatze",
-            typing_effect: {
-                unity_dev: "Unity Game Developer",
-                mobile_game_dev: "Mobile Game Developer",
-                web_dev: "Web Developer",
-                pixel_artist: "Pixel Artist",
-                superslide_dev: "Creator of Superslide",
-                stardew_modder: "Stardew Valley Modder",
+        en: {
+            navbar: {
+                home: "Home",
+                projects: "Projects",
+                skills: "Skills",
+                blog: "Blog",
+                joke: "Joke",
+                cat: "Cat",
+                idiot_test: "Idiot Test",
             },
-            welcome: "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
-            title_projects: "My Projects",
-        },
-    
-        superslide: {
-            mirror_reminder: "Mirror version coming here soon...",
-            event: {
-                easter: "Easter",
-                summer: "Summer",
-                anniversary: "Anniversary",
-                halloween: "Halloween",
-                christmas: "Christmas",
+
+            footer: {
+                text_part1: "Built with ",
+                text_part2: " and ",
+                text_part3: ". Source available on ",
+                link_nuxt: "Nuxt",
+                link_tailwind: "Tailwind",
+                link_github: "Github",
             },
-        },
 
-        skills: {
-            title_software: "Software",
-            title_technologies: "Technologies & Frameworks",
-        },
-
-        blog: {
-            title: "My Blog"
-        },
-
-        error: {
-            404: "Even this cute cat couldn't find the page you were looking for ;(",
-            else: "This cute cat is puzzled. An error occured ;(",
-        },
-
-        button: {
-            default: "Button",
-            home: "Home",
-            back: "Back",
-            new_joke: "Another one!",
-            new_cat: "More!",
-        },
-
-        consent_panel: {
-            text: "This website uses content from third-party sources (e.g. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), which may transmit data to external servers. Please agree to load this content.",
-            button: "Load content",
-        },
-
-        joke: {
-            credits: "Jokes by <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>"
-        },
-
-        cat: {
-            loading: "Loading...",
-            credits: "Cats by <a href='https://thecatapi.com/' target='_blank'>TheCatAPI</a>"
-        },
-      },
-      de: {
-        navbar: {
-            home: "Home",
-            projects: "Projekte",
-            skills: "Skills",
-            blog: "Blog",
-            joke: "Witz",
-            cat: "Kadze",
-        },
-
-        footer: {
-            text_part1: "Erstellt mit ",
-            text_part2: " und ",
-            text_part3: ". Quelle verfügbar auf ",
-            link_nuxt: "Nuxt",
-            link_tailwind: "Tailwind",
-            link_github: "Github",
-        },
-
-        project_descriptions: {
-            superslide: "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
-            flappy_christmas: "Springe durch die Schornsteine!",
-            coming_soon: "Kommt bald",
-        },
-   
-        index: {
-            introduction: "Hallo! Ich bin Creeperkatze",
-            typing_effect: {
-                unity_dev: "Unity Spieleentwickler",
-                mobile_game_dev: "Handyspiel-Entwickler",
-                web_dev: "Web-Entwickler",
-                pixel_artist: "Pixelartist",
-                superslide_dev: "Ersteller von Superslide",
-                stardew_modder: "Stardew Valley Modder",
+            project_descriptions: {
+                superslide: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
+                flappy_christmas: "Jump through the chimneys!",
+                coming_soon: "Coming Soon",
             },
-            welcome: "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
-            title_projects: "Meine Projekte",
-        },
 
-        superslide: {
-            mirror_reminder: "Hier erscheint bald eine Mirror-Version...",
-            event: {
-                easter: "Ostern",
-                summer: "Sommer",
-                anniversary: "Jubiläum",
-                halloween: "Halloween",
-                christmas: "Weihnachten",
+            index: {
+                introduction: "Hello! I'm Creeperkatze",
+                typing_effect: {
+                    unity_dev: "Unity Game Developer",
+                    mobile_game_dev: "Mobile Game Developer",
+                    web_dev: "Web Developer",
+                    pixel_artist: "Pixel Artist",
+                    superslide_dev: "Creator of Superslide",
+                    stardew_modder: "Stardew Valley Modder",
+                },
+                welcome: "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
+                title_projects: "My Projects",
+            },
+
+            superslide: {
+                mirror_reminder: "Mirror version coming here soon...",
+                event: {
+                    easter: "Easter",
+                    summer: "Summer",
+                    anniversary: "Anniversary",
+                    halloween: "Halloween",
+                    christmas: "Christmas",
+                },
+            },
+
+            skills: {
+                title_software: "Software",
+                title_technologies: "Technologies & Frameworks",
+            },
+
+            blog: {
+                title: "My Blog"
+            },
+
+            error: {
+                404: "Even this cute cat couldn't find the page you were looking for ;(",
+                else: "This cute cat is puzzled. An error occured ;(",
+            },
+
+            button: {
+                default: "Button",
+                home: "Home",
+                back: "Back",
+                new_joke: "Another one!",
+                new_cat: "More!",
+            },
+
+            consent_panel: {
+                text: "This website uses content from third-party sources (e.g. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), which may transmit data to external servers. Please agree to load this content.",
+                button: "Load content",
+            },
+
+            joke: {
+                credits_part1: "Jokey by ",
+                credits_part2: "JokeAPI",
+            },
+
+            cat: {
+                loading: "Loading...",
+                credits_part1: "Cats by ",
+                credits_part2: "TheCatAPI",
+                credits: " ",
+            },
+
+            idiot_test: {
+                title: "Idiot Test",
+                results: "Results",
+                score: "Your score: ",
+                percentage: "That is: ",
+                rank_title: "Your rank:",
+                disclaimer: "(Please don't take it too seriously)",
+                rank: {
+                    name: {
+                        0: "Idiot",
+                        1: "Amateur",
+                        2: "NPC",
+                        3: "Smarty pants",
+                        4: "Genius",
+                    },
+                    description: {
+                        0: "You somehow managed to answer hardly any questions correctly...",
+                        1: "Well... You're not an idiot, but you can do better!",
+                        2: "Not bad at all! A pretty... average score.",
+                        3: "Ok, ok, not bad... But you're still not a genius.",
+                        4: "You answered ALL the questions correctly... Respect!",
+                    },
+                },
             },
         },
+        de: {
+            navbar: {
+                home: "Home",
+                projects: "Projekte",
+                skills: "Skills",
+                blog: "Blog",
+                joke: "Witz",
+                cat: "Kadze",
+                idiot_test: "Idiotentest",
+            },
 
-        skills: {
-            title_software: "Programme",
-            title_technologies: "Technologien & Frameworks",
-        },
+            footer: {
+                text_part1: "Erstellt mit ",
+                text_part2: " und ",
+                text_part3: ". Quelle verfügbar auf ",
+                link_nuxt: "Nuxt",
+                link_tailwind: "Tailwind",
+                link_github: "Github",
+            },
 
-        blog: {
-            title: "Mein Blog"
-        },
+            project_descriptions: {
+                superslide: "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
+                flappy_christmas: "Springe durch die Schornsteine!",
+                coming_soon: "Kommt bald",
+            },
 
-        error: {
-            404: "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
-            else: "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",
-        },
+            index: {
+                introduction: "Hallo! Ich bin Creeperkatze",
+                typing_effect: {
+                    unity_dev: "Unity Spieleentwickler",
+                    mobile_game_dev: "Handyspiel-Entwickler",
+                    web_dev: "Web-Entwickler",
+                    pixel_artist: "Pixelartist",
+                    superslide_dev: "Ersteller von Superslide",
+                    stardew_modder: "Stardew Valley Modder",
+                },
+                welcome: "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+                title_projects: "Meine Projekte",
+            },
 
-        button: {
-            default: "Knopf",
-            home: "Home",
-            back: "Zurück",
-            new_joke: "Noch einer!",
-            new_cat: "Mehr!",
-        },
+            superslide: {
+                mirror_reminder: "Hier erscheint bald eine Mirror-Version...",
+                event: {
+                    easter: "Ostern",
+                    summer: "Sommer",
+                    anniversary: "Jubiläum",
+                    halloween: "Halloween",
+                    christmas: "Weihnachten",
+                },
+            },
 
-        consent_panel: {
-            text: "Diese Website verwendet Inhalte von Drittanbietern (z. B. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
-            button: "Inhalt laden",
-        },
+            skills: {
+                title_software: "Programme",
+                title_technologies: "Technologien & Frameworks",
+            },
 
-        joke: {
-            credits: "Witze von <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>",
-        },
-        
-        cat: {
-            loading: "Lädt...",
-            credits: "Katzen von <a href='https://thecatapi.com/' target='_blank'>TheCatAPI</a>",
-        },
-      }
+            blog: {
+                title: "Mein Blog"
+            },
+
+            error: {
+                404: "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
+                else: "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",
+            },
+
+            button: {
+                default: "Knopf",
+                home: "Home",
+                back: "Zurück",
+                new_joke: "Noch einer!",
+                new_cat: "Mehr!",
+            },
+
+            consent_panel: {
+                text: "Diese Website verwendet Inhalte von Drittanbietern (z. B. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
+                button: "Inhalt laden",
+            },
+
+            joke: {
+                credits_part1: "Witze von ",
+                credits_part2: "JokeAPI",
+            },
+
+            cat: {
+                loading: "Lädt...",
+                credits_part1: "Katzen von ",
+                credits_part2: "TheCatAPI",
+                credits: " ",
+            },
+
+            idiot_test: {
+                title: "Idiotentest",
+                results: "Ergebnisse",
+                score: "Deine Punktzahl: ",
+                percentage: "Das sind: ",
+                rank_title: "Dein Rang:",
+                disclaimer: "(Bitte nicht zu ernst nehmen)",
+                rank: {
+                    name: {
+                        0: "Idiot",
+                        1: "Amateur",
+                        2: "NPC",
+                        3: "Schlaumeier",
+                        4: "Genie",
+                    },
+                    description: {
+                        0: "Du hast es irgendwie geschafft kaum eine Frage richtig zu beantworten...",
+                        1: "Na ja... Du bist zwar kein Idiot aber das geht besser!",
+                        2: "Garnicht so übel! Eine ziemlich... durchschnittliche Punktzahl.",
+                        3: "Ok, ok, nicht schlecht... Aber ein Genie bist du trotzdem nicht.",
+                        4: "Du hast ALLE Fragen richtig beantwortet... Respekt!",
+                    },
+                },
+            },
+        }
     }
-  }))
+}))

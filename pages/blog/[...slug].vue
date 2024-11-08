@@ -1,5 +1,5 @@
 <template>
-    <Button link="/blog" buttonTextKey="button.back" />
+    <Button link="/blog" button-text-key="button.back" />
     <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-[1000px]">
         <ContentDoc>
             <template v-slot="{ doc }">

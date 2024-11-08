@@ -8,7 +8,7 @@
                         <h2>{{ article.title }}</h2>
                         <p class="text-gray-400 ml-4">{{ article.date }}</p>
                     </div>
-                    <hr class="rounded border-1 border-gray-400">
+                    <hr class="rounded border-[1px] border-gray-400">
                     <p>{{ article.description }}</p>
                 </div>
             </NuxtLink>

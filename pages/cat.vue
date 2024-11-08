@@ -1,20 +1,21 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
-        <div class="rounded-lg border-gray-300 border-2 p-4">
+        <div class="rounded-lg border-2 p-4">
             <div v-if="catData">
-                <img :src="catData.url" alt="Random Cat Image" class="center max-w-screen-sm max-h-[600px] mb-4" />
+                <img :src="catData.url" alt="Random Cat Image" class="center max-h-[600px] mb-4">
             </div>
             <div v-else>
                 <p v-if="error">Error: {{ error }}</p>
                 <p v-else>{{ $t("cat.loading")}}</p>
             </div>
-            <Button link="/cat" @click="fetchCatImage()" buttonTextKey="button.new_cat" :rainbowBackground="true" />
+            <Button link="/cat" buttonTextKey="button.new_cat" :rainbowBackground="true" @click="fetchCatImage()" />
         </div>
     </div>
-    <p class="mb-4" v-html="$t('cat.credits')"></p>
+    <p class="mb-4">{{ $t("cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{ $t("cat.credits_part2") }}</a></p>
 </template>
 
 <script setup lang="ts">
+
 useHead({
     title: "Cat | Creeperkatze",
 })
@@ -22,7 +23,7 @@ useHead({
 useSeoMeta({
     title: "Cat | Creeperkatze",
     ogTitle: "Cat | Creeperkatze",
-    twitterTitle: "Cat| Creeperkatze",
+    twitterTitle: "Cat | Creeperkatze",
     description: "Get a random cat photo using TheCatAPI.",
     ogDescription: "Get a random cat photo using TheCatAPI.",
     twitterDescription: "Get a random cat photo using TheCatAPI.",

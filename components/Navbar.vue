@@ -8,8 +8,8 @@
             </p>
         </NuxtLink>
         <!-- Close icon with absolute positioning -->
-        <IconClose @click.stop="showBanner = false"
-            class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" />
+        <IconClose class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
+            @click.stop="showBanner = false" />
     </div>
     <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4">
         <div class="wrapper flex items-center justify-between px-4">
@@ -17,7 +17,7 @@
             <NuxtLink to="/">
                 <picture>
                     <!-- Fallback for very small screens -->
-                    <source srcset="/images/Logo.png" media="(max-width: 640px)" />
+                    <source srcset="/images/Logo.png" media="(max-width: 640px)" >
                     <!-- Default Logo Banner -->
                     <img src="/images/LogoBanner.png" alt="Creeperkatze" class="pixelated shrink-0 min-w-8 min-h-8">
                 </picture>
@@ -27,7 +27,7 @@
             <div class="flex flex-wrap justify-start gap-4 mx-4">
                 <NuxtLink to="/" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                 <div class="dropdown relative inline-flex">
-                    <NuxtLink to="/projects" id="dropdown-hover-event" type="button"
+                    <NuxtLink id="dropdown-hover-event" to="/projects" type="button"
                         class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
                         aria-label="Dropdown">
                         {{ $t('navbar.projects') }}
@@ -48,6 +48,7 @@
                 <NuxtLink to="/blog" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
                 <NuxtLink to="/joke" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
                 <NuxtLink to="/cat" class="navbar-element">{{ $t('navbar.cat') }}</NuxtLink>
+                <NuxtLink to="/idiot-test" class="navbar-element">{{ $t('navbar.idiot_test') }}</NuxtLink>
             </div>
 
             <!-- Buttons -->
@@ -69,6 +70,25 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+
+    data()
+    {
+        return {
+            showBanner: false, // Change to true to activate the Superslide campaign
+            dropdownOpen: false // State to track dropdown visibility
+        };
+    },
+    methods: {
+        toggleDropdown()
+        {
+            this.dropdownOpen = !this.dropdownOpen; // Toggle dropdown state
+        }
+    }
+};
+</script>
 
 <style>
 .wrapper
@@ -129,22 +149,3 @@ nav,
     }
 }
 </style>
-
-<script>
-export default {
-
-    data()
-    {
-        return {
-            showBanner: false, // Change to true to activate the Superslide campaign
-            dropdownOpen: false // State to track dropdown visibility
-        };
-    },
-    methods: {
-        toggleDropdown()
-        {
-            this.dropdownOpen = !this.dropdownOpen; // Toggle dropdown state
-        }
-    }
-};
-</script>

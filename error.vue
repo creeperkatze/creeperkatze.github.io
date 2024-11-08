@@ -8,7 +8,7 @@
     <h2 v-else class="mb-5">
         {{ $t("error.else") }}
     </h2>
-    <img src="/images/error/soggy-cat-cat.gif" class="center w-[400px] mb-5" />
+    <img src="/images/error/soggy-cat-cat.gif" class="center w-[400px] mb-5">
     <Button link="/" buttonTextKey="button.home" />
 </template>
 
