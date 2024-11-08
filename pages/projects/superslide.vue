@@ -13,8 +13,6 @@
     <div v-else class="mx-4">
         <ConsentPanel />
     </div>
-
-    <Countdown v-slot="{ days, hours, minutes, seconds }" :date="2024-11-20" enable-days />
 </template>
 
 <script setup lang="ts">
