@@ -10,6 +10,7 @@ export default defineI18nConfig(() => ({
             skills: "Skills",
             blog: "Blog",
             joke: "Joke",
+            cat: "Cat",
         },
 
         footer: {
@@ -71,6 +72,7 @@ export default defineI18nConfig(() => ({
             home: "Home",
             back: "Back",
             new_joke: "Another one!",
+            new_cat: "More!",
         },
 
         consent_panel: {
@@ -80,7 +82,12 @@ export default defineI18nConfig(() => ({
 
         joke: {
             credits: "Jokes by <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>"
-        }
+        },
+
+        cat: {
+            loading: "Loading...",
+            credits: "Cats by <a href='https://thecatapi.com/' target='_blank'>TheCatAPI</a>"
+        },
       },
       de: {
         navbar: {
@@ -89,6 +96,7 @@ export default defineI18nConfig(() => ({
             skills: "Skills",
             blog: "Blog",
             joke: "Witz",
+            cat: "Kadze",
         },
 
         footer: {
@@ -150,6 +158,7 @@ export default defineI18nConfig(() => ({
             home: "Home",
             back: "Zurück",
             new_joke: "Noch einer!",
+            new_cat: "Mehr!",
         },
 
         consent_panel: {
@@ -158,7 +167,12 @@ export default defineI18nConfig(() => ({
         },
 
         joke: {
-            credits: "Witze von <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>"
+            credits: "Witze von <a href='https://sv443.net/jokeapi/v2/' target='_blank'>JokeAPI</a>",
+        },
+        
+        cat: {
+            loading: "Lädt...",
+            credits: "Katzen von <a href='https://thecatapi.com/' target='_blank'>TheCatAPI</a>",
         },
       }
     }

@@ -19,6 +19,7 @@
         "@nuxtjs/sitemap": "^6.1.4",
         "@nuxtjs/tailwindcss": "^6.12.2",
         "nuxt": "^3.13.2",
+        "nuxt-countdown": "^1.2.0",
         "vue": "latest",
         "vue-router": "latest"
     },

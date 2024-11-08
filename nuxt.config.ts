@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ["~/assets/css/main.css"],
     modules:
-        ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image", "@nuxt/content"],
+        ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/image", "@nuxt/content", "nuxt-countdown"],
 
     googleFonts:
     {
@@ -53,5 +53,9 @@ export default defineNuxtConfig({
 
     content: {
         contentHead: false
+    },
+
+    countdown: {
+        prefix: 'Package' // if it's not defined, you can use the components as shown as in the docs. 
     },
 });

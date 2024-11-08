@@ -33,8 +33,6 @@ useSeoMeta({
     twitterDescription: "Generate a random joke using JokeAPI.",
 })
 
-import { useJoke } from '~/composables/useJoke';
-
 const { locale } = useI18n()
 
 const { joke, error, fetchJoke } = useJoke();
@@ -43,6 +41,7 @@ onMounted(() =>
 {
     getJoke();
 });
+
 const getJoke = async () =>
 {
     await fetchJoke(locale.value);

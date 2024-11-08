@@ -13,6 +13,8 @@
     <div v-else class="mx-4">
         <ConsentPanel />
     </div>
+
+    <Countdown v-slot="{ days, hours, minutes, seconds }" :date="2024-11-20" enable-days />
 </template>
 
 <script setup lang="ts">
@@ -34,4 +36,84 @@ useSeoMeta({
 
 const { consent } = useConsent();
 
+const date = computed(() => {
+  const today = new Date()
+  const tomorrow = new Date(today)
+  tomorrow.setDate(tomorrow.getDate() + 1)
+  return tomorrow
+})
+
 </script>
+
+<style>
+/* Keyframes for the flip animation */
+@keyframes flip
+{
+    0%
+    {
+        transform: rotateX(0);
+    }
+
+    50%
+    {
+        transform: rotateX(-90deg);
+    }
+
+    100%
+    {
+        transform: rotateX(0);
+    }
+}
+
+/* Custom styles for the flipping effect */
+.flip-digit
+{
+    perspective: 1000px;
+}
+
+.flip-inner
+{
+    position: relative;
+    width: 3rem;
+    height: 4rem;
+    background-color: #f3f4f6;
+    /* Tailwind gray-200 */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b91c1c;
+    /* Tailwind red-700 */
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: flip 1s ease-in-out infinite;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Backside of the flip effect */
+.flip-inner span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-inner .top
+{
+    z-index: 2;
+    transform-origin: 50% 100%;
+}
+
+.flip-inner .bottom
+{
+    z-index: 1;
+    transform-origin: 50% 0;
+}
+</style>
