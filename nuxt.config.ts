@@ -13,7 +13,6 @@ export default defineNuxtConfig({
             "@nuxtjs/i18n",
             "@nuxt/image",
             "@nuxt/content",
-            "nuxt-countdown",
             "@nuxt/eslint",
         ],
 
@@ -63,9 +62,5 @@ export default defineNuxtConfig({
 
     content: {
         contentHead: false
-    },
-
-    countdown: {
-        prefix: 'Package' // if it's not defined, you can use the components as shown as in the docs. 
     },
 });
