@@ -96,6 +96,7 @@ export default defineI18nConfig(() => ({
             idiot_test: {
                 title: "Idiot Test",
                 subtitle: "Answer all questions to get your rank!",
+                progress: "Progress: ",
                 results: "Results",
                 score: "Your score: ",
                 percentage: "That is: ",
@@ -212,6 +213,7 @@ export default defineI18nConfig(() => ({
             idiot_test: {
                 title: "Idiotentest",
                 subtitle: "Beantworte alle Fragen, um deinen Rang zu erhalten!",
+                progress: "Fortschritt: ",
                 results: "Ergebnisse",
                 score: "Deine Punktzahl: ",
                 percentage: "Das sind: ",

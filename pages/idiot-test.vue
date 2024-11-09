@@ -5,6 +5,14 @@
     <div class="max-w-screen-md mx-auto">
         <h1>{{ $t("idiot_test.title") }}</h1>
         <p class="mb-4">{{ $t("idiot_test.subtitle") }}</p>
+        <div v-if="!allQuestionsAnswered" class="sticky top-4 max-w-xl mx-auto p-4 bg-white border-2 border-black rounded-lg mb-4 z-10">
+            <div class="w-full bg-gray-200 h-2 rounded-full">
+                <div class="bg-black h-2 rounded-full" :style="{ width: percentageAnswered + '%' }"></div>
+            </div>
+            <p class="mt-2 text-center">
+                {{ $t("idiot_test.progress") }}{{ percentageAnswered }}%
+            </p>
+        </div>
         <ul>
             <li v-for="(question, index) in questions" :key="index" class="question border-2 mb-2 rounded-lg p-2"
                 :class="{
@@ -146,7 +154,7 @@ export default {
                 },
                 {
                     text: "Woher kommt eine Ente, die in Duisburg im Rhein schwimmt?",
-                    correctAnswers: ["ei", "aus einem Ei", "einem ei"],
+                    correctAnswers: ["ei", "aus einem Ei", "einem ei", "aus dem ei", "dem ei"],
                     explanation: "Aus einem Ei.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -181,7 +189,7 @@ export default {
                 },
                 {
                     text: "Wie viele Leitern bräuchte man von der Erde bis zum Mond?",
-                    correctAnswers: ["1", "eine", "nur eine"],
+                    correctAnswers: ["1", "eine", "nur eine", "eine große", "eine lange"],
                     explanation: "Nur eine, sie muss nur lang genug sein.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -216,7 +224,7 @@ export default {
                 },
                 {
                     text: "'Du bist mein Sohn, aber ich bin nicht dein Vater'. Wer sagt das?",
-                    correctAnswers: ["mutter", "die mutter", "eine mutter"],
+                    correctAnswers: ["mutter", "die mutter", "eine mutter", "deine mudda"],
                     explanation: "Die Mutter.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -237,7 +245,7 @@ export default {
                 },
                 {
                     text: "Wenn du um 8 Uhr ins Bett gehst, und dein Wecker so gestellt wurde, das du um 9 Uhr aufwachst, hast du wie lange geschlafen?",
-                    correctAnswers: ["1 stunde", "eine stunde", "1"],
+                    correctAnswers: ["1 stunde", "eine stunde", "1", "1h"],
                     explanation: "Eine Stunde.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -261,7 +269,24 @@ export default {
             }, 0);
 
         },
-        percentage()
+        answered()
+        {
+            return this.questions.reduce((total, question) =>
+            {
+                return total + (question.isCorrect !== undefined ? 1 : 0);
+            }, 0);
+
+        },
+        percentageAnswered()
+        {
+            const totalQuestions = this.questions.length;
+            if (totalQuestions === 0)
+            {
+                return 0; // Avoid division by zero if there are no questions
+            }
+            return Math.round((this.answered / totalQuestions) * 100);
+        },
+        percentageCorrect()
         {
             const totalQuestions = this.questions.length;
             if (totalQuestions === 0)
