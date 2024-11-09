@@ -77,7 +77,9 @@ export default defineI18nConfig(() => ({
             },
 
             consent_panel: {
-                text: "This website uses content from third-party sources (e.g. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), which may transmit data to external servers. Please agree to load this content.",
+                text_part1: "This website uses content from third-party sources (e.g. ",
+                text_part2: "Itch.io",
+                text_part3: "), which may transmit data to external servers. Please agree to load this content.",
                 button: "Load content",
             },
 
@@ -194,7 +196,9 @@ export default defineI18nConfig(() => ({
             },
 
             consent_panel: {
-                text: "Diese Website verwendet Inhalte von Drittanbietern (z. B. <a href='https://itch.io/docs/legal/privacy-policy' target='_blank'>Itch.io</a>), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
+                text_part1: "Diese Website verwendet Inhalte von Drittanbietern (z. B. ",
+                text_part2: "Itch.io",
+                text_part3: "), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
                 button: "Inhalt laden",
             },
 
