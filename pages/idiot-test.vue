@@ -11,7 +11,12 @@
                     'border-green-600': question.isCorrect,
                     'border-red-600': !question.isCorrect && question.isCorrect != undefined,
                 }">
-                <p :class="{ 'opacity-50': question.isCorrect !== undefined }">{{ question.text }}</p>
+                <div class="flex items-start space-x-2" :class="{ 'opacity-50': question.isCorrect !== undefined }">
+                    <p class="m-0">{{ index + 1 }}.</p>
+                    <p class="flex-1 text-center m-0">
+                        {{ question.text }}
+                    </p>
+                </div>
                 <div class="answers flex flex-wrap justify-center gap-2">
                     <input v-model="question.answer" type="text" placeholder="Schreibe deine Antwort"
                         class="no-outline px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black border-black hover:text-black disabled:opacity-50 disabled:pointer-events-none"
@@ -139,6 +144,111 @@ export default {
                     answer: undefined,
                     isCorrect: undefined,
                 },
+                {
+                    text: "Woher kommt eine Ente, die in Duisburg im Rhein schwimmt?",
+                    correctAnswers: ["ei", "aus einem Ei", "einem ei"],
+                    explanation: "Aus einem Ei.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Eine Taube kann eher 1500kg Weizen fressen als ein Pferd. Stimmt das?",
+                    correctAnswers: ["ja", "klar",],
+                    explanation: "Ja, eine Taube frisst kein Pferd.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Womit fängt der Tag an und hört die Nacht auf?",
+                    correctAnswers: ["t", "buchstabe t"],
+                    explanation: "Mit dem Buchstaben 't'.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Was steht hinter dem Kölner Dom?",
+                    correctAnswers: ["fragezeichen", "ein fragezeichen", "?", "ein ?"],
+                    explanation: "Ein Fragezeichen.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Was macht ein Glaser, wenn er kein Glas hat?",
+                    correctAnswers: ["er trinkt aus der Flasche", "trinken aus der Flasche", "trinkt aus der flasche"],
+                    explanation: "Er trinkt aus der Flasche.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Wie viele Leitern bräuchte man von der Erde bis zum Mond?",
+                    correctAnswers: ["1", "eine", "nur eine"],
+                    explanation: "Nur eine, sie muss nur lang genug sein.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Von sechs Kerzen werden vier ausgeblasen. Wie viele bleiben übrig?",
+                    correctAnswers: ["4", "vier"],
+                    explanation: "4, da die restlichen abbrennen.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Was ergibt sieben und sieben und sieben?",
+                    correctAnswers: ["feinen sand", "sand"],
+                    explanation: "Feinen Sand",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Erhält ein Nachtwächter, der am Tage stirbt, eine Pension?",
+                    correctAnswers: ["nein", "er stirbt", "er ist tod"],
+                    explanation: "Nein, er ist Tod.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Auf einer Stange sitzen 10 Tauben. Ein Jäger schießt eine Taube ab. Wie viele sitzen noch da?",
+                    correctAnswers: ["0", "keine", "null"],
+                    explanation: "Keine, weil die anderen durch den Schuss davonfliegen",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "'Du bist mein Sohn, aber ich bin nicht dein Vater'. Wer sagt das?",
+                    correctAnswers: ["mutter", "die mutter", "eine mutter"],
+                    explanation: "Die Mutter.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Auf dem Dorfplatz steht ein 20 Zentner schwerer Stein. Jeden morgen, wenn der Hahn kräht, bewegt er sich. Ist das möglich?",
+                    correctAnswers: ["ja"],
+                    explanation: "Ja, der Hahn kann sich bewegen.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Kann ein Mensch, der westlich von New York lebt, in Manchester begraben sein?",
+                    correctAnswers: ["nein"],
+                    explanation: "Nein, er lebt ja noch.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Wenn du um 8 Uhr ins Bett gehst, und dein Wecker so gestellt wurde, das du um 9 Uhr aufwachst, hast du wie lange geschlafen?",
+                    correctAnswers: ["1 stunde", "eine stunde", "1"],
+                    explanation: "Eine Stunde.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
+                {
+                    text: "Was war am 24.12.1969 in Berlin?",
+                    correctAnswers: ["weihnachten"],
+                    explanation: "Weihnachten.",
+                    answer: undefined,
+                    isCorrect: undefined,
+                },
             ],
         };
     },
@@ -193,8 +303,9 @@ export default {
         // Watch for changes in `allQuestionsAnswered`
         allQuestionsAnswered(newValue)
         {
-            if (newValue) {
-                this.$router.replace({ name: this.$route.name, hash: '#results' });   
+            if (newValue)
+            {
+                this.$router.replace({ name: this.$route.name, hash: '#results' });
             }
         }
     },

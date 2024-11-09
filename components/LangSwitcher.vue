@@ -8,8 +8,8 @@ const availableLocales = computed(() =>
 </script>
 
 <template>
-    <button v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="() => setLocale(locale.code)"
-        class="self-center min-w-8 min-h-8">
+    <button v-for="locale in availableLocales" :key="locale.code" class="self-center min-w-8 min-h-8"
+        @click.prevent.stop="() => setLocale(locale.code)">
         <img :src="`/images/flags/${locale.code}.svg`" alt="Language"
             class="rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125">
     </button>
