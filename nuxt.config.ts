@@ -63,4 +63,10 @@ export default defineNuxtConfig({
     content: {
         contentHead: false
     },
+
+    router: {
+        options: {
+          scrollBehaviorType: 'smooth'
+        }
+      }
 });

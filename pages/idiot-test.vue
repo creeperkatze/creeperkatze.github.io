@@ -3,7 +3,8 @@
     <audio ref="correctSound" src="/audio/correct.mp3" />
 
     <div class="max-w-screen-md mx-auto">
-        <h1 class="mb-4">{{ $t("idiot_test.title") }}</h1>
+        <h1>{{ $t("idiot_test.title") }}</h1>
+        <p class="mb-4">{{ $t("idiot_test.subtitle") }}</p>
         <ul>
             <li v-for="(question, index) in questions" :key="index" class="question border-2 mb-2 rounded-lg p-2"
                 :class="{
@@ -31,7 +32,7 @@
             </li>
         </ul>
 
-        <div class="mt-4">
+        <div v-if="allQuestionsAnswered" id="results" class="mt-4">
             <hr class="rounded border-[1px] mt-4 mb-4">
             <h1 class="mb-4">{{ $t("idiot_test.results") }}</h1>
             <h3>{{ $t("idiot_test.score") }}{{ score }} / {{ questions.length }}</h3>
@@ -181,6 +182,20 @@ export default {
                 }
             }
             return 0; // Default to 0 if no rank matches
+        },
+        allQuestionsAnswered()
+        {
+            // Check if all questions have been answered (isCorrect is not undefined)
+            return this.questions.every(question => question.isCorrect !== undefined);
+        }
+    },
+    watch: {
+        // Watch for changes in `allQuestionsAnswered`
+        allQuestionsAnswered(newValue)
+        {
+            if (newValue) {
+                this.$router.replace({ name: this.$route.name, hash: '#results' });   
+            }
         }
     },
     methods: {
