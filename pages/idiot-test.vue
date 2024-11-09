@@ -49,7 +49,7 @@
             <hr class="rounded border-[1px] mt-4 mb-4">
             <h1 class="mb-4">{{ $t("idiot_test.results") }}</h1>
             <h3>{{ $t("idiot_test.score") }}{{ score }} / {{ questions.length }}</h3>
-            <h3>{{ $t("idiot_test.percentage") }}{{ percentage }}%</h3>
+            <h3>{{ $t("idiot_test.percentage") }}{{ percentageCorrect }}%</h3>
             <hr class="rounded border-[1px] mt-4 mb-4">
             <h1 class="mt-4">{{ $t("idiot_test.rank_title") }}</h1>
             <p class="mb-4">{{ $t("idiot_test.disclaimer") }}</p>
@@ -297,7 +297,7 @@ export default {
         },
         rank()
         {
-            const percentage = this.percentage;
+            const percentage = this.percentageCorrect;
 
             // Define the rank thresholds
             const rankThresholds = {
