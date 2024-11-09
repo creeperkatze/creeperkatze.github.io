@@ -29,6 +29,8 @@ useSeoMeta({
     description: "My blog, consisting of articles about Unity game developement, web developement, and more!",
     ogDescription: "My blog, consisting of articles about Unity game developement, web developement, and more!",
     twitterDescription: "My blog, consisting of articles about Unity game developement, web developement, and more!",
+    ogImage: "/images/blog/image.jpg",
+    twitterImage: "/images/blog/image.jpg",
 })
 
 </script>

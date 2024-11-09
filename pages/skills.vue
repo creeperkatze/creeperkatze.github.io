@@ -37,6 +37,8 @@ useSeoMeta({
     description: "My skills, including both software I'm working with and which technologies & frameworks I am using",
     ogDescription: "My skills, including both software I'm working with and which technologies & frameworks I am using",
     twitterDescription: "My skills, including both software I'm working with and which technologies & frameworks I am using",
+    ogImage: "/images/skills/image.jpg",
+    twitterImage: "/images/skills/image.jpg",
 })
 
 const softwareItems = [

@@ -6,12 +6,13 @@
             </div>
             <div v-else>
                 <p v-if="error">Error: {{ error }}</p>
-                <p v-else>{{ $t("cat.loading")}}</p>
+                <p v-else>{{ $t("cat.loading") }}</p>
             </div>
             <Button link="/cat" buttonTextKey="button.new_cat" :rainbowBackground="true" @click="fetchCatImage()" />
         </div>
     </div>
-    <p class="mb-4">{{ $t("cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{ $t("cat.credits_part2") }}</a></p>
+    <p class="mb-4">{{ $t("cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{
+        $t("cat.credits_part2") }}</a></p>
 </template>
 
 <script setup lang="ts">
@@ -27,6 +28,8 @@ useSeoMeta({
     description: "Get a random cat photo using TheCatAPI.",
     ogDescription: "Get a random cat photo using TheCatAPI.",
     twitterDescription: "Get a random cat photo using TheCatAPI.",
+    ogImage: "/images/cat/image.jpg",
+    twitterImage: "/images/cat/image.jpg",
 })
 
 const { catData, error, fetchCatImage } = useCat();

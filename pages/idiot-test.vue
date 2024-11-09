@@ -78,6 +78,8 @@ export default {
             description: "Test if youre an idiot with these crazy and tricky questions.",
             ogDescription: "Test if youre an idiot with these crazy and tricky questions.",
             twitterDescription: "Test if youre an idiot with these crazy and tricky questions.",
+            ogImage: "/images/idiot-test/4.jpg",
+            twitterImage: "/images/idiot-test/4.jpg",
         })
 
         return {

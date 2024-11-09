@@ -32,6 +32,8 @@ useSeoMeta({
     description: "Generate a random joke using JokeAPI.",
     ogDescription: "Generate a random joke using JokeAPI.",
     twitterDescription: "Generate a random joke using JokeAPI.",
+    ogImage: "/images/joke/image.jpg",
+    twitterImage: "/images/joke/image.jpg",
 })
 
 const { locale } = useI18n()
