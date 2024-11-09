@@ -128,7 +128,7 @@ export default {
                 },
                 {
                     text: "Berlin schreibt man am Anfang mit 'B' und hinten mit 'h'. Stimmt das?",
-                    correctAnswers: ["ja", "klar"],
+                    correctAnswers: ["ja"],
                     explanation: "Natürlich schreibt man 'hinten' mit 'h'.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -163,7 +163,7 @@ export default {
                 },
                 {
                     text: "Eine Taube kann eher 1500kg Weizen fressen als ein Pferd. Stimmt das?",
-                    correctAnswers: ["ja", "klar",],
+                    correctAnswers: ["ja"],
                     explanation: "Ja, eine Taube frisst kein Pferd.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -184,7 +184,7 @@ export default {
                 },
                 {
                     text: "Was macht ein Glaser, wenn er kein Glas hat?",
-                    correctAnswers: ["er trinkt aus der Flasche", "trinken aus der Flasche", "trinkt aus der flasche"],
+                    correctAnswers: ["er trinkt aus der Flasche", "trinken aus der Flasche", "trinkt aus der flasche", "aus der flasche trinken", "aus flasche trinken"],
                     explanation: "Er trinkt aus der Flasche.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -206,13 +206,13 @@ export default {
                 {
                     text: "Was ergibt sieben und sieben und sieben?",
                     correctAnswers: ["feinen sand", "sand"],
-                    explanation: "Feinen Sand",
+                    explanation: "Feinen Sand.",
                     answer: undefined,
                     isCorrect: undefined,
                 },
                 {
                     text: "Erhält ein Nachtwächter, der am Tage stirbt, eine Pension?",
-                    correctAnswers: ["nein", "er stirbt", "er ist tod"],
+                    correctAnswers: ["nein", "er stirbt", "er ist tod", "tod"],
                     explanation: "Nein, er ist Tod.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -232,7 +232,7 @@ export default {
                     isCorrect: undefined,
                 },
                 {
-                    text: "Auf dem Dorfplatz steht ein 20 Zentner schwerer Stein. Jeden morgen, wenn der Hahn kräht, bewegt er sich. Ist das möglich?",
+                    text: "Auf dem Dorfplatz steht ein schwerer Stein. Jeden morgen, wenn der Hahn kräht, bewegt er sich. Ist das möglich?",
                     correctAnswers: ["ja"],
                     explanation: "Ja, der Hahn kann sich bewegen.",
                     answer: undefined,
@@ -240,7 +240,7 @@ export default {
                 },
                 {
                     text: "Kann ein Mensch, der westlich von New York lebt, in Manchester begraben sein?",
-                    correctAnswers: ["nein"],
+                    correctAnswers: ["nein", "nein er lebt noch"],
                     explanation: "Nein, er lebt ja noch.",
                     answer: undefined,
                     isCorrect: undefined,

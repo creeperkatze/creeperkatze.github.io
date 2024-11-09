@@ -95,10 +95,10 @@
                         <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 z-10"
                             role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
                             <div class="p-1 pl-1 text-left text-nowrap">
-                                <NuxtLink to="/projects/superslide" class="navbar-element">Superslide</NuxtLink>
+                                <NuxtLink @click="drawer" to="/projects/superslide" class="navbar-element">Superslide</NuxtLink>
                             </div>
                             <div class="p-1 pl-1 text-left text-nowrap">
-                                <NuxtLink to="/projects/flappy-christmas" class="navbar-element">Flappy Christmas</NuxtLink>
+                                <NuxtLink @click="drawer" to="/projects/flappy-christmas" class="navbar-element">Flappy Christmas</NuxtLink>
                             </div>
                         </div>
                     </div>
