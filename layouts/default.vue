@@ -33,7 +33,8 @@ useSeoMeta({
     twitterDescription: "Creeperkatze's Website",
     twitterImage: "/images/Logo128.png",
     twitterCard: 'summary',
-    ogSiteName: "Creeperkatze"
+    ogSiteName: "Creeperkatze",
+    ogType: "website",
 })
 
 const { locale, setLocale } = useI18n()
