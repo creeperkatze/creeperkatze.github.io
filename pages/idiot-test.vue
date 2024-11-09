@@ -72,12 +72,12 @@ export default {
         })
 
         useSeoMeta({
-            title: "Idiot Test | Creeperkatze",
-            ogTitle: "Idiot Test | Creeperkatze",
-            twitterTitle: "Idiot Test | Creeperkatze",
-            description: "Test if youre an idiot with these crazy and tricky questions.",
-            ogDescription: "Test if youre an idiot with these crazy and tricky questions.",
-            twitterDescription: "Test if youre an idiot with these crazy and tricky questions.",
+            title: "Idiotentest | Creeperkatze",
+            ogTitle: "Idiotentest | Creeperkatze",
+            twitterTitle: "Idiotentest | Creeperkatze",
+            description: "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
+            ogDescription: "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
+            twitterDescription: "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
             ogImage: "/images/idiot-test/4.jpg",
             twitterImage: "/images/idiot-test/4.jpg",
         })
