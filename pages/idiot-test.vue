@@ -20,21 +20,21 @@
                     'border-green-600': question.isCorrect,
                     'border-red-600': !question.isCorrect && question.isCorrect != undefined,
                 }">
-                <div class="flex items-start space-x-2" :class="{ 'opacity-50': question.isCorrect !== undefined }">
-                    <p class="m-0">{{ index + 1 }}.</p>
-                    <p class="flex-1 text-center m-0">
+                <div class="relative flex items-start" :class="{ 'opacity-50': question.isCorrect !== undefined }">
+                    <p class="absolute left-0 text-left">{{ index + 1 }}.</p>
+                    <p class="pl-8 text-left">
                         {{ question.text }}
                     </p>
                 </div>
-                <div class="answers flex flex-wrap justify-center gap-2">
+                <div class="answers flex flex-shrink justify-center gap-2">
                     <input v-model="question.answer" type="text" placeholder="Schreibe deine Antwort"
-                        class="no-outline px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black border-black hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        class="no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black border-black hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         :class="{
                         }" :disabled="question.isCorrect !== undefined" @keydown.enter="checkAnswer(index)">
 
                     <!-- Add a validation button -->
                     <button
-                        class="no-outline px-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-gray-400 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        class="no-outline min-w-0 px-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-gray-400 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
                         <IconSubmit />
                     </button>
