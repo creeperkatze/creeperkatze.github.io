@@ -1,10 +1,9 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <footer class="bg-black items-center ignore-scrollbar">
-    <p class="text-white mt-4 mx-4 text-center">
+  <footer class="bg-black items-center ignore-scrollbar pb-2 h-auto">
+    <p class="text-white mt-4 mx-4 text-center text-sm md:text-lg">
       ©<span v-text="new Date().getFullYear()"></span> {{ $t ("footer.copyright") }}
     </p>
-    <p class="text-white mb-2 mx-4 text-center text-xm sm:text-base">
+    <p class="text-white mb-2 mx-4 text-center text-sm md:text-lg">
       {{ $t("footer.text_part1") }}
       <a href="https://nuxt.com/" target="_blank">{{
         $t("footer.link_nuxt")
@@ -30,6 +29,5 @@
       src="https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github"
       alt="build"
       format="webp" />
-    <div class="mb-2"></div>
   </footer>
 </template>
