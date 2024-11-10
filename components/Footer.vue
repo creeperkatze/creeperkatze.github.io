@@ -2,7 +2,7 @@
 <template>
   <footer class="bg-black items-center ignore-scrollbar">
     <p class="text-white mt-4 mx-4 text-center">
-      ©<span v-text="new Date().getFullYear()"></span> Creeperkatze
+      ©<span v-text="new Date().getFullYear()"></span> {{ $t ("footer.copyright") }}
     </p>
     <p class="text-white mb-2 mx-4 text-center text-xm sm:text-base">
       {{ $t("footer.text_part1") }}

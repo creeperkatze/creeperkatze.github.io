@@ -15,6 +15,7 @@ export default defineI18nConfig(() => ({
             },
 
             footer: {
+                copyright: "Creeperkatze. All rights reserved.",
                 text_part1: "Built with ",
                 text_part2: " and ",
                 text_part3: ". Source available on ",
@@ -134,6 +135,7 @@ export default defineI18nConfig(() => ({
             },
 
             footer: {
+                copyright: "Creeperkatze. Alle Rechte vorbehalten.",
                 text_part1: "Erstellt mit ",
                 text_part2: " und ",
                 text_part3: ". Quelle verfügbar auf ",
