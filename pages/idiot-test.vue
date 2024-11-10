@@ -157,7 +157,7 @@ export default {
                 },
                 {
                     text: "Woher kommt eine Ente, die in Duisburg im Rhein schwimmt?",
-                    correctAnswers: ["ei", "aus einem Ei", "einem ei", "aus dem ei", "dem ei"],
+                    correctAnswers: ["ei", "aus einem Ei", "einem ei", "aus dem ei"],
                     explanation: "Aus einem Ei.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -200,7 +200,7 @@ export default {
                 {
                     text: "Von sechs Kerzen werden vier ausgeblasen. Wie viele bleiben übrig?",
                     correctAnswers: ["4", "vier"],
-                    explanation: "4, da die restlichen abbrennen.",
+                    explanation: "Vier, die restlichen brennen ab.",
                     answer: undefined,
                     isCorrect: undefined,
                 },
