@@ -75,6 +75,7 @@ export default defineI18nConfig(() => ({
                 back: "Back",
                 new_joke: "Another one!",
                 new_cat: "More!",
+                yippee: "Yippee!",
             },
 
             consent_panel: {
@@ -195,6 +196,7 @@ export default defineI18nConfig(() => ({
                 back: "Zurück",
                 new_joke: "Noch einer!",
                 new_cat: "Mehr!",
+                yippee: "Yippee!",
             },
 
             consent_panel: {
