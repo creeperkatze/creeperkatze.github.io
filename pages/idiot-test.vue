@@ -121,7 +121,7 @@ export default {
                     isCorrect: undefined,
                 },
                 {
-                    text: "Ein Bauer hat 10 Schafe, alle sterben außer 9. Wie viele lebende Schafe hat er noch?",
+                    text: "Ein Bauer hat 10 Schafe, alle sterben außer 9. Wie viele Schafe hat er noch?",
                     correctAnswers: ["9", "neun"],
                     explanation: "Wenn alle außer 9 sterben, leben noch 9.",
                     answer: undefined,
@@ -241,7 +241,7 @@ export default {
                 },
                 {
                     text: "Kann ein Mensch, der westlich von New York lebt, in Manchester begraben sein?",
-                    correctAnswers: ["nein", "nein er lebt noch"],
+                    correctAnswers: ["nein", "lebt noch", "geht nicht", "unmöglich", "nicht möglich"],
                     explanation: "Nein, er lebt ja noch.",
                     answer: undefined,
                     isCorrect: undefined,
