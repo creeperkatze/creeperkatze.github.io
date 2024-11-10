@@ -384,6 +384,7 @@ export default {
                     return true;
                 }
 
+                console.log("Answer was not found")
                 return false
             });
         },
