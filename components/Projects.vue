@@ -50,6 +50,7 @@ export default {
         const event = ref({ name: 'none', endTimestamp: null });
         const countdown = ref('');
 
+        /*
         const fetchEventData = async () =>
         {
             // Fetch event data on component mount
@@ -61,6 +62,7 @@ export default {
             }
             event.value = await response.json();
         }
+        */
 
         // Calculate remaining time
         const getCountdown = () =>
