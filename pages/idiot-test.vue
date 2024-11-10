@@ -5,9 +5,10 @@
     <div class="max-w-screen-md mx-auto">
         <h1>{{ $t("idiot_test.title") }}</h1>
         <p class="mb-4">{{ $t("idiot_test.subtitle") }}</p>
-        <div v-if="!allQuestionsAnswered" class="sticky top-4 max-w-xl mx-auto p-4 bg-white border-2 border-black rounded-lg mb-4 z-10">
+        <div v-if="!allQuestionsAnswered"
+            class="sticky top-4 max-w-xl mx-auto p-4 bg-white border-2 border-black rounded-lg mb-4 z-10">
             <div class="w-full bg-gray-200 h-2 rounded-full">
-                <div class="bg-black h-2 rounded-full" :style="{ width: percentageAnswered + '%' }"></div>
+                <div class="bg-black h-2 rounded-full" :style="{ width: percentageAnswered + '%' }" />
             </div>
             <p class="mt-2 text-center">
                 {{ $t("idiot_test.progress") }}{{ percentageAnswered }}%
@@ -255,7 +256,7 @@ export default {
                 {
                     text: "Was war am 24.12.1969 in Berlin?",
                     correctAnswers: ["weihnachten", "heiligabend"],
-                    explanation: "Weihnachten.",
+                    explanation: "Heiligabend.",
                     answer: undefined,
                     isCorrect: undefined,
                 },
@@ -345,8 +346,7 @@ export default {
             {
                 this.questions[index].isCorrect = true;
                 sound = this.$refs.correctSound;
-            }
-            else
+            } else
             {
                 this.questions[index].isCorrect = false;
                 sound = this.$refs.wrongSound;
@@ -356,60 +356,37 @@ export default {
             sound.play();
         },
 
-        editDistance(s1, s2)
+        validateAnswer(userAnswer, correctAnswers)
         {
-            const len1 = s1.length;
-            const len2 = s2.length;
-            const dp = Array(len1 + 1).fill().map(() => Array(len2 + 1).fill(0));
-
-            for (let i = 0; i <= len1; i++)
-            {
-                for (let j = 0; j <= len2; j++)
-                {
-                    if (i === 0)
-                    {
-                        dp[i][j] = j;
-                    } else if (j === 0)
-                    {
-                        dp[i][j] = i;
-                    } else if (s1[i - 1] === s2[j - 1])
-                    {
-                        dp[i][j] = dp[i - 1][j - 1];
-                    } else
-                    {
-                        dp[i][j] = Math.min(dp[i - 1][j - 1] + 1, Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1));
-                    }
-                }
-            }
-            return dp[len1][len2];
-        },
-
-        // Function to calculate similarity percentage between two strings
-        calculateSimilarity(s1, s2)
-        {
-            const longer = s1.length > s2.length ? s1 : s2;
-            const shorter = s1.length <= s2.length ? s1 : s2;
-
-            if (longer.length === 0) return 1.0;
-            const dist = this.editDistance(longer, shorter);
-            return (longer.length - dist) / longer.length;
-        },
-
-        // Function to validate if the selected answer is similar enough to any of the correct answers
-        validateAnswer(selectedAnswer, correctAnswers, threshold = 0.8)
-        {
-            if (!selectedAnswer || !correctAnswers || correctAnswers.length === 0)
+            if (!userAnswer || !correctAnswers || correctAnswers.length === 0)
             {
                 return false;
             }
 
+            const normalizedInput = userAnswer.toLowerCase().trim();
+
             return correctAnswers.some(correctAnswer =>
             {
-                const similarity = this.calculateSimilarity(selectedAnswer.toLowerCase(), correctAnswer.toLowerCase());
-                console.log(similarity);
-                return similarity >= threshold; // Returns true if similarity exceeds the threshold
+                const normalizedCorrect = correctAnswer.toLowerCase().trim();
+
+                // 1. Exact match (always check for exact match)
+                if (normalizedInput === normalizedCorrect)
+                {
+                    console.log("Answer was an exact match")
+                    return true;
+                }
+
+                // 2. Check if normalizedCorrect is contained within normalizedInput
+                // Only do this if the correct answer is longer than 2 characters
+                if (normalizedCorrect.length > 2 && normalizedInput.includes(normalizedCorrect))
+                {
+                    console.log("Answer was included")
+                    return true;
+                }
+
+                return false
             });
-        }
+        },
     }
 };
 </script>
