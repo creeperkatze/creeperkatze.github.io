@@ -191,7 +191,7 @@ export default {
                 },
                 {
                     text: "Wie viele Leitern bräuchte man von der Erde bis zum Mond?",
-                    correctAnswers: ["1", "eine", "nur eine", "eine große", "eine lange"],
+                    correctAnswers: ["1", "eine", "nur eine", "eine große", "eine lange", "eine, sie muss nur lang genug sein", "nur eine, sie muss nur lang genug sein"],
                     explanation: "Nur eine, sie muss nur lang genug sein.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -212,7 +212,7 @@ export default {
                 },
                 {
                     text: "Erhält ein Nachtwächter, der am Tage stirbt, eine Pension?",
-                    correctAnswers: ["nein", "er stirbt", "er ist tod", "tod"],
+                    correctAnswers: ["nein", "er stirbt", "er ist tod", "tod", "geht nicht", "nicht möglich", "unmöglich"],
                     explanation: "Nein, er ist Tod.",
                     answer: undefined,
                     isCorrect: undefined,
@@ -246,7 +246,7 @@ export default {
                     isCorrect: undefined,
                 },
                 {
-                    text: "Wenn du um 8 Uhr ins Bett gehst, und dein Wecker so gestellt wurde, das du um 9 Uhr aufwachst, hast du wie lange geschlafen?",
+                    text: "Du gehst um 8 Uhr ins Bett und schläfst sofort ein. Dein Wecker ist so gestellt, dass du um 9 Uhr aufwachst, wie lange hast du geschlafen?",
                     correctAnswers: ["1 stunde", "eine stunde", "1", "1h"],
                     explanation: "Eine Stunde.",
                     answer: undefined,
@@ -254,7 +254,7 @@ export default {
                 },
                 {
                     text: "Was war am 24.12.1969 in Berlin?",
-                    correctAnswers: ["weihnachten"],
+                    correctAnswers: ["weihnachten", "heiligabend"],
                     explanation: "Weihnachten.",
                     answer: undefined,
                     isCorrect: undefined,
