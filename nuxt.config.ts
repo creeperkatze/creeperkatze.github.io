@@ -2,6 +2,7 @@ import svgLoader from "vite-svg-loader"
 
 export default defineNuxtConfig({
     compatibilityDate: "2024-04-03",
+    telemetry: false,
     devtools: { enabled: true },
     css: ["~/assets/css/main.css"],
     modules:
@@ -66,7 +67,8 @@ export default defineNuxtConfig({
 
     router: {
         options: {
-          scrollBehaviorType: 'smooth'
+            strict: true,
+            scrollBehaviorType: 'smooth',
         }
-      }
+    }
 });
