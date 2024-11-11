@@ -14,7 +14,7 @@
       }}</a
       >{{ $t("footer.text_part3")
       }}<a
-        href="https://github.com/Creeperkatze/creeperkatze.github.io"
+        href="https://github.com/creeperkatze/creeperkatze.github.io"
         target="_blank"
         >{{ $t("footer.link_github") }}</a
       >.
