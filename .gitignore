@@ -22,3 +22,7 @@ logs
 .env
 .env.*
 !.env.example
+
+# WIP
+pages/projects/superslide/privacy-policy.vue
+pages/projects/superslide/terms.vue

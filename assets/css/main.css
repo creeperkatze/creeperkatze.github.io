@@ -82,6 +82,18 @@ h6
 li
 {
     list-style-position: inside;
+    @apply text-lg;
+
+}
+
+li:marker
+{
+    color: black;
+}
+
+hr
+{
+    @apply rounded mb-4 border-gray-400
 }
 
 .footer-text

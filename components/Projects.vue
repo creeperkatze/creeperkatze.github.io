@@ -5,13 +5,14 @@
                 <NuxtImg src="/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
                     class="rounded-t-lg object-cover w-full" alt="Superslide" />
 
-                <!-- Event banner -->
+                <!-- Event banner 
                 <div v-if="event.name !== 'none'"
                     class="absolute top-0 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
                     :style="{ backgroundColor: event.color }">
                     <span class="text-left event-text text-black">{{ $t("superslide.event." + event.name) }}</span>
                     <span class="text-right event-text text-black">{{ countdown }}</span>
                 </div>
+                -->
 
                 <div class="p-5">
                     <h3 class="mb-2 font-bold text-white">Superslide</h3>
@@ -42,6 +43,7 @@
 </template>
 
 <script>
+/*
 import { onMounted, onUnmounted, ref } from 'vue';
 
 export default {
@@ -49,8 +51,6 @@ export default {
     {
         const event = ref({ name: 'none', endTimestamp: null });
         const countdown = ref('');
-
-        /*
         const fetchEventData = async () =>
         {
             // Fetch event data on component mount
@@ -62,7 +62,6 @@ export default {
             }
             event.value = await response.json();
         }
-        */
 
         // Calculate remaining time
         const getCountdown = () =>
@@ -107,6 +106,7 @@ export default {
         return { event, countdown };
     }
 };
+        */
 </script>
 
 <style>

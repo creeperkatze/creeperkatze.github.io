@@ -46,6 +46,9 @@ export default defineI18nConfig(() => ({
 
             superslide: {
                 mirror_reminder: "Mirror version coming here soon...",
+                legal: "Legal",
+                privacy_policy: "Privacy Policy",
+                terms: "Terms & Conditions",
                 event: {
                     easter: "Easter",
                     summer: "Summer",
@@ -167,6 +170,9 @@ export default defineI18nConfig(() => ({
 
             superslide: {
                 mirror_reminder: "Hier erscheint bald eine Mirror-Version...",
+                legal: "Legales",
+                privacy_policy: "Datenschutzerklärung",
+                terms: "Nutzungsbedingungen",
                 event: {
                     easter: "Ostern",
                     summer: "Sommer",

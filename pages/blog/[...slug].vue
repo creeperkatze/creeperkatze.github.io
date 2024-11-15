@@ -1,6 +1,6 @@
 <template>
     <Button link="/blog" button-text-key="button.back" />
-    <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-[1000px]">
+    <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-screen-md">
         <ContentDoc>
             <template v-slot="{ doc }">
                 <article>
@@ -9,7 +9,7 @@
                         <p class="text-right text-gray-400 ml-4">{{ doc.date }}</p>
                     </div>
                     <h4 class="text-left text-gray-400">{{ doc.description }}</h4>
-                    <hr class="rounded border-1 mb-4 border-gray-400">
+                    <hr>
                     <ContentRenderer :value="doc" class="text-left" />
                 </article>
             </template>
