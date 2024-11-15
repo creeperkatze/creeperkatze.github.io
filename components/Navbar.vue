@@ -117,14 +117,14 @@ export default {
     data()
     {
         return {
-            showBanner: false, // Change to true to activate the Superslide campaign
+            showBanner: false,
             drawerOpen: false,
         };
     },
     methods: {
         toggleDropdown()
         {
-            this.dropdownOpen = !this.dropdownOpen; // Toggle dropdown state
+            this.dropdownOpen = !this.dropdownOpen;
         },
         drawer()
         {

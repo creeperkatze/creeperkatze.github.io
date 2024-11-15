@@ -1,18 +1,16 @@
 <template>
-    <div class="flex flex-wrap flex-row gap-4 max-w-[920px] mx-auto">
-        <NuxtLink to="/projects/superslide" class="no-underline relative">
-            <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2 max-w-[450px] h-[400px]">
+    <div class="flex flex-wrap flex-row gap-2 max-w-[940px] mx-auto">
+        <NuxtLink to="/projects/superslide" class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+            <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                 <NuxtImg src="/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
                     class="rounded-t-lg object-cover w-full" alt="Superslide" />
 
-                <!-- Event banner 
                 <div v-if="event.name !== 'none'"
-                    class="absolute top-0 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
+                    class="absolute top-1 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
                     :style="{ backgroundColor: event.color }">
                     <span class="text-left event-text text-black">{{ $t("superslide.event." + event.name) }}</span>
                     <span class="text-right event-text text-black">{{ countdown }}</span>
                 </div>
-                -->
 
                 <div class="p-5">
                     <h3 class="mb-2 font-bold text-white">Superslide</h3>
@@ -20,8 +18,8 @@
                 </div>
             </div>
         </NuxtLink>
-        <NuxtLink to="/projects/flappy-christmas" class="no-underline">
-            <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2 max-w-[450px] h-[400px]">
+        <NuxtLink to="/projects/flappy-christmas" class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+            <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                 <NuxtImg src="/images/flappy-christmas/Cover.png" format="webp" width="450"
                     class="rounded-t-lg object-cover w-full" alt="Flappy Christmas" />
                 <div class="p-5">
@@ -30,8 +28,8 @@
                 </div>
             </div>
         </NuxtLink>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="no-underline">
-            <div class="rounded-lg bg-black transition ease-in-out hover:-translate-y-2 max-w-[450px] h-[400px]">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+            <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                 <NuxtImg src="/images/CardComingSoon.png" format="webp" width="450"
                     class="rounded-t-lg object-cover w-full" alt="Coming Soon" />
                 <div class="p-5">
@@ -43,7 +41,6 @@
 </template>
 
 <script>
-/*
 import { onMounted, onUnmounted, ref } from 'vue';
 
 export default {
@@ -106,7 +103,6 @@ export default {
         return { event, countdown };
     }
 };
-        */
 </script>
 
 <style>

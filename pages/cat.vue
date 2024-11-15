@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
-        <div class="rounded-lg border-2 p-4">
+        <div class="bg-white rounded-lg border-2 p-4">
             <div v-if="catData">
                 <img :src="catData.url" alt="Random Cat Image" class="center max-h-[600px] mb-4">
             </div>
