@@ -21,7 +21,7 @@
                 </NuxtLink>
                 <div class="md:hidden">
                     <button @click="drawer">
-                        <svg class="h-8 w-8 fill-current text-white" alt="Menu" fill="none" stroke-linecap="round"
+                        <svg class="h-8 w-8 fill-current text-white" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>

@@ -31,8 +31,6 @@
                         class="no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black border-black hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         :class="{
                         }" :disabled="question.isCorrect !== undefined" @keydown.enter="checkAnswer(index)">
-
-                    <!-- Add a validation button -->
                     <button
                         class="no-outline min-w-0 px-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-gray-400 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
@@ -227,7 +225,7 @@ export default {
                 },
                 {
                     text: "'Du bist mein Sohn, aber ich bin nicht dein Vater'. Wer sagt das?",
-                    correctAnswers: ["mutter", "die mutter", "eine mutter", "deine mudda"],
+                    correctAnswers: ["mutter", "mudda", "mama"],
                     explanation: "Die Mutter.",
                     answer: undefined,
                     isCorrect: undefined,
