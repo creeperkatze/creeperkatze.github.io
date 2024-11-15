@@ -15,7 +15,7 @@
             </p>
         </div>
         <ul>
-            <li v-for="(question, index) in questions" :key="index" class="question border-2 mb-2 rounded-lg p-2"
+            <li v-for="(question, index) in questions" :key="index" class="bg-white border-2 mb-2 rounded-lg p-2"
                 :class="{
                     'border-green-600': question.isCorrect,
                     'border-red-600': !question.isCorrect && question.isCorrect != undefined,
@@ -28,7 +28,7 @@
                 </div>
                 <div class="answers flex flex-shrink justify-center gap-2">
                     <input v-model="question.answer" type="text" placeholder="Schreibe deine Antwort"
-                        class="no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black border-black hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        class="bg-white text-black border-black hover:text-black no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none"
                         :class="{
                         }" :disabled="question.isCorrect !== undefined" @keydown.enter="checkAnswer(index)">
                     <button
