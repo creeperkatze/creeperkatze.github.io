@@ -16,10 +16,10 @@
             <div class="flex flex-row gap-4">
                 <NuxtLink to="/">
                     <img src="/images/LogoBanner.png" alt="Creeperkatze"
-                        class="pixelated shrink-0 min-w-8 min-h-8 hidden md:block">
-                    <img src="/images/Logo.png" alt="Creeperkatze" class="pixelated shrink-0 min-w-8 min-h-8 md:hidden">
+                        class="pixelated object-contain shrink-0 min-w-8 min-h-8 hidden lg:block">
+                    <img src="/images/Logo.png" alt="Creeperkatze" class="pixelated object-contain shrink-0 min-w-8 min-h-8 lg:hidden">
                 </NuxtLink>
-                <div class="md:hidden">
+                <div class="lg:hidden">
                     <button @click="drawer">
                         <svg class="h-8 w-8 fill-current text-white" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -30,7 +30,7 @@
             </div>
 
             <!-- Links for desktop view -->
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 <div class="flex justify-start gap-4 mx-4">
                     <NuxtLink to="/" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                     <div class="dropdown relative inline-flex">
@@ -81,7 +81,7 @@
     </div>
 
     <!-- Drawer Menu for Mobile -->
-    <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 md:hidden">
+    <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden">
         <div class="flex flex-col items-center justify-center space-y-4">
             <NuxtLink @click="drawer" to="/" class="navbar-element text-left">{{ $t('navbar.home') }}</NuxtLink>
             <div class="dropdown relative inline-flex">
