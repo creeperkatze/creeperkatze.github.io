@@ -22,7 +22,7 @@ useHead({
 })
 
 useSeoMeta({
-    title: "Cat | Creeperkatze",
+    title: "Cat  | Creeperkatze",
     ogTitle: "Cat | Creeperkatze",
     twitterTitle: "Cat | Creeperkatze",
     description: "Get a random cat photo using TheCatAPI.",
