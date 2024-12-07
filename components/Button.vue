@@ -1,36 +1,34 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <NuxtLink :to="link" :class="['no-outline center max-w-fit px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-green-600 border-black hover:bg-green-800 hover:text-black disabled:opacity-50', rainbowBackground ? 'rainbow-background' : '']" >
-        <div>
-            {{ $t(buttonTextKey) }}
-        </div>
+    <NuxtLink :to="localePath(link)" class="text-black hover:text-black">
+        <button
+            :class="['no-outline center max-w-fit px-4 pt-2 pb-2 bg-green-600 hover:bg-green-800 disabled:opacity-50 rounded-lg items-center border-2 border-black', rainbowBackground ? 'rainbow-background' : '']">
+            <slot>
+                <p class="text-black">Button</p>
+            </slot>
+        </button>
     </NuxtLink>
 </template>
 
-<script>
-export default {
-    props: {
-        link: {
-            type: String,
-            default: '/' // Default link
-        },
-        buttonTextKey: {
-            type: String,
-            default: 'button.back' // Default translation key
-        },
-        rainbowBackground: {
-            type: Boolean,
-            default: false // Default value is false, which means no rainbow animation
-        },
-    }
-}
+<script setup>
+const localePath = useLocalePath()
+
+// Defining props using defineProps()
+const props = defineProps({
+  link: {
+    type: String,
+    default: '/' // Default link
+  },
+  rainbowBackground: {
+    type: Boolean,
+    default: false // Default value is false, meaning no rainbow animation
+  },
+})
 </script>
 
 <style>
 .rainbow-background
 {
-    background: linear-gradient(
-            -45deg,
+    background: linear-gradient(-45deg,
             rgba(255, 0, 0, 1) 0%,
             rgba(255, 154, 0, 1) 5%,
             rgba(208, 222, 33, 1) 10%,
@@ -51,8 +49,7 @@ export default {
             rgba(95, 21, 242, 1) 85%,
             rgba(186, 12, 248, 1) 90%,
             rgba(251, 7, 217, 1) 95%,
-            rgba(255, 0, 0, 1) 100%
-        );
+            rgba(255, 0, 0, 1) 100%);
     background-size: 400% 400%;
     background-position: bottom right;
     animation: rainbow 2s linear infinite;
@@ -60,7 +57,8 @@ export default {
 
 @keyframes rainbow
 {
-    to {
+    to
+    {
         background-position: 33.33% 33.33%;
     }
 }

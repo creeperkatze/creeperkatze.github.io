@@ -1,17 +1,26 @@
 <template>
-    <NuxtImg src="/images/superslide/GameTitle1024.png" alt="Superslide" format="webp" width="800"
-        class="center mb-5" />
+    <img src="~/assets/images/superslide/GameTitle1024.png" alt="Superslide" format="webp" width="800"
+        class="center mb-5">
 
-    <div v-if="consent" class="center rounded-lg w-full max-w-xl mx-4">
-        <iframe frameborder="0"
-            src="https://itch.io/embed/2402263?bg_color=ffffff&amp;fg_color=222222&amp;link_color=327345&amp;border_color=bebebe"
-            width="552" height="167" class="w-full max-w-xl">
-            <a href="https://creeperkatze.itch.io/superslide">Superslide by Creeperkatze</a>
-        </iframe>
-    </div>
-
-    <div v-else class="mx-4">
-        <ConsentPanel />
+    <div class="center rounded-lg w-full h-full max-h-screen max-w-screen mx-4">
+        <div v-if="consent">
+            <div v-if="disclaimerVisible">
+                <div class="bg-white center rounded-lg w-full max-w-xl border-gray-300 border-2">
+                    <p class="p-4">{{ $t('superslide_disclaimer.text') }}</p>
+                    <div class="mb-4 center w-64 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-yellow-400 border-black hover:bg-yellow-600 hover:cursor-pointer"
+                        @click="acknowledgeDisclaimer">
+                        {{ $t("superslide_disclaimer.button") }}
+                    </div>
+                </div>
+            </div>
+            <iframe v-else frameborder="0" src="https://itch.io/embed-upload/11932762?color=333333" allow="fullscreen"
+                class="center" width="1000" height="600"><a href="https://creeperkatze.itch.io/superslide">Play
+                    Superslide
+                    on itch.io</a></iframe>
+        </div>
+        <div v-else>
+            <ConsentPanel />
+        </div>
     </div>
 
     <!--
@@ -29,24 +38,21 @@
     -->
 </template>
 
-<script setup lang="ts">
+<script setup>
 
-useHead({
-    title: 'Superslide | Creeperkatze',
-})
-
-useSeoMeta({
-    title: "Superslide | Creeperkatze",
-    ogTitle: "Superslide | Creeperkatze",
-    twitterTitle: "Superslide | Creeperkatze",
-    description: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
-    ogDescription: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
-    twitterDescription: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
-    ogImage: "/images/superslide/GameIcon.png",
-    twitterImage: "/images/superslide/GameIcon.png",
+definePageMeta({
+    title: 'page.superslide.title',
+    description: 'page.superslide.description',
+    image: '/images/seo/superslide.png'
 })
 
 const { consent } = useConsent();
+const disclaimerVisible = ref(true);
+
+function acknowledgeDisclaimer()
+{
+    disclaimerVisible.value = false; // Hide the disclaimer
+}
 </script>
 
 <style>

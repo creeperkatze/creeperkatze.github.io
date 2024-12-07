@@ -7,14 +7,13 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css"],
     modules:
         [
-            "@nuxtjs/google-fonts",
-            "@nuxtjs/tailwindcss",
-            "@nuxtjs/color-mode",
-            "@nuxtjs/sitemap",
-            "@nuxtjs/i18n",
-            "@nuxt/image",
-            "@nuxt/content",
-            "@nuxt/eslint",
+          "@nuxtjs/google-fonts",
+          "@nuxtjs/tailwindcss",
+          "@nuxtjs/color-mode",
+          "@nuxtjs/sitemap",
+          "@nuxtjs/i18n",
+          "@nuxt/content",
+          "@nuxt/eslint",
         ],
 
     googleFonts:
@@ -40,12 +39,13 @@ export default defineNuxtConfig({
     },
 
     i18n: {
-        strategy: "no_prefix",
+        baseUrl: "https://creeperkatze.github.io",
+        strategy: "prefix_except_default",
         detectBrowserLanguage: {
             useCookie: true,
             cookieKey: "i18n",
         },
-        defaultLocale: "en",
+        defaultLocale: "de",
         locales: [
             {
                 code: "en",

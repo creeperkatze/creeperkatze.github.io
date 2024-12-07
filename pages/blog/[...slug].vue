@@ -1,5 +1,5 @@
 <template>
-    <Button link="/blog" button-text-key="button.back" />
+    <Button link="/blog">{{ $t('button.back') }}</Button>
     <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-screen-md">
         <ContentDoc>
             <template v-slot="{ doc }">
@@ -23,7 +23,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 const currentPath = useRoute().path; // Get the current route path dynamically
 const { data: page } = await useAsyncData(`current-page-${currentPath}`, () =>

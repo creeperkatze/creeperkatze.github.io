@@ -6,30 +6,21 @@
             </div>
             <div v-else>
                 <p v-if="error">Error: {{ error }}</p>
-                <p v-else>{{ $t("cat.loading") }}</p>
+                <p v-else>{{ $t("page.cat.loading") }}</p>
             </div>
-            <Button link="/cat" buttonTextKey="button.new_cat" :rainbowBackground="true" @click="fetchCatImage()" />
+            <Button link="/cat" :rainbowBackground="true" @click="fetchCatImage()">{{ $t('button.new_cat') }}</Button>
         </div>
     </div>
-    <p class="mb-4">{{ $t("cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{
-        $t("cat.credits_part2") }}</a></p>
+    <p class="mb-4">{{ $t("page.cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{
+        $t("page.cat.credits_part2") }}</a></p>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
-useHead({
-    title: "Cat | Creeperkatze",
-})
-
-useSeoMeta({
-    title: "Cat  | Creeperkatze",
-    ogTitle: "Cat | Creeperkatze",
-    twitterTitle: "Cat | Creeperkatze",
-    description: "Get a random cat photo using TheCatAPI.",
-    ogDescription: "Get a random cat photo using TheCatAPI.",
-    twitterDescription: "Get a random cat photo using TheCatAPI.",
-    ogImage: "/images/cat/image.jpg",
-    twitterImage: "/images/cat/image.jpg",
+definePageMeta({
+    title: 'page.cat.title',
+    description: 'page.cat.description',
+    image: '/images/seo/cat.jpg'
 })
 
 const { catData, error, fetchCatImage } = useCat();

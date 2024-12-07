@@ -1,5 +1,5 @@
 <template>
-    <h2 class="mb-5">{{ $t("skills.title_software") }}</h2>
+    <h2 class="mb-5">{{ $t("page.skills.title_software") }}</h2>
     <div class="flex flex-wrap justify-center gap-4">
         <a v-for="(item, index) in softwareItems" :key="item.name" :href="item.link" target="_blank"
             :style="{ animationDelay: index * 0.1 + 's' }" class="animated-item">
@@ -7,7 +7,7 @@
         </a>
     </div>
 
-    <h2 class="mt-5 mb-5">{{ $t("skills.title_technologies") }}</h2>
+    <h2 class="mt-5 mb-5">{{ $t("page.skills.title_technologies") }}</h2>
     <div class="flex flex-wrap justify-center gap-4">
         <a v-for="(item, index) in techItems" :key="item.name" :href="item.link" target="_blank"
             :style="{ animationDelay: index * 0.1 + 's' }" class="animated-item">
@@ -24,21 +24,12 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
-useHead({
-    title: 'Skills | Creeperkatze',
-})
-
-useSeoMeta({
-    title: "Skills | Creeperkatze",
-    ogTitle: "Skills | Creeperkatze",
-    twitterTitle: "Skills | Creeperkatze",
-    description: "My skills, including both software I'm working with and which technologies & frameworks I am using",
-    ogDescription: "My skills, including both software I'm working with and which technologies & frameworks I am using",
-    twitterDescription: "My skills, including both software I'm working with and which technologies & frameworks I am using",
-    ogImage: "/images/skills/image.jpg",
-    twitterImage: "/images/skills/image.jpg",
+definePageMeta({
+    title: 'page.skills.title',
+    description: 'page.skills.description',
+    image: '/images/seo/skills.jpg'
 })
 
 const softwareItems = [

@@ -1,6 +1,6 @@
 <template>
     <div v-if="showBanner" class="relative flex items-center bg-green-600 overflow-hidden">
-        <NuxtLink to="/projects/superslide" class="flex-grow">
+        <NuxtLink :to="localePath('/projects/superslide')" class="flex-grow">
             <p class="scrolling-text text-white text-left whitespace-nowrap overflow-visible">
                 Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide
                 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21
@@ -14,10 +14,11 @@
         <div class="wrapper flex items-center justify-between px-4">
             <!-- Logo -->
             <div class="flex flex-row gap-4">
-                <NuxtLink to="/">
-                    <img src="/images/LogoBanner.png" alt="Creeperkatze"
+                <NuxtLink :to="localePath('/')">
+                    <img src="~/assets/images/LogoBanner.png" alt="Creeperkatze"
                         class="pixelated object-contain shrink-0 min-w-8 min-h-8 hidden lg:block">
-                    <img src="/images/Logo.png" alt="Creeperkatze" class="pixelated object-contain shrink-0 min-w-8 min-h-8 lg:hidden">
+                    <img src="~/assets/images/Logo.png" alt="Creeperkatze"
+                        class="pixelated object-contain shrink-0 min-w-8 min-h-8 lg:hidden">
                 </NuxtLink>
                 <div class="lg:hidden">
                     <button @click="drawer">
@@ -32,9 +33,9 @@
             <!-- Links for desktop view -->
             <div class="hidden lg:block">
                 <div class="flex justify-start gap-4 mx-4">
-                    <NuxtLink to="/" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                     <div class="dropdown relative inline-flex">
-                        <NuxtLink id="dropdown-hover-event" to="/projects" type="button"
+                        <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
                             class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
                             aria-label="Dropdown">
                             {{ $t('navbar.projects') }}
@@ -44,20 +45,23 @@
                         <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-10"
                             role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
                             <div class="p-1 pl-1 text-left text-nowrap">
-                                <NuxtLink to="/projects/superslide" class="navbar-element">Superslide</NuxtLink>
+                                <NuxtLink :to="localePath('/projects/superslide')" class="navbar-element">Superslide
+                                </NuxtLink>
                             </div>
                             <div class="p-1 pl-1 text-left text-nowrap">
-                                <NuxtLink to="/projects/flappy-christmas" class="navbar-element">Flappy Christmas
+                                <NuxtLink :to="localePath('/projects/flappy-christmas')" class="navbar-element">Flappy
+                                    Christmas
                                 </NuxtLink>
                             </div>
                         </div>
                     </div>
 
-                    <NuxtLink to="/skills" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
-                    <NuxtLink to="/blog" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
-                    <NuxtLink to="/joke" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
-                    <NuxtLink to="/cat" class="navbar-element">{{ $t('navbar.cat') }}</NuxtLink>
-                    <NuxtLink to="/idiot-test" class="navbar-element">{{ $t('navbar.idiot_test') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/skills')" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/blog')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/joke')" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/cat')" class="navbar-element">{{ $t('navbar.cat') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/idiot-test')" class="navbar-element">{{ $t('navbar.idiot_test') }}
+                    </NuxtLink>
                 </div>
             </div>
 
@@ -83,55 +87,46 @@
     <!-- Drawer Menu for Mobile -->
     <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden">
         <div class="flex flex-col items-center justify-center space-y-4">
-            <NuxtLink @click="drawer" to="/" class="navbar-element text-left">{{ $t('navbar.home') }}</NuxtLink>
+            <NuxtLink to="/" @click="drawer" class="navbar-element text-left">{{ $t('navbar.home') }}</NuxtLink>
             <div class="dropdown relative inline-flex">
-                        <NuxtLink id="dropdown-hover-event" to="/projects" type="button"
-                            class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
-                            aria-label="Dropdown">
-                            {{ $t('navbar.projects') }}
-                            <IconArrowDown class="size-4" />
-                        </NuxtLink>
-                        
-                        <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 z-10"
-                            role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
-                            <div class="p-1 pl-1 text-left text-nowrap">
-                                <NuxtLink @click="drawer" to="/projects/superslide" class="navbar-element">Superslide</NuxtLink>
-                            </div>
-                            <div class="p-1 pl-1 text-left text-nowrap">
-                                <NuxtLink @click="drawer" to="/projects/flappy-christmas" class="navbar-element">Flappy Christmas</NuxtLink>
-                            </div>
-                        </div>
+                <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
+                    class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
+                    aria-label="Dropdown">
+                    {{ $t('navbar.projects') }}
+                    <IconArrowDown class="size-4" />
+                </NuxtLink>
+
+                <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 z-10"
+                    role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
+                    <div class="p-1 pl-1 text-left text-nowrap">
+                        <NuxtLink :to="localePath('/projects/superslide')" @click="drawer" class="navbar-element">Superslide</NuxtLink>
                     </div>
-            <NuxtLink @click="drawer" to="/skills" class="navbar-element text-left">{{ $t('navbar.skills') }}</NuxtLink>
-            <NuxtLink @click="drawer" to="/blog" class="navbar-element text-left">{{ $t('navbar.blog') }}</NuxtLink>
-            <NuxtLink @click="drawer" to="/joke" class="navbar-element text-left">{{ $t('navbar.joke') }}</NuxtLink>
-            <NuxtLink @click="drawer" to="/cat" class="navbar-element text-left">{{ $t('navbar.cat') }}</NuxtLink>
-            <NuxtLink @click="drawer" to="/idiot-test" class="navbar-element text-left">{{ $t('navbar.idiot_test') }}
+                    <div class="p-1 pl-1 text-left text-nowrap">
+                        <NuxtLink :to="localePath('/projects/flappy-christmas')" @click="drawer" class="navbar-element">Flappy
+                            Christmas</NuxtLink>
+                    </div>
+                </div>
+            </div>
+            <NuxtLink :to="localePath('/skills')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.skills') }}</NuxtLink>
+            <NuxtLink :to="localePath('/blog')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.blog') }}</NuxtLink>
+            <NuxtLink :to="localePath('/joke')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.joke') }}</NuxtLink>
+            <NuxtLink :to="localePath('/cat')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.cat') }}</NuxtLink>
+            <NuxtLink :to="localePath('/idiot-test')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.idiot_test') }}
             </NuxtLink>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-    data()
-    {
-        return {
-            showBanner: false,
-            drawerOpen: false,
-        };
-    },
-    methods: {
-        toggleDropdown()
-        {
-            this.dropdownOpen = !this.dropdownOpen;
-        },
-        drawer()
-        {
-            this.drawerOpen = !this.drawerOpen;
-        },
-    },
-};
+<script setup>
+const localePath = useLocalePath()
+
+const showBanner = ref(false);
+const drawerOpen = ref(false);
+
+function drawer()
+{
+    drawerOpen.value = !drawerOpen.value;
+}
 </script>
 
 <style>

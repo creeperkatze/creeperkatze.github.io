@@ -30,46 +30,115 @@ export default defineI18nConfig(() => ({
                 coming_soon: "Coming Soon",
             },
 
-            index: {
-                introduction: "Hello! I'm Creeperkatze",
-                typing_effect: {
-                    unity_dev: "Unity Game Developer",
-                    mobile_game_dev: "Mobile Game Developer",
-                    web_dev: "Web Developer",
-                    pixel_artist: "Pixel Artist",
-                    superslide_dev: "Creator of Superslide",
-                    stardew_modder: "Stardew Valley Modder",
+            page: {
+                index: {
+                    title: "Home",
+                    description: "I'm Creeperkatze, a Unity game developer from Germany, with my current big project being Superslide. Currently also stumbling into web development.",
+                    introduction: "Hello! I'm Creeperkatze",
+                    typing_effect: {
+                        unity_dev: "Unity Game Developer",
+                        mobile_game_dev: "Mobile Game Developer",
+                        web_dev: "Web Developer",
+                        pixel_artist: "Pixel Artist",
+                        superslide_dev: "Creator of Superslide",
+                        stardew_modder: "Stardew Valley Modder",
+                    },
+                    welcome: "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
+                    title_projects: "My Projects",
                 },
-                welcome: "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
-                title_projects: "My Projects",
-            },
 
-            superslide: {
-                mirror_reminder: "Mirror version coming here soon...",
-                legal: "Legal",
-                privacy_policy: "Privacy Policy",
-                terms: "Terms & Conditions",
-                event: {
-                    easter: "Easter",
-                    summer: "Summer",
-                    anniversary: "Anniversary",
-                    halloween: "Halloween",
-                    christmas: "Christmas",
+                projects: {
+                    title: "Projects",
+                    description: "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas",
                 },
-            },
 
-            skills: {
-                title_software: "Software",
-                title_technologies: "Technologies & Frameworks",
-            },
+                superslide: {
+                    title: "Superslide",
+                    description: "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
+                    mirror_reminder: "Mirror version coming here soon...",
+                    legal: "Legal",
+                    privacy_policy: "Privacy Policy",
+                    terms: "Terms & Conditions",
+                    event: {
+                        easter: "Easter",
+                        summer: "Summer",
+                        anniversary: "Anniversary",
+                        halloween: "Halloween",
+                        christmas: "Christmas",
+                    },
+                },
 
-            blog: {
-                title: "My Blog"
-            },
+                flappy_christmas: {
+                    title: "Flappy Christmas",
+                    description: "Jump through the chimneys!",
+                },
 
-            error: {
-                404: "Even this cute cat couldn't find the page you were looking for ;(",
-                else: "This cute cat is puzzled. An error occured ;(",
+                skills: {
+                    title: "Skills",
+                    description: "My skills, including both software I'm working with and which technologies & frameworks I am using",
+                    title_software: "Software",
+                    title_technologies: "Technologies & Frameworks",
+                },
+
+                blog: {
+                    title: "Blog",
+                    heading: "My Blog",
+                    description: "My blog, consisting of articles about Unity game developement, web developement, and more!",
+                },
+
+                joke: {
+                    title: "Joke",
+                    description: "Generate a random joke using JokeAPI.",
+                    credits_part1: "Joke by ",
+                    credits_part2: "JokeAPI",
+                },
+
+                yippee: {
+                    title: "Yippee",
+                    description: "Meine Mama hat mir einfach erlaubt, dass ich Cola trinken darf!"
+                },
+
+                cat: {
+                    title: "Cat",
+                    description: "Get a random cat photo using TheCatAPI.",
+                    loading: "Loading...",
+                    credits_part1: "Cats by ",
+                    credits_part2: "TheCatAPI",
+                    credits: " ",
+                },
+
+                idiot_test: {
+                    title: "Idiot Test",
+                    description: "Test whether you're an idiot with these crazy and tricky questions.",
+                    subtitle: "Answer all questions to get your rank!",
+                    progress: "Progress: ",
+                    results: "Results",
+                    score: "Your score: ",
+                    percentage: "That is: ",
+                    rank_title: "Your rank:",
+                    disclaimer: "(Please don't take it too seriously)",
+                    rank: {
+                        name: {
+                            0: "Idiot",
+                            1: "Amateur",
+                            2: "NPC",
+                            3: "Smarty pants",
+                            4: "Genius",
+                        },
+                        description: {
+                            0: "You somehow managed to answer hardly any questions correctly...",
+                            1: "Well... You're not an idiot, but you can do better!",
+                            2: "Not bad at all! A pretty... average score.",
+                            3: "Ok, ok, not bad... But you're still not a genius.",
+                            4: "You answered ALL the questions correctly... Respect!",
+                        },
+                    },
+                },
+
+                error: {
+                    404: "Even this cute cat couldn't find the page you were looking for ;(",
+                    else: "This cute cat is puzzled. An error occured ;(",
+                },
             },
 
             button: {
@@ -88,50 +157,16 @@ export default defineI18nConfig(() => ({
                 button: "Load content",
             },
 
-            joke: {
-                credits_part1: "Jokey by ",
-                credits_part2: "JokeAPI",
-            },
-
-            cat: {
-                loading: "Loading...",
-                credits_part1: "Cats by ",
-                credits_part2: "TheCatAPI",
-                credits: " ",
-            },
-
-            idiot_test: {
-                title: "Idiot Test",
-                subtitle: "Answer all questions to get your rank!",
-                progress: "Progress: ",
-                results: "Results",
-                score: "Your score: ",
-                percentage: "That is: ",
-                rank_title: "Your rank:",
-                disclaimer: "(Please don't take it too seriously)",
-                rank: {
-                    name: {
-                        0: "Idiot",
-                        1: "Amateur",
-                        2: "NPC",
-                        3: "Smarty pants",
-                        4: "Genius",
-                    },
-                    description: {
-                        0: "You somehow managed to answer hardly any questions correctly...",
-                        1: "Well... You're not an idiot, but you can do better!",
-                        2: "Not bad at all! A pretty... average score.",
-                        3: "Ok, ok, not bad... But you're still not a genius.",
-                        4: "You answered ALL the questions correctly... Respect!",
-                    },
-                },
+            superslide_disclaimer: {
+                text: "This is the web version of Superslide. Your progress will not be saved.",
+                button: "Continue",
             },
         },
         de: {
             navbar: {
                 home: "Home",
                 projects: "Projekte",
-                skills: "Skills",
+                skills: "Fähigkeiten",
                 blog: "Blog",
                 joke: "Witz",
                 cat: "Kadze",
@@ -154,46 +189,115 @@ export default defineI18nConfig(() => ({
                 coming_soon: "Kommt bald",
             },
 
-            index: {
-                introduction: "Hallo! Ich bin Creeperkatze",
-                typing_effect: {
-                    unity_dev: "Unity Spieleentwickler",
-                    mobile_game_dev: "Handyspiel-Entwickler",
-                    web_dev: "Web-Entwickler",
-                    pixel_artist: "Pixelartist",
-                    superslide_dev: "Ersteller von Superslide",
-                    stardew_modder: "Stardew Valley Modder",
+            page: {
+                index: {
+                    title: "Home",
+                    description: "Ich bin Creeperkatze, ein Unity-Spieleentwickler aus Deutschland. Mein aktuelles großes Projekt ist Superslide. Momentan beschäftige ich mich auch mit Webentwicklung.",
+                    introduction: "Hallo! Ich bin Creeperkatze",
+                    typing_effect: {
+                        unity_dev: "Unity Spieleentwickler",
+                        mobile_game_dev: "Handyspiel-Entwickler",
+                        web_dev: "Web-Entwickler",
+                        pixel_artist: "Pixelartist",
+                        superslide_dev: "Ersteller von Superslide",
+                        stardew_modder: "Stardew Valley Modder",
+                    },
+                    welcome: "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+                    title_projects: "Meine Projekte",
                 },
-                welcome: "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
-                title_projects: "Meine Projekte",
-            },
 
-            superslide: {
-                mirror_reminder: "Hier erscheint bald eine Mirror-Version...",
-                legal: "Legales",
-                privacy_policy: "Datenschutzerklärung",
-                terms: "Nutzungsbedingungen",
-                event: {
-                    easter: "Ostern",
-                    summer: "Sommer",
-                    anniversary: "Jubiläum",
-                    halloween: "Halloween",
-                    christmas: "Weihnachten",
+                projects: {
+                    title: "Projekte",
+                    description: "Meine Unity-Spielentwicklungsprojekte, derzeit bestehend aus Superslide und Flappy Christmas",
                 },
-            },
 
-            skills: {
-                title_software: "Programme",
-                title_technologies: "Technologien & Frameworks",
-            },
+                superslide: {
+                    title: "Superslide",
+                    description: "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
+                    mirror_reminder: "Hier erscheint bald eine Mirror-Version...",
+                    legal: "Legales",
+                    privacy_policy: "Datenschutzerklärung",
+                    terms: "Nutzungsbedingungen",
+                    event: {
+                        easter: "Ostern",
+                        summer: "Sommer",
+                        anniversary: "Jubiläum",
+                        halloween: "Halloween",
+                        christmas: "Weihnachten",
+                    },
+                },
 
-            blog: {
-                title: "Mein Blog"
-            },
+                flappy_christmas: {
+                    title: "Flappy Christmas",
+                    description: "Springe durch die Schornsteine!",
+                },
 
-            error: {
-                404: "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
-                else: "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",
+                skills: {
+                    title: "Fähigkeiten",
+                    description: "Meine Fähigkeiten, darunter sowohl die Software, mit der ich arbeite, als auch die Technologien und Frameworks, die ich verwende",
+                    title_software: "Programme",
+                    title_technologies: "Technologien & Frameworks",
+                },
+
+                blog: {
+                    title: "Blog",
+                    heading: "Mein Blog",
+                    description: "Mein Blog, mit Artikeln über die Entwicklung von Unity-Spielen, Web-Entwicklung und mehr!",
+                },
+
+                joke: {
+                    title: "Witz",
+                    description: "Generieren einen zufälligen Witz von der JokeAPI.",
+                    credits_part1: "Witze von ",
+                    credits_part2: "JokeAPI",
+                },
+
+                yippee: {
+                    title: "Yippee",
+                    description: "Meine Mama hat mir einfach erlaubt, dass ich Cola trinken darf!"
+                },
+
+                cat: {
+                    title: "Kadze",
+                    description: "Erhalte ein zufälliges Katzenfoto von TheCatAPI.",
+                    loading: "Lädt...",
+                    credits_part1: "Katzen von ",
+                    credits_part2: "TheCatAPI",
+                    credits: " ",
+                },
+
+                idiot_test: {
+                    title: "Idiotentest",
+                    description: "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
+                    subtitle: "Beantworte alle Fragen, um deinen Rang zu erhalten!",
+                    progress: "Fortschritt: ",
+                    results: "Ergebnisse",
+                    score: "Deine Punktzahl: ",
+                    percentage: "Das sind: ",
+                    rank_title: "Dein Rang:",
+                    disclaimer: "(Bitte nicht zu ernst nehmen)",
+                    rank: {
+                        name: {
+                            0: "Idiot",
+                            1: "Amateur",
+                            2: "NPC",
+                            3: "Schlaumeier",
+                            4: "Genie",
+                        },
+                        description: {
+                            0: "Du hast es irgendwie geschafft kaum eine Frage richtig zu beantworten...",
+                            1: "Na ja... Du bist zwar kein Idiot aber das geht besser!",
+                            2: "Garnicht so übel! Eine ziemlich... durchschnittliche Punktzahl.",
+                            3: "Ok, ok, nicht schlecht... Aber ein Genie bist du trotzdem nicht.",
+                            4: "Du hast ALLE Fragen richtig beantwortet... Respekt!",
+                        },
+                    },
+                },
+
+                error: {
+                    404: "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
+                    else: "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",
+                },
             },
 
             button: {
@@ -212,43 +316,9 @@ export default defineI18nConfig(() => ({
                 button: "Inhalt laden",
             },
 
-            joke: {
-                credits_part1: "Witze von ",
-                credits_part2: "JokeAPI",
-            },
-
-            cat: {
-                loading: "Lädt...",
-                credits_part1: "Katzen von ",
-                credits_part2: "TheCatAPI",
-                credits: " ",
-            },
-
-            idiot_test: {
-                title: "Idiotentest",
-                subtitle: "Beantworte alle Fragen, um deinen Rang zu erhalten!",
-                progress: "Fortschritt: ",
-                results: "Ergebnisse",
-                score: "Deine Punktzahl: ",
-                percentage: "Das sind: ",
-                rank_title: "Dein Rang:",
-                disclaimer: "(Bitte nicht zu ernst nehmen)",
-                rank: {
-                    name: {
-                        0: "Idiot",
-                        1: "Amateur",
-                        2: "NPC",
-                        3: "Schlaumeier",
-                        4: "Genie",
-                    },
-                    description: {
-                        0: "Du hast es irgendwie geschafft kaum eine Frage richtig zu beantworten...",
-                        1: "Na ja... Du bist zwar kein Idiot aber das geht besser!",
-                        2: "Garnicht so übel! Eine ziemlich... durchschnittliche Punktzahl.",
-                        3: "Ok, ok, nicht schlecht... Aber ein Genie bist du trotzdem nicht.",
-                        4: "Du hast ALLE Fragen richtig beantwortet... Respekt!",
-                    },
-                },
+            superslide_disclaimer: {
+                text: "Dies ist die Web-Version von Superslide. Dein Fortschritt wird nicht gepeichert.",
+                button: "Fortfahren",
             },
         }
     }

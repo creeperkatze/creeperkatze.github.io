@@ -2,19 +2,12 @@
     <Projects />
 </template>
 
-<script setup lang="ts">
+<script setup>
 
-useHead({
-    title: 'Projects | Creeperkatze',
-})
-
-useSeoMeta({
-    title: "Projects | Creeperkatze",
-    ogTitle: "Projects | Creeperkatze",
-    twitterTitle: "Projects | Creeperkatze",
-    description: "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas",
-    ogDescription: "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas",
-    twitterDescription: "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas",
+definePageMeta({
+    title: 'page.projects.title',
+    description: 'page.projects.description',
+    image: '/images/seo/default.png'
 })
 
 </script>

@@ -9,7 +9,7 @@ body
     justify-content: center;
     font-weight: bold;
     overflow-y: overlay;
-    background-image: url("/images/bg.jpg");
+    background-image: url("~/assets/images/bg.jpg");
     background-size: 250px;
 }
 
@@ -93,7 +93,7 @@ li:marker
 
 hr
 {
-    @apply rounded mb-4 border-gray-400
+    @apply rounded mb-4 border border-gray-400
 }
 
 .footer-text

@@ -13,27 +13,19 @@
                 <h1 class="text-red-600">{{ error }}</h1>
             </div>
             <hr class="rounded border-[1px] mt-4 mb-4">
-            <Button link="/joke" :rainbowBackground="true" buttonTextKey="button.new_joke" @click="getJoke" />
+            <Button link="/joke" :rainbowBackground="true" @click="getJoke">{{ $t('button.new_joke') }}</Button>
         </div>
-        <p class="mb-4">{{ $t("joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{ $t("joke.credits_part2") }}</a></p>
+        <p class="mb-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{ $t("page.joke.credits_part2") }}</a></p>
     </div>
 </template>
 
 
-<script setup lang="ts">
-useHead({
-    title: "Joke | Creeperkatze",
-})
+<script setup>
 
-useSeoMeta({
-    title: "Joke | Creeperkatze",
-    ogTitle: "Joke | Creeperkatze",
-    twitterTitle: "Joke| Creeperkatze",
-    description: "Generate a random joke using JokeAPI.",
-    ogDescription: "Generate a random joke using JokeAPI.",
-    twitterDescription: "Generate a random joke using JokeAPI.",
-    ogImage: "/images/joke/image.jpg",
-    twitterImage: "/images/joke/image.jpg",
+definePageMeta({
+  title: 'page.joke.title',
+  description: 'page.joke.description',
+  image: '/images/seo/joke.jpg'
 })
 
 const { locale } = useI18n()

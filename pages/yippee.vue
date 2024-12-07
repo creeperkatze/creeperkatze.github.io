@@ -1,14 +1,22 @@
 <template>
-    <Button link="/yippee" buttonTextKey="button.yippee" :rainbowBackground="true" @click="playSound"/>
+    <Button link="/yippee" :rainbowBackground="true" @click="playSound">{{ $t('button.yippee') }}</Button>
 </template>
 
 <script>
+
+definePageMeta({
+    title: 'page.yippee.title',
+    description: 'page.yippee.description',
+    image: '/images/seo/yippee.png'
+})
+
 export default {
-  methods: {
-    playSound() {
-      const audio = new Audio('/audio/yippee.mp3'); // Specify the correct path to your audio file
-      audio.play();
+    methods: {
+        playSound()
+        {
+            const audio = new Audio('/audio/yippee.mp3');
+            audio.play();
+        }
     }
-  }
 }
 </script>
