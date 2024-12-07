@@ -322,13 +322,13 @@ function checkAnswer(index)
 {
     let sound;
 
-    if (this.validateAnswer(this.questions[index].answer, this.questions[index].correctAnswers))
+    if (validateAnswer(questions[index].answer, questions[index].correctAnswers))
     {
-        this.questions[index].isCorrect = true;
+        questions[index].isCorrect = true;
         sound = correctSound;
     } else
     {
-        this.questions[index].isCorrect = false;
+        questions[index].isCorrect = false;
         sound = wrongSound;
     }
 
