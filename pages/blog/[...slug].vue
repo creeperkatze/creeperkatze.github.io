@@ -30,6 +30,12 @@ const { data: page } = await useAsyncData(`current-page-${currentPath}`, () =>
     queryContent(currentPath).findOne()
 );
 
+definePageMeta({
+    title: 'page.blog.title',
+    description: 'page.blog.description',
+    image: '/images/seo/blog.jpg'
+})
+
 useHead({
     title: `${page.value?.title} | Blog | Creeperkatze`
 });
