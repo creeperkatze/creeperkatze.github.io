@@ -160,7 +160,7 @@ export default defineI18nConfig(() => ({
             },
 
             superslide_disclaimer: {
-                text: "This is the web version of Superslide. Your progress will not be saved.",
+                text: "This is the web version of Superslide. Your progress is not yet being saved.",
                 button: "Continue",
             },
         },
@@ -319,7 +319,7 @@ export default defineI18nConfig(() => ({
             },
 
             superslide_disclaimer: {
-                text: "Dies ist die Web-Version von Superslide. Dein Fortschritt wird nicht gepeichert.",
+                text: "Dies ist die Web-Version von Superslide. Dein Fortschritt wird momentan noch nicht gepeichert.",
                 button: "Fortfahren",
             },
         }
