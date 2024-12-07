@@ -1,4 +1,3 @@
-<!--  -->
 <template>
     <NuxtLayout />
     <h1 class="text-red-600">{{ error?.statusCode }}</h1>

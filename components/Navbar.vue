@@ -151,7 +151,6 @@ function drawer()
     @apply transition-transform duration-200 hover:scale-110 fill-black;
 }
 
-
 .dropdown:hover .dropdown-menu
 {
     display: block;
