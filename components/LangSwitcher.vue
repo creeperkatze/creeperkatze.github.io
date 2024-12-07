@@ -1,5 +1,4 @@
 <template>
-    // eslint-disable-next-line vue/no-template-shadow
     <button v-for="currentLocale in availableLocales" :key="currentLocale.code" class="self-center min-w-8 min-h-8"
         @click.prevent.stop="() => setLocale(currentLocale.code)">
         <img :src="images[`${currentLocale.code}`]" alt="Language"
