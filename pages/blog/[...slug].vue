@@ -47,8 +47,6 @@ useSeoMeta({
     description: page.value?.description,
     ogDescription: page.value?.description,
     twitterDescription: page.value?.description,
-    ogImage: "/images/blog/image.jpg",
-    twitterImage: "/images/blog/image.jpg",
 })
 
 </script>
