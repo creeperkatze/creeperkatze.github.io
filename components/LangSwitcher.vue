@@ -14,7 +14,7 @@ const images = Object.fromEntries(
     Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
 
-const { locale, locales, setLocale } = useI18n();
+const { locales, setLocale } = useI18n();
 
 const availableLocales = computed(() =>
 {

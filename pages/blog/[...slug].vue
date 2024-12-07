@@ -2,7 +2,7 @@
     <Button link="/blog">{{ $t('button.back') }}</Button>
     <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-screen-md">
         <ContentDoc>
-            <template v-slot="{ doc }">
+            <template #default="{ doc }">
                 <article>
                     <div class="flex items-center justify-between">
                         <h1 class="text-left">{{ doc.title }}</h1>

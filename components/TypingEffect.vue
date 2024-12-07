@@ -7,6 +7,9 @@ export default {
     props: {
         phrases: {
             type: Array,
+            default() {
+                return ["Typing Effect"];
+            }
         },
         loop: {
             type: Boolean,
