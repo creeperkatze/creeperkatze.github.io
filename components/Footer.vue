@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-black items-center ignore-scrollbar pb-2 h-auto">
+    <footer class="bg-black items-center ignore-scrollbar pb-2 h-auto data-nosnippet">
         <p class="text-white mt-4 mx-4 text-center text-sm md:text-lg">
             ©<span v-text="new Date().getFullYear()"></span> {{ $t("footer.copyright") }}
         </p>
