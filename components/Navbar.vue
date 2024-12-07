@@ -24,7 +24,7 @@
                     <button @click="drawer">
                         <svg class="h-8 w-8 fill-current text-white" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -87,7 +87,7 @@
     <!-- Drawer Menu for Mobile -->
     <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden">
         <div class="flex flex-col items-center justify-center space-y-4">
-            <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
+            <NuxtLink to="/" @click="drawer" class="navbar-element text-left">{{ $t('navbar.home') }}</NuxtLink>
             <div class="dropdown relative inline-flex">
                 <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
                     class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
@@ -99,19 +99,19 @@
                 <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 z-10"
                     role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
                     <div class="p-1 pl-1 text-left text-nowrap">
-                        <NuxtLink :to="localePath('/projects/superslide')" class="navbar-element" @click="drawer">Superslide</NuxtLink>
+                        <NuxtLink :to="localePath('/projects/superslide')" @click="drawer" class="navbar-element">Superslide</NuxtLink>
                     </div>
                     <div class="p-1 pl-1 text-left text-nowrap">
-                        <NuxtLink :to="localePath('/projects/flappy-christmas')" class="navbar-element" @click="drawer">Flappy
+                        <NuxtLink :to="localePath('/projects/flappy-christmas')" @click="drawer" class="navbar-element">Flappy
                             Christmas</NuxtLink>
                     </div>
                 </div>
             </div>
-            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.skills') }}</NuxtLink>
-            <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}</NuxtLink>
-            <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}</NuxtLink>
-            <NuxtLink :to="localePath('/cat')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.cat') }}</NuxtLink>
-            <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.idiot_test') }}
+            <NuxtLink :to="localePath('/skills')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.skills') }}</NuxtLink>
+            <NuxtLink :to="localePath('/blog')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.blog') }}</NuxtLink>
+            <NuxtLink :to="localePath('/joke')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.joke') }}</NuxtLink>
+            <NuxtLink :to="localePath('/cat')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.cat') }}</NuxtLink>
+            <NuxtLink :to="localePath('/idiot-test')" @click="drawer" class="navbar-element text-left">{{ $t('navbar.idiot_test') }}
             </NuxtLink>
         </div>
     </div>
