@@ -78,7 +78,7 @@ export default defineNuxtConfig({
         identity: {
           type: 'Person',
           name: 'Creeperkatze',
-          logo: '/images/Logo512.png',
+          image: '/images/Logo512.png',
           sameAs: [
             'https://www.instagram.com/creeperkatze/',
             'https://creeperkatze.itch.io/',
