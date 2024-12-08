@@ -70,5 +70,18 @@ export default defineNuxtConfig({
         options: {
             scrollBehaviorType: 'smooth',
         }
-    }
+    },
+
+    schemaOrg: {
+        identity: {
+          type: 'Person',
+          name: 'Creeperkatze',
+          logo: '/images/Logo512.png',
+          sameAs: [
+            'https://www.instagram.com/creeperkatze/',
+            'https://creeperkatze.itch.io/',
+            'https://github.com/creeperkatze'
+          ]
+        }
+      }
 });
