@@ -112,7 +112,7 @@ export default defineI18nConfig(() => ({
                 idiot_test: {
                     title: "Idiot Test",
                     description: "Test whether you're an idiot with these crazy and tricky questions.",
-                    subtitle: "Answer all questions to get your rank!",
+                    text: "Have you ever wondered whether you're an idiot? Then you've come to the right place! Answer all 25 questions in this online idiot test to get your result!",
                     progress: "Progress: ",
                     results: "Results",
                     score: "Your score: ",
@@ -271,7 +271,7 @@ export default defineI18nConfig(() => ({
                 idiot_test: {
                     title: "Idiotentest",
                     description: "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
-                    subtitle: "Beantworte alle Fragen, um deinen Rang zu erhalten!",
+                    text: "Hast du dich schon einmal gefragt, ob du ein Idiot bist? Dann bist du hier genau richtig! Beantworte in diesem Online-Idiotentest alle 25 Fragen, um dein Ergebnis zu erhalten!",
                     progress: "Fortschritt: ",
                     results: "Ergebnisse",
                     score: "Deine Punktzahl: ",

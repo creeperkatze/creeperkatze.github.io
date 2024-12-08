@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-screen-md mx-auto">
         <h1>{{ $t("page.idiot_test.title") }}</h1>
-        <p class="mb-4">{{ $t("page.idiot_test.subtitle") }}</p>
+        <p class="mb-4">{{ $t("page.idiot_test.text") }}</p>
         <div v-if="!allQuestionsAnswered"
             class="sticky top-4 max-w-xl mx-auto p-4 bg-white border-2 border-black rounded-lg mb-4 z-10">
             <div class="w-full bg-gray-200 h-2 rounded-full">
