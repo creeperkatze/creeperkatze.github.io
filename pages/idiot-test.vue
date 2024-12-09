@@ -180,7 +180,7 @@ function validateAnswer(userAnswer, correctAnswers)
 
     return correctAnswers.some(correctAnswer =>
     {
-        const normalizedCorrect = correctAnswer.loc.source.toLowerCase().trim();
+        const normalizedCorrect = correctAnswer.body.static.toLowerCase().trim();
 
         // 1. Exact match (always check for exact match)
         if (normalizedInput === normalizedCorrect)
