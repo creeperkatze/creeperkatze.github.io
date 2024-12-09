@@ -36,7 +36,7 @@ const head = useLocaleHead()
 update();
 
 function update(){
-    const translatedTitle = t(route.meta.title) || '?';
+    const translatedTitle = t(route.meta.title) || '';
     const translatedDescription = t(route.meta.description) || '';
 
     const image = route.meta.image ? route.meta.image : '/images/seo/default.png';
@@ -56,9 +56,9 @@ function update(){
     })
 
     useSeoMeta({
-        title: `${translatedTitle}`,
-        ogTitle: `${translatedTitle}`,
-        twitterTitle: `${translatedTitle}`,
+        title: `${translatedTitle} | Creeperkatze`,
+        ogTitle: `${translatedTitle} | Creeperkatze`,
+        twitterTitle: `${translatedTitle} | Creeperkatze`,
         description: translatedDescription,
         ogDescription: translatedDescription,
         twitterDescription: translatedDescription,
