@@ -56,7 +56,7 @@ function update(){
     })
 
     useSeoMeta({
-        title: `${translatedTitle} | Creeperkatze`,
+        title: `${translatedTitle}`,
         ogTitle: `${translatedTitle} | Creeperkatze`,
         twitterTitle: `${translatedTitle} | Creeperkatze`,
         description: translatedDescription,
