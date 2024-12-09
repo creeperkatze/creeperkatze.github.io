@@ -36,7 +36,7 @@ const head = useLocaleHead()
 update();
 
 function update(){
-    const translatedTitle = t(route.meta.title) || 'Creeperkatze';
+    const translatedTitle = t(route.meta.title) || '?';
     const translatedDescription = t(route.meta.description) || '';
 
     const image = route.meta.image ? route.meta.image : '/images/seo/default.png';
@@ -52,13 +52,13 @@ function update(){
         meta: [
             { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' },
         ],
-        title: `${translatedTitle} | Creeperkatze`,
+        title: `${translatedTitle}`,
     })
 
     useSeoMeta({
-        title: `${translatedTitle} | Creeperkatze`,
-        ogTitle: `${translatedTitle} | Creeperkatze`,
-        twitterTitle: `${translatedTitle} | Creeperkatze`,
+        title: `${translatedTitle}`,
+        ogTitle: `${translatedTitle}`,
+        twitterTitle: `${translatedTitle}`,
         description: translatedDescription,
         ogDescription: translatedDescription,
         twitterDescription: translatedDescription,
