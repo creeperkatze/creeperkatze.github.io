@@ -1,0 +1,227 @@
+{
+    "idiot_test": {
+        "questions": {
+            "0": {
+                "text": "How often can you subtract 1 from 20?",
+                "correctAnswers": [
+                    "1 time",
+                    "1",
+                    "one time",
+                    "one",
+                    "once"
+                ],
+                "explanation": "Only once, after that you're already subtracting from 19."
+            },
+            "1": {
+                "text": "You overtake the second fastest runner, in which place are you now?",
+                "correctAnswers": [
+                    "place 2",
+                    "2",
+                    "2.",
+                    "two",
+                    "second"
+                ],
+                "explanation": "You took his place, in other words the second one."
+            },
+            "2": {
+                "text": "Which words are written on the edge of a 1 euro coin?",
+                "correctAnswers": [
+                    "none",
+                    "nothing"
+                ],
+                "explanation": "There's never been anything written there xD."
+            },
+            "3": {
+                "text": "How many birthdays does a person have?",
+                "correctAnswers": [
+                    "1",
+                    "one"
+                ],
+                "explanation": "Obviously, you are only born once."
+            },
+            "4": {
+                "text": "Some months have 31 days, others 30. How many months have 28 days?",
+                "correctAnswers": [
+                    "12",
+                    "twelve",
+                    "all"
+                ],
+                "explanation": "All months have at least 28 days."
+            },
+            "5": {
+                "text": "A farmer has 10 sheep, all but 9 die. How many sheep does he have left?",
+                "correctAnswers": [
+                    "9",
+                    "nine"
+                ],
+                "explanation": "If all except 9 die, 9 are still alive."
+            },
+            "6": {
+                "text": "Berlin begins with a \"B\" and ends with an \"e\". Is that correct?",
+                "correctAnswers": [
+                    "yes"
+                ],
+                "explanation": "Of course \"ends\" begins with an \"e\"."
+            },
+            "7": {
+                "text": "Is it legal in Switzerland for a man to marry his widow's sister?",
+                "correctAnswers": [
+                    "does not work",
+                    "impossible",
+                    "not possible",
+                    "is dead",
+                    "would be dead",
+                    "alive"
+                ],
+                "explanation": "That's not possible. The man would no longer be alive."
+            },
+            "8": {
+                "text": "You have a box of matches and enter a room containing nothing but a paraffin lamp, a fireplace and an oil stove. What do you light first?",
+                "correctAnswers": [
+                    "matches",
+                    "match",
+                    "the matches"
+                ],
+                "explanation": "Obviously the match."
+            },
+            "9": {
+                "text": "Is there a June 17th in England?",
+                "correctAnswers": [
+                    "yes"
+                ],
+                "explanation": "Of course."
+            },
+            "10": {
+                "text": "Where does a duck that swims in the Rhine in Duisburg come from?",
+                "correctAnswers": [
+                    "egg",
+                    "an egg"
+                ],
+                "explanation": "From an egg."
+            },
+            "11": {
+                "text": "A pigeon is more likely to eat 1500kg of wheat than a horse. Is that true?",
+                "correctAnswers": [
+                    "yes"
+                ],
+                "explanation": "Yes, a pigeon can't eat a horse."
+            },
+            "12": {
+                "text": "With what does the time begin and the night end?",
+                "correctAnswers": [
+                    "t",
+                    "letter t"
+                ],
+                "explanation": "With the letter \"t\"."
+            },
+            "13": {
+                "text": "What is behind Cologne Cathedral?",
+                "correctAnswers": [
+                    "question mark",
+                    "a question mark",
+                    "?",
+                    "a ?"
+                ],
+                "explanation": "A question mark."
+            },
+            "14": {
+                "text": "What does a glazier do when he has no glass?",
+                "correctAnswers": [
+                    "he drinks from the bottle",
+                    "drinking from the bottle",
+                    "drink from the bottle",
+                    "drink from bottle",
+                    "bottle"
+                ],
+                "explanation": "He drinks from the bottle."
+            },
+            "15": {
+                "text": "How many ladders would it take to get from the Earth to the Moon?",
+                "correctAnswers": [
+                    "1",
+                    "one",
+                    "a large",
+                    "a big one"
+                ],
+                "explanation": "Just one, it just has to be long enough."
+            },
+            "16": {
+                "text": "Four out of six candles are blown out. How many are left?",
+                "correctAnswers": [
+                    "4",
+                    "four"
+                ],
+                "explanation": "Four, the rest burn down."
+            },
+            "17": {
+                "text": "What word is spelled incorrectly in every single dictionary?",
+                "correctAnswers": [
+                    "incorrectly"
+                ],
+                "explanation": "Incorrectly."
+            },
+            "18": {
+                "text": "Does a night warden who dies during the day receive a pension?",
+                "correctAnswers": [
+                    "no",
+                    "he dies",
+                    "dead",
+                    "not possible",
+                    "impossible"
+                ],
+                "explanation": "No, he is dead."
+            },
+            "19": {
+                "text": "There are 10 pigeons sitting on a pole. A hunter shoots one pigeon. How many are still sitting there?",
+                "correctAnswers": [
+                    "0",
+                    "none",
+                    "zero"
+                ],
+                "explanation": "None, because the others fly away due to the shot"
+            },
+            "20": {
+                "text": "\"You are my son, but I am not your father\". Who says that?",
+                "correctAnswers": [
+                    "mother"
+                ],
+                "explanation": "The mother."
+            },
+            "21": {
+                "text": "A heavy stone stands on the village square. Every morning when the cock crows, it moves. Is that possible?",
+                "correctAnswers": [
+                    "yes"
+                ],
+                "explanation": "Yes, the cock can move."
+            },
+            "22": {
+                "text": "Can a person living west of New York be buried in Manchester?",
+                "correctAnswers": [
+                    "no",
+                    "still alive",
+                    "does not work",
+                    "impossible",
+                    "not possible"
+                ],
+                "explanation": "No, he is still alive."
+            },
+            "23": {
+                "text": "You go to bed at 8am and fall asleep immediately. Your alarm is set to wake you up at 9am, how long did you sleep?",
+                "correctAnswers": [
+                    "1 hour",
+                    "one hour",
+                    "1",
+                    "1h"
+                ],
+                "explanation": "One hour."
+            },
+            "24": {
+                "text": "What happened in Berlin on December 24th, 1969?",
+                "correctAnswers": [
+                    "christmas"
+                ],
+                "explanation": "Christmas."
+            }
+        }
+    }
+}

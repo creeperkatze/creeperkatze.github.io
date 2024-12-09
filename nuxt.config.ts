@@ -48,18 +48,23 @@ export default defineNuxtConfig({
             useCookie: true,
             cookieKey: "i18n",
         },
+        langDir: 'locales/',
         defaultLocale: "de",
+        lazy: true,
         locales: [
+            {
+                code: "de",
+                language: "de-DE",
+                name: "Deutsch",
+                dir: 'ltr', 
+                files: ['de/main.json', 'de/idiot_test.json'],
+            },
             {
                 code: "en",
                 language: "en-US",
                 name: "English",
-
-            },
-            {
-                code: "de",
-                language: "de-DE",
-                name: "Deutsch"
+                dir: 'ltr', 
+                files: ['en/main.json', 'en/idiot_test.json'],
             }
         ]
     },

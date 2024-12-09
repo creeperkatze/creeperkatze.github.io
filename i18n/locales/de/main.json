@@ -1,0 +1,144 @@
+{
+    "navbar": {
+        "home": "Home",
+        "projects": "Projekte",
+        "skills": "Fähigkeiten",
+        "blog": "Blog",
+        "joke": "Witz",
+        "cat": "Kadze",
+        "idiot_test": "Idiotentest"
+    },
+    "footer": {
+        "copyright": "Creeperkatze. Alle Rechte vorbehalten.",
+        "text_part1": "Erstellt mit ",
+        "text_part2": " und ",
+        "text_part3": ". Quelle verfügbar auf ",
+        "link_nuxt": "Nuxt",
+        "link_tailwind": "Tailwind",
+        "link_github": "Github"
+    },
+    "project_descriptions": {
+        "superslide": "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
+        "flappy_christmas": "Springe durch die Schornsteine!",
+        "coming_soon": "Kommt bald"
+    },
+    "page": {
+        "index": {
+            "title": "Home",
+            "description": "Ich bin Creeperkatze, ein Unity-Spieleentwickler aus Deutschland. Mein aktuelles großes Projekt ist Superslide. Momentan beschäftige ich mich auch mit Webentwicklung.",
+            "introduction": "Hallo! Ich bin Creeperkatze",
+            "typing_effect": {
+                "unity_dev": "Unity Spieleentwickler",
+                "mobile_game_dev": "Handyspiel-Entwickler",
+                "web_dev": "Web-Entwickler",
+                "pixel_artist": "Pixelartist",
+                "superslide_dev": "Ersteller von Superslide",
+                "stardew_modder": "Stardew Valley Modder"
+            },
+            "welcome": "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+            "title_projects": "Meine Projekte"
+        },
+        "projects": {
+            "title": "Projekte",
+            "description": "Meine Unity-Spielentwicklungsprojekte, derzeit bestehend aus Superslide und Flappy Christmas"
+        },
+        "superslide": {
+            "title": "Superslide",
+            "description": "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
+            "mirror_reminder": "Hier erscheint bald eine Mirror-Version...",
+            "legal": "Legales",
+            "privacy_policy": "Datenschutzerklärung",
+            "terms": "Nutzungsbedingungen",
+            "event": {
+                "easter": "Ostern",
+                "summer": "Sommer",
+                "anniversary": "Jubiläum",
+                "halloween": "Halloween",
+                "christmas": "Weihnachten"
+            }
+        },
+        "flappy_christmas": {
+            "title": "Flappy Christmas",
+            "description": "Springe durch die Schornsteine!"
+        },
+        "skills": {
+            "title": "Fähigkeiten",
+            "description": "Meine Fähigkeiten, darunter sowohl die Software, mit der ich arbeite, als auch die Technologien und Frameworks, die ich verwende",
+            "title_software": "Programme",
+            "title_technologies": "Technologien & Frameworks"
+        },
+        "blog": {
+            "title": "Blog",
+            "heading": "Mein Blog",
+            "description": "Mein Blog, mit Artikeln über die Entwicklung von Unity-Spielen, Web-Entwicklung und mehr!"
+        },
+        "joke": {
+            "title": "Witz",
+            "description": "Generieren einen zufälligen Witz von der JokeAPI.",
+            "credits_part1": "Witze von ",
+            "credits_part2": "JokeAPI"
+        },
+        "yippee": {
+            "title": "Yippee",
+            "description": "Meine Mama hat mir einfach erlaubt, dass ich Cola trinken darf!"
+        },
+        "cat": {
+            "title": "Kadze",
+            "description": "Erhalte ein zufälliges Katzenfoto von TheCatAPI.",
+            "loading": "Lädt...",
+            "credits_part1": "Katzen von ",
+            "credits_part2": "TheCatAPI",
+            "credits": " "
+        },
+        "idiot_test": {
+            "title": "Idiotentest",
+            "description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
+            "text": "Hast du dich schon einmal gefragt, ob du ein Idiot bist? Dann bist du hier genau richtig! Beantworte in diesem Online-Idiotentest alle 25 Fragen, um dein Ergebnis zu erhalten!",
+            "input": "Schreibe deine Antwort",
+            "progress": "Fortschritt: ",
+            "results": "Ergebnisse",
+            "score": "Deine Punktzahl: ",
+            "percentage": "Das sind: ",
+            "rank_title": "Dein Rang:",
+            "disclaimer": "(Bitte nicht zu ernst nehmen)",
+            "rank": {
+                "name": {
+                    "0": "Idiot",
+                    "1": "Amateur",
+                    "2": "NPC",
+                    "3": "Schlaumeier",
+                    "4": "Genie"
+                },
+                "description": {
+                    "0": "Du hast es irgendwie geschafft kaum eine Frage richtig zu beantworten...",
+                    "1": "Na ja... Du bist zwar kein Idiot aber das geht besser!",
+                    "2": "Garnicht so übel! Eine ziemlich... durchschnittliche Punktzahl.",
+                    "3": "Ok, ok, nicht schlecht... Aber ein Genie bist du trotzdem nicht.",
+                    "4": "Du hast ALLE Fragen richtig beantwortet... Respekt!"
+                }
+            }
+        },
+        "error": {
+            "404": "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
+            "else": "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;("
+        }
+    },
+    "button": {
+        "default": "Knopf",
+        "home": "Home",
+        "back": "Zurück",
+        "new_joke": "Noch einer!",
+        "new_cat": "Mehr!",
+        "yippee": "Yippee!"
+    },
+    "consent_panel": {
+        "text_part1": "Diese Website verwendet Inhalte von Drittanbietern (z. B. ",
+        "text_part2": "Itch.io",
+        "text_part3": "), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
+        "button": "Inhalt laden"
+    },
+    "superslide_disclaimer": {
+        "text": "Dies ist die Web-Version von Superslide. Dein Fortschritt wird momentan noch nicht gepeichert.",
+        "button": "Fortfahren"
+    }
+}
