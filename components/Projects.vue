@@ -53,13 +53,15 @@ const countdown = ref('');
 
 const fetchEventData = async () =>
 {
-    // Fetch event data on component mount
-    const response = await fetch('/api/superslide/event');
-
-    if (!response.ok)
+    try
     {
-        console.warn(`Superslide API response failed ${response.status}`);
+        response = await fetch('/api/superslide/event');
     }
+    catch
+    {
+        console.warn(`Superslide API response failed: ${error}`);
+    }
+
     event.value = await response.json();
 }
 
