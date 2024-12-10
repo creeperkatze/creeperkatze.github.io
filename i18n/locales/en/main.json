@@ -73,7 +73,7 @@
             "description": "My blog, consisting of articles about Unity game developement, web developement, and more!"
         },
         "joke": {
-            "title": "Joke",
+            "title": "Joke Generator",
             "description": "Generate a random joke using JokeAPI.",
             "credits_part1": "Joke by ",
             "credits_part2": "JokeAPI"
@@ -83,7 +83,7 @@
             "description": "Meine Mama hat mir einfach erlaubt, dass ich Cola trinken darf!"
         },
         "cat": {
-            "title": "Cat",
+            "title": "Cat Generator",
             "description": "Get a random cat photo using TheCatAPI.",
             "loading": "Loading...",
             "credits_part1": "Cats by ",

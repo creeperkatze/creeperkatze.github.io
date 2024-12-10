@@ -51,8 +51,9 @@ useSeoMeta({
 
 useSchemaOrg([
   defineWebPage({
-    type: "BlogPosting"
+    type: "BlogPosting",
   })
+
 ]);
 
 </script>
