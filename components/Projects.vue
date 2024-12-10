@@ -58,7 +58,7 @@ const fetchEventData = async () =>
 
     if (!response.ok)
     {
-        throw new Error('Network response was not ok');
+        console.warn(`Superslide API response failed ${response.status}`);
     }
     event.value = await response.json();
 }
