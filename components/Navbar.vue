@@ -31,7 +31,7 @@
             </div>
 
             <!-- Links for desktop view -->
-            <div class="hidden lg:block">
+            <nav class="hidden lg:block">
                 <div class="flex justify-start gap-4 mx-4">
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                     <div class="dropdown relative inline-flex">
@@ -60,10 +60,9 @@
                     <NuxtLink :to="localePath('/blog')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
                     <NuxtLink :to="localePath('/joke')" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
                     <NuxtLink :to="localePath('/cat')" class="navbar-element">{{ $t('navbar.cat') }}</NuxtLink>
-                    <NuxtLink :to="localePath('/idiot-test')" class="navbar-element">{{ $t('navbar.idiot_test') }}
-                    </NuxtLink>
+                    <NuxtLink :to="localePath('/idiot-test')" class="navbar-element">{{ $t('navbar.idiot_test') }}</NuxtLink>
                 </div>
-            </div>
+            </nav>
 
             <!-- Buttons -->
             <div class="flex flex-row gap-4">
@@ -86,7 +85,7 @@
 
     <!-- Drawer Menu for Mobile -->
     <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden">
-        <div class="flex flex-col items-center justify-center space-y-4">
+        <nav class="flex flex-col items-center justify-center space-y-4">
             <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
             <div class="dropdown relative inline-flex">
                 <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
@@ -111,9 +110,8 @@
             <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}</NuxtLink>
             <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}</NuxtLink>
             <NuxtLink :to="localePath('/cat')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.cat') }}</NuxtLink>
-            <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.idiot_test') }}
-            </NuxtLink>
-        </div>
+            <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.idiot_test') }}</NuxtLink>
+        </nav>
     </div>
 </template>
 
@@ -129,7 +127,7 @@ function drawer()
 }
 </script>
 
-<style>
+<style setup>
 .wrapper
 {
     @apply max-w-screen-xl mx-auto

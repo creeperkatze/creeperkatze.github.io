@@ -41,7 +41,7 @@
             </li>
         </ul>
 
-        <div v-if="allQuestionsAnswered" id="results" class="mt-4">
+        <section v-if="allQuestionsAnswered" id="results" class="mt-4">
             <hr class="rounded border-[1px] mt-4 mb-4">
             <h1 class="mb-4">{{ $t("page.idiot_test.results") }}</h1>
             <h3>{{ $t("page.idiot_test.score") }}{{ score }} / {{ questions.length }}</h3>
@@ -52,9 +52,10 @@
             <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-8 border-yellow-600">
                 <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
                 <h4 class="mb-4">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
-                <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center" :alt="$t('page.idiot_test.rank.name.' + rank)">
+                <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center"
+                    :alt="$t('page.idiot_test.rank.name.' + rank)">
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
@@ -86,7 +87,8 @@ const images = Object.fromEntries(
 
 const { tm, t, rt } = useI18n();
 
-const questions = reactive(Object.keys(tm('idiot_test.questions')).map((key) => {
+const questions = reactive(Object.keys(tm('idiot_test.questions')).map((key) =>
+{
     return {
         text: t(`idiot_test.questions.${key}.text`),
         correctAnswers: toRaw(tm(`idiot_test.questions.${key}.correctAnswers`)),
@@ -169,9 +171,11 @@ function checkAnswer(index)
     sound.play();
 
     const nextIndex = questions.findIndex((question, i) => i > index && question.isCorrect === undefined);
-    if (nextIndex !== -1) {
+    if (nextIndex !== -1)
+    {
         const nextInput = document.querySelectorAll("input")[nextIndex];
-        if (nextInput) {
+        if (nextInput)
+        {
             nextInput.focus();
         }
     }
