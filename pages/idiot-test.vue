@@ -167,6 +167,14 @@ function checkAnswer(index)
 
     sound.currentTime = 0; // Restart sound
     sound.play();
+
+    const nextIndex = questions.findIndex((question, i) => i > index && question.isCorrect === undefined);
+    if (nextIndex !== -1) {
+        const nextInput = document.querySelectorAll("input")[nextIndex];
+        if (nextInput) {
+            nextInput.focus();
+        }
+    }
 }
 
 function validateAnswer(userAnswer, correctAnswers)
