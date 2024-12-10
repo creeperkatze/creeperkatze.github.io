@@ -47,6 +47,12 @@ useSeoMeta({
     description: page.value?.description,
     ogDescription: page.value?.description,
     twitterDescription: page.value?.description,
-})
+});
+
+useSchemaOrg([
+  defineWebPage({
+    type: "BlogPosting"
+  })
+]);
 
 </script>
