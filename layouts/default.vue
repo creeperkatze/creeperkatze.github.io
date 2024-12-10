@@ -33,11 +33,20 @@ const route = useRoute()
 const { t } = useI18n()
 const head = useLocaleHead()
 
-update();
 
-function update(){
+function update()
+{
+    // If the route name cant be resolved, for example when theres a 404 error, 
+    // dont use this custom implementation, as it relies on definePageMeta()
+    if (route.name == undefined)
+    {
+        return;
+    }
+
     const translatedTitle = t(route.meta.title) || '';
+    console.log(translatedTitle);
     const translatedDescription = t(route.meta.description) || '';
+    console.log(translatedDescription);
 
     const image = route.meta.image ? route.meta.image : '/images/seo/default.png';
 

@@ -1,5 +1,5 @@
 <template>
-    <img src="~/assets/images/flappy-christmas/FlappyChristmas.png" format="webp" width="800" class="center mb-5">
+    <img src="~/assets/images/flappy-christmas/FlappyChristmas.png" alt="Flappy Christmas" format="webp" width="800" class="center mb-5">
 
     <div v-if="consent" class="center rounded-lg w-full max-w-xl mx-4">
         <iframe frameborder="0"

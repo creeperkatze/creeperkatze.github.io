@@ -52,7 +52,7 @@
             <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-8 border-yellow-600">
                 <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
                 <h4 class="mb-4">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
-                <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center">
+                <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center" :alt="$t('page.idiot_test.rank.name.' + rank)">
             </div>
         </div>
     </div>

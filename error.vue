@@ -8,30 +8,35 @@
     <h2 v-else class="mb-5">
         {{ $t("page.error.else") }}
     </h2>
-    <img src="~/assets/images/error/soggy-cat-cat.gif" class="center w-[400px] mb-5">
+    <img src="~/assets/images/error/soggy-cat-cat.gif" :alt="$t('error.image.cat')" class="center w-[400px] mb-5">
     <Button link="/">{{ $t('button.home') }}</Button>
 </template>
 
 <script setup>
-
-definePageMeta({
-  description: 'page.error.404'
-})
-
-useHead({
-    title: '404 | Creeperkatze',
-})
-
-useSeoMeta({
-    title: '404 | Creeperkatze',
-    ogTitle: '404 | Creeperkatze',
-    twitterTitle: '404 | Creeperkatze',
-})
+const { t } = useI18n()
 
 defineProps({
     error: {
         type: Object,
         required: true,
     },
+});
+
+useHead({
+    title: '404 | Creeperkatze',
+})
+
+const localizedDescription = t('page.error.404');
+
+useSeoMeta({
+    title: '404',
+    ogTitle: '404 | Creeperkatze',
+    twitterTitle: '404 | Creeperkatze',
+    description: localizedDescription,
+    ogDescription: localizedDescription,
+    twitterDescription: localizedDescription,
+    ogImage: '/images/seo/error.png',
+    twitterImage: '/images/seo/error.png',
+    twitterCard: "summary",
 });
 </script>
