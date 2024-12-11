@@ -53,17 +53,26 @@ const countdown = ref('');
 
 const fetchEventData = async () =>
 {
+    let response;
+
     try
     {
         response = await fetch('/api/superslide/event');
-    }
-    catch
+    } catch (error)
     {
-        console.warn('Superslide API response failed');
+        console.warn('Superslide API response failed:', error);
+        return; // Exit early if the request fails
     }
 
-    event.value = await response.json();
-}
+    try
+    {
+        event.value = await response.json();
+    } 
+    catch (error)
+    {
+        console.warn('Failed to parse JSON response:', error);
+    }
+};
 
 // Calculate remaining time
 const getCountdown = () =>
@@ -93,15 +102,9 @@ onMounted(async () =>
     countdown.value = getCountdown();
 
     // Update the remaining time every second
-    const interval = setInterval(() =>
+    setInterval(() =>
     {
         countdown.value = getCountdown();
-    }, 1000);
-
-    // Clear the interval on component unmount
-    onUnmounted(() =>
-    {
-        clearInterval(interval);
     });
 });
 </script>
