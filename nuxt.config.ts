@@ -8,15 +8,15 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css"],
     modules:
         [
-          "@nuxtjs/google-fonts",
-          "@nuxtjs/tailwindcss",
-          "@nuxtjs/color-mode",
-          "@nuxtjs/sitemap",
-          "@nuxtjs/i18n",
-          "@nuxt/content",
-          "@nuxt/eslint",
-          "nuxt-schema-org",
-          "@nuxtjs/seo"
+            "@nuxtjs/google-fonts",
+            "@nuxtjs/tailwindcss",
+            "@nuxtjs/color-mode",
+            "@nuxtjs/sitemap",
+            "@nuxtjs/i18n",
+            "@nuxt/content",
+            "@nuxt/eslint",
+            "nuxt-schema-org",
+            "@nuxtjs/seo"
         ],
 
     googleFonts:
@@ -34,6 +34,12 @@ export default defineNuxtConfig({
         plugins: [svgLoader({
             defaultImport: "url"
         })]
+    },
+
+    nitro: {
+        prerender: {
+            failOnError: false,
+        },
     },
 
     site: {
@@ -56,14 +62,14 @@ export default defineNuxtConfig({
                 code: "de",
                 language: "de-DE",
                 name: "Deutsch",
-                dir: 'ltr', 
+                dir: 'ltr',
                 files: ['de/main.json', 'de/idiot_test.json'],
             },
             {
                 code: "en",
                 language: "en-US",
                 name: "English",
-                dir: 'ltr', 
+                dir: 'ltr',
                 files: ['en/main.json', 'en/idiot_test.json'],
             }
         ]
@@ -81,14 +87,14 @@ export default defineNuxtConfig({
 
     schemaOrg: {
         identity: {
-          type: 'Person',
-          name: 'Creeperkatze',
-          image: '/images/Logo512.png',
-          sameAs: [
-            'https://www.instagram.com/creeperkatze/',
-            'https://creeperkatze.itch.io/',
-            'https://github.com/creeperkatze'
-          ]
+            type: 'Person',
+            name: 'Creeperkatze',
+            image: '/images/Logo512.png',
+            sameAs: [
+                'https://www.instagram.com/creeperkatze/',
+                'https://creeperkatze.itch.io/',
+                'https://github.com/creeperkatze'
+            ]
         }
-      }
+    }
 });
