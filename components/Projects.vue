@@ -98,6 +98,7 @@ const getCountdown = () =>
 // Fetch event data and initialize remaining time
 onMounted(async () =>
 {
+    /*
     await fetchEventData();
     countdown.value = getCountdown();
 
@@ -106,6 +107,7 @@ onMounted(async () =>
     {
         countdown.value = getCountdown();
     });
+    */
 });
 </script>
 
