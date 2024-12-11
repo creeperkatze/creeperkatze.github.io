@@ -45,9 +45,7 @@ function update()
     }
 
     const translatedTitle = t(route.meta.title) || '';
-    console.log(translatedTitle);
     const translatedDescription = t(route.meta.description) || '';
-    console.log(translatedDescription);
 
     const image = route.meta.image ? route.meta.image : '/images/seo/default.png';
 
