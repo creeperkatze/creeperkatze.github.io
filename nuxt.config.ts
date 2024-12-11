@@ -36,12 +36,6 @@ export default defineNuxtConfig({
         })]
     },
 
-    nitro: {
-        prerender: {
-            failOnError: false,
-        },
-    },
-
     site: {
         url: "https://creeperkatze.github.io",
         name: "Creeperkatze"
@@ -76,7 +70,8 @@ export default defineNuxtConfig({
     },
 
     content: {
-        contentHead: false
+        contentHead: false,
+        locales: ['de', 'en'],
     },
 
     router: {

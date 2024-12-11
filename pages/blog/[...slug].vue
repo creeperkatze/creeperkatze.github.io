@@ -1,7 +1,7 @@
 <template>
     <Button link="/blog">{{ $t('button.back') }}</Button>
     <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-screen-md">
-        <ContentDoc>
+        <ContentDoc :path="currentPath">
             <template #default="{ doc }">
                 <article>
                     <div class="flex items-center justify-between">
@@ -25,10 +25,28 @@
 
 <script setup>
 
-const currentPath = useRoute().path; // Get the current route path dynamically
+const currentPath = useUnlocalePath(useRoute().path); // Get the current route path dynamically
 const { data: page } = await useAsyncData(`current-page-${currentPath}`, () =>
-    queryContent(currentPath).findOne()
+    queryContent(currentPath.findOne())
 );
+
+console.log()
+
+function useUnlocalePath()
+{
+    const path = useRoute().path;
+    for (const locale of useI18n().availableLocales)
+    {
+        const prefix = "/" + locale;
+        if (path.startsWith(prefix))
+        {
+            return path.slice(prefix.length);
+        }
+    }
+    return path;
+}
+
+console.log(currentPath);
 
 definePageMeta({
     title: 'page.blog.title',
@@ -37,11 +55,11 @@ definePageMeta({
 })
 
 useHead({
-    title: `${page.value?.title} | Blog | Creeperkatze`
+    title: `${page.value?.title} | Blog`
 });
 
 useSeoMeta({
-    title: `${page.value?.title} | Blog | Creeperkatze`,
+    title: `${page.value?.title} | Blog`,
     ogTitle: `${page.value?.title} | Blog | Creeperkatze`,
     twitterTitle: `${page.value?.title} | Blog | Creeperkatze`,
     description: page.value?.description,
@@ -50,9 +68,9 @@ useSeoMeta({
 });
 
 useSchemaOrg([
-  defineWebPage({
-    type: "BlogPosting",
-  })
+    defineWebPage({
+        type: "BlogPosting",
+    })
 
 ]);
 
