@@ -86,7 +86,9 @@
         "blog": {
             "title": "Blog",
             "heading": "Mein Blog",
-            "description": "Mein Blog, mit Artikeln über die Entwicklung von Unity-Spielen, Web-Entwicklung und mehr!"
+            "description": "Mein Blog, mit Artikeln über die Entwicklung von Unity-Spielen, Web-Entwicklung und mehr!",
+            "not_found": "Blog nicht gefunden",
+            "empty": "Blog ist leer"
         },
         "joke": {
             "title": "Witzgenerator",
@@ -139,6 +141,7 @@
         },
         "error": {
             "404": "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
+            "else": "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",
             "image": {
                 "cat": "Nasse Katze"
             }

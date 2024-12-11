@@ -86,7 +86,9 @@
         "blog": {
             "title": "Blog",
             "heading": "My Blog",
-            "description": "My blog, consisting of articles about Unity game developement, web developement, and more!"
+            "description": "My blog, consisting of articles about Unity game developement, web developement, and more!",
+            "not_found": "Blog not found",
+            "empty": "Blog is empty"
         },
         "joke": {
             "title": "Joke Generator",

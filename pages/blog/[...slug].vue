@@ -1,7 +1,7 @@
 <template>
     <Button link="/blog">{{ $t('button.back') }}</Button>
     <div class="flex center items-center p-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-screen-md">
-        <ContentDoc :path="currentPath">
+        <ContentDoc :path="path">
             <template #default="{ doc }">
                 <article>
                     <div class="flex items-center justify-between">
@@ -14,23 +14,23 @@
                 </article>
             </template>
             <template #not-found>
-                <h1>Blog not found</h1>
+                <h1>{{ $t('page.blog.not_found') }}</h1>
             </template>
             <template #empty>
-                <h1>Blog is empty</h1>
+                <h1>{{ $t('page.blog.empty') }}</h1>
             </template>
         </ContentDoc>
     </div>
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router';
 
-const currentPath = useUnlocalePath(useRoute().path); // Get the current route path dynamically
-const { data: page } = await useAsyncData(`current-page-${currentPath}`, () =>
-    queryContent(currentPath.findOne())
+const path = useUnlocalePath(useRoute().path);
+
+const { data: page } = await useAsyncData(`current-page-${path}`, () =>
+    queryContent(path).findOne()
 );
-
-console.log()
 
 function useUnlocalePath()
 {
@@ -45,8 +45,6 @@ function useUnlocalePath()
     }
     return path;
 }
-
-console.log(currentPath);
 
 definePageMeta({
     title: 'page.blog.title',
@@ -71,7 +69,6 @@ useSchemaOrg([
     defineWebPage({
         type: "BlogPosting",
     })
-
 ]);
 
 </script>
