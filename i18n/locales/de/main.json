@@ -40,14 +40,22 @@
                 "games": "Spiele",
                 "webdev": "Webentwicklung"
             },
-            "project_title": {
-                "website": "Persönliche Website"
-            },
-            "project_description": {
-                "superslide": "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
-                "flappy_christmas": "Springe durch die Schornsteine!",
-                "website": "Wie ich diese persönliche Website mit Nuxt und Tailwind erstellt habe✨",
-                "coming_soon": "Kommt bald"
+            "project": {
+                "superslide": {
+                    "title": "Superslide",
+                    "description": "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!"
+                },
+                "flappy_christmas": {
+                    "title": "Flappy Christmas",
+                    "description": "Springe durch die Schornsteine!"
+                },
+                "website": {
+                    "title": "Persönliche Website",
+                    "description": "Wie ich diese persönliche Website mit Nuxt und Tailwind erstellt habe✨"
+                },
+                "coming_soon": {
+                    "title": "Kommt bald"
+                }
             }
         },
         "superslide": {
