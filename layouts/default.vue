@@ -33,6 +33,7 @@ const route = useRoute()
 const { t } = useI18n()
 const head = useLocaleHead()
 
+update();
 
 function update()
 {
