@@ -59,7 +59,7 @@ const fetchEventData = async () =>
     }
     catch
     {
-        console.warn(`Superslide API response failed: ${error}`);
+        console.warn('Superslide API response failed');
     }
 
     event.value = await response.json();
