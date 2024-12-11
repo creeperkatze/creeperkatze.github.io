@@ -17,11 +17,6 @@
         "link_tailwind": "Tailwind",
         "link_github": "Github"
     },
-    "project_descriptions": {
-        "superslide": "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
-        "flappy_christmas": "Jump through the chimneys!",
-        "coming_soon": "Coming Soon"
-    },
     "page": {
         "index": {
             "title": "Home",
@@ -40,7 +35,20 @@
         },
         "projects": {
             "title": "Projects",
-            "description": "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas"
+            "description": "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas",
+            "subtitle": {
+                "games": "Games",
+                "webdev": "Web Developement"
+            },
+            "project_title": {
+                "website": "Personal Website"
+            },
+            "project_description": {
+                "superslide": "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
+                "flappy_christmas": "Jump through the chimneys!",
+                "website": "How I created this personal website using Nuxt and Tailwind✨",
+                "coming_soon": "Coming Soon"
+            }
         },
         "superslide": {
             "title": "Superslide",

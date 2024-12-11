@@ -1,45 +1,65 @@
 <template>
-    <div class="flex flex-wrap flex-row gap-2 max-w-[940px] mx-auto">
-        <NuxtLink :to="localePath('/projects/superslide')"
-            class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-            <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
-                    class="rounded-t-lg object-cover w-full" alt="Superslide">
+    <div class="flex justify-center mx-auto flex-col max-w-[940px]">
+        <h2 class="text-left mb-2">{{ $t('page.projects.subtitle.games') }}</h2>
+        <hr>
+        <div class="flex flex-wrap flex-row gap-2 justify-center">
+            <NuxtLink :to="localePath('/projects/superslide')"
+                class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
+                    <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
+                        class="rounded-t-lg object-cover w-full" alt="Superslide">
 
-                <div v-if="event.name !== 'none'"
-                    class="absolute top-1 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
-                    :style="{ backgroundColor: event.color }">
-                    <span class="text-left event-text text-black">{{ $t("superslide.event." + event.name) }}</span>
-                    <span class="text-right event-text text-black">{{ countdown }}</span>
-                </div>
+                    <div v-if="event.name !== 'none'"
+                        class="absolute top-1 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
+                        :style="{ backgroundColor: event.color }">
+                        <span class="text-left event-text text-black">{{ $t("superslide.event." + event.name) }}</span>
+                        <span class="text-right event-text text-black">{{ countdown }}</span>
+                    </div>
 
-                <div class="p-5">
-                    <h3 class="mb-2 font-bold text-white">Superslide</h3>
-                    <p class="mb-3 text-white">{{ $t("project_descriptions.superslide") }}</p>
+                    <div class="p-5">
+                        <h3 class="mb-2 font-bold text-white">Superslide</h3>
+                        <p class="mb-3 text-white">{{ $t("page.projects.project_description.superslide") }}</p>
+                    </div>
                 </div>
-            </div>
-        </NuxtLink>
-        <NuxtLink :to="localePath('/projects/flappy-christmas')"
-            class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-            <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                <img src="~/assets/images/flappy-christmas/Cover.png" format="webp" width="450"
-                    class="rounded-t-lg object-cover w-full" alt="Flappy Christmas">
-                <div class="p-5">
-                    <h3 class="mb-2 font-bold text-white">Flappy Christmas</h3>
-                    <p class="mb-3 text-white">{{ $t("project_descriptions.flappy_christmas") }}</p>
+            </NuxtLink>
+            <NuxtLink :to="localePath('/projects/flappy-christmas')"
+                class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
+                    <img src="~/assets/images/flappy-christmas/Cover.png" format="webp" width="450"
+                        class="rounded-t-lg object-cover w-full" alt="Flappy Christmas">
+                    <div class="p-5">
+                        <h3 class="mb-2 font-bold text-white">Flappy Christmas</h3>
+                        <p class="mb-3 text-white">{{ $t("page.projects.project_description.flappy_christmas") }}</p>
+                    </div>
                 </div>
-            </div>
-        </NuxtLink>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
-            class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-            <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                <img src="~/assets/images/CardComingSoon.png" format="webp" width="450"
-                    class="rounded-t-lg object-cover w-full" alt="Coming Soon">
-                <div class="p-5">
-                    <h3 class="mb-2 font-bold text-white">{{ $t("project_descriptions.coming_soon") }}</h3>
+            </NuxtLink>
+        </div>
+        <h2 class="text-left mb-2 mt-4">{{ $t('page.projects.subtitle.webdev') }}</h2>
+        <hr>
+        <div class="flex flex-wrap flex-row gap-2 justify-center">
+            <NuxtLink :to="localePath('/blog/first-website')"
+                class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
+                    <img src="~/assets/images/CardWebsite.png" format="webp" width="450"
+                        class="rounded-t-lg object-cover w-full" alt="Website">
+                    <div class="p-5">
+                        <h3 class="mb-2 font-bold text-white">{{ $t('page.projects.project_title.website') }}</h3>
+                        <p class="mb-3 text-white">{{ $t("page.projects.project_description.website") }}</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </NuxtLink>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+                class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
+                    <img src="~/assets/images/CardComingSoon.png" format="webp" width="450"
+                        class="rounded-t-lg object-cover w-full" alt="Coming Soon">
+                    <div class="p-5">
+                        <h3 class="mb-2 font-bold text-white">{{ $t("page.projects.project_description.coming_soon") }}
+                        </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -67,7 +87,7 @@ const fetchEventData = async () =>
     try
     {
         event.value = await response.json();
-    } 
+    }
     catch (error)
     {
         console.warn('Failed to parse JSON response:', error);

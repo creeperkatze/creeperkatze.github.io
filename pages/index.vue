@@ -4,7 +4,7 @@
     <p class="mb-4 whitespace-pre-line">
         {{ $t("page.index.welcome") }}
     </p>
-    <h2 class="mb-4">{{ $t("page.index.title_projects") }}</h2>
+    <h1 class="mb-4">{{ $t("page.index.title_projects") }}</h1>
     <Projects />
 </template>
 
