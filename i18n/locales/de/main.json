@@ -113,7 +113,7 @@
         },
         "idiot_test": {
             "title": "Idiotentest",
-            "description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
+            "description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist!",
             "input": "Schreibe deine Antwort",
             "progress": "Fortschritt: ",
             "results": "Ergebnisse",

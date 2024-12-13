@@ -113,7 +113,7 @@
         },
         "idiot_test": {
             "title": "Idiot Test",
-            "description": "Test whether you're an idiot with these crazy and tricky questions.",
+            "description": "Test whether you're an idiot with these crazy and tricky questions!",
             "text": "Have you ever wondered whether you're an idiot? Then you've come to the right place! Answer all 25 questions in this online idiot test to get your result!",
             "input": "Write your answer",
             "progress": "Progress: ",
