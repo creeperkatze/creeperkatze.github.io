@@ -1,5 +1,5 @@
 <template>
-    <div v-if="showBanner" class="relative flex items-center bg-green-600 overflow-hidden">
+    <div v-if="showBanner" class="relative flex items-center bg-green-600 overflow-hidden" data-nosnippet>
         <NuxtLink :to="localePath('/projects/superslide')" class="flex-grow">
             <p class="scrolling-text text-white text-left whitespace-nowrap overflow-visible">
                 Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide
@@ -10,7 +10,7 @@
         <IconClose class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
             @click.stop="showBanner = false" />
     </div>
-    <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4">
+    <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4" data-nosnippet>
         <div class="wrapper flex items-center justify-between px-4">
             <!-- Logo -->
             <div class="flex flex-row gap-4">
@@ -84,7 +84,7 @@
     </div>
 
     <!-- Drawer Menu for Mobile -->
-    <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden">
+    <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
         <nav class="flex flex-col items-center justify-center space-y-4">
             <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
             <div class="dropdown relative inline-flex">
