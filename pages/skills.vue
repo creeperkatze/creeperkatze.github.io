@@ -1,5 +1,5 @@
 <template>
-    <h2 class="mb-5">{{ $t("page.skills.title_software") }}</h2>
+    <h1 class="mb-5">{{ $t("page.skills.title_software") }}</h1>
     <div class="flex flex-wrap justify-center gap-4">
         <a v-for="(item, index) in softwareItems" :key="item.name" :href="item.link" target="_blank"
             :style="{ animationDelay: index * 0.1 + 's' }" class="animated-item">
@@ -7,7 +7,7 @@
         </a>
     </div>
 
-    <h2 class="mt-5 mb-5">{{ $t("page.skills.title_technologies") }}</h2>
+    <h1 class="mt-5 mb-5">{{ $t("page.skills.title_technologies") }}</h1>
     <div class="flex flex-wrap justify-center gap-4">
         <a v-for="(item, index) in techItems" :key="item.name" :href="item.link" target="_blank"
             :style="{ animationDelay: index * 0.1 + 's' }" class="animated-item">
