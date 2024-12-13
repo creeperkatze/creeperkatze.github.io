@@ -112,9 +112,8 @@
             "credits": " "
         },
         "idiot_test": {
-            "title": "Idiotentest - Bist du so schlau wie du denkst?",
-            "description": "Beantworte in diesem Online-Idiotentest alle 25 verrückten und kniffligen Fragen, um dein Ergebnis zu erhalten!",
-            "text": "Hast du dich schon einmal gefragt, ob du ein Idiot bist? Dann bist du hier genau richtig! Beantworte in diesem Online-Idiotentest alle 25 Fragen, um dein Ergebnis zu erhalten!",
+            "title": "Idiotentest",
+            "description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist.",
             "input": "Schreibe deine Antwort",
             "progress": "Fortschritt: ",
             "results": "Ergebnisse",
