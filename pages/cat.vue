@@ -1,12 +1,14 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
         <div class="bg-white rounded-lg border-2 p-4">
-            <div v-if="catData">
-                <img :src="catData.url" :alt="$t('page.cat.image.cat')" class="center max-h-[600px] mb-4">
-            </div>
-            <div v-else>
-                <p v-if="error">Error: {{ error }}</p>
-                <img v-else src="~/assets/images/loading.svg" class="center w-16">
+            <div class="min-h-64 min-w-64 flex items-center justify-center m-auto align-middle">
+                <div v-if="catData">
+                    <img :src="catData.url" :alt="$t('page.cat.image.cat')" class="center max-h-[600px] mb-4">
+                </div>
+                <div v-else>
+                    <p v-if="error">Error: {{ error }}</p>
+                    <img v-else src="~/assets/icons/loading.svg" class="center w-16">
+                </div>
             </div>
             <Button link="/cat" :rainbowBackground="true" @click="fetchCatImage()">{{ $t('button.new_cat') }}</Button>
         </div>
