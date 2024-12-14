@@ -93,6 +93,7 @@
         "joke": {
             "title": "Joke Generator",
             "description": "Generate a random joke using JokeAPI.",
+            "loading": "Loading...",
             "credits_part1": "Joke by ",
             "credits_part2": "JokeAPI"
         },

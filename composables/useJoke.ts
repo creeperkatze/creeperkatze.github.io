@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 
 // Define the structure of the joke data
-type JokeData = {
+type Joke = {
     error: boolean;
     category: string;
     type: 'single' | 'twopart';
@@ -23,44 +23,38 @@ type JokeData = {
 
 export default function useJoke()
 {
-    const joke = ref<JokeData | null>(null);
+    const jokeData = ref<Joke | null>(null);
     const error = ref<string | null>(null);
 
     const fetchJoke = async (lang: string = 'de') =>
     {
-        const url = `https://v2.jokeapi.dev/joke/Any?lang=${encodeURIComponent(lang)}&blacklistFlags=nsfw,religious,racist,sexist,explicit`;
-
-        joke.value = null;
-
-        const response = await fetch(url);
-        if (!response.ok)
+        jokeData.value = null;
+        try
         {
-            throw new Error('Failed to fetch the joke');
+            const url = `https://v2.jokeapi.dev/joke/Any?lang=${encodeURIComponent(lang)}&blacklistFlags=nsfw,religious,racist,sexist,explicit`;
+            const data = await $fetch<Joke>(url);
+
+            // Decode HTML entities in the joke content
+            if (data.type === 'single' && data.joke)
+            {
+                data.joke = decodeHTMLEntities(data.joke);
+            } else if (data.type === 'twopart' && data.setup && data.delivery)
+            {
+                data.setup = decodeHTMLEntities(data.setup);
+                data.delivery = decodeHTMLEntities(data.delivery);
+            }
+
+            jokeData.value = data;
         }
-
-        const data: JokeData = await response.json();
-
-        if (data.error)
+        catch (err)
         {
-            throw new Error('API returned an error');
+            error.value = (err as Error).message || 'An unknown error occurred.';
+            jokeData.value = null;
         }
-
-        // Decode HTML entities in the joke content
-        if (data.type === 'single' && data.joke)
-        {
-            data.joke = decodeHTMLEntities(data.joke);
-        } else if (data.type === 'twopart' && data.setup && data.delivery)
-        {
-            data.setup = decodeHTMLEntities(data.setup);
-            data.delivery = decodeHTMLEntities(data.delivery);
-        }
-
-        joke.value = data;
-        error.value = null;
     };
 
     return {
-        joke,
+        jokeData,
         error,
         fetchJoke,
     };

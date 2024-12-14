@@ -93,6 +93,7 @@
         "joke": {
             "title": "Witzgenerator",
             "description": "Generieren einen zufälligen Witz von der JokeAPI.",
+            "loading": "Lädt...",
             "credits_part1": "Witze von ",
             "credits_part2": "JokeAPI"
         },
