@@ -7,8 +7,8 @@
                 Released
             </p>
         </NuxtLink>
-        <IconClose class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
-            @click.stop="showBanner = false" />
+        <img src="~/assets/icons/close.svg"
+            class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" @click.stop="showBanner = false">
     </div>
     <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4" data-nosnippet>
         <div class="wrapper flex items-center justify-between px-4">
@@ -39,7 +39,7 @@
                             class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
                             aria-label="Dropdown">
                             {{ $t('navbar.projects') }}
-                            <IconArrowDown class="size-4" />
+                            <IconDown class="size-4" />
                         </NuxtLink>
 
                         <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-10"
@@ -60,23 +60,21 @@
                     <NuxtLink :to="localePath('/blog')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
                     <NuxtLink :to="localePath('/joke')" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
                     <NuxtLink :to="localePath('/cat')" class="navbar-element">{{ $t('navbar.cat') }}</NuxtLink>
-                    <NuxtLink :to="localePath('/idiot-test')" class="navbar-element">{{ $t('navbar.idiot_test') }}</NuxtLink>
+                    <NuxtLink :to="localePath('/idiot-test')" class="navbar-element">{{ $t('navbar.idiot_test') }}
+                    </NuxtLink>
                 </div>
             </nav>
 
             <!-- Buttons -->
             <div class="flex flex-row gap-4">
                 <a href="https://www.instagram.com/creeperkatze/" target="_blank">
-                    <IconInstagram
-                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                    <IconInstagram class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
                 <a href="https://creeperkatze.itch.io/" target="_blank">
-                    <IconItch
-                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                    <IconItch class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
                 <a href="https://github.com/creeperkatze" target="_blank">
-                    <IconGitHub
-                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                    <IconGithub class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
                 <LangSwitcher />
             </div>
@@ -92,25 +90,32 @@
                     class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
                     aria-label="Dropdown">
                     {{ $t('navbar.projects') }}
-                    <IconArrowDown class="size-4" />
+                    <IconDown />
                 </NuxtLink>
 
                 <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 z-10"
                     role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
                     <div class="p-1 pl-1 text-left text-nowrap">
-                        <NuxtLink :to="localePath('/projects/superslide')" class="navbar-element" @click="drawer">Superslide</NuxtLink>
+                        <NuxtLink :to="localePath('/projects/superslide')" class="navbar-element" @click="drawer">
+                            Superslide</NuxtLink>
                     </div>
                     <div class="p-1 pl-1 text-left text-nowrap">
-                        <NuxtLink :to="localePath('/projects/flappy-christmas')" class="navbar-element" @click="drawer">Flappy
+                        <NuxtLink :to="localePath('/projects/flappy-christmas')" class="navbar-element" @click="drawer">
+                            Flappy
                             Christmas</NuxtLink>
                     </div>
                 </div>
             </div>
-            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.skills') }}</NuxtLink>
-            <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}</NuxtLink>
-            <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}</NuxtLink>
-            <NuxtLink :to="localePath('/cat')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.cat') }}</NuxtLink>
-            <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.idiot_test') }}</NuxtLink>
+            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{
+                $t('navbar.skills') }}</NuxtLink>
+            <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}
+            </NuxtLink>
+            <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}
+            </NuxtLink>
+            <NuxtLink :to="localePath('/cat')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.cat') }}
+            </NuxtLink>
+            <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{
+                $t('navbar.idiot_test') }}</NuxtLink>
         </nav>
     </div>
 </template>

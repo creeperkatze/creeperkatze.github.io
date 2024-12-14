@@ -1,10 +1,10 @@
 <template>
     <button class="self-center min-w-6 min-h-6" @click.prevent.stop="toggleColorMode">
         <template v-if="colorMode.value === 'dark'">
-            <IconSun />
+            <img src="~/assets/images/icons/sun.svg">
         </template>
         <template v-else>
-            <IconMoon />
+            <img src="~/assets/images/icons/moon.svg">
         </template>
     </button>
 </template>

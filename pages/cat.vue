@@ -6,7 +6,7 @@
             </div>
             <div v-else>
                 <p v-if="error">Error: {{ error }}</p>
-                <p v-else>{{ $t("page.cat.loading") }}</p>
+                <img v-else src="~/assets/images/loading.svg" class="center w-16">
             </div>
             <Button link="/cat" :rainbowBackground="true" @click="fetchCatImage()">{{ $t('button.new_cat') }}</Button>
         </div>

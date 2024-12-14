@@ -30,6 +30,8 @@ export default function useJoke()
     {
         const url = `https://v2.jokeapi.dev/joke/Any?lang=${encodeURIComponent(lang)}&blacklistFlags=nsfw,religious,racist,sexist,explicit`;
 
+        joke.value = null;
+
         const response = await fetch(url);
         if (!response.ok)
         {

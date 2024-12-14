@@ -1,4 +1,3 @@
-<!--  -->
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
         <div class="bg-white rounded-lg border-2 p-4 max-w-screen-sm">
@@ -9,13 +8,17 @@
                     <h3>{{ joke.delivery }}</h3>
                 </div>
             </div>
-            <div v-if="error" class="mb-4">
-                <h1 class="text-red-600">{{ error }}</h1>
+            <div v-else>
+                <div v-if="error" class="mb-4">
+                    <h1 class="text-red-600">{{ error }}</h1>
+                </div>
+                <img v-else src="~/assets/images/loading.svg" class="center w-16">
             </div>
             <hr class="rounded border-[1px] mt-4 mb-4">
             <Button link="/joke" :rainbowBackground="true" @click="getJoke">{{ $t('button.new_joke') }}</Button>
         </div>
-        <p class="mb-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{ $t("page.joke.credits_part2") }}</a></p>
+        <p class="mb-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{
+            $t("page.joke.credits_part2") }}</a></p>
     </div>
 </template>
 
@@ -23,9 +26,9 @@
 <script setup>
 
 definePageMeta({
-  title: 'page.joke.title',
-  description: 'page.joke.description',
-  image: '/images/seo/joke.jpg'
+    title: 'page.joke.title',
+    description: 'page.joke.description',
+    image: '/images/seo/joke.jpg'
 })
 
 const { locale } = useI18n()

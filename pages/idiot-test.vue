@@ -31,7 +31,7 @@
                     <button
                         class="no-outline min-w-0 px-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-gray-400 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
-                        <IconSubmit />
+                        <img src="~/assets/icons/submit.svg">
                     </button>
                 </div>
                 <p v-if="question.isCorrect != undefined" :class="{

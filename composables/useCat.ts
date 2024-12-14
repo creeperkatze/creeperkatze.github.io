@@ -10,6 +10,7 @@ export default function useCatImage() {
     const error = ref<string | null>(null);
 
     const fetchCatImage = async () => {
+        catData.value = null;
         try {
             const data = await $fetch<CatImage[]>('https://api.thecatapi.com/v1/images/search');
             catData.value = data.length > 0 ? data[0] : null;
