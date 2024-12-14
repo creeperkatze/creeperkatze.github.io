@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <iframe v-else frameborder="0" src="https://itch.io/embed-upload/12241600?color=000000" allow="fullscreen"
+            <iframe v-else frameborder="0" src="https://itch.io/embed-upload/12251132?color=000000" allow="fullscreen"
                 class="center max-w-full max-h-full" width="1000" height="600"><a href="https://creeperkatze.itch.io/superslide">Play
                     Superslide
                     on itch.io</a></iframe>
