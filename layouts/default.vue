@@ -51,11 +51,8 @@ function update()
 
     useHead({
         link: [
-            {
-                rel: 'icon',
-                type: 'image/ico',
-                href: '/favicon.ico'
-            }
+            { rel: 'icon', type: 'image/ico', href: '/favicon.ico' },
+            { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/Logo180.png' },
         ],
         meta: [
             { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' },
