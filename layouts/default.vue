@@ -57,11 +57,11 @@ function update()
         meta: [
             { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' },
         ],
-        title: `${translatedTitle} | Creeperkatze`,
+        title: `${translatedTitle}`,
     })
 
     useSeoMeta({
-        title: `${translatedTitle} | Creeperkatze`,
+        title: `${translatedTitle}`,
         ogTitle: `${translatedTitle} | Creeperkatze`,
         twitterTitle: `${translatedTitle} | Creeperkatze`,
         description: translatedDescription,
