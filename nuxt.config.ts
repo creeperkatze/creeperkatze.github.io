@@ -16,7 +16,6 @@ export default defineNuxtConfig({
             "@nuxt/content",
             "@nuxt/eslint",
             "nuxt-schema-org",
-            "@nuxtjs/seo"
         ],
 
     googleFonts:

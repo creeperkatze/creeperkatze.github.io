@@ -53,11 +53,11 @@ definePageMeta({
 })
 
 useHead({
-    title: `${page.value?.title} | Blog`
+    title: `${page.value?.title} | Blog | Creeperkatze`
 });
 
 useSeoMeta({
-    title: `${page.value?.title} | Blog`,
+    title: `${page.value?.title} | Blog | Creeperkatze`,
     ogTitle: `${page.value?.title} | Blog | Creeperkatze`,
     twitterTitle: `${page.value?.title} | Blog | Creeperkatze`,
     description: page.value?.description,
