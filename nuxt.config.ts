@@ -94,7 +94,6 @@ export default defineNuxtConfig({
     },
 
     robots: {
-        enabled: false,
-        credits: false
+        enabled: false
     }
 });
