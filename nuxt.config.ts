@@ -91,9 +91,5 @@ export default defineNuxtConfig({
                 'https://github.com/creeperkatze'
             ]
         }
-    },
-
-    robots: {
-        enabled: false
     }
 });
