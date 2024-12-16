@@ -25,7 +25,7 @@
         "vue-router": "latest"
     },
     "devDependencies": {
-        "@nuxt/eslint": "^0.7.2",
+        "@nuxt/eslint": "^0.7.3",
         "eslint": "^9.16.0",
         "vite-svg-loader": "^5.1.0"
     }
