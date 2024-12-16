@@ -54,14 +54,12 @@ export default defineNuxtConfig({
         locales: [
             {
                 code: "de",
-                language: "de-DE",
                 name: "Deutsch",
                 dir: 'ltr',
                 files: ['de/main.json', 'de/idiot_test.json'],
             },
             {
                 code: "en",
-                language: "en-US",
                 name: "English",
                 dir: 'ltr',
                 files: ['en/main.json', 'en/idiot_test.json'],
