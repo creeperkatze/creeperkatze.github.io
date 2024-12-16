@@ -55,13 +55,11 @@ export default defineNuxtConfig({
             {
                 code: "de",
                 name: "Deutsch",
-                dir: 'ltr',
                 files: ['de/main.json', 'de/idiot_test.json'],
             },
             {
                 code: "en",
                 name: "English",
-                dir: 'ltr',
                 files: ['en/main.json', 'en/idiot_test.json'],
             }
         ]
