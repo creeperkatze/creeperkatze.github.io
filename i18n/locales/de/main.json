@@ -139,6 +139,10 @@
                     "3": "Ok, ok, nicht schlecht... Aber ein Genie bist du trotzdem nicht.",
                     "4": "Du hast ALLE Fragen richtig beantwortet... Respekt!"
                 }
+            },
+            "share": {
+                "title": "Ich bin ein: %rank%",
+                "text": "Probiere jetzt diesen Idiotentest aus, um rauszufinden, ob du ein Idiot, oder doch ein Genie bist!"
             }
         },
         "error": {

@@ -50,11 +50,21 @@
             <h1 class="mt-4">{{ $t("page.idiot_test.rank_title") }}</h1>
             <p class="mb-4">{{ $t("page.idiot_test.disclaimer") }}</p>
             <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-8 border-yellow-600">
-                <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
+                <div class="flex justify-between">
+                    <div />
+                    <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
+                    <button v-if="shareSupported"
+                        class="no-outline min-w-0 px-2 rounded-lg border-2 transition ease-in-out text-black border-black bg-purple-500 hover:bg-purple-700 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        @click="share">
+                        <img src="~/assets/icons/share.svg">
+                    </button>
+                    <div v-else />
+                </div>
                 <h4 class="mb-4">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
                 <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center"
                     :alt="$t('page.idiot_test.rank.name.' + rank)">
             </div>
+
         </section>
     </div>
 </template>
@@ -71,6 +81,11 @@ definePageMeta({
 
 const router = useRouter();
 
+const shareSupported = ref(false);
+
+const userRank = ref('Gold'); // Example: Replace with dynamic data
+const customMessage = ref(`I got ${userRank.value} rank, try it out now!`);
+
 let correctSound;
 let wrongSound;
 
@@ -78,6 +93,8 @@ onMounted(() =>
 {
     correctSound = new Audio("/audio/correct.mp3");
     wrongSound = new Audio("/audio/wrong.mp3");
+
+    shareSupported.value = !!navigator.share;
 });
 
 const glob = import.meta.glob('@/assets/images/idiot-test/*.jpg', { eager: true })
@@ -213,4 +230,28 @@ function validateAnswer(userAnswer, correctAnswers)
         return false
     });
 }
+
+const share = async () =>
+{
+    try
+    {
+        const title = t("page.idiot_test.share.title").replace(
+            "%rank%",
+            t("page.idiot_test.rank.name." + rank.value)
+        );
+        const text = t("page.idiot_test.share.text");
+        const url = window.location.href;
+
+        await navigator.share({
+            title: title,
+            text: text,
+            url: url,
+        });
+
+        console.log(`Shared successfully! Title: ${title}, Text: ${text}, URL: ${url}`);
+    } catch (error)
+    {
+        console.error("Error sharing:", error);
+    }
+};
 </script>

@@ -139,6 +139,10 @@
                     "3": "Ok, ok, not bad... But you're still not a genius.",
                     "4": "You answered ALL the questions correctly... Respect!"
                 }
+            },
+            "share": {
+                "title": "I'm a: %rank%",
+                "text": "Try out this idiot test now to find out whether you're an idiot or a genius!"
             }
         },
         "error": {
