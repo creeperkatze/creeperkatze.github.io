@@ -10,7 +10,7 @@
         <img src="~/assets/icons/close.svg"
             class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" @click.stop="showBanner = false">
     </div>
-    <div class="bg-black ignore-scrollbar pt-4 pb-4 mb-4" data-nosnippet>
+    <header class="bg-black w-screen pt-4 pb-4 mb-4" data-nosnippet>
         <div class="wrapper flex items-center justify-between px-4">
             <!-- Logo -->
             <div class="flex flex-row gap-4">
@@ -79,7 +79,7 @@
                 <LangSwitcher />
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- Drawer Menu for Mobile -->
     <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
