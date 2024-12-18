@@ -85,29 +85,8 @@
     <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
         <nav class="flex flex-col items-center justify-center space-y-4">
             <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
-            <div class="dropdown relative inline-flex">
-                <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
-                    class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
-                    aria-label="Dropdown">
-                    {{ $t('navbar.projects') }}
-                    <IconDown />
-                </NuxtLink>
-
-                <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-800 z-10"
-                    role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
-                    <div class="p-1 pl-1 text-left text-nowrap">
-                        <NuxtLink :to="localePath('/projects/superslide')" class="navbar-element" @click="drawer">
-                            Superslide</NuxtLink>
-                    </div>
-                    <div class="p-1 pl-1 text-left text-nowrap">
-                        <NuxtLink :to="localePath('/projects/flappy-christmas')" class="navbar-element" @click="drawer">
-                            Flappy
-                            Christmas</NuxtLink>
-                    </div>
-                </div>
-            </div>
-            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{
-                $t('navbar.skills') }}</NuxtLink>
+            <NuxtLink :to="localePath('/projects')" class="navbar-element text-left" @click="drawer">{{$t('navbar.projects') }}</NuxtLink>
+            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{$t('navbar.skills') }}</NuxtLink>
             <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}
             </NuxtLink>
             <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}
