@@ -93,7 +93,6 @@
         "joke": {
             "title": "Witzgenerator",
             "description": "Generieren einen zufälligen Witz von der JokeAPI.",
-            "loading": "Lädt...",
             "credits_part1": "Witze von ",
             "credits_part2": "JokeAPI"
         },
@@ -104,7 +103,6 @@
         "cat": {
             "title": "Kadzengenerator",
             "description": "Erhalte ein zufälliges Katzenfoto von TheCatAPI.",
-            "loading": "Lädt...",
             "image": {
                 "cat": "Generiertes Katzenfoto"
             },
@@ -113,7 +111,7 @@
             "credits": " "
         },
         "idiot_test": {
-            "title": "Idiotentest",
+            "title": "Idiotentest: Wie schlau bist du wirklich?",
             "description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist!",
             "text": "Hast du dich schon einmal gefragt, ob du ein Idiot bist? Dann bist du hier genau richtig! Beantworte in diesem Online-Idiotentest alle 25 Fragen, um dein Ergebnis zu erhalten! Aber Vorsicht: Nicht alle Lösungen sind so einfach wie sie scheinen.",
             "input": "Schreibe deine Antwort",
