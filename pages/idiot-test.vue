@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-screen-md mx-auto">
-        <h1>{{ $t("page.idiot_test.title") }}</h1>
+        <h1>{{ $t("page.idiot_test.heading") }}</h1>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
         <div v-if="!allQuestionsAnswered"
             class="sticky top-4 max-w-xl mx-auto p-4 bg-white border-2 border-black rounded-lg mb-4 z-10">

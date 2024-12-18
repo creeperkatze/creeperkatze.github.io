@@ -113,6 +113,7 @@
         "idiot_test": {
             "title": "Idiot Test - How smart are you really?",
             "description": "Test whether you're an idiot with these crazy and tricky questions!",
+            "heading": "Idiot Test",
             "text": "Have you ever wondered whether you're an idiot? Then you've come to the right place! Answer all 25 questions in this online idiot test to get your result! \nBut beware: not all solutions are as simple as they may seem.",
             "input": "Write your answer",
             "progress": "Progress: ",

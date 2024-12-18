@@ -113,6 +113,7 @@
         "idiot_test": {
             "title": "Idiotentest: Wie schlau bist du wirklich?",
             "description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist!",
+            "heading": "Idiotentest",
             "text": "Hast du dich schon einmal gefragt, ob du ein Idiot bist? Dann bist du hier genau richtig! Beantworte in diesem Online-Idiotentest alle 25 Fragen, um dein Ergebnis zu erhalten! Aber Vorsicht: Nicht alle Lösungen sind so einfach wie sie scheinen.",
             "input": "Schreibe deine Antwort",
             "progress": "Fortschritt: ",
