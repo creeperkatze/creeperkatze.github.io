@@ -7,8 +7,8 @@
                 Released
             </p>
         </NuxtLink>
-        <img src="~/assets/icons/close.svg"
-            class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" @click.stop="showBanner = false">
+        <img src="~/assets/icons/close.svg" class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
+            @click.stop="showBanner = false">
     </div>
     <header class="bg-black w-screen pt-4 pb-4 mb-4" data-nosnippet>
         <div class="wrapper flex items-center justify-between px-4">
@@ -20,9 +20,9 @@
                     <img src="~/assets/images/Logo.png" alt="Creeperkatze"
                         class="pixelated object-contain shrink-0 min-w-8 min-h-8 lg:hidden">
                 </NuxtLink>
-                <div class="lg:hidden">
+                <div class="lg:hidden flex items-center">
                     <button @click="drawer">
-                        <svg class="h-8 w-8 fill-current text-white" fill="none" stroke-linecap="round"
+                        <svg class="h-8 w-8 text-white" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -68,13 +68,16 @@
             <!-- Buttons -->
             <div class="flex flex-row gap-4">
                 <a href="https://www.instagram.com/creeperkatze/" target="_blank">
-                    <IconInstagram class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                    <IconInstagram
+                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
                 <a href="https://creeperkatze.itch.io/" target="_blank">
-                    <IconItch class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                    <IconItch
+                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
                 <a href="https://github.com/creeperkatze" target="_blank">
-                    <IconGithub class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                    <IconGithub
+                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
                 <LangSwitcher />
             </div>
@@ -85,8 +88,10 @@
     <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
         <nav class="flex flex-col items-center justify-center space-y-4">
             <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
-            <NuxtLink :to="localePath('/projects')" class="navbar-element text-left" @click="drawer">{{$t('navbar.projects') }}</NuxtLink>
-            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{$t('navbar.skills') }}</NuxtLink>
+            <NuxtLink :to="localePath('/projects')" class="navbar-element text-left" @click="drawer">
+                {{ $t('navbar.projects') }}</NuxtLink>
+            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.skills')
+                }}</NuxtLink>
             <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}
             </NuxtLink>
             <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}
@@ -153,7 +158,6 @@ nav,
     animation: scroll 30s linear infinite;
     /* Calls the scroll animation */
 }
-
 @keyframes scroll
 {
     0%

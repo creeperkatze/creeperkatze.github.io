@@ -11,6 +11,7 @@ body
     overflow-y: overlay;
     background-image: url("~/assets/images/bg.jpg");
     background-size: 250px;
+    overflow-x: hidden;
 }
 
 a
