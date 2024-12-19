@@ -129,7 +129,7 @@
                     "0": "Idiot",
                     "1": "Amateur",
                     "2": "NPC",
-                    "3": "Smarty pants",
+                    "3": "Brainiac",
                     "4": "Genius"
                 },
                 "description": {
@@ -141,8 +141,8 @@
                 }
             },
             "share": {
-                "title": "I'm a: %rank%",
-                "text": "Try out this idiot test now to find out whether you're an idiot or a genius!"
+                "title": "Idiot Test - How smart are you really?",
+                "text": "I am a: %rank%\nTry out this idiot test and find out whether you are an idiot or a genius after all!"
             }
         },
         "error": {

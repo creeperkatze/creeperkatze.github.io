@@ -141,8 +141,8 @@
                 }
             },
             "share": {
-                "title": "Ich bin ein: %rank%",
-                "text": "Probiere jetzt diesen Idiotentest aus, um rauszufinden, ob du ein Idiot, oder doch ein Genie bist!"
+                "title": "Idiotentest - Wie schlau bist du wirklich?",
+                "text": "Ich bin ein: %rank%\nProbiere diesen Idiotentest aus und finde heraus, ob du ein Idiot oder doch ein Genie bist!"
             }
         },
         "error": {

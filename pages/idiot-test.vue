@@ -50,21 +50,16 @@
             <h1 class="mt-4">{{ $t("page.idiot_test.rank_title") }}</h1>
             <p class="mb-4">{{ $t("page.idiot_test.disclaimer") }}</p>
             <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-8 border-yellow-600">
-                <div class="flex justify-between">
-                    <div />
-                    <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
-                    <button v-if="shareSupported"
-                        class="no-outline min-w-0 px-2 rounded-lg border-2 transition ease-in-out text-black border-black bg-purple-500 hover:bg-purple-700 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
-                        @click="share">
-                        <img src="~/assets/icons/share.svg">
-                    </button>
-                    <div v-else />
-                </div>
+                <button v-if="shareSupported"
+                    class="float-right no-outline w-10 h-10 px-2 rounded-lg border-2 transition ease-in-out text-black border-black bg-purple-500 hover:bg-purple-700 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                    @click="share">
+                    <img src="~/assets/icons/share.svg">
+                </button>
+                <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
                 <h4 class="mb-4">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
                 <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center"
                     :alt="$t('page.idiot_test.rank.name.' + rank)">
             </div>
-
         </section>
     </div>
 </template>
@@ -235,12 +230,12 @@ const share = async () =>
 {
     try
     {
-        const title = t("page.idiot_test.share.title").replace(
+        const title = t("page.idiot_test.share.title");
+        const text = t("page.idiot_test.share.text").replace(
             "%rank%",
             t("page.idiot_test.rank.name." + rank.value)
         );
-        const text = t("page.idiot_test.share.text");
-        const url = window.location.href;
+        const url = window.location.href.split('#')[0];
 
         await navigator.share({
             title: title,
