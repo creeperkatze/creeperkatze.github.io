@@ -8,15 +8,15 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css"],
     modules:
         [
-          "@nuxtjs/google-fonts",
-          "@nuxtjs/tailwindcss",
-          "@nuxtjs/color-mode",
-          "@nuxtjs/sitemap",
-          "@nuxtjs/i18n",
-          "@nuxt/content",
-          "@nuxt/eslint",
-          "nuxt-schema-org",
-          "nuxt-seo-utils"
+            "@nuxtjs/google-fonts",
+            "@nuxtjs/tailwindcss",
+            "@nuxtjs/color-mode",
+            "@nuxtjs/sitemap",
+            "@nuxtjs/i18n",
+            "@nuxt/content",
+            "@nuxt/eslint",
+            "nuxt-schema-org",
+            "nuxt-seo-utils"
         ],
 
     googleFonts:
@@ -39,7 +39,6 @@ export default defineNuxtConfig({
     site: {
         url: "https://creeperkatze.github.io",
         name: "Creeperkatze",
-        trailingSlash: true,
     },
 
     i18n: {
