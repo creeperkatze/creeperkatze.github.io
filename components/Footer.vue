@@ -22,9 +22,5 @@
             <img class="h-6 px-1 inline"
                 src="https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github"
                 alt="Build Status"></a>
-        <a href="https://github.com/creeperkatze/creeperkatze.github.io/issues/new">
-            <img class="h-6 px-1 inline"
-                :src="$t('footer.badge.issue')"
-                alt="New Issue"></a>
     </footer>
 </template>
