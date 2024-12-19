@@ -38,7 +38,8 @@ export default defineNuxtConfig({
 
     site: {
         url: "https://creeperkatze.github.io",
-        name: "Creeperkatze"
+        name: "Creeperkatze",
+        trailingSlash: true,
     },
 
     i18n: {
