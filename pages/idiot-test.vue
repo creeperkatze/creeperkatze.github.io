@@ -238,24 +238,12 @@ const share = async () =>
             t("page.idiot_test.rank.name." + rank.value)
         );
         const url = window.location.href.split('#')[0];
-        const rankImage = images[rank.value];
 
-        const shareData = {
+        await navigator.share({
             title: title,
             text: text,
             url: url,
-        };
-
-        // Add image if available
-        if (rankImage) {
-            shareData.files = [
-                new File([await fetch(rankImage).then(r => r.blob())], 'rank.jpg', {
-                    type: 'image/jpeg'
-                })
-            ];
-        }
-
-        await navigator.share(shareData);
+        });
 
         console.log(`Shared successfully! Title: ${title}, Text: ${text}, URL: ${url}`);
     } catch (error)
