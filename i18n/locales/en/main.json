@@ -15,7 +15,10 @@
         "text_part3": ". Source available on ",
         "link_nuxt": "Nuxt",
         "link_tailwind": "Tailwind",
-        "link_github": "Github"
+        "link_github": "Github",
+        "badge": {
+            "issue": "https://img.shields.io/badge/problems_%26_improvements-here-blue?logo=github"
+        }
     },
     "page": {
         "index": {
