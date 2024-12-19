@@ -142,7 +142,7 @@
             },
             "share": {
                 "title": "Idiot Test - How smart are you really?",
-                "text": "I am a: %rank%\nTry out this idiot test and find out whether you are an idiot or a genius after all!"
+                "text": "I am a: %rank%\n\nTry out this idiot test and find out whether you are an idiot or a genius after all!"
             }
         },
         "error": {

@@ -142,7 +142,7 @@
             },
             "share": {
                 "title": "Idiotentest - Wie schlau bist du wirklich?",
-                "text": "Ich bin ein: %rank%\nProbiere diesen Idiotentest aus und finde heraus, ob du ein Idiot oder doch ein Genie bist!"
+                "text": "Ich bin ein: %rank%\n\nProbiere diesen Idiotentest aus und finde heraus, ob du ein Idiot oder doch ein Genie bist!"
             }
         },
         "error": {
