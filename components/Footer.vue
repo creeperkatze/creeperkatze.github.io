@@ -14,7 +14,7 @@
             }}<a href="https://github.com/creeperkatze/creeperkatze.github.io" target="_blank">{{
                 $t("footer.link_github") }}</a>.
         </p>
-        <a href="https://github.com/creeperkatze/creeperkatze.github.io/commits/main/s">
+        <a href="https://github.com/creeperkatze/creeperkatze.github.io/commits/main">
             <img class="h-6 px-1 inline"
                 src="https://img.shields.io/github/last-commit/creeperkatze/creeperkatze.github.io/main?display_timestamp=author&logo=github"
                 alt="Last Commit"></a>
