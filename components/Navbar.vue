@@ -10,7 +10,7 @@
         <img src="~/assets/icons/close.svg" class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
             @click.stop="showBanner = false">
     </div>
-    <header class="bg-black w-screen pt-4 pb-4 mb-4" data-nosnippet>
+    <header class="relative z-50 bg-black w-screen pt-4 pb-4 mb-4" data-nosnippet>
         <div class="wrapper flex items-center justify-between px-4">
             <!-- Logo -->
             <div class="flex flex-row gap-4">
@@ -22,8 +22,8 @@
                 </NuxtLink>
                 <div class="lg:hidden flex items-center">
                     <button @click="drawer">
-                        <svg class="h-8 w-8 text-white" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-8 w-8 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
@@ -85,23 +85,31 @@
     </header>
 
     <!-- Drawer Menu for Mobile -->
-    <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
-        <nav class="flex flex-col items-center justify-center space-y-4">
-            <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
-            <NuxtLink :to="localePath('/projects')" class="navbar-element text-left" @click="drawer">
-                {{ $t('navbar.projects') }}</NuxtLink>
-            <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.skills')
-                }}</NuxtLink>
-            <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.blog') }}
-            </NuxtLink>
-            <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.joke') }}
-            </NuxtLink>
-            <NuxtLink :to="localePath('/cat')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.cat') }}
-            </NuxtLink>
-            <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{
-                $t('navbar.idiot_test') }}</NuxtLink>
-        </nav>
-    </div>
+    <Transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-y-full"
+        enter-to-class="transform translate-y-0" leave-active-class="transition duration-100 ease-in"
+        leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
+        <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
+            <nav class="flex flex-col items-center justify-center space-y-4">
+                <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
+                <NuxtLink :to="localePath('/projects')" class="navbar-element text-left" @click="drawer">
+                    {{ $t('navbar.projects') }}</NuxtLink>
+                <NuxtLink :to="localePath('/skills')" class="navbar-element text-left" @click="drawer">{{
+                    $t('navbar.skills')
+                    }}</NuxtLink>
+                <NuxtLink :to="localePath('/blog')" class="navbar-element text-left" @click="drawer">{{
+                    $t('navbar.blog') }}
+                </NuxtLink>
+                <NuxtLink :to="localePath('/joke')" class="navbar-element text-left" @click="drawer">{{
+                    $t('navbar.joke') }}
+                </NuxtLink>
+                <NuxtLink :to="localePath('/cat')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.cat')
+                    }}
+                </NuxtLink>
+                <NuxtLink :to="localePath('/idiot-test')" class="navbar-element text-left" @click="drawer">{{
+                    $t('navbar.idiot_test') }}</NuxtLink>
+            </nav>
+        </div>
+    </Transition>
 </template>
 
 <script setup>
@@ -158,6 +166,7 @@ nav,
     animation: scroll 30s linear infinite;
     /* Calls the scroll animation */
 }
+
 @keyframes scroll
 {
     0%
