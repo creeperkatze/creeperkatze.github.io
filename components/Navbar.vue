@@ -67,15 +67,15 @@
 
             <!-- Buttons -->
             <div class="flex flex-row gap-4">
-                <a href="https://www.instagram.com/creeperkatze/" target="_blank">
+                <a href="https://www.instagram.com/creeperkatze/" target="_blank" aria-label="Instagram">
                     <IconInstagram
                         class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
-                <a href="https://creeperkatze.itch.io/" target="_blank">
+                <a href="https://creeperkatze.itch.io/" target="_blank" aria-label="Itch.io">
                     <IconItch
                         class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
-                <a href="https://github.com/creeperkatze" target="_blank">
+                <a href="https://github.com/creeperkatze" target="_blank" aria-label="GitHub">
                     <IconGithub
                         class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
                 </a>
