@@ -7,7 +7,7 @@
                 Released
             </p>
         </NuxtLink>
-        <img src="~/assets/icons/close.svg" class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
+        <img src="~/assets/icons/close.svg" :alt="$t('button.close')" class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
             @click.stop="showBanner = false">
     </div>
     <header class="relative z-50 bg-black w-screen pt-4 pb-4 mb-4" data-nosnippet>
@@ -22,7 +22,7 @@
                 </NuxtLink>
                 <div class="lg:hidden flex items-center">
                     <button @click="drawer">
-                        <svg class="h-8 w-8 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        <svg class="h-8 w-8 text-white" :alt="$t('button.drawer')" fill="none" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>

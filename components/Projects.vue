@@ -7,7 +7,7 @@
                 class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" alt="Superslide">
+                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.superslide.title')">
 
                     <div v-if="event.name !== 'none'"
                         class="absolute top-1 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
@@ -26,7 +26,7 @@
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/flappy-christmas/Cover.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" alt="Flappy Christmas">
+                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.flappy_christmas.title')">
                     <div class="p-5">
                         <h3 class="mb-2 font-bold text-white">{{ $t("page.projects.project.flappy_christmas.title") }}</h3>
                         <p class="mb-3 text-white">{{ $t("page.projects.project.flappy_christmas.description") }}</p>
@@ -41,7 +41,7 @@
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/CardWebsite.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" alt="Website">
+                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.website.title')">
                     <div class="p-5">
                         <h3 class="mb-2 font-bold text-white">{{ $t('page.projects.project.website.title') }}</h3>
                         <p class="mb-3 text-white">{{ $t('page.projects.project.website.description') }}</p>
@@ -52,7 +52,7 @@
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/CardComingSoon.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" alt="Coming Soon">
+                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.coming_soon.title')">
                     <div class="p-5">
                         <h3 class="mb-2 font-bold text-white">{{ $t("page.projects.project.coming_soon.title") }}</h3>
                     </div>
