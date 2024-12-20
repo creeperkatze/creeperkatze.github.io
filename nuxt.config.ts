@@ -36,6 +36,12 @@ export default defineNuxtConfig({
         })]
     },
 
+    app: {
+        head: {
+            titleTemplate: '',
+        },
+    },
+
     site: {
         url: "https://creeperkatze.github.io",
         name: "Creeperkatze",
