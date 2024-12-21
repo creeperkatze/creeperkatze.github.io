@@ -3,7 +3,7 @@
         <h2 class="text-left mb-2">{{ $t('page.projects.subtitle.games') }}</h2>
         <hr>
         <div class="flex flex-wrap flex-row gap-2 justify-center">
-            <NuxtLink :to="localePath('/projects/superslide')"
+            <NuxtLink :to="localePath('/projects/superslide/')"
                 class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </NuxtLink>
-            <NuxtLink :to="localePath('/projects/flappy-christmas')"
+            <NuxtLink :to="localePath('/projects/flappy-christmas/')"
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/flappy-christmas/Cover.png" format="webp" width="450"
@@ -37,7 +37,7 @@
         <h2 class="text-left mb-2 mt-4">{{ $t('page.projects.subtitle.webdev') }}</h2>
         <hr>
         <div class="flex flex-wrap flex-row gap-2 justify-center">
-            <NuxtLink :to="localePath('/blog/first-website')"
+            <NuxtLink :to="localePath('/blog/first-website/')"
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                 <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
                     <img src="~/assets/images/CardWebsite.png" format="webp" width="450"
