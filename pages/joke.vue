@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
         <div class="bg-white rounded-lg border-2 p-4 max-w-screen-sm">
-            <div class="min-h-40 min-w-64 flex items-center justify-center m-auto align-middle">
+            <div class="min-h-40 min-w-64 flex items-center justify-center mx-auto align-middle">
                 <div v-if="jokeData" class="mb-4">
                     <h1 v-if="jokeData.type === 'single'">{{ jokeData.joke }}</h1>
                     <div v-else>
