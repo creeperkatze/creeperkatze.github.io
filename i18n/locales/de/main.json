@@ -68,6 +68,10 @@
             "legal": "Legales",
             "privacy_policy": "Datenschutzerklärung",
             "terms": "Nutzungsbedingungen",
+            "disclaimer": {
+                "text": "Dies ist die Web-Version von Superslide. Dein Fortschritt wird nur für diese Browser- und diese Websitenkombination lokal gespeichert.",
+                "button": "Fortfahren"
+            },
             "event": {
                 "easter": "Ostern",
                 "summer": "Sommer",
@@ -173,9 +177,5 @@
         "text_part2": "Itch.io",
         "text_part3": "), die möglicherweise Daten an externe Server übermitteln. Bitte stimme zu, den Inhalt zu laden.",
         "button": "Inhalt laden"
-    },
-    "superslide_disclaimer": {
-        "text": "Dies ist die Web-Version von Superslide. Dein Fortschritt wird momentan noch nicht gepeichert.",
-        "button": "Fortfahren"
     }
 }
