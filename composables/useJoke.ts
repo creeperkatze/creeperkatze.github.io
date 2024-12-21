@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 // Define the structure of the joke data
 type Joke = {
