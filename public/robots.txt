@@ -60,9 +60,6 @@
 #                                                                        @@@@                                                    
 
 User-agent: *
-Disallow: /idiot-test
-Disallow: /idiot-test/
-Disallow: /en/idiot-test
-Disallow: /en/idiot-test/
+Disallow:
 
 Sitemap: https://creeperkatze.github.io/sitemap_index.xml
