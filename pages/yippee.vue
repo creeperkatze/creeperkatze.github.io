@@ -1,5 +1,5 @@
 <template>
-    <Button link="/yippee" :rainbowBackground="true" @click="playSound">{{ $t('button.yippee') }}</Button>
+    <Button :rainbowBackground="true" @click="playSound">{{ $t('button.yippee') }}</Button>
 </template>
 
 <script>

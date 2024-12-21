@@ -11,7 +11,7 @@
                 </div>
             </div>
             <hr class="mt-4 mb-4">
-            <Button link="/cat" :rainbowBackground="true" @click="fetchCatImage()">{{ $t('button.new_cat') }}</Button>
+            <Button :rainbowBackground="true" @click="fetchCatImage()">{{ $t('button.new_cat') }}</Button>
         </div>
     </div>
     <p class="mb-4">{{ $t("page.cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{

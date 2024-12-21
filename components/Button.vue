@@ -1,12 +1,22 @@
 <template>
-    <NuxtLink :to="localePath(link)" class="text-black hover:text-black">
+    <template v-if="link">
+        <NuxtLink :to="localePath(link)" class="text-black hover:text-black">
+            <button
+                :class="['no-outline center max-w-fit px-4 pt-2 pb-2 bg-green-600 hover:bg-green-800 disabled:opacity-50 rounded-lg items-center border-2 border-black', rainbowBackground ? 'rainbow-background' : '']">
+                <slot>
+                    <p class="text-black">Button</p>
+                </slot>
+            </button>
+        </NuxtLink>
+    </template>
+    <template v-else>
         <button
             :class="['no-outline center max-w-fit px-4 pt-2 pb-2 bg-green-600 hover:bg-green-800 disabled:opacity-50 rounded-lg items-center border-2 border-black', rainbowBackground ? 'rainbow-background' : '']">
             <slot>
                 <p class="text-black">Button</p>
             </slot>
         </button>
-    </NuxtLink>
+    </template>
 </template>
 
 <script setup>
@@ -16,11 +26,11 @@ const localePath = useLocalePath()
 const props = defineProps({
   link: {
     type: String,
-    default: '/' // Default link
+    default: undefined
   },
   rainbowBackground: {
     type: Boolean,
-    default: false // Default value is false, meaning no rainbow animation
+    default: false
   },
 })
 </script>

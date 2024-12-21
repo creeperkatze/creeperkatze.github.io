@@ -17,7 +17,7 @@
                 </div>
             </div>
             <hr class="mt-4 mb-4">
-            <Button link="/joke" :rainbowBackground="true" @click="getJoke">{{ $t('button.new_joke') }}</Button>
+            <Button :rainbowBackground="true" @click="getJoke">{{ $t('button.new_joke') }}</Button>
         </div>
         <p class="mb-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{
             $t("page.joke.credits_part2") }}</a></p>
