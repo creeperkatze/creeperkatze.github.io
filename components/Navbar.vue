@@ -34,12 +34,12 @@
             <nav class="hidden lg:block">
                 <div class="flex justify-start gap-4 mx-4">
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
-                    <div class="dropdown relative inline-flex">
+                    <div class="dropdown relative inline-flex" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
                         <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
                             class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
                             aria-label="Dropdown">
                             {{ $t('navbar.projects') }}
-                            <IconDown class="size-4" />
+                            <IconDown class="size-4 transform transition-all" :class="{ 'rotate-180': dropdownOpen }" />
                         </NuxtLink>
 
                         <div class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-400 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-10"
@@ -117,6 +117,7 @@ const localePath = useLocalePath()
 
 const showBanner = ref(false);
 const drawerOpen = ref(false);
+const dropdownOpen = ref(false);
 
 function drawer()
 {
