@@ -6,8 +6,8 @@
         </div>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.christmas-quiz.text") }}</p>
         <div v-if="!allQuestionsAnswered"
-            class="sticky top-4 max-w-xl mx-auto p-4 bg-red-600 border-2 border-black rounded-lg mb-8 z-10 candycane-border outline-2">
-            <div class="w-full bg-white h-2 rounded-full outline-2">
+            class="sticky top-4 max-w-xl mx-auto p-4 bg-red-600 border-2 border-black rounded-lg mb-8 z-10 candycane-border outline outline-2">
+            <div class="w-full bg-white h-2 rounded-full outline outline-2">
                 <div class="bg-black h-2 rounded-full candycane-progress"
                     :style="{ width: percentageAnswered + '%' }" />
             </div>
@@ -282,7 +282,6 @@ const share = async () =>
 {
     border: 10px solid transparent;
     border-image: url(~/assets/images/christmas-quiz/border-candycane.png) 20% round;
-    border-image-outset: 2px;
 }
 
 .candycane-progress
