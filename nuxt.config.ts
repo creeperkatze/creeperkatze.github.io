@@ -64,13 +64,13 @@ export default defineNuxtConfig({
                 code: "de",
                 language: "de",
                 name: "Deutsch",
-                files: ['de/main.json', 'de/idiot_test.json'],
+                files: ['de/main.json', 'de/idiot_test.json', 'de/christmas_quiz.json'],
             },
             {
                 code: "en",
                 language: "en",
                 name: "English",
-                files: ['en/main.json', 'en/idiot_test.json'],
+                files: ['en/main.json', 'en/idiot_test.json', 'en/christmas_quiz.json'],
             }
         ]
     },

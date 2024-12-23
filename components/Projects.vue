@@ -5,9 +5,10 @@
         <div class="flex flex-wrap flex-row gap-2 justify-center">
             <NuxtLink :to="localePath('/projects/superslide/')"
                 class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                    <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.superslide.title')">
+                <div class="rounded-lg bg-black max-w-[450px] max-h-[400px] h-full flex flex-col">
+                    <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png"
+                        class="rounded-t-lg object-cover w-full h-[250px]"
+                        :alt="$t('page.projects.project.superslide.title')">
 
                     <div v-if="event.name !== 'none'"
                         class="absolute top-1 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"
@@ -24,11 +25,13 @@
             </NuxtLink>
             <NuxtLink :to="localePath('/projects/flappy-christmas/')"
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                    <img src="~/assets/images/flappy-christmas/Cover.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.flappy_christmas.title')">
+                <div class="rounded-lg bg-black max-w-[450px] max-h-[400px] h-full flex flex-col">
+                    <img src="~/assets/images/flappy-christmas/Cover.png"
+                        class="rounded-t-lg object-cover w-full h-[250px]"
+                        :alt="$t('page.projects.project.flappy_christmas.title')">
                     <div class="p-5">
-                        <h3 class="mb-2 font-bold text-white">{{ $t("page.projects.project.flappy_christmas.title") }}</h3>
+                        <h3 class="mb-2 font-bold text-white">{{ $t("page.projects.project.flappy_christmas.title") }}
+                        </h3>
                         <p class="mb-3 text-white">{{ $t("page.projects.project.flappy_christmas.description") }}</p>
                     </div>
                 </div>
@@ -39,25 +42,49 @@
         <div class="flex flex-wrap flex-row gap-2 justify-center">
             <NuxtLink :to="localePath('/blog/first-website/')"
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                    <img src="~/assets/images/CardWebsite.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.website.title')">
+                <div class="rounded-lg bg-black max-w-[450px] max-h-[400px] h-full flex flex-col">
+                    <img src="~/assets/images/CardWebsite.png" class="rounded-t-lg object-cover w-full h-[250px]"
+                        :alt="$t('page.projects.project.website.title')">
                     <div class="p-5">
                         <h3 class="mb-2 font-bold text-white">{{ $t('page.projects.project.website.title') }}</h3>
                         <p class="mb-3 text-white">{{ $t('page.projects.project.website.description') }}</p>
                     </div>
                 </div>
             </NuxtLink>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
-                class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
-                <div class="rounded-lg bg-black max-w-[450px] h-[400px]">
-                    <img src="~/assets/images/CardComingSoon.png" format="webp" width="450"
-                        class="rounded-t-lg object-cover w-full" :alt="$t('page.projects.project.coming_soon.title')">
-                    <div class="p-5">
-                        <h3 class="mb-2 font-bold text-white">{{ $t("page.projects.project.coming_soon.title") }}</h3>
+            <div class="grid grid-cols-2 gap-2 w-[465px] h-[415px]">
+                <NuxtLink :to="localePath('/idiot-test/')"
+                    class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                    <div class="rounded-lg bg-black h-full flex flex-col">
+                        <img src="/images/seo/idiot-test.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
+                            :alt="$t('page.projects.project.idiot-test.title')">
+                        <h5 class="text-white p-2">{{ $t('page.projects.project.idiot-test.title') }}</h5>
                     </div>
-                </div>
-            </a>
+                </NuxtLink>
+                <NuxtLink :to="localePath('/christmas-quiz/')"
+                    class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                    <div class="rounded-lg bg-black h-full flex flex-col">
+                        <img src="/images/seo/christmas-quiz.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
+                            :alt="$t('page.projects.project.christmas-quiz.title')">
+                        <h5 class="text-white p-2">{{ $t('page.projects.project.christmas-quiz.title') }}</h5>
+                    </div>
+                </NuxtLink>
+                <NuxtLink :to="localePath('/joke/')"
+                    class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                    <div class="rounded-lg bg-black h-full flex flex-col">
+                        <img src="/images/seo/joke.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
+                            :alt="$t('page.projects.project.joke.title')">
+                        <h5 class="text-white p-2">{{ $t('page.projects.project.joke.title') }}</h5>
+                    </div>
+                </NuxtLink>
+                <NuxtLink :to="localePath('/cat/')"
+                    class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
+                    <div class="rounded-lg bg-black h-full flex flex-col">
+                        <img src="/images/seo/cat.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
+                            :alt="$t('page.projects.project.cat.title')">
+                        <h5 class="text-white p-2">{{ $t('page.projects.project.cat.title') }}</h5>
+                    </div>
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>

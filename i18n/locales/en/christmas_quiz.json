@@ -1,0 +1,281 @@
+{
+    "christmas-quiz": {
+        "questions": {
+            "0": {
+                "text": "Why did Mary and Joseph have to go to Bethlehem?",
+                "answers": [
+                    "Census",
+                    "Vacation",
+                    "Christmas party",
+                    "Work"
+                ],
+                "correctAnswer": "0",
+                "explanation": "Mary and Joseph traveled to Bethlehem due to a census ordered by Emperor Augustus."
+            },
+            "1": {
+                "text": "When was Christmas first celebrated?",
+                "answers": [
+                    "18th century",
+                    "Middle Ages",
+                    "4th century",
+                    "1 AD"
+                ],
+                "correctAnswer": "2",
+                "explanation": "The first Christian Christmas celebration was held in Rome in 336 AD."
+            },
+            "2": {
+                "text": "Who visited Jesus first?",
+                "answers": [
+                    "Angels",
+                    "A priest",
+                    "The Three Wise Men",
+                    "Shepherds"
+                ],
+                "correctAnswer": "3",
+                "explanation": "In the Christmas story, the shepherds were the first to arrive at the stable."
+            },
+            "3": {
+                "text": "Where is the 'Julbock' set up at Christmas?",
+                "answers": [
+                    "Bavaria",
+                    "Norway",
+                    "Sweden",
+                    "Mecklenburg-Vorpommern"
+                ],
+                "correctAnswer": "2",
+                "explanation": "The setting up of the 'Julbock' is a Swedish tradition."
+            },
+            "4": {
+                "text": "Which animal is mentioned in the Christmas story?",
+                "answers": [
+                    "Horse",
+                    "Dog",
+                    "Sheep",
+                    "Chicken"
+                ],
+                "correctAnswer": "2",
+                "explanation": "In the Christmas story, the sheep is mentioned as part of the flock tended by the shepherds near the birth of Jesus."
+            },
+            "5": {
+                "text": "What percentage of alcohol must mulled wine contain in Germany to be called mulled wine?",
+                "answers": [
+                    "7%",
+                    "14%",
+                    "80%",
+                    "69%"
+                ],
+                "correctAnswer": "0",
+                "explanation": "The legal minimum for mulled wine is 7%, with a maximum of 14.5% allowed."
+            },
+            "6": {
+                "text": "What does the Latin word 'adventus' mean?",
+                "answers": [
+                    "Almighty",
+                    "Arrival",
+                    "Contemplation",
+                    "Candle"
+                ],
+                "correctAnswer": "1",
+                "explanation": "The Latin word 'adventus' can be translated to 'arrival' in English."
+            },
+            "7": {
+                "text": "Who composed the Christmas Oratorio?",
+                "answers": [
+                    "Ludwig van Beethoven",
+                    "Johann Sebastian Bach",
+                    "Mark Forster",
+                    "Richard Wagner"
+                ],
+                "correctAnswer": "1",
+                "explanation": "The Christmas Oratorio, composed by Johann Sebastian Bach, was first performed in Leipzig in 1734."
+            },
+            "8": {
+                "text": "In Russia, there is no Santa Claus, but instead...",
+                "answers": [
+                    "The Christmas Angel",
+                    "The Babushka Bear",
+                    "The Christ Child",
+                    "Father Frost"
+                ],
+                "correctAnswer": "3",
+                "explanation": "In Russia, gifts are not distributed by Santa Claus but by дед мороз (Ded Moroz), which translates to 'Father Frost' in English."
+            },
+            "9": {
+                "text": "Who wrote the famous Christmas carol 'From Heaven Above to Earth I Come'?",
+                "answers": [
+                    "Wolfgang Amadeus Mozart",
+                    "Martin Luther",
+                    "Jürgen Plümer",
+                    "Elvis Presley"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Martin Luther wrote the Christmas carol 'From Heaven Above to Earth I Come' in Wittenberg in 1535 for his children."
+            },
+            "10": {
+                "text": "Where is the Christmas story found?",
+                "answers": [
+                    "Gospels",
+                    "Letters of Paul",
+                    "Psalms",
+                    "Letters to the Romans"
+                ],
+                "correctAnswer": "0",
+                "explanation": "The accounts of the Christmas story are found in the Gospels of the New Testament."
+            },
+            "11": {
+                "text": "What is myrrh?",
+                "answers": [
+                    "Perfume",
+                    "Fragrant resin",
+                    "Powder",
+                    "Tobacco"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Myrrh is a fragrant resin used in ancient times for incense, medicine, and ointments."
+            },
+            "12": {
+                "text": "How does the song 'Rudolph The Red-Nosed Reindeer' end?",
+                "answers": [
+                    "...you are such a mystery",
+                    "...you'll go down in history",
+                    "...sing a song of glory",
+                    "...they will finally see"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Rudolph the red-nosed reindeer, you'll go down in history!"
+            },
+            "13": {
+                "text": "How many doors does the Advent calendar in Iceland have?",
+                "answers": [
+                    "24",
+                    "12",
+                    "13",
+                    "25"
+                ],
+                "correctAnswer": "2",
+                "explanation": "In Iceland, the Advent calendar has only 13 doors because instead of Santa Claus, the 13 Christmas elves bring gifts. The calendar starts on December 12."
+            },
+            "14": {
+                "text": "What is Christmas cookies called in Switzerland?",
+                "answers": [
+                    "Christmas-güetzi",
+                    "Christmas-küchili",
+                    "Christmas-gebäckili",
+                    "Christmas-schmausi"
+                ],
+                "correctAnswer": "0",
+                "explanation": "In Switzerland, Christmas cookies are also called 'Christmas-Güetzi'."
+            },
+            "15": {
+                "text": "Who brings the gifts in Spain?",
+                "answers": [
+                    "Santa Claus",
+                    "The Three Wise Men",
+                    "The Christ Child",
+                    "Father Frost"
+                ],
+                "correctAnswer": "1",
+                "explanation": "In Spain, the Three Wise Men traditionally bring the Christmas gifts."
+            },
+            "16": {
+                "text": "How does the song from 'Santa Claus & Co. KG' continue? Santa Claus...",
+                "answers": [
+                    "...tell me, how are you so smart?",
+                    "...tell me, how do you know so well?",
+                    "...tell me, how do you know so well?",
+                    "...tell me, why are you so smart?"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Santa Claus, tell me, why are you so smart? How do you know exactly The Christmas wish of every child?"
+            },
+            "17": {
+                "text": "What was Joseph's profession?",
+                "answers": [
+                    "Bricklayer",
+                    "Shepherd",
+                    "Programmer",
+                    "Carpenter"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Joseph was a carpenter by profession."
+            },
+            "18": {
+                "text": "How many Christmas holidays are there in Germany?",
+                "answers": [
+                    "One",
+                    "Three",
+                    "Two",
+                    "Four"
+                ],
+                "correctAnswer": "2",
+                "explanation": "Two, December 25th and 26th."
+            },
+            "19": {
+                "text": "Which spice is not in speculoos?",
+                "answers": [
+                    "Cinnamon",
+                    "Oregano",
+                    "Coriander",
+                    "Cardamom"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Oregano is not in speculoos, as it is a savory spice, while speculoos is made with sweet spices like cinnamon, cloves, and cardamom."
+            },
+            "20": {
+                "text": "Who showed the shepherds and the Three Wise Men the way to the manger?",
+                "answers": [
+                    "An angel",
+                    "A star",
+                    "Jesus",
+                    "Residents"
+                ],
+                "correctAnswer": "1",
+                "explanation": "The Christmas star."
+            },
+            "21": {
+                "text": "In which city did Mary and Joseph live?",
+                "answers": [
+                    "Nazareth",
+                    "Jerusalem",
+                    "Bethlehem",
+                    "Berlin"
+                ],
+                "correctAnswer": "0",
+                "explanation": "Mary and Joseph lived in Nazareth before their journey."
+            },
+            "22": {
+                "text": "What means of transport did Mary and Joseph use to get to Bethlehem?",
+                "answers": [
+                    "Horse",
+                    "Gunter Sachs",
+                    "Donkey",
+                    "Deutsche Bahn"
+                ],
+                "correctAnswer": "2",
+                "explanation": "Traditionally, it is believed that a donkey was used as a means of transport for Mary."
+            },
+            "23": {
+                "text": "Which Christmas pastry does not exist?",
+                "answers": [
+                    "Bethmännchen",
+                    "Heidesand",
+                    "Speculoos",
+                    "Milchbuben"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Milchbuben has never existed as a Christmas pastry - the name sounds fitting but is entirely made up."
+            },
+            "24": {
+                "text": "And when the fifth light is burning...",
+                "answers": [
+                    "...you have slept through Christmas time!",
+                    "...then you have slept through Christmas!",
+                    "...then Advent is over!",
+                    "...there will be a lot of crying!"
+                ],
+                "correctAnswer": "1",
+                "explanation": "This excerpt is from the children's rhyme 'Advent, Advent, a little light is burning', which has historically always been passed down orally."
+            }
+        }
+    }
+}

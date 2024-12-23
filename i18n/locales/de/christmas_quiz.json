@@ -1,0 +1,281 @@
+{
+    "christmas-quiz": {
+        "questions": {
+            "0": {
+                "text": "Warum mussten Maria und Josef nach Bethlehem?",
+                "answers": [
+                    "Volkszählung",
+                    "Urlaub",
+                    "Weihnachtsfeier",
+                    "Arbeit"
+                ],
+                "correctAnswer": "0",
+                "explanation": "Maria und Josef machten sich aufgrund einer Volkszählung des Kaisers Augustus auf den Weg nach Bethlehem."
+            },
+            "1": {
+                "text": "Wann wurde zum ersten Mal Weihnachten gefeiert?",
+                "answers": [
+                    "18. Jahrhundert",
+                    "Mittelalter",
+                    "4. Jahrhundert",
+                    "1. n. Chr."
+                ],
+                "correctAnswer": "2",
+                "explanation": "Das erste christliche Weihnachtsfest wurde im Jahr 336 im Rom gefeiert."
+            },
+            "2": {
+                "text": "Wer besuchte Jesus zuerst?",
+                "answers": [
+                    "Engel",
+                    "Ein Pfarrer",
+                    "Die Heiligen drei Könige",
+                    "Hirten"
+                ],
+                "correctAnswer": "3",
+                "explanation": "In der Weihnachtsgeschichte trafen die Hirten als erstes beim Stall ein."
+            },
+            "3": {
+                "text": "Wo wird der \"Julbock\" zu Weihnachten aufgestellt?",
+                "answers": [
+                    "Bayern",
+                    "Norwegen",
+                    "Schweden",
+                    "Mecklenburg-Vorpommern"
+                ],
+                "correctAnswer": "2",
+                "explanation": "Die Aufstellung des \"Julbocks\" ist eine Schwedische Tradition."
+            },
+            "4": {
+                "text": "Welches Tier ist in der Weihnachtsgeschichte erwähnt?",
+                "answers": [
+                    "Pferd",
+                    "Hund",
+                    "Schaf",
+                    "Huhn"
+                ],
+                "correctAnswer": "2",
+                "explanation": "In der Weihnachtsgeschichte wird das Schaf erwähnt, da es Teil der Herde war, die von den Hirten in der Nähe der Geburt Jesu gehütet wurde."
+            },
+            "5": {
+                "text": "Wieviel Prozent Alkohol muss Glühwein in Deutschland mindestens enthalten, um ihn Glühwein nennen zu dürfen?",
+                "answers": [
+                    "7%",
+                    "14%",
+                    "80%",
+                    "69%"
+                ],
+                "correctAnswer": "0",
+                "explanation": "Der gesetzliche Mindestwert für Glühwein beträgt 7%, maximal erlaubt sind 14,5%."
+            },
+            "6": {
+                "text": "Was bedeutet das lateinische Wort \"adventus\"?",
+                "answers": [
+                    "Allmächtiger",
+                    "Ankunft",
+                    "Besinnlichkeit",
+                    "Kerze"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Das lateinische Wort \"adventus\" kann ins Deutsche mit \"Ankunft\" übersetzt werden."
+            },
+            "7": {
+                "text": "Wer komponierte das Weihnachtsoratorium?",
+                "answers": [
+                    "Ludwig van Beethoven",
+                    "Johann Sebastian Bach",
+                    "Mark Forster",
+                    "Richard Wagner"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Das von Johann Sebastian Bachs komponierte Weihnachtsoratorium wurde erstmals 1734 in Leipzig aufgeführt."
+            },
+            "8": {
+                "text": "In Russland gibt es keinen Weihnachtsmann, dafür aber...",
+                "answers": [
+                    "Den Weihnachtsengel",
+                    "Den Babuschka-Bär",
+                    "Das Christkind",
+                    "Väterchen Frost"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Die Geschenke werden in Russland nicht vom Weihnachtsmann verteilt, sondern von дед мороз (Ded Moroz). Dies lässt sich mit \"Väterchen Frost\" ins Deutsche übersetzen."
+            },
+            "9": {
+                "text": "Wer schrieb das bekannte Weihnachtslied \"Vom Himmel hoch da komm ich her\"?",
+                "answers": [
+                    "Wolfgang Amadeus Mozart",
+                    "Martin Luther",
+                    "Jürgen Plümer",
+                    "Elvis Presley"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Martin Luther schrieb in Wittenberg im Jahr 1535 das Weihnachtslied \"Vom Himmel hoch, da komm' ich her\" für seine Kinder."
+            },
+            "10": {
+                "text": "Wo steht die Weihnachtsgeschichte?",
+                "answers": [
+                    "Evangelien",
+                    "Briefen von Paulus",
+                    "Psalmen",
+                    "Briefe der Römer"
+                ],
+                "correctAnswer": "0",
+                "explanation": "Die Erzählungen der Weihnachtsgeschichte sind in den Evangelien des neuen Testaments zu finden."
+            },
+            "11": {
+                "text": "Was ist Myrrhe?",
+                "answers": [
+                    "Parfüm",
+                    "Duftendes Harz",
+                    "Puder",
+                    "Tabak"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Myrrhe ist ein duftendes Harz, das in der Antike für Räucherwerk, Medizin und Salben genutzt wurde."
+            },
+            "12": {
+                "text": "Wie endet der Song \"Rudolph The Red Nose Reindeer\"?",
+                "answers": [
+                    "...you are such a mystery",
+                    "...you'll go down in history",
+                    "...sing a song of glory",
+                    "...they will finally see"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Rudolph the red-nosed reindeer, you'll go down in history!"
+            },
+            "13": {
+                "text": "Wie viele Türchen hat der Adventskalender in Island?",
+                "answers": [
+                    "24",
+                    "12",
+                    "13",
+                    "25"
+                ],
+                "correctAnswer": "2",
+                "explanation": "In Island hat der Adventskalender nur 13 Türchen, da dort statt des Weihnachtsmanns die 13 Weihnachtszwerge Geschenke bringen. Der Kalender beginnt am 12. Dezember."
+            },
+            "14": {
+                "text": "Wie wird Weihnachtsgebäck in der Schweiz auch genannt?",
+                "answers": [
+                    "Weihnachts-güetzi",
+                    "Weihnachts-küchili",
+                    "Weihnachts-gebäckili",
+                    "Weihnachts-schmausi"
+                ],
+                "correctAnswer": "0",
+                "explanation": "In der Schweiz wird Weihnachtsgebäck auch \"Weihnachts-Güetzi\" genannt."
+            },
+            "15": {
+                "text": "Wer bringt in Spanien die Geschenke?",
+                "answers": [
+                    "Der Weihnachtsmann",
+                    "Die Heiligen drei Könige",
+                    "Das Christkind",
+                    "Väterchen Frost"
+                ],
+                "correctAnswer": "1",
+                "explanation": "In Spanien bringen traditionell die Heiligen drei Könige die Weihnachtsgeschenke."
+            },
+            "16": {
+                "text": "Wie geht der Song von \"Weihnachtsmann & Co. KG\" weiter? Weihnachtsmann...",
+                "answers": [
+                    "...sag mir, woher bist du so schlau?",
+                    "...sag mir, woher weißt du so genau?",
+                    "...erzähl mir, woher weißt du so genau?",
+                    "...sag mir, wieso bist du so schlau?"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Weihnachtsmann, sag mir, wieso bist du so schlau? Woher kennst du ganz genau Den Weihnachtswunsch von jedem Kind?"
+            },
+            "17": {
+                "text": "Welchen Beruf übte Josef aus?",
+                "answers": [
+                    "Maurer",
+                    "Hirte",
+                    "Programmierer",
+                    "Zimmermann"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Josef war von Beruf Zimmermann."
+            },
+            "18": {
+                "text": "Wie viele Weihnachtsfeiertage gibt es in Deutschland?",
+                "answers": [
+                    "Einen",
+                    "Drei",
+                    "Zwei",
+                    "Vier"
+                ],
+                "correctAnswer": "2",
+                "explanation": "Zwei, den 25. und den 26. Dezember."
+            },
+            "19": {
+                "text": "Welches Gewürz gehört nicht in Spekulatius?",
+                "answers": [
+                    "Zimt",
+                    "Oregano",
+                    "Koriander",
+                    "Kardamom"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Oregano gehört nicht in Spekulatius, da es ein herbes Gewürz ist, während Spekulatius mit süßen Gewürzen wie Zimt, Nelken und Kardamom zubereitet wird."
+            },
+            "20": {
+                "text": "\"Wer\" zeigte den Hirten und den Heiligen drei Königen den Weg zur Krippe?",
+                "answers": [
+                    "Ein Engel",
+                    "Ein Stern",
+                    "Jesus",
+                    "Anwohner"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Der Weihnachtsstern."
+            },
+            "21": {
+                "text": "In welcher Stadt lebten Maria und Josef?",
+                "answers": [
+                    "Nazareth",
+                    "Jerusalem",
+                    "Bethlehem",
+                    "Berlin"
+                ],
+                "correctAnswer": "0",
+                "explanation": "Maria und Josef lebten vor ihrem Aufbruch in Nazareth."
+            },
+            "22": {
+                "text": "Mit welchem Transportmittel kamen Jesus und Maria nach Bethlehem?",
+                "answers": [
+                    "Pferd",
+                    "Gunter Sachs",
+                    "Esel",
+                    "Deutsche Bahn"
+                ],
+                "correctAnswer": "2",
+                "explanation": "Traditionell wird angenommen, dass ein Esel als Transportmittel für Maria diente."
+            },
+            "23": {
+                "text": "Welches Weihnachtsgebäck gibt es nicht?",
+                "answers": [
+                    "Bethmännchen",
+                    "Heidesand",
+                    "Spekulatius",
+                    "Milchbuben"
+                ],
+                "correctAnswer": "3",
+                "explanation": "Milchbuben gab es noch nie als Weihnachtsgebäck - der Name klingt zwar passend, ist aber frei erfunden."
+            },
+            "24": {
+                "text": "Und wenn das fünfte Lichtlein brennt...",
+                "answers": [
+                    "...du hast die Weihnachtszeit verpennt!",
+                    "...dann hast du Weihnachten verpennt!",
+                    "...dann ist's zuend mit dem Advent!",
+                    "...wird ordentlich geflennt!"
+                ],
+                "correctAnswer": "1",
+                "explanation": "Dieser Ausschnitt stammt aus dem Kinderreim \"Advent, Advent, ein Lichtlein brennt\", der historisch schon immer mündlich überliefert wurde."
+            }
+        }
+    }
+}

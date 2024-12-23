@@ -11,12 +11,11 @@
                 {{ $t("page.idiot_test.progress") }}{{ percentageAnswered }}%
             </p>
         </div>
-        <ul>
-            <li v-for="(question, index) in questions" :key="index" class="bg-white border-2 mb-2 rounded-lg p-2"
-                :class="{
-                    'border-green-600': question.isCorrect,
-                    'border-red-600': !question.isCorrect && question.isCorrect != undefined,
-                }">
+        <ul class="space-y-4">
+            <li v-for="(question, index) in questions" :key="index" class="bg-white border-2 rounded-lg p-2" :class="{
+                'border-green-600': question.isCorrect,
+                'border-red-600': !question.isCorrect && question.isCorrect != undefined,
+            }">
                 <div class="relative flex items-start" :class="{ 'opacity-50': question.isCorrect !== undefined }">
                     <p class="absolute left-0 text-left">{{ index + 1 }}.</p>
                     <p class="pl-8 text-left">
@@ -80,9 +79,6 @@ const router = useRouter();
 
 const shareSupported = ref(false);
 
-const userRank = ref('Gold'); // Example: Replace with dynamic data
-const customMessage = ref(`I got ${userRank.value} rank, try it out now!`);
-
 let correctSound;
 let wrongSound;
 
@@ -105,7 +101,7 @@ const questions = reactive(Object.keys(tm('idiot_test.questions')).map((key) =>
 {
     return {
         text: t(`idiot_test.questions.${key}.text`),
-        correctAnswers: toRaw(tm(`idiot_test.questions.${key}.correctAnswers`)),
+        correctAnswers: toRaw(tm(`idiot_test.questions.${key}.correctAnswers`)).map(answer => rt(answer)),
         explanation: t(`idiot_test.questions.${key}.explanation`),
         answer: undefined,
         isCorrect: undefined,
@@ -158,7 +154,6 @@ const allQuestionsAnswered = computed(() =>
     questions.every((question) => question.isCorrect !== undefined)
 );
 
-// Watch for changes in `allQuestionsAnswered`
 watch(allQuestionsAnswered, (newValue) =>
 {
     if (newValue)
@@ -206,7 +201,7 @@ function validateAnswer(userAnswer, correctAnswers)
 
     return correctAnswers.some(correctAnswer =>
     {
-        const normalizedCorrect = rt(correctAnswer).toLowerCase().trim();
+        const normalizedCorrect = correctAnswer.toLowerCase().trim();
 
         // 1. Exact match (always check for exact match)
         if (normalizedInput === normalizedCorrect)
@@ -233,10 +228,10 @@ const share = async () =>
     try
     {
         const title = t("page.idiot_test.share.title");
-        const text = t("page.idiot_test.share.text").replace(
-            "%rank%",
-            t("page.idiot_test.rank.name." + rank.value)
-        );
+        const text = t("page.idiot_test.share.text")
+            .replace("%rank%", t("page.idiot_test.rank.name." + rank.value))
+            .replace("%score%", score.value)
+            .replace("%questionsLength%", questions.length);
         const url = window.location.href.split('#')[0];
 
         await navigator.share({

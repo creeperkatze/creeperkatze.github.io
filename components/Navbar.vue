@@ -7,23 +7,24 @@
                 Released
             </p>
         </NuxtLink>
-        <img src="~/assets/icons/close.svg" :alt="$t('button.close')" class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer"
-            @click.stop="showBanner = false">
+        <img src="~/assets/icons/close.svg" :alt="$t('button.close')"
+            class="absolute bg-green-600 right-0 w-6 h-6 fill-white cursor-pointer" @click.stop="showBanner = false">
     </div>
-    <header class="relative z-50 bg-black w-screen pt-4 pb-4 mb-4" data-nosnippet>
-        <div class="wrapper flex items-center justify-between px-4">
+    <header class="relative z-50 bg-black max-w-screen pt-4 pb-4 mb-4 lg:pl-[calc(100vw-100%)]" data-nosnippet>
+        <div class="wrapper flex items-center justify-between px-4 space-x-4">
             <!-- Logo -->
             <div class="flex flex-row gap-4">
                 <NuxtLink :to="localePath('/')">
-                    <img src="~/assets/images/LogoBanner.png" alt="Creeperkatze"
+
+                    <img :src="isDecember ? images['LogoBannerChristmas'] : images['LogoBanner']" alt="Creeperkatze"
                         class="pixelated object-contain shrink-0 min-w-8 min-h-8 hidden lg:block">
-                    <img src="~/assets/images/Logo.png" alt="Creeperkatze"
+                    <img :src="isDecember ? images['LogoChristmas'] : images['Logo']" alt="Creeperkatze"
                         class="pixelated object-contain shrink-0 min-w-8 min-h-8 lg:hidden">
                 </NuxtLink>
                 <div class="lg:hidden flex items-center">
                     <button @click="drawer">
-                        <svg class="h-8 w-8 text-white" :alt="$t('button.drawer')" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-8 w-8 text-white" :alt="$t('button.drawer')" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
@@ -34,7 +35,8 @@
             <nav class="hidden lg:block">
                 <div class="flex justify-start gap-4 mx-4">
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
-                    <div class="dropdown relative inline-flex" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+                    <div class="dropdown relative inline-flex" @mouseenter="dropdownOpen = true"
+                        @mouseleave="dropdownOpen = false">
                         <NuxtLink id="dropdown-hover-event" :to="localePath('/projects')" type="button"
                             class="inline-flex navbar-element items-center" aria-haspopup="menu" aria-expanded="false"
                             aria-label="Dropdown">
@@ -60,8 +62,10 @@
                     <NuxtLink :to="localePath('/blog/')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
                     <NuxtLink :to="localePath('/joke/')" class="navbar-element">{{ $t('navbar.joke') }}</NuxtLink>
                     <NuxtLink :to="localePath('/cat/')" class="navbar-element">{{ $t('navbar.cat') }}</NuxtLink>
-                    <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element">{{ $t('navbar.idiot_test') }}
+                    <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element">{{ $t('navbar.idiot-test') }}
                     </NuxtLink>
+                    <NuxtLink :to="localePath('/christmas-quiz/')" :class="['navbar-element', { 'christmas-stripes': isDecember }]">{{
+                        $t('navbar.christmas-quiz')}}</NuxtLink>
                 </div>
             </nav>
 
@@ -106,18 +110,29 @@
                     }}
                 </NuxtLink>
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left" @click="drawer">{{
-                    $t('navbar.idiot_test') }}</NuxtLink>
+                    $t('navbar.idiot-test') }}</NuxtLink>
+                <NuxtLink :to="localePath('/christmas-quiz/')" class="navbar-element text-left christmas-stripes" @click="drawer">{{
+                    $t('navbar.christmas-quiz') }}</NuxtLink>
             </nav>
         </div>
     </Transition>
 </template>
 
 <script setup>
+import { filename } from 'pathe/utils'
+
 const localePath = useLocalePath()
 
 const showBanner = ref(false);
 const drawerOpen = ref(false);
 const dropdownOpen = ref(false);
+
+const isDecember = new Date().getMonth() === 11;
+
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+const images = Object.fromEntries(
+    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 
 function drawer()
 {
@@ -181,5 +196,13 @@ nav,
         transform: translateX(-100%);
         /* End at left */
     }
+}
+
+.christmas-stripes:not(.router-link-active) {
+    background: repeating-linear-gradient(-45deg, rgba(255, 96, 96, 1), rgba(255, 96, 96, 1) 5%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 10%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 </style>
