@@ -150,7 +150,7 @@
                     "24",
                     "12",
                     "13",
-                    "25"
+                    "4"
                 ],
                 "correctAnswer": "2",
                 "explanation": "In Iceland, the Advent calendar has only 13 doors because instead of Santa Claus, the 13 Christmas elves bring gifts. The calendar starts on December 12."
@@ -172,7 +172,7 @@
                     "Santa Claus",
                     "The Three Wise Men",
                     "The Christ Child",
-                    "Father Frost"
+                    "The Christmas Angel"
                 ],
                 "correctAnswer": "1",
                 "explanation": "In Spain, the Three Wise Men traditionally bring the Christmas gifts."
@@ -214,12 +214,12 @@
                 "text": "Which spice is not in speculoos?",
                 "answers": [
                     "Cinnamon",
-                    "Oregano",
+                    "Nutmeg",
                     "Coriander",
                     "Cardamom"
                 ],
                 "correctAnswer": "1",
-                "explanation": "Oregano is not in speculoos, as it is a savory spice, while speculoos is made with sweet spices like cinnamon, cloves, and cardamom."
+                "explanation": "Nutmeg is not in speculoos, as it is a savory spice, while speculoos is made with sweet spices like cinnamon, cloves, and cardamom."
             },
             "20": {
                 "text": "Who showed the shepherds and the Three Wise Men the way to the manger?",

@@ -150,7 +150,7 @@
                     "24",
                     "12",
                     "13",
-                    "25"
+                    "4"
                 ],
                 "correctAnswer": "2",
                 "explanation": "In Island hat der Adventskalender nur 13 Türchen, da dort statt des Weihnachtsmanns die 13 Weihnachtszwerge Geschenke bringen. Der Kalender beginnt am 12. Dezember."
@@ -172,7 +172,7 @@
                     "Der Weihnachtsmann",
                     "Die Heiligen drei Könige",
                     "Das Christkind",
-                    "Väterchen Frost"
+                    "Der Weihnachtsengel"
                 ],
                 "correctAnswer": "1",
                 "explanation": "In Spanien bringen traditionell die Heiligen drei Könige die Weihnachtsgeschenke."
@@ -214,12 +214,12 @@
                 "text": "Welches Gewürz gehört nicht in Spekulatius?",
                 "answers": [
                     "Zimt",
-                    "Oregano",
+                    "Muskatnuss",
                     "Koriander",
                     "Kardamom"
                 ],
                 "correctAnswer": "1",
-                "explanation": "Oregano gehört nicht in Spekulatius, da es ein herbes Gewürz ist, während Spekulatius mit süßen Gewürzen wie Zimt, Nelken und Kardamom zubereitet wird."
+                "explanation": "Muskatnuss gehört nicht in Spekulatius, da es ein herbes Gewürz ist, während Spekulatius mit süßen Gewürzen wie Zimt, Nelken und Kardamom zubereitet wird."
             },
             "20": {
                 "text": "\"Wer\" zeigte den Hirten und den Heiligen drei Königen den Weg zur Krippe?",
