@@ -282,6 +282,7 @@ const share = async () =>
 {
     border: 10px solid transparent;
     border-image: url(~/assets/images/christmas-quiz/border-candycane.png) 20% round;
+    border-image-outset: 1px;
 }
 
 .candycane-progress
