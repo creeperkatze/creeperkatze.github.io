@@ -10,7 +10,6 @@ export default defineNuxtConfig({
         [
           "@nuxtjs/google-fonts",
           "@nuxtjs/tailwindcss",
-          "@nuxtjs/color-mode",
           "@nuxtjs/sitemap",
           "@nuxtjs/i18n",
           "@nuxt/content",
