@@ -14,7 +14,8 @@
                 </div>
             </div>
             <iframe v-else frameborder="0" src="https://itch.io/embed-upload/12251132?color=000000" allow="fullscreen"
-                class="center max-w-full max-h-full" width="1000" height="600"><a href="https://creeperkatze.itch.io/superslide">Play
+                class="center max-w-full max-h-full" width="1000" height="600"><a
+                    href="https://creeperkatze.itch.io/superslide">Play
                     Superslide
                     on itch.io</a></iframe>
         </div>
@@ -28,10 +29,11 @@
         <h2>{{ $t("superslide.legal") }}</h2>
         <ul class="list-disc">
             <li>
-                <NuxtLink to="/projects/superslide/privacy-policy">{{ $t("superslide.privacy_policy") }}</NuxtLink>
+
+                <NuxtLink :to="localePath('/projects/superslide/privacy-policy/')">{{ $t("superslide.privacy_policy") }}</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/projects/superslide/terms">{{ $t("superslide.terms") }}</NuxtLink>
+                <NuxtLink :to="localePath('/projects/superslide/terms/')"">{{ $t("superslide.terms") }}</NuxtLink>
             </li>
         </ul>
     </div>

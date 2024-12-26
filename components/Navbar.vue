@@ -94,7 +94,7 @@
         leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
         <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
             <nav class="flex flex-col items-center justify-center space-y-4">
-                <NuxtLink to="/" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
+                <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawer">{{ $t('navbar.home') }}</NuxtLink>
                 <NuxtLink :to="localePath('/projects')" class="navbar-element text-left" @click="drawer">
                     {{ $t('navbar.projects') }}</NuxtLink>
                 <NuxtLink :to="localePath('/skills/')" class="navbar-element text-left" @click="drawer">{{
