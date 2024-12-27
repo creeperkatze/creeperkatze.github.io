@@ -1,5 +1,5 @@
 ---
-name: 🌐EN Submit an idea
+name: Submit an idea
 about: Suggest an idea for the website
 title: 'Idea: '
 labels: 'enhancement'

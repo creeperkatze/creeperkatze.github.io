@@ -1,5 +1,5 @@
 ---
-name: 🌐DE Idee einreichen
+name: Idee einreichen
 about: Schlage eine Idee für die Website vor
 title: 'Idee: '
 labels: 'enhancement'

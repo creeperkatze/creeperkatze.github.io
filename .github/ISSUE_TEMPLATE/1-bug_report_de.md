@@ -1,5 +1,5 @@
 ---
-name: 🌐DE Ein Problem melden
+name: Ein Problem melden
 about: Erstelle einen Bericht zur Verbesserung der Website
 title: 'Problem: '
 labels: 'bug'
