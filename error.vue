@@ -29,7 +29,7 @@ useHead({
 const localizedDescription = t('page.error.404');
 
 useSeoMeta({
-    title: '404',
+    title: '404 | Creeperkatze',
     ogTitle: '404 | Creeperkatze',
     twitterTitle: '404 | Creeperkatze',
     description: localizedDescription,
