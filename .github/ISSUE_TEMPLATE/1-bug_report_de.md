@@ -1,7 +1,7 @@
 ---
 name: 🌐DE Ein Problem melden
 about: Erstelle einen Bericht zur Verbesserung der Website
-title: ''
+title: 'Problem: '
 labels: 'bug'
 assignees: ''
 

@@ -1,7 +1,7 @@
 ---
 name: 🌐EN Report a problem
 about: Create a report to help improve the website
-title: ''
+title: 'Problem: '
 labels: 'bug'
 assignees: ''
 

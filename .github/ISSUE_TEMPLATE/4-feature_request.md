@@ -1,7 +1,7 @@
 ---
 name: 🌐EN Submit an idea
 about: Suggest an idea for the website
-title: ''
+title: 'Idea: '
 labels: 'enhancement'
 assignees: ''
 
