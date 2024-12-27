@@ -1,5 +1,5 @@
 ---
-name: 🌐EN🌐 Report a problem
+name: 🌐EN Report a problem
 about: Create a report to help improve the website
 title: ''
 labels: 'bug'
