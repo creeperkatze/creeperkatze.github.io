@@ -94,7 +94,7 @@ li:marker
 
 hr
 {
-    @apply rounded mb-4 border border-gray-400
+    @apply rounded border border-gray-400
 }
 
 .footer-text

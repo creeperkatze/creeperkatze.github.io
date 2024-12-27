@@ -117,7 +117,13 @@
             "heading": "Mein Blog",
             "description": "Mein Blog, mit Artikeln über die Entwicklung von Unity-Spielen, Web-Entwicklung und mehr!",
             "not_found": "Blog nicht gefunden",
-            "empty": "Blog ist leer"
+            "empty": "Blog ist leer",
+            "tag": {
+                "website": "Website",
+                "addition": "Neu",
+                "seo": "SEO",
+                "google": "Google"
+            }
         },
         "joke": {
             "title": "Witzgenerator",

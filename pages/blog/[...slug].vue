@@ -9,7 +9,17 @@
                         <p class="text-right text-gray-400 ml-4">{{ doc.date }}</p>
                     </div>
                     <h4 class="text-left text-gray-400">{{ doc.description }}</h4>
-                    <hr>
+                    <div class="mt-2 mb-4 flex flex-wrap">
+                        <span v-for="tag in doc.tags" :key="tag"
+                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 group-hover:bg-green-700">
+                            #{{ $t(`page.blog.tag.${tag}`) }}
+                        </span>
+                        <span
+                            class="inline-flex items-center bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 group-hover:bg-green-700">
+                            <img :src="images[doc.lang]" :alt="doc.lang" class="w-6 rounded-full">
+                        </span>
+                    </div>
+                    <hr class="mb-4">
                     <ContentRenderer :value="doc" class="text-left" />
                 </article>
             </template>
@@ -25,6 +35,12 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
+import { filename } from 'pathe/utils';
+
+const glob = import.meta.glob('@/assets/images/flags/*.svg', { eager: true });
+const images = Object.fromEntries(
+    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+);
 
 const path = useUnlocalePath(useRoute().path);
 
