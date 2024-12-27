@@ -18,7 +18,16 @@
         "link_tailwind": "Tailwind",
         "link_github": "Github",
         "badge": {
-            "issue": "https://img.shields.io/badge/fehler_%26_verbesserungen-hier-blue?logo=github"
+            "problem": {
+                "shield": "https://img.shields.io/badge/problem-melden-blue?logo=github",
+                "link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=",
+                "alt": "Problem melden"
+            },
+            "suggestion": {
+                "shield": "https://img.shields.io/badge/idee-einreichen-blue?logo=github",
+                "link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=enhancement&projects=&template=2-feature_request_de.md&title=",
+                "alt": "Idee einreichen"
+            }
         }
     },
     "page": {
