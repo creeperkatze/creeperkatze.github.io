@@ -20,12 +20,12 @@
         "badge": {
             "problem": {
                 "shield": "https://img.shields.io/badge/problem-melden-blue?logo=github",
-                "link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=",
+                "link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=Problem%3A+",
                 "alt": "Problem melden"
             },
             "suggestion": {
                 "shield": "https://img.shields.io/badge/idee-einreichen-blue?logo=github",
-                "link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=enhancement&projects=&template=2-feature_request_de.md&title=",
+                "link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=enhancement&projects=&template=2-feature_request_de.md&title=Idee%3A+",
                 "alt": "Idee einreichen"
             }
         }
