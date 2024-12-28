@@ -6,7 +6,7 @@
                 <div
                     class="text-left mb-4 pt-4 pb-4 px-2 md:px-4 rounded-lg border-2 transition ease-in-out bg-white text-black hover:border-black hover:bg-green-600 group">
                     <div class="flex items-center justify-between">
-                        <h2>{{ article.title }}</h2>
+                        <h2 class="truncate">{{ article.title }}</h2>
                         <p class="text-gray-400 ml-4">{{ article.date }}</p>
                     </div>
                     <hr>
