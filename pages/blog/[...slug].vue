@@ -5,7 +5,7 @@
             <template #default="{ doc }">
                 <article>
                     <div class="flex items-center justify-between">
-                        <h1 class="text-left">{{ doc.title }}</h1>
+                        <h1 class="text-left truncate">{{ doc.title }}</h1>
                         <p class="text-right text-gray-400 ml-4">{{ doc.date }}</p>
                     </div>
                     <h4 class="text-left text-gray-400">{{ doc.description }}</h4>
