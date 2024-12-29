@@ -6,7 +6,7 @@
             <IconDown class="size-4 transform transition-all" :class="{ 'rotate-180': dropdownOpen }" />
         </NuxtLink>
 
-        <div v-if="dropdownOpen" class="mt-4 border border-green-500 rounded-md flex flex-col space-y-4 p-1">
+        <div v-if="dropdownOpen" class="mt-4 border border-gray-400 rounded-md flex flex-col space-y-4 p-1">
             <div v-for="item in items" :key="item.name" class="">
                 <NuxtLink :to="localePath(item.link)" class="navbar-element" @click="emit('item-clicked')">{{ item.name }}</NuxtLink>
             </div>
