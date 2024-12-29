@@ -96,5 +96,10 @@ export default defineNuxtConfig({
                 'https://github.com/creeperkatze'
             ]
         }
-    }
+    },
+
+    routeRules: {
+        '/joke/': { redirect: '/generators/joke/' },
+        '/cat/': { redirect: '/generators/cat/' },
+    },
 });

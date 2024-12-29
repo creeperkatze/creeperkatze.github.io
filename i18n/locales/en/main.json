@@ -2,8 +2,11 @@
     "navbar": {
         "home": "Home",
         "projects": "Projects",
+        "superslide": "Superslide",
+        "flappy-christmas": "Flappy Christmas",
         "skills": "Skills",
         "blog": "Blog",
+        "generators": "Generators",
         "joke": "Joke",
         "cat": "Cat",
         "idiot-test": "Idiot Test",
@@ -135,6 +138,11 @@
         "yippee": {
             "title": "Yippee",
             "description": "Meine Mama hat mir einfach erlaubt, dass ich Cola trinken darf!"
+        },
+        "generators": {
+            "title": "Generators",
+            "description": "Funny generators, like random jokes or cat photos!",
+            "heading": "Generators"
         },
         "cat": {
             "title": "Cat Generator",

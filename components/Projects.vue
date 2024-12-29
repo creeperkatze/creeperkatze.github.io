@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center mx-auto flex-col max-w-[940px]">
         <h2 class="text-left mb-2">{{ $t('page.projects.subtitle.games') }}</h2>
-        <hr>
+        <hr class="mb-2">
         <div class="flex flex-wrap flex-row gap-2 justify-center">
             <NuxtLink :to="localePath('/projects/superslide/')"
                 class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
@@ -38,7 +38,7 @@
             </NuxtLink>
         </div>
         <h2 class="text-left mb-2 mt-4">{{ $t('page.projects.subtitle.webdev') }}</h2>
-        <hr>
+        <hr class="mb-2">
         <div class="flex flex-wrap flex-row gap-2 justify-center">
             <NuxtLink :to="localePath('/blog/first-website/')"
                 class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
@@ -68,7 +68,7 @@
                         <h5 class="text-white p-2">{{ $t('page.projects.project.christmas-quiz.title') }}</h5>
                     </div>
                 </NuxtLink>
-                <NuxtLink :to="localePath('/joke/')"
+                <NuxtLink :to="localePath('/generators/joke/')"
                     class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                     <div class="rounded-lg bg-black h-full flex flex-col">
                         <img src="/images/seo/joke.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
@@ -76,7 +76,7 @@
                         <h5 class="text-white p-2">{{ $t('page.projects.project.joke.title') }}</h5>
                     </div>
                 </NuxtLink>
-                <NuxtLink :to="localePath('/cat/')"
+                <NuxtLink :to="localePath('/generators/cat/')"
                     class="no-underline rounded-xl transition ease-in-out hover:scale-95 border-4 p-1 hover:border-black">
                     <div class="rounded-lg bg-black h-full flex flex-col">
                         <img src="/images/seo/cat.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
