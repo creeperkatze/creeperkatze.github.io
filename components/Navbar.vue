@@ -79,7 +79,7 @@
             <nav class="flex flex-col items-center justify-center space-y-4">
                 <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{
                     $t('navbar.home') }}</NuxtLink>
-                <DrawerDropdown :title="$t('navbar.projects')" :titleLink="localePath('/projects/')" :items="[
+                <DropdownDrawer :title="$t('navbar.projects')" :titleLink="localePath('/projects/')" :items="[
                     { name: $t('navbar.superslide'), link: '/projects/superslide/' },
                     { name: $t('navbar.flappy-christmas'), link: '/projects/flappy-christmas' } 
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
@@ -91,7 +91,7 @@
                     {{
                         $t('navbar.blog') }}
                 </NuxtLink>
-                <DrawerDropdown :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
+                <DropdownDrawer :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
                     { name: $t('navbar.joke'), link: '/generators/joke' },
                     { name: $t('navbar.cat'), link: '/generators/cat/' }
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
