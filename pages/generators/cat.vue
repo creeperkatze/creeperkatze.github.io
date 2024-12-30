@@ -7,7 +7,7 @@
                 </div>
                 <div v-else>
                     <p v-if="error" class="text-red-600">Error: {{ error }}</p>
-                    <img v-else src="~/assets/icons/loading.svg" :alt="$t('page.cat.loading')" class="center w-16">
+                    <IconLoading :alt="$t('page.cat.loading')" class="center w-16"/>
                 </div>
             </div>
             <hr class="mt-4 mb-4">

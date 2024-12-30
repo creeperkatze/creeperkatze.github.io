@@ -13,7 +13,7 @@
                     <div v-if="error" class="mb-4">
                         <p v-if="error" class="text-red-600">Error: {{ error }}</p>
                     </div>
-                    <img v-else src="~/assets/icons/loading.svg" :alt="$t('page.joke.loading')" class="center w-16 center">
+                    <IconLoading :alt="$t('page.joke.loading')" class="center w-16"/>
                 </div>
             </div>
             <hr class="mt-4 mb-4">
