@@ -100,6 +100,8 @@ export default defineNuxtConfig({
 
     routeRules: {
         '/joke/': { redirect: '/generators/joke/' },
+        '/en/joke/': { redirect: '/en/generators/joke/' },
         '/cat/': { redirect: '/generators/cat/' },
+        '/en/cat/': { redirect: '/en/generators/cat/' },
     },
 });
