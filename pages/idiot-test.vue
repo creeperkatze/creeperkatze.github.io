@@ -30,7 +30,7 @@
                     <button
                         class="no-outline min-w-0 px-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-gray-400 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
-                        <img src="~/assets/icons/submit.svg" :alt="$t('button.submit')">
+                        <IconSubmit :alt="$t('button.submit')"/>
                     </button>
                 </div>
                 <p v-if="question.isCorrect != undefined" :class="{
@@ -54,7 +54,7 @@
                     <button v-if="shareSupported"
                         class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 transition ease-in-out text-black border-black bg-purple-500 hover:bg-purple-700 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
                         @click="share">
-                        <img src="~/assets/icons/share.svg" :alt="$t('button.share')">
+                        <IconShare :alt="$t('button.share')"/>
                     </button>
                 </div>
                 <h4 class="mb-4">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
