@@ -1,5 +1,5 @@
 <template>
-    <div class="dropdown flex flex-col" @click="toggleDropdown">
+    <div class="dropdown flex flex-col" @click="setDropdown(!dropdown)">
         <NuxtLink :to="localePath(titleLink)" type="button" class="inline-flex navbar-element items-center">
             {{ title }}
             <IconDown class="size-4 transform transition-all" :class="{ 'rotate-180': dropdownOpen }" />
@@ -47,11 +47,11 @@ watch(() => props.drawerOpen, (newVal) =>
 {
     if (!newVal)
     {
-        toggleDropdown(false)
+        setDropdown(false)
     }
 })
 
-const toggleDropdown = (state) =>
+const setDropdown = (state) =>
 {
     dropdownOpen.value = state
 }
