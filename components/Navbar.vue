@@ -73,13 +73,13 @@
         enter-to-class="transform translate-y-0" leave-active-class="transition duration-100 ease-in"
         leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
         <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
-            <nav class="flex flex-col items-center justify-center space-y-4">
+            <nav class="flex flex-col text-left space-y-4 ml-4">
                 <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{
                     $t('navbar.home') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.projects')" :titleLink="localePath('/projects/')" :items="[
                     { name: $t('navbar.superslide'), link: '/projects/superslide/' },
                     { name: $t('navbar.flappy-christmas'), link: '/projects/flappy-christmas' } 
-                ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
+                    ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen"/>
                 <NuxtLink :to="localePath('/skills/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.skills')
@@ -91,7 +91,7 @@
                 <DropdownDrawer :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
                     { name: $t('navbar.joke'), link: '/generators/joke' },
                     { name: $t('navbar.cat'), link: '/generators/cat/' }
-                ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
+                    ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen"/>
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.idiot-test') }}</NuxtLink>
@@ -180,7 +180,7 @@ nav,
 .christmas-stripes:not(.router-link-active)
 {
     background: repeating-linear-gradient(-45deg, rgba(255, 96, 96, 1), rgba(255, 96, 96, 1) 5%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 10%);
-    background-size: 200% 100%;
+    background-size: 80% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

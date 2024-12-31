@@ -1,15 +1,20 @@
 <template>
-    <div class="dropdown flex flex-col" @click="dropdownOpen = !dropdownOpen">
-        <NuxtLink :to="localePath(titleLink)" type="button"
-            class="inline-flex navbar-element items-center justify-center">
+    <div class="dropdown flex flex-col" @click="toggleDropdown">
+        <NuxtLink :to="localePath(titleLink)" type="button" class="inline-flex navbar-element items-center">
             {{ title }}
             <IconDown class="size-4 transform transition-all" :class="{ 'rotate-180': dropdownOpen }" />
         </NuxtLink>
 
-        <div v-if="dropdownOpen" class="mt-4 border border-gray-400 rounded-md flex flex-col space-y-4 p-1">
-            <div v-for="item in items" :key="item.name" class="">
-                <NuxtLink :to="localePath(item.link)" class="navbar-element" @click="emit('item-clicked')">{{ item.name }}</NuxtLink>
+        <div v-if="dropdownOpen" class="mt-2 flex">
+            <div class="w-[2px] bg-gray-400" />
+            <div class="flex flex-col space-y-4 p-1">
+                <div v-for="item in items" :key="item.name" class="ml-2">
+                    <NuxtLink :to="localePath(item.link)" class="navbar-element" @click="emit('item-clicked')">{{
+                        item.name
+                    }}</NuxtLink>
+                </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -38,11 +43,18 @@ const props = defineProps({
     }
 })
 
-watch(() => props.drawerOpen, (newVal) => {
-    if (!newVal) {
-        dropdownOpen.value = false;
+watch(() => props.drawerOpen, (newVal) =>
+{
+    if (!newVal)
+    {
+        toggleDropdown(false)
     }
 })
+
+const toggleDropdown = (state) =>
+{
+    dropdownOpen.value = state
+}
 
 const emit = defineEmits(['item-clicked'])
 </script>
