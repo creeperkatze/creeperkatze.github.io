@@ -1,5 +1,5 @@
 <template>
-    <div class="dropdown flex flex-col" @click="setDropdown(!dropdown)">
+    <div class="dropdown flex flex-col" @click="setDropdown(!dropdownOpen)">
         <NuxtLink :to="localePath(titleLink)" type="button" class="inline-flex navbar-element items-center">
             {{ title }}
             <IconDown class="size-4 transform transition-all" :class="{ 'rotate-180': dropdownOpen }" />
