@@ -2,7 +2,7 @@
     <footer class="bg-black items-center max-w-screen pb-2 h-auto" style="padding-left: calc(100vw - 100%);"
         data-nosnippet>
         <p class="text-white mt-4 mx-4 text-center text-sm md:text-lg">
-            ©<span v-text="new Date().getFullYear()" /> {{ $t("footer.copyright") }}
+            ©<span v-text="currentYear" /> {{ $t("footer.copyright") }}
         </p>
         <p class="text-white mb-2 mx-4 text-center text-sm md:text-lg">
             {{ $t("footer.text_part1") }}
@@ -31,3 +31,7 @@
                 :alt="$t('footer.badge.suggestion.alt')"></a>
     </footer>
 </template>
+
+<script setup>
+const currentYear = computed(() => new Date().getFullYear());
+</script>

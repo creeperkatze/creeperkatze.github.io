@@ -111,7 +111,7 @@ const localePath = useLocalePath()
 const showBanner = ref(false);
 const drawerOpen = ref(false);
 
-const isDecember = new Date().getMonth() === 11;
+const isDecember = computed(() => new Date().getMonth() === 11);
 
 const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
 const images = Object.fromEntries(
