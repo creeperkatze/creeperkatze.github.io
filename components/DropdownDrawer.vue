@@ -20,7 +20,10 @@
 </template>
 
 <script setup>
-const localePath = useLocalePath()
+import { ref, watch } from 'vue';
+import emitter from '~/utils/eventBus';
+
+const localePath = useLocalePath();
 const dropdownOpen = ref(false);
 
 const props = defineProps({
@@ -53,8 +56,15 @@ watch(() => props.drawerOpen, (newVal) =>
 
 const setDropdown = (state) =>
 {
-    dropdownOpen.value = state
+    if (state) {
+        emitter.emit('close');
+    }
+    dropdownOpen.value = state;
 }
+
+emitter.on('close', () => {
+    setDropdown(false)
+});
 
 const emit = defineEmits(['item-clicked'])
 </script>
