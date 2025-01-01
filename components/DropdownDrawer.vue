@@ -20,9 +20,6 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
-import emitter from '~/utils/eventBus';
-
 const localePath = useLocalePath();
 const dropdownOpen = ref(false);
 
@@ -56,15 +53,19 @@ watch(() => props.drawerOpen, (newVal) =>
 
 const setDropdown = (state) =>
 {
-    if (state) {
-        emitter.emit('close');
+    if (state)
+    {
+       useNuxtApp().$bus.$emit('close');
     }
     dropdownOpen.value = state;
 }
 
-emitter.on('close', () => {
-    setDropdown(false)
+onMounted(() => {
+    useNuxtApp().$bus.$on('close', () => {
+        setDropdown(false)
+    });
 });
+
 
 const emit = defineEmits(['item-clicked'])
 </script>
