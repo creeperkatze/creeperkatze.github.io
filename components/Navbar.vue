@@ -95,7 +95,7 @@
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.idiot-test') }}</NuxtLink>
-                <NuxtLink :to="localePath('/christmas-quiz/')" class="navbar-element text-left christmas-stripes-drawer"
+                <NuxtLink :to="localePath('/christmas-quiz/')" :class="['navbar-element text-left', { 'christmas-stripes-drawer': isDecember }]"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.christmas-quiz') }}</NuxtLink>
             </nav>
@@ -189,7 +189,7 @@ nav,
 .christmas-stripes-drawer:not(.router-link-active)
 {
     background: repeating-linear-gradient(-45deg, rgba(255, 96, 96, 1), rgba(255, 96, 96, 1) 5%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 10%);
-    background-size: 20% 100%;
+    background-size: 50% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
