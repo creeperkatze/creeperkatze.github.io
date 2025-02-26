@@ -1,6 +1,6 @@
 <template>
     <div v-if="showBanner" class="relative flex items-center bg-green-600 overflow-hidden z-50" data-nosnippet>
-        <NuxtLink :to="localePath('/projects/superslide/')" class="flex-grow">
+        <NuxtLink :to="localePath('/games/superslide/')" class="flex-grow">
             <p class="scrolling-text text-white text-left whitespace-nowrap overflow-visible">
                 Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide
                 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21
@@ -31,9 +31,9 @@
             <nav class="hidden lg:block">
                 <div class="flex justify-start gap-4 mx-4">
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
-                    <Dropdown :title="$t('navbar.projects')" :titleLink="localePath('/projects/')" :items="[
-                        { name: $t('navbar.superslide'), link: '/projects/superslide/' },
-                        { name: $t('navbar.flappy-christmas'), link: '/projects/flappy-christmas/' }
+                    <Dropdown :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
+                        { name: $t('navbar.superslide'), link: '/games/superslide/' },
+                        { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' }
                     ]" />
                     <NuxtLink :to="localePath('/skills/')" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
                     <NuxtLink :to="localePath('/blog/')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
@@ -76,9 +76,9 @@
             <nav class="flex flex-col text-left space-y-4 ml-4">
                 <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{
                     $t('navbar.home') }}</NuxtLink>
-                <DropdownDrawer :title="$t('navbar.projects')" :titleLink="localePath('/projects/')" :items="[
-                    { name: $t('navbar.superslide'), link: '/projects/superslide/' },
-                    { name: $t('navbar.flappy-christmas'), link: '/projects/flappy-christmas' } 
+                <DropdownDrawer :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
+                    { name: $t('navbar.superslide'), link: '/games/superslide/' },
+                    { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas' } 
                     ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen"/>
                 <NuxtLink :to="localePath('/skills/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{

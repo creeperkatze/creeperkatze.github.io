@@ -103,5 +103,11 @@ export default defineNuxtConfig({
         '/en/joke/': { redirect: '/en/generators/joke/' },
         '/cat/': { redirect: '/generators/cat/' },
         '/en/cat/': { redirect: '/en/generators/cat/' },
+        '/projects/': { redirect: '/games//' },
+        '/en/projects/': { redirect: '/en/games/' },
+        '/projects/superslide/': { redirect: '/games/superslide/' },
+        '/en/projects/superslide/': { redirect: '/en/games/superslide/' },
+        '/projects/flappy-christmas/': { redirect: '/games/flappy-christmas/' },
+        '/en/projects/flappy-christmas/': { redirect: '/en/games/flappy-christmas/' },
     },
 });

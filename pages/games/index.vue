@@ -1,12 +1,12 @@
 <template>
-    <Projects />
+    <GameCards />
 </template>
 
 <script setup>
 
 definePageMeta({
-    title: 'page.projects.title',
-    description: 'page.projects.description',
+    title: 'page.games.title',
+    description: 'page.games.description',
     image: '/images/seo/default.png'
 })
 

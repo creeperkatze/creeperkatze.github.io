@@ -23,21 +23,6 @@
             <ConsentPanel />
         </div>
     </div>
-
-    <!--
-    <div class="mt-8 flex center items-center pt-4 pb-4 rounded-lg border-2 bg-white border-gray-400 max-w-screen-md">
-        <h2>{{ $t("superslide.legal") }}</h2>
-        <ul class="list-disc">
-            <li>
-
-                <NuxtLink :to="localePath('/projects/superslide/privacy-policy/')">{{ $t("superslide.privacy_policy") }}</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink :to="localePath('/projects/superslide/terms/')"">{{ $t("superslide.terms") }}</NuxtLink>
-            </li>
-        </ul>
-    </div>
-    -->
 </template>
 
 <script setup>

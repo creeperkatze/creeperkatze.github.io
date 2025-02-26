@@ -5,7 +5,8 @@
         {{ $t("page.index.welcome") }}
     </p>
     <h1 class="mb-6">{{ $t("page.index.title_projects") }}</h1>
-    <Projects />
+    <GameCards />
+    <WebsiteCards />
 </template>
 
 <script setup>

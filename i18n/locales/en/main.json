@@ -1,7 +1,7 @@
 {
     "navbar": {
         "home": "Home",
-        "projects": "Projects",
+        "games": "Games",
         "superslide": "Superslide",
         "flappy-christmas": "Flappy Christmas",
         "skills": "Skills",
@@ -49,12 +49,11 @@
             "welcome": "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
             "title_projects": "My Projects"
         },
-        "projects": {
-            "title": "Projects",
-            "description": "My Unity game developement projects, currently consisting of Superslide and Flappy Christmas",
+        "games": {
+            "title": "Games",
+            "description": "My games, Superslide and Flappy Christmas",
             "subtitle": {
-                "games": "Games",
-                "webdev": "Web Developement"
+                "games": "Games"
             },
             "project": {
                 "superslide": {
@@ -64,7 +63,14 @@
                 "flappy_christmas": {
                     "title": "Flappy Christmas",
                     "description": "Jump through the chimneys!"
-                },
+                }
+            }
+        },
+        "projects": {
+            "subtitle": {
+                "webdev": "Web Developement"
+            },
+            "project": {
                 "website": {
                     "title": "Personal Website",
                     "description": "How I created this personal website using Nuxt and Tailwind✨"
