@@ -1,14 +1,14 @@
 import colors from 'tailwindcss/colors';
 
-module.exports = {
+export default {
     theme: {
-        fontFamily: {
-            sans: ['"Lexend"', 'sans-serif']
-        },
         extend: {
+            fontFamily: {
+                sans: ['Lexend']
+            },
             borderColor: {
                 DEFAULT: colors.gray[400],
             },
-        },
+        }
     }
 }
