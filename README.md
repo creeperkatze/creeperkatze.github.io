@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://creeperkatze.github.io">
-    <img src="LogoBanner.png" width="400" alt="Creeperkatze banner" style="image-rendering: pixelated;">
+    <img src="LogoBanner128.png" width="400" alt="Creeperkatze banner">
   </a>
 </p>
 
