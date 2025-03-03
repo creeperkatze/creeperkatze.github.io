@@ -1,10 +1,20 @@
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/creeperkatze/creeperkatze.github.io/main?display_timestamp=author&logo=github)](https://github.com/Creeperkatze/creeperkatze.github.io/commits/)
 [![Build Passing](https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github")](https://github.com/Creeperkatze/creeperkatze.github.io/actions)
-# creeperkatze.github.io
 
-# This website will be used
-- As a personal portfolio
-- To host mirror versions of my itch.io games
-- To host static images used inside my games
+<p align="center">
+  <a href="https://creeperkatze.github.io">
+    <img src="LogoBanner.png" width="400" alt="Creeperkatze banner" style="image-rendering: pixelated;">
+  </a>
+</p>
 
-*Currently work in progress*
+# The Creeperkatze Website
+### Here you can:
+- Check out my games
+- Test yourself with fun quizzes
+- Marvel at my programming skills
+- Read interesting blogs (barely updated)
+- Generate cat photos
+- & do much more
+
+What are you waiting for?\
+[Go check it out!](https://creeperkatze.github.io)
