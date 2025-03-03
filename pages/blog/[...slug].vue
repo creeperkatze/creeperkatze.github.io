@@ -1,6 +1,6 @@
 <template>
     <Button link="/blog/">{{ $t('button.back') }}</Button>
-    <div class="flex center items-center pt-4 pb-4 px-2 md:px-4 rounded-lg border-2 bg-white border-gray-400 mt-4 max-w-screen-md">
+    <div class="flex center items-center pt-4 pb-4 px-2 md:px-4 rounded-lg border-2 bg-white mt-4 max-w-3xl">
         <ContentDoc :path="path">
             <template #default="{ doc }">
                 <article>

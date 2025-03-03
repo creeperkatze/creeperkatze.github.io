@@ -1,0 +1,11 @@
+{
+    "superslide.server_status_display.title.checking": "Serverstatus wird überprüft...",
+    "superslide.server_status_display.title.online": "Server Online",
+    "superslide.server_status_display.title.offline": "Server Offline",
+    "superslide.server_status_display.title.maintenance": "Server im Wartungsmodus",
+
+    "superslide.server_status_display.item.levels": "Level",
+    "superslide.server_status_display.item.users": "Nutzer",
+    "superslide.server_status_display.item.level_downloads": "Heruntergeladene Level",
+    "superslide.server_status_display.item.uptime": "Laufzeit"
+}

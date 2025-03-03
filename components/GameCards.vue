@@ -8,7 +8,7 @@
                 <div class="rounded-lg bg-black max-w-[450px] max-h-[400px] h-full flex flex-col">
                     <img src="~/assets/images/superslide/SplashBackgroundGameTitle.png"
                         class="rounded-t-lg object-cover w-full h-[250px]"
-                        :alt="$t('page.game.project.superslide.title')">
+                        :alt="$t('page.superslide.title')">
 
                     <div v-if="event.name !== 'none'"
                         class="absolute top-1 px-2 py-1 rounded-tl-md rounded-br-md min-w-1/2 pt-2 pb-2 flex justify-between space-x-4 glint overflow-hidden fancy-box-shadow"

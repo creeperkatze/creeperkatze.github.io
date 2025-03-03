@@ -8,16 +8,20 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css"],
     modules:
         [
-          "@nuxtjs/google-fonts",
-          "@nuxtjs/tailwindcss",
-          "@nuxtjs/sitemap",
-          "@nuxtjs/i18n",
-          "@nuxt/content",
-          "@nuxt/eslint",
-          "nuxt-schema-org",
-          "nuxt-seo-utils",
-          "nuxt-link-checker"
+            "@nuxtjs/google-fonts",
+            "@nuxtjs/tailwindcss",
+            "@nuxtjs/sitemap",
+            "@nuxtjs/i18n",
+            "@nuxt/content",
+            "@nuxt/eslint",
+            "nuxt-schema-org",
+            "nuxt-seo-utils",
+            "nuxt-link-checker"
         ],
+
+    devServer: {
+        port: 8000
+    },
 
     googleFonts:
     {
@@ -63,13 +67,13 @@ export default defineNuxtConfig({
                 code: "de",
                 language: "de",
                 name: "Deutsch",
-                files: ['de/main.json', 'de/idiot_test.json', 'de/christmas_quiz.json'],
+                files: ['de/main.json', 'de/idiot_test.json', 'de/christmas_quiz.json', "de/superslide.json"],
             },
             {
                 code: "en",
                 language: "en",
                 name: "English",
-                files: ['en/main.json', 'en/idiot_test.json', 'en/christmas_quiz.json'],
+                files: ['en/main.json', 'en/idiot_test.json', 'en/christmas_quiz.json', "en/superslide.json"],
             }
         ]
     },
@@ -95,6 +99,12 @@ export default defineNuxtConfig({
                 'https://creeperkatze.itch.io/',
                 'https://github.com/creeperkatze'
             ]
+        }
+    },
+
+    runtimeConfig: {
+        public: {
+            superslideServerUrl: "http://127.0.0.1:3000"
         }
     },
 

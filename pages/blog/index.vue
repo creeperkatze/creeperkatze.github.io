@@ -1,6 +1,6 @@
 <template>
     <h1>{{ $t("page.blog.heading") }}</h1>
-    <div class="flex center items-justify-center mt-4 max-w-screen-md">
+    <div class="flex center items-justify-center mt-4 max-w-3xl">
         <ContentList v-slot="{ list }" path="/blog/">
             <NuxtLink v-for="article in list.slice().reverse()" :key="article._path" :to="localePath(article._path)">
                 <div

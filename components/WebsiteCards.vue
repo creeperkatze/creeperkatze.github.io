@@ -20,7 +20,7 @@
                     <div class="rounded-lg bg-black h-full flex flex-col">
                         <img src="/images/seo/idiot-test.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
                             :alt="$t('page.projects.project.idiot-test.title')">
-                        <h5 class="text-white p-2">{{ $t('page.projects.project.idiot-test.title') }}</h5>
+                        <h5 class="text-white p-2 text-base sm:text-lg">{{ $t('page.projects.project.idiot-test.title') }}</h5>
                     </div>
                 </NuxtLink>
                 <NuxtLink :to="localePath('/christmas-quiz/')"
@@ -28,7 +28,7 @@
                     <div class="rounded-lg bg-black h-full flex flex-col">
                         <img src="/images/seo/christmas-quiz.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
                             :alt="$t('page.projects.project.christmas-quiz.title')">
-                        <h5 class="text-white p-2">{{ $t('page.projects.project.christmas-quiz.title') }}</h5>
+                        <h5 class="text-white p-2 text-base sm:text-lg">{{ $t('page.projects.project.christmas-quiz.title') }}</h5>
                     </div>
                 </NuxtLink>
                 <NuxtLink :to="localePath('/generators/joke/')"
@@ -36,7 +36,7 @@
                     <div class="rounded-lg bg-black h-full flex flex-col">
                         <img src="/images/seo/joke.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
                             :alt="$t('page.projects.project.joke.title')">
-                        <h5 class="text-white p-2">{{ $t('page.projects.project.joke.title') }}</h5>
+                        <h5 class="text-white p-2 text-base sm:text-lg">{{ $t('page.projects.project.joke.title') }}</h5>
                     </div>
                 </NuxtLink>
                 <NuxtLink :to="localePath('/generators/cat/')"
@@ -44,7 +44,7 @@
                     <div class="rounded-lg bg-black h-full flex flex-col">
                         <img src="/images/seo/cat.jpg" class="rounded-t-lg object-cover w-full h-[140px]"
                             :alt="$t('page.projects.project.cat.title')">
-                        <h5 class="text-white p-2">{{ $t('page.projects.project.cat.title') }}</h5>
+                        <h5 class="text-white p-2 text-base sm:text-lg">{{ $t('page.projects.project.cat.title') }}</h5>
                     </div>
                 </NuxtLink>
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto max-w-screen-md">
+    <div class="mx-auto max-w-4xl">
         <h1 class="mb-5">{{ $t("page.skills.title_software") }}</h1>
         <div class="flex flex-wrap justify-center gap-4">
             <a v-for="(item, index) in softwareItems" :key="item.name" :href="item.link" target="_blank"
@@ -51,6 +51,8 @@ const techItems = [
     { name: 'Nuxt', link: 'https://nuxt.com/', icon: 'nuxt' },
     { name: 'Tailwind', link: 'https://tailwindcss.com/', icon: 'tailwind' },
     { name: 'Git', link: 'https://git-scm.com/', icon: 'git' },
+    { name: 'Express', link: 'https://expressjs.com/', icon: 'express' },
+    { name: 'MongoDB', link: 'https://www.mongodb.com/', icon: 'mongodb' },
 ];
 </script>
 

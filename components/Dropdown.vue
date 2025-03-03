@@ -7,7 +7,8 @@
             <IconDown class="size-4 transform transition-all" :class="{ 'rotate-180': dropdownOpen }" />
         </NuxtLink>
 
-        <div v-if="dropdownOpen" class="dropdown-menu transition duration-100 hidden rounded-md bg-black border border-gray-400 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-10"
+        <div v-if="dropdownOpen"
+            class="dropdown-menu transition duration-100 hidden rounded-md bg-black border after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full z-10"
             role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover-event">
             <div v-for="item in items" :key="item.name" class="p-1 pl-1 text-left text-nowrap">
                 <NuxtLink :to="localePath(item.link)" class="navbar-element">{{ item.name }}</NuxtLink>

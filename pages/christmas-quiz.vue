@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-screen-md mx-auto">
+    <div class="mx-auto max-w-3xl">
         <div class="relative text-center">
             <h1 class="christmas-stripes-title">{{ $t('page.christmas-quiz.heading') }}</h1>
             <h1 class="christmas-stripes-title-stroke" aria-hidden="true">{{ $t('page.christmas-quiz.heading') }}</h1>

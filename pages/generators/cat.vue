@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
-        <div class="bg-white rounded-lg border-2 p-4 max-w-screen-xl">
+        <div class="bg-white rounded-lg border-2 p-4  max-w-3xl">
             <div class="min-h-64 min-w-64 flex items-center justify-center m-auto align-middle">
                 <div v-if="catData">
                     <img :src="catData.url" :alt="$t('page.cat.image.cat')" class="center max-h-[600px] mb-4">
