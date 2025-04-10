@@ -65,13 +65,13 @@ export default defineNuxtConfig({
         locales: [
             {
                 code: "de",
-                language: "de",
+                language: "de-DE",
                 name: "Deutsch",
                 files: ['de.json', 'idiot-test/de.json', 'christmas-quiz/de.json'],
             },
             {
                 code: "en",
-                language: "en",
+                language: "en-US",
                 name: "English",
                 files: ['en.json', 'idiot-test/en.json', 'christmas-quiz/en.json'],
             }
@@ -79,8 +79,7 @@ export default defineNuxtConfig({
     },
 
     content: {
-        contentHead: false,
-        locales: ['de', 'en'],
+        contentHead: false
     },
 
     router: {

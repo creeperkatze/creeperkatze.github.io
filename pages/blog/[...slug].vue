@@ -5,7 +5,7 @@
             <article>
                 <div class="flex items-center justify-between">
                     <h1 class="text-left truncate">{{ blog.title }}</h1>
-                    <p class="text-right text-gray-400 ml-4">{{ new Date(blog.date).toLocaleDateString() }}</p>
+                    <p class="text-right text-gray-400 ml-4">{{ new Date(blog.date).toLocaleDateString(locale) }}</p>
                 </div>
                 <h4 class="text-left text-gray-400">{{ blog.description }}</h4>
                 <div class="mt-2 mb-4 flex flex-wrap">
@@ -31,6 +31,8 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { filename } from 'pathe/utils';
+
+const { locale } = useI18n();
 
 const glob = import.meta.glob('@/assets/images/flags/*.svg', { eager: true });
 const images = Object.fromEntries(

@@ -6,7 +6,7 @@
                 class="text-left mb-4 pt-4 pb-4 px-2 md:px-4 rounded-lg border-2 transition ease-in-out bg-white text-black hover:border-black hover:bg-green-600 group">
                 <div class="flex items-center justify-between">
                     <h2 class="truncate">{{ blog.title }}</h2>
-                    <p class="text-gray-400 ml-4">{{ new Date(blog.date).toLocaleDateString() }}</p>
+                    <p class="text-gray-400 ml-4">{{ new Date(blog.date).toLocaleDateString(locale) }}</p>
                 </div>
                 <hr>
                 <p>{{ blog.description }}</p>
@@ -28,6 +28,9 @@
 <script setup>
 import { filename } from 'pathe/utils';
 
+const { locale } = useI18n();
+const localePath = useLocalePath()
+
 const glob = import.meta.glob('@/assets/images/flags/*.svg', { eager: true });
 const images = Object.fromEntries(
     Object.entries(glob).map(([key, value]) => [filename(key), value.default])
@@ -40,8 +43,6 @@ const { data: blogs } = await useAsyncData("blog-list", () => {
         .order('date', 'DESC')
         .all()
 })
-
-const localePath = useLocalePath()
 
 definePageMeta({
     title: 'page.blog.title',
