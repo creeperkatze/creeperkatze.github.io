@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class="lg:pb-0 pb-32">
         <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">

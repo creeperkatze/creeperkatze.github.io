@@ -1,8 +1,8 @@
 ---
-title: 'Suchmaschienenoptimierung'
-description: 'Nicht nur ein Wort für Galgenraten, sondern sehr wichtig!'
-date: '27.12.2024'
-lang: de
+title: Suchmaschienenoptimierung
+description: Nicht nur ein Wort für Galgenraten, sondern sehr wichtig!
+date: '2024-12-27T00:00:00Z'
+lang: 'de'
 
 tags:
     - website

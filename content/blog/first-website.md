@@ -1,8 +1,8 @@
 ---
-title: 'First website'
-description: 'Building my first website with Nuxt and Tailwind'
-date: '26.10.2024'
-lang: en
+title: First website
+description: Building my first website with Nuxt and Tailwind
+date: '2024-10-26T00:00:00Z'
+lang: 'en'
 
 tags:
     - website
