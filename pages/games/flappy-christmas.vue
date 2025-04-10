@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-
 definePageMeta({
     title: 'page.flappy_christmas.title',
     description: 'page.flappy_christmas.description',
@@ -22,5 +21,4 @@ definePageMeta({
 })
 
 const { consent } = useConsent();
-
 </script>

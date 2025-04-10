@@ -19,7 +19,6 @@
 </template>
 
 <script setup>
-
 definePageMeta({
     title: 'page.cat.title',
     description: 'page.cat.description',
@@ -32,5 +31,4 @@ onMounted(() =>
 {
     fetchCatImage();
 });
-
 </script>

@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
 definePageMeta({
     title: 'page.yippee.title',
     description: 'page.yippee.description',

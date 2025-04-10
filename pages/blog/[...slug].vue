@@ -62,10 +62,6 @@ definePageMeta({
     image: '/images/seo/blog.jpg'
 })
 
-useHead({
-    title: `${blog.value?.title} | Blog | Creeperkatze`
-});
-
 useSeoMeta({
     title: `${blog.value?.title} | Blog | Creeperkatze`,
     ogTitle: `${blog.value?.title} | Blog | Creeperkatze`,
@@ -80,5 +76,4 @@ useSchemaOrg([
         type: "BlogPosting",
     })
 ]);
-
 </script>

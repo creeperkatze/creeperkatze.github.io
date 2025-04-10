@@ -26,7 +26,6 @@
 
 
 <script setup>
-
 definePageMeta({
     title: 'page.joke.title',
     description: 'page.joke.description',

@@ -48,5 +48,4 @@ definePageMeta({
     description: 'page.blog.description',
     image: '/images/seo/blog.jpg'
 })
-
 </script>
