@@ -120,4 +120,9 @@ export default defineNuxtConfig({
         '/projects/flappy-christmas/': { redirect: '/games/flappy-christmas/' },
         '/en/projects/flappy-christmas/': { redirect: '/en/games/flappy-christmas/' },
     },
+
+    seo: {
+        automaticDefaults: false,
+        fallbackTitle: false
+    }
 });
