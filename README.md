@@ -2,7 +2,7 @@
 [![Build Passing](https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github")](https://github.com/Creeperkatze/creeperkatze.github.io/actions)
 
 <p align="center">
-  <a href="https://creeperkatze.github.io">
+  <a href="https://creeperkatze.de">
     <img src="LogoBanner256.png" width="400" alt="Creeperkatze banner">
   </a>
 </p>
@@ -17,4 +17,4 @@
 - & do much more
 
 What are you waiting for?\
-[Go check it out!](https://creeperkatze.github.io)
+[Go check it out!](https://creeperkatze.de)
