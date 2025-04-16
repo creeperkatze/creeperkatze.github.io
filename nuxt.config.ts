@@ -47,13 +47,13 @@ export default defineNuxtConfig({
     },
 
     site: {
-        url: "https://creeperkatze.github.io",
+        url: "https://creeperkatze.de",
         name: "Creeperkatze",
         trailingSlash: true
     },
 
     i18n: {
-        baseUrl: "https://creeperkatze.github.io",
+        baseUrl: "https://creeperkatze.de",
         strategy: "prefix_except_default",
         detectBrowserLanguage: {
             useCookie: true,
