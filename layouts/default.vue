@@ -44,6 +44,7 @@ function update() {
         ],
         meta: [
             { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' },
+            { 'property': 'og:site_name', content: 'Creeperkatze' }
         ]
     })
 
