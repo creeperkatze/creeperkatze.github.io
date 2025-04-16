@@ -19,10 +19,10 @@
     "footer.link_tailwind": "Tailwind",
     "footer.link_github": "Github",
     "footer.badge.problem.shield": "https://img.shields.io/badge/problem-melden-blue?logo=github",
-    "footer.badge.problem.link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=Problem%3A+",
+    "footer.badge.problem.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=Problem%3A+",
     "footer.badge.problem.alt": "Problem melden",
     "footer.badge.suggestion.shield": "https://img.shields.io/badge/idee-einreichen-blue?logo=github",
-    "footer.badge.suggestion.link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=enhancement&projects=&template=2-feature_request_de.md&title=Idee%3A+",
+    "footer.badge.suggestion.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=enhancement&projects=&template=2-feature_request_de.md&title=Idee%3A+",
     "footer.badge.suggestion.alt": "Idee einreichen",
     
     "page.index.title": "Startseite",

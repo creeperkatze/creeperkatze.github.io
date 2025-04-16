@@ -62,4 +62,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://creeperkatze.github.io/sitemap_index.xml
+Sitemap: https://creeperkatze.de/sitemap_index.xml

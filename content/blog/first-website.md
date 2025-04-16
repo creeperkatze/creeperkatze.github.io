@@ -29,4 +29,4 @@ Long story short: This is my shot at creating a personal portfolio-ish website, 
 \
 Of course the website is still in early developement, so expect drastic updates over time.\
 \
-Be sure to check out the [GithHub repo](https://github.com/creeperkatze/creeperkatze.github.io) for this site if you're interested on how I implemented some things.
+Be sure to check out the [GithHub repo](https://github.com/creeperkatze/website) for this site if you're interested on how I implemented some things.

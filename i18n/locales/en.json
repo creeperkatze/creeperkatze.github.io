@@ -19,10 +19,10 @@
     "footer.link_tailwind": "Tailwind",
     "footer.link_github": "Github",
     "footer.badge.problem.shield": "https://img.shields.io/badge/report-broblem-blue?logo=github",
-    "footer.badge.problem.link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=bug&projects=&template=3-bug_report.md&title=Problem%3A+",
+    "footer.badge.problem.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=bug&projects=&template=3-bug_report.md&title=Problem%3A+",
     "footer.badge.problem.alt": "Report problem",
     "footer.badge.suggestion.shield": "https://img.shields.io/badge/submit-idea-blue?logo=github",
-    "footer.badge.suggestion.link": "https://github.com/creeperkatze/creeperkatze.github.io/issues/new?assignees=&labels=enhancement&projects=&template=4-feature_request.md&title=Idea%3A+",
+    "footer.badge.suggestion.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=enhancement&projects=&template=4-feature_request.md&title=Idea%3A+",
     "footer.badge.suggestion.alt": "Submit idea",
     
     "page.index.title": "Home",

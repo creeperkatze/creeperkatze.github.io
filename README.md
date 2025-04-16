@@ -1,5 +1,5 @@
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/creeperkatze/creeperkatze.github.io/main?display_timestamp=author&logo=github)](https://github.com/Creeperkatze/creeperkatze.github.io/commits/)
-[![Build Passing](https://img.shields.io/github/actions/workflow/status/Creeperkatze/creeperkatze.github.io/deploy.yml?logo=github")](https://github.com/Creeperkatze/creeperkatze.github.io/actions)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/creeperkatze/website/main?display_timestamp=author&logo=github)](https://github.com/creeperkatze/website/commits/)
+[![Build Passing](https://img.shields.io/github/actions/workflow/status/creeperkatze/website/deploy.yml?logo=github")](https://github.com/creeperkatze/website/actions)
 
 <p align="center">
   <a href="https://creeperkatze.de">
