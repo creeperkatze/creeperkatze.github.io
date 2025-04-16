@@ -1,5 +1,3 @@
-import colors from 'tailwindcss/colors';
-
 export default {
     theme: {
         extend: {
@@ -7,7 +5,7 @@ export default {
                 sans: ['Lexend']
             },
             borderColor: {
-                DEFAULT: colors.gray[400],
+                DEFAULT: '#9ca3af',
             },
         }
     }
