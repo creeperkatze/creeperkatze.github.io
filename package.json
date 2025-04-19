@@ -17,8 +17,8 @@
         "@nuxtjs/sitemap": "^7.2.10",
         "@nuxtjs/tailwindcss": "^6.13.2",
         "nuxt": "^3.16.2",
-        "nuxt-schema-org": "^5.0.4",
-        "nuxt-seo-utils": "^7.0.7",
+        "nuxt-schema-org": "^5.0.5",
+        "nuxt-seo-utils": "^7.0.9",
         "vue": "latest",
         "vue-router": "latest"
     },

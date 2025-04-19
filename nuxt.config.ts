@@ -45,11 +45,10 @@ export default defineNuxtConfig({
             titleTemplate: '',
         },
     },
-
     site: {
+        trailingSlash: true,
         url: "https://creeperkatze.de",
         name: "Creeperkatze",
-        trailingSlash: true
     },
 
     i18n: {
@@ -121,7 +120,6 @@ export default defineNuxtConfig({
     },
 
     seo: {
-        automaticDefaults: false,
         fallbackTitle: false
     }
 });

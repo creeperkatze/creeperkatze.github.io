@@ -31,6 +31,9 @@ const title = computed(() => route.meta.title ? t(route.meta.title) : undefined)
 const description = computed(() => route.meta.description ? t(route.meta.description) : undefined);
 const image = computed(() => route.meta.image ?? undefined);
 
+// i18n thinks it can just set the canonical link incorrectly
+head.value.link = head.value.link?.filter(link => link.rel !== 'canonical')
+
 update();
 
 function update() {
@@ -43,13 +46,12 @@ function update() {
             }
         ],
         meta: [
-            { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' },
-            { 'property': 'og:site_name', content: 'Creeperkatze' }
+            { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' }
         ]
     })
 
     useSeoMeta({
-        title: title.value ? `${title.value} | Creeperkatze` : "Creeperkatze",
+        title: title.value ? `${title.value}` : "",
         ogTitle: title.value ? `${title.value} | Creeperkatze` : "Creeperkatze",
         twitterTitle: title.value ? `${title.value} | Creeperkatze` : "Creeperkatze",
         description: description.value ? description.value : undefined,

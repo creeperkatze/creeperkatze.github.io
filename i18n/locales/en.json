@@ -8,6 +8,7 @@
     "navbar.generators": "Generators",
     "navbar.joke": "Joke",
     "navbar.cat": "Cat",
+    "navbar.dog": "Dog",
     "navbar.idiot-test": "Idiot Test",
     "navbar.christmas-quiz": "Christmas Quiz",
     
@@ -114,6 +115,14 @@
     "page.cat.credits_part1": "Cats by ",
     "page.cat.credits_part2": "TheCatAPI",
     "page.cat.credits": " ",
+
+    "page.dog.title": "Dog Generator",
+    "page.dog.description": "Get a random dog photo using TheDogAPI.",
+    "page.dog.loading": "Loading...",
+    "page.dog.image.dog": "Generated dog photo",
+    "page.dog.credits_part1": "Dogs by ",
+    "page.dog.credits_part2": "TheDogAPI",
+    "page.dog.credits": " ",
     
     "page.idiot_test.title": "Idiot Test - How smart are you really?",
     "page.idiot_test.description": "Test whether you're an idiot with these crazy and tricky questions!",

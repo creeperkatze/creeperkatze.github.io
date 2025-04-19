@@ -8,6 +8,7 @@
     "navbar.generators": "Generatoren",
     "navbar.joke": "Witz",
     "navbar.cat": "Kadze",
+    "navbar.dog": "Hund",
     "navbar.idiot-test": "Idiotentest",
     "navbar.christmas-quiz": "Weihnachtsquiz",
     
@@ -114,6 +115,14 @@
     "page.cat.credits_part1": "Katzen von ",
     "page.cat.credits_part2": "TheCatAPI",
     "page.cat.credits": " ",
+
+    "page.dog.title": "Hundegenerator",
+    "page.dog.description": "Erhalte ein zufälliges Hundefoto von TheDogAPI.",
+    "page.dog.loading": "Lädt...",
+    "page.dog.image.dog": "Generiertes Hundefoto",
+    "page.dog.credits_part1": "Hunde von ",
+    "page.dog.credits_part2": "TheDogAPI",
+    "page.dog.credits": " ",
     
     "page.idiot_test.title": "Idiotentest - Wie schlau bist du wirklich?",
     "page.idiot_test.description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist!",

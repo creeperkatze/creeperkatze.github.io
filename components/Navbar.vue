@@ -39,7 +39,8 @@
                     <NuxtLink :to="localePath('/blog/')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
                     <Dropdown :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
                         { name: $t('navbar.joke'), link: '/generators/joke/' },
-                        { name: $t('navbar.cat'), link: '/generators/cat/' }
+                        { name: $t('navbar.cat'), link: '/generators/cat/' },
+                        { name: $t('navbar.dog'), link: '/generators/dog/' },
                     ]" />
                     <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element">{{ $t('navbar.idiot-test') }}
                     </NuxtLink>
@@ -90,7 +91,8 @@
                 </NuxtLink>
                 <DropdownDrawer :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
                     { name: $t('navbar.joke'), link: '/generators/joke' },
-                    { name: $t('navbar.cat'), link: '/generators/cat/' }
+                    { name: $t('navbar.cat'), link: '/generators/cat/' },
+                    { name: $t('navbar.dog'), link: '/generators/dog/' }
                     ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen"/>
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{
