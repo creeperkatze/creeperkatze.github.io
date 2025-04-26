@@ -46,9 +46,9 @@ function update() {
             }
         ],
         meta: [
-            { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' },
-            { name: "google-adsense-account", content: "ca-pub-4002723557422760" }
-        ]
+        
+            { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' }
+        ],
     })
 
     useSeoMeta({
