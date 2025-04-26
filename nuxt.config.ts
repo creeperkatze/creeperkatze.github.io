@@ -16,8 +16,7 @@ export default defineNuxtConfig({
             "@nuxt/eslint",
             "nuxt-schema-org",
             "nuxt-seo-utils",
-            "nuxt-link-checker",
-            "@nuxtjs/google-adsense"
+            "nuxt-link-checker"
         ],
 
     devServer: {
@@ -99,12 +98,6 @@ export default defineNuxtConfig({
                 'https://github.com/creeperkatze'
             ]
         }
-    },
-
-    googleAdsense: {
-        id: "ca-pub-4002723557422760",
-        onPageLoad: true,
-        test: true
     },
 
     runtimeConfig: {
