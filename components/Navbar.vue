@@ -22,7 +22,7 @@
                 </NuxtLink>
                 <div class="lg:hidden flex items-center">
                     <button @click="drawerOpen = !drawerOpen">
-                        <IconDrawer class="h-8 w-8 text-white" :alt="$t('button.drawer')"/>
+                        <IconDrawer class="h-8 w-8 text-white" :alt="$t('button.drawer')" />
                     </button>
                 </div>
             </div>
@@ -33,7 +33,8 @@
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                     <Dropdown :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
                         { name: $t('navbar.superslide'), link: '/games/superslide/' },
-                        { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' }
+                        { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' },
+                        { name: $t('navbar.divebomb'), link: '/games/divebomb/' },
                     ]" />
                     <NuxtLink :to="localePath('/skills/')" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
                     <NuxtLink :to="localePath('/blog/')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
@@ -79,8 +80,9 @@
                     $t('navbar.home') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
                     { name: $t('navbar.superslide'), link: '/games/superslide/' },
-                    { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas' } 
-                    ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen"/>
+                    { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' },
+                    { name: $t('navbar.divebomb'), link: '/games/divebomb/' }
+                ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
                 <NuxtLink :to="localePath('/skills/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.skills')
@@ -93,11 +95,12 @@
                     { name: $t('navbar.joke'), link: '/generators/joke' },
                     { name: $t('navbar.cat'), link: '/generators/cat/' },
                     { name: $t('navbar.dog'), link: '/generators/dog/' }
-                    ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen"/>
+                ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.idiot-test') }}</NuxtLink>
-                <NuxtLink :to="localePath('/christmas-quiz/')" :class="['navbar-element text-left', { 'christmas-stripes-drawer': isDecember }]"
+                <NuxtLink :to="localePath('/christmas-quiz/')"
+                    :class="['navbar-element text-left', { 'christmas-stripes-drawer': isDecember }]"
                     @click="drawerOpen = !drawerOpen">{{
                         $t('navbar.christmas-quiz') }}</NuxtLink>
             </nav>
