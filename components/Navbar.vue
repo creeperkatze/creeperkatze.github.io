@@ -1,38 +1,16 @@
 <template>
-    <div v-if="showBanner" class="relative flex items-center bg-green-600 overflow-hidden z-50" data-nosnippet>
-        <NuxtLink :to="localePath('/games/superslide/')" class="flex-grow">
-            <p class="scrolling-text text-white text-left whitespace-nowrap overflow-visible">
-                Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide
-                0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21 Released +++ Superslide 0.0.21
-                Released
-            </p>
-        </NuxtLink>
-        <IconClose class="absolute fill-white right-0 w-6 h-6 cursor-pointer" @click.stop="showBanner = false" />
-    </div>
-    <header class="relative z-50 bg-black max-w-screen pt-4 pb-4 mb-4 lg:pl-[calc(100vw-100%)]" data-nosnippet>
-        <div class="wrapper flex items-center justify-between px-4 space-x-4">
-            <!-- Logo -->
-            <div class="flex flex-row gap-4">
-                <NuxtLink :to="localePath('/')">
-
-                    <img :src="isDecember ? images['LogoBannerChristmas'] : images['LogoBanner']" alt="Creeperkatze"
-                        class="pixelated object-contain shrink-0 min-w-8 min-h-8 hidden lg:block">
-                    <img :src="isDecember ? images['LogoChristmas'] : images['Logo']" alt="Creeperkatze"
-                        class="pixelated object-contain shrink-0 min-w-8 min-h-8 lg:hidden">
-                </NuxtLink>
-                <div class="lg:hidden flex items-center">
-                    <button @click="drawerOpen = !drawerOpen">
-                        <IconDrawer class="h-8 w-8 text-white" :alt="$t('button.drawer')" />
-                    </button>
-                </div>
-            </div>
-
-            <!-- Links for desktop view -->
-            <nav class="hidden lg:block">
-                <div class="flex justify-start gap-4 mx-4">
+    <header class="top-4 z-40 sticky glass-effect border-2 xl:max-w-7xl xl:mx-auto mx-2 rounded-lg shadow-lg" data-nosnippet>
+        <!-- Desktop -->
+        <div class="wrapper items-center justify-between px-2 space-x-4 h-16 hidden lg:flex">
+            <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
+                <NuxtImg :src="isDecember ? '/images/LogoBannerChristmas.png' : '/images/LogoBanner.png'"
+                    class="w-60 md:w-72 object-contain rounded-sm" alt="Banner" style="image-rendering: pixelated;" />
+            </NuxtLink>
+            <nav class="max-w-5xl mx-auto px-6">
+                <div class="flex flex-row items-center justify-between space-x-4">
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
                     <Dropdown :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
-                        { name: $t('navbar.superslide'), link: '/games/superslide/' },
+                        { name: $t('navbar.superslide'), link: 'https://supersli.de' },
                         { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' },
                         { name: $t('navbar.divebomb'), link: '/games/divebomb/' },
                     ]" />
@@ -50,20 +28,40 @@
                             $t('navbar.christmas-quiz') }}</NuxtLink>
                 </div>
             </nav>
+            <div class="flex flex-row items-center justify-between space-x-3">
+                <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
+                    <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
+                </NuxtLink>
+                <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
+                    <IconItch class="w-8 h-8 text-white hover:text-gift" />
+                </NuxtLink>
+                <NuxtLink href="https://github.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                    <IconGithub class="w-8 h-8 text-white hover:text-gift" />
+                </NuxtLink>
+                <LangSwitcher />
+            </div>
+        </div>
 
-            <!-- Buttons -->
-            <div class="flex flex-row gap-4">
-                <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" aria-label="Instagram">
-                    <IconInstagram
-                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+        <!-- Mobile -->
+        <div class="lg:hidden flex flex-row gap-4 h-16">
+            <div class="flex items-center ml-2 space-x-2">
+                <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
+                    <NuxtImg :src="isDecember ? '/images/LogoChristmas.png' : '/images/Logo.png'"
+                        class="w-10 object-contain rounded-sm" alt="Banner" style="image-rendering: pixelated;" />
                 </NuxtLink>
-                <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" aria-label="Itch.io">
-                    <IconItch
-                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                <button @click="drawerOpen = !drawerOpen">
+                    <IconDrawer class="h-10 w-10 text-white" :alt="$t('button.drawer')" />
+                </button>
+            </div>
+            <div class="flex flex-row items-center justify-end flex-1 space-x-3 mr-2">
+                <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
+                    <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink href="https://github.com/creeperkatze" target="_blank" aria-label="GitHub">
-                    <IconGithub
-                        class="w-8 h-8 text-white hover:text-green-600 transform hover:scale-125 transition ease-in-out" />
+                <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
+                    <IconItch class="w-8 h-8 text-white hover:text-gift" />
+                </NuxtLink>
+                <NuxtLink href="https://github.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                    <IconGithub class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
                 <LangSwitcher />
             </div>
@@ -74,35 +72,27 @@
     <Transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-y-full"
         enter-to-class="transform translate-y-0" leave-active-class="transition duration-100 ease-in"
         leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
-        <div v-show="drawerOpen" class="absolute w-full bg-black -mt-4 pb-4 z-40 lg:hidden" data-nosnippet>
+        <div v-show="drawerOpen" class="w-full glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-0 right-0" style="top:5.5rem;" data-nosnippet>
             <nav class="flex flex-col text-left space-y-4 ml-4">
-                <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{
-                    $t('navbar.home') }}</NuxtLink>
+                <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{$t('navbar.home') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
-                    { name: $t('navbar.superslide'), link: '/games/superslide/' },
+                    { name: $t('navbar.superslide'), link: 'https://supersli.de' },
                     { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' },
                     { name: $t('navbar.divebomb'), link: '/games/divebomb/' }
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
                 <NuxtLink :to="localePath('/skills/')" class="navbar-element text-left"
-                    @click="drawerOpen = !drawerOpen">{{
-                        $t('navbar.skills')
-                    }}</NuxtLink>
-                <NuxtLink :to="localePath('/blog/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">
-                    {{
-                        $t('navbar.blog') }}
-                </NuxtLink>
+                    @click="drawerOpen = !drawerOpen">{{$t('navbar.skills')}}</NuxtLink>
+                <NuxtLink :to="localePath('/blog/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{$t('navbar.blog') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
                     { name: $t('navbar.joke'), link: '/generators/joke' },
                     { name: $t('navbar.cat'), link: '/generators/cat/' },
                     { name: $t('navbar.dog'), link: '/generators/dog/' }
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left"
-                    @click="drawerOpen = !drawerOpen">{{
-                        $t('navbar.idiot-test') }}</NuxtLink>
+                    @click="drawerOpen = !drawerOpen">{{$t('navbar.idiot-test') }}</NuxtLink>
                 <NuxtLink :to="localePath('/christmas-quiz/')"
                     :class="['navbar-element text-left', { 'christmas-stripes-drawer': isDecember }]"
-                    @click="drawerOpen = !drawerOpen">{{
-                        $t('navbar.christmas-quiz') }}</NuxtLink>
+                    @click="drawerOpen = !drawerOpen">{{$t('navbar.christmas-quiz') }}</NuxtLink>
             </nav>
         </div>
     </Transition>
@@ -113,32 +103,30 @@ import { filename } from 'pathe/utils'
 
 const localePath = useLocalePath()
 
-const showBanner = ref(false);
 const drawerOpen = ref(false);
 
 const isDecember = computed(() => new Date().getMonth() === 11);
-
-const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-)
 </script>
 
 <style setup>
+.hover-lift-icons
+{
+    @apply transition-transform hover:scale-110;
+}
+
 .wrapper
 {
     @apply max-w-screen-xl mx-auto
 }
 
-
 .navbar-element
 {
-    @apply no-underline text-white hover:text-gray-400;
+    @apply no-underline text-white;
 }
 
 .navbar-element.router-link-active
 {
-    @apply text-green-600;
+    @apply text-gift;
 }
 
 .navbar-social-media-icon

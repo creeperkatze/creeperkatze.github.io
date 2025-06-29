@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center mx-4">
-        <div class="bg-white rounded-lg border-2 p-4 max-w-3xl">
+        <div class="glass-effect rounded-lg border-2 p-4 max-w-3xl">
             <div class="min-h-40 min-w-64 flex items-center justify-center mx-auto align-middle">
                 <div v-if="jokeData" class="mb-4">
                     <h1 v-if="jokeData.type === 'single'">{{ jokeData.joke }}</h1>
@@ -19,7 +19,7 @@
             <hr class="mt-4 mb-4">
             <Button :rainbowBackground="true" @click="getJoke">{{ $t('button.new_joke') }}</Button>
         </div>
-        <p class="mb-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{
+        <p class="my-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{
             $t("page.joke.credits_part2") }}</a></p>
     </div>
 </template>

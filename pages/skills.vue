@@ -4,7 +4,7 @@
         <div class="flex flex-wrap justify-center gap-4">
             <a v-for="(item, index) in softwareItems" :key="item.name" :href="item.link" target="_blank"
                 :style="{ animationDelay: index * 0.1 + 's' }" class="animated-item">
-                <img :src="images[`${item.icon}`]" class="w-32 h-32 transition ease-in-out hover:-translate-y-2"
+                <img :src="`/images/skills/${item.icon}`" class="w-32 h-32 transition ease-in-out hover:-translate-y-2"
                     :alt="item.name">
             </a>
         </div>
@@ -13,7 +13,7 @@
         <div class="flex flex-wrap justify-center gap-4">
             <a v-for="(item, index) in techItems" :key="item.name" :href="item.link" target="_blank"
                 :style="{ animationDelay: index * 0.1 + 's' }" class="animated-item">
-                <img :src="images[`${item.icon}`]" class="w-32 h-32 transition ease-in-out hover:-translate-y-2"
+                <img :src="`/images/skills/${item.icon}`" class="w-32 h-32 transition ease-in-out hover:-translate-y-2"
                     :alt="item.name">
             </a>
         </div>
@@ -35,24 +35,24 @@ const images = Object.fromEntries(
 )
 
 const softwareItems = [
-    { name: 'Unity', link: 'https://unity.com/', icon: 'unity' },
-    { name: 'Visual Studio', link: 'https://visualstudio.microsoft.com/', icon: 'vs' },
-    { name: 'Visual Studio Code', link: 'https://code.visualstudio.com/', icon: 'vscode' },
+    { name: 'Unity', link: 'https://unity.com/', icon: 'unity.svg' },
+    { name: 'Visual Studio', link: 'https://visualstudio.microsoft.com/', icon: 'vs.svg' },
+    { name: 'Visual Studio Code', link: 'https://code.visualstudio.com/', icon: 'vscode.svg' },
 ];
 
 const techItems = [
-    { name: 'C#', link: 'https://dotnet.microsoft.com/en-us/languages/csharp', icon: 'csharp' },
-    { name: 'Python', link: 'https://www.python.org/', icon: 'python' },
-    { name: 'HTML', link: 'https://www.w3.org/standards/', icon: 'html' },
-    { name: 'CSS', link: 'https://www.w3.org/standards/', icon: 'css' },
-    { name: 'JavaScript', link: 'https://www.w3.org/standards/', icon: 'js' },
-    { name: 'Node', link: 'https://nodejs.org/', icon: 'node' },
-    { name: 'Vue', link: 'https://vuejs.org/', icon: 'vue' },
-    { name: 'Nuxt', link: 'https://nuxt.com/', icon: 'nuxt' },
-    { name: 'Tailwind', link: 'https://tailwindcss.com/', icon: 'tailwind' },
-    { name: 'Git', link: 'https://git-scm.com/', icon: 'git' },
-    { name: 'Express', link: 'https://expressjs.com/', icon: 'express' },
-    { name: 'MongoDB', link: 'https://www.mongodb.com/', icon: 'mongodb' },
+    { name: 'C#', link: 'https://dotnet.microsoft.com/en-us/languages/csharp', icon: 'csharp.svg' },
+    { name: 'Python', link: 'https://www.python.org/', icon: 'python.svg' },
+    { name: 'HTML', link: 'https://www.w3.org/standards/', icon: 'html.svg' },
+    { name: 'CSS', link: 'https://www.w3.org/standards/', icon: 'css.svg' },
+    { name: 'JavaScript', link: 'https://www.w3.org/standards/', icon: 'js.svg' },
+    { name: 'Node', link: 'https://nodejs.org/', icon: 'node.svg' },
+    { name: 'Vue', link: 'https://vuejs.org/', icon: 'vue.svg' },
+    { name: 'Nuxt', link: 'https://nuxt.com/', icon: 'nuxt.svg' },
+    { name: 'Tailwind', link: 'https://tailwindcss.com/', icon: 'tailwind.svg' },
+    { name: 'Git', link: 'https://git-scm.com/', icon: 'git.svg' },
+    { name: 'Express', link: 'https://expressjs.com/', icon: 'express.png' },
+    { name: 'MongoDB', link: 'https://www.mongodb.com/', icon: 'mongodb.svg' },
 ];
 </script>
 

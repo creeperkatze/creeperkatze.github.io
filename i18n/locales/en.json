@@ -34,7 +34,6 @@
   "page.index.typing_effect.mobile_game_dev": "Mobile Game Developer",
   "page.index.typing_effect.web_dev": "Web Developer",
   "page.index.typing_effect.pixel_artist": "Pixel Artist",
-  "page.index.typing_effect.superslide_dev": "Creator of Superslide",
   "page.index.typing_effect.stardew_modder": "Stardew Valley Modder",
   "page.index.welcome": "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
   "page.index.title_projects": "My Projects",
@@ -100,6 +99,8 @@
   "page.blog.tag.addition": "Addition",
   "page.blog.tag.seo": "SEO",
   "page.blog.tag.google": "Google",
+  "page.blog.tag.apple": "Apple",
+  "page.blog.tag.superslide": "Superslide",
 
   "page.joke.title": "Joke Generator",
   "page.joke.description": "Generate a random joke using JokeAPI.",

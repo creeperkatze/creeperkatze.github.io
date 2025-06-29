@@ -3,7 +3,7 @@
         <h1>{{ $t("page.idiot_test.heading") }}</h1>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
         <div v-if="!allQuestionsAnswered"
-            class="sticky top-4 max-w-xl mx-auto p-4 bg-white border-2 border-black rounded-lg mb-4 z-10">
+            class="sticky top-24 max-w-xl mx-auto p-4 glass-effect border-gray-400 border-2 rounded-lg mb-4 z-10">
             <div class="w-full bg-gray-200 h-2 rounded-full">
                 <div class="bg-black h-2 rounded-full" :style="{ width: percentageAnswered + '%' }" />
             </div>
@@ -12,7 +12,7 @@
             </p>
         </div>
         <ul class="space-y-4">
-            <li v-for="(question, index) in questions" :key="index" class="bg-white border-2 rounded-lg p-2" :class="{
+            <li v-for="(question, index) in questions" :key="index" class="glass-effect border-2 rounded-lg p-2" :class="{
                 'border-green-600': question.isCorrect,
                 'border-red-600': !question.isCorrect && question.isCorrect != undefined,
             }">
@@ -24,11 +24,11 @@
                 </div>
                 <div class="answers flex flex-shrink justify-center gap-2">
                     <input v-model="question.answer" type="text" :placeholder="$t('page.idiot_test.input')"
-                        class="bg-white text-black border-black hover:text-black no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none"
+                        class="glass-effect-inverted text-white no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none"
                         :class="{
                         }" :disabled="question.isCorrect !== undefined" @keydown.enter="checkAnswer(index)">
                     <button
-                        class="no-outline min-w-0 px-4 rounded-lg border-2 transition ease-in-out text-black border-black hover:bg-gray-400 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        class="no-outline min-w-0 px-4 rounded-lg border-2 hover-lift-button text-neutral-400 glass-effect-inverted hover:border-white hover:text-white disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
                         <IconSubmit :alt="$t('button.submit')"/>
                     </button>
@@ -50,15 +50,15 @@
             <p class="mb-4">{{ $t("page.idiot_test.disclaimer") }}</p>
             <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-8 border-yellow-600">
                 <div class="relative">
-                    <h1>{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
+                    <h1 class="text-black">{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
                     <button v-if="shareSupported"
-                        class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 transition ease-in-out text-black border-black bg-purple-500 hover:bg-purple-700 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 text-black border-black bg-purple-500 hover:bg-purple-700 hover-lift-button disabled:opacity-50 disabled:pointer-events-none"
                         @click="share">
                         <IconShare :alt="$t('button.share')"/>
                     </button>
                 </div>
-                <h4 class="mb-4">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
-                <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center"
+                <h4 class="mb-4 text-black">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
+                <img :src="`/images/idiot-test/${rank}.jpg`" class="mb-2 rounded-lg w-full center"
                     :alt="$t('page.idiot_test.rank.name.' + rank)">
             </div>
         </section>
@@ -89,11 +89,6 @@ onMounted(() =>
 
     shareSupported.value = !!navigator.share;
 });
-
-const glob = import.meta.glob('@/assets/images/idiot-test/*.jpg', { eager: true })
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-)
 
 const { tm, t, rt } = useI18n();
 

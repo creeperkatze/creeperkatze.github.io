@@ -34,7 +34,6 @@
   "page.index.typing_effect.mobile_game_dev": "Handyspiel-Entwickler",
   "page.index.typing_effect.web_dev": "Web-Entwickler",
   "page.index.typing_effect.pixel_artist": "Pixelartist",
-  "page.index.typing_effect.superslide_dev": "Ersteller von Superslide",
   "page.index.typing_effect.stardew_modder": "Stardew Valley Modder",
   "page.index.welcome": "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
   "page.index.title_projects": "Meine Projekte",
@@ -100,6 +99,8 @@
   "page.blog.tag.addition": "Neu",
   "page.blog.tag.seo": "SEO",
   "page.blog.tag.google": "Google",
+  "page.blog.tag.apple": "Apple",
+  "page.blog.tag.superslide": "Superslide",
 
   "page.joke.title": "Witzgenerator",
   "page.joke.description": "Generieren einen zufälligen Witz von der JokeAPI.",

@@ -3,7 +3,7 @@
         <div class="absolute inset-0 opacity-5 background" style="background-size: 100px; background-repeat: repeat;" />
 
         <div class="absolute left-0 top-0 transform h-32 opacity-50">
-            <img src="~/assets/images/superslide/icons/website.svg" class="h-full w-auto object-contain" style="mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+            <img src="/images/superslide/icons/website.svg" class="h-full w-auto object-contain" style="mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
                        -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);">
         </div>
 
@@ -19,7 +19,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                 <div class="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-white rounded-md border-2">
                     <div class="p-2 bg-blue-200 rounded-full flex-shrink-0">
-                        <img src="~/assets/images/superslide/icons/levels.svg" class="h-6 w-6 sm:h-8 sm:w-8">
+                        <img src="/images/superslide/icons/levels.svg" class="h-6 w-6 sm:h-8 sm:w-8">
                     </div>
                     <div class="flex-1">
                         <div class="text-gray-500 text-left">{{ $t("superslide.server_status_display.item.levels") }}</div>
@@ -29,7 +29,7 @@
 
                 <div class="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-white rounded-md border-2">
                     <div class="p-2 bg-green-200 rounded-full flex-shrink-0">
-                        <img src="~/assets/images/superslide/icons/users.svg" class="h-6 w-6 sm:h-8 sm:w-8">
+                        <img src="/images/superslide/icons/users.svg" class="h-6 w-6 sm:h-8 sm:w-8">
                     </div>
                     <div class="flex-1">
                         <div class="text-gray-500 text-left">{{ $t("superslide.server_status_display.item.users") }}</div>
@@ -39,7 +39,7 @@
 
                 <div class="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-white rounded-md border-2">
                     <div class="p-2 bg-orange-200 rounded-full flex-shrink-0">
-                        <img src="~/assets/images/superslide/icons/downloads.svg" class="h-6 w-6 sm:h-8 sm:w-8">
+                        <img src="/images/superslide/icons/downloads.svg" class="h-6 w-6 sm:h-8 sm:w-8">
                     </div>
                     <div class="flex-1">
                         <div class="text-gray-500 text-left">{{ $t("superslide.server_status_display.item.level_downloads") }}</div>
@@ -49,7 +49,7 @@
 
                 <div class="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 bg-white rounded-md border-2">
                     <div class="p-2 bg-purple-200 rounded-full flex-shrink-0">
-                        <img src="~/assets/images/superslide/icons/uptime.svg" class="h-6 w-6 sm:h-8 sm:w-8">
+                        <img src="/images/superslide/icons/uptime.svg" class="h-6 w-6 sm:h-8 sm:w-8">
                     </div>
                     <div class="flex-1">
                         <div class="text-gray-500 text-left">{{ $t("superslide.server_status_display.item.uptime") }}</div>
@@ -156,7 +156,7 @@ async function checkServerStatus() {
             levelObjectsCount.value = "-"
             uptime.value = "-"
         }
-    } catch (error) {
+    } catch {
         isPinging.value = false
         statusColor.value = 'bg-red-500 border-red-700'
         statusText.value = 'superslide.server_status_display.title.offline'
@@ -175,10 +175,6 @@ onMounted(() => {
 </script>
 
 <style>
-.background
-{
-    background-image: url('~/assets/images/superslide/icons/signal.svg');
-}
 
 @keyframes ping-slow {
     0% {

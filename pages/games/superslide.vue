@@ -1,10 +1,10 @@
 <template>
-    <img src="~/assets/images/superslide/GameTitle1024.png" alt="Superslide" format="webp" width="800"
-        class="center mb-5">
+    <NuxtImg src="/images/superslide/GameTitle1024.png" alt="Superslide"
+        class="center mb-5" />
     <div class="center rounded-lg w-full h-full max-h-screen max-w-screen mx-4">
         <div v-if="consent">
             <div v-if="disclaimerVisible">
-                <div class="bg-white center rounded-lg w-full max-w-3xl border-2">
+                <div class="glass-effect center rounded-lg w-full max-w-3xl border-2">
                     <p class="p-4">{{ $t('page.superslide.disclaimer.text') }}</p>
                     <div class="mb-4 center w-64 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out text-black bg-yellow-400 border-black hover:bg-yellow-600 hover:cursor-pointer"
                         @click="acknowledgeDisclaimer">

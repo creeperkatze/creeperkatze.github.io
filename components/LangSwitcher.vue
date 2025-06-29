@@ -1,19 +1,12 @@
 <template>
     <button v-for="currentLocale in availableLocales" :key="currentLocale.code" class="self-center min-w-8 min-h-8"
         @click.prevent.stop="() => setLocale(currentLocale.code)">
-        <img :src="images[`${currentLocale.code}`]" :alt="currentLocale.name"
+        <img :src="`/images/flags/${currentLocale.code}.svg`" :alt="currentLocale.name"
             class="rounded-lg border-2 border-white transition-transform duration-200 hover:scale-125">
     </button>
 </template>
 
 <script setup>
-import { filename } from 'pathe/utils'
-
-const glob = import.meta.glob('@/assets/images/flags/*.svg', { eager: true })
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-)
-
 const { locale, locales, setLocale } = useI18n();
 
 const availableLocales = computed(() =>

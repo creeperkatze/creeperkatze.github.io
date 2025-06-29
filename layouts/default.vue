@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:pb-0 pb-32">
+    <div>
         <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
 
         <Head>
@@ -11,9 +11,9 @@
             </template>
         </Head>
 
-        <Body>
+        <Body class="relative min-h-screen pb-48">
             <Navbar />
-            <main class="page">
+            <main class="page mt-12">
                 <slot />
             </main>
             <Footer />

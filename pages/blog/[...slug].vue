@@ -1,6 +1,6 @@
 <template>
     <Button link="/blog/">{{ $t('button.back') }}</Button>
-    <div class="flex center items-center pt-4 pb-4 px-2 md:px-4 rounded-lg border-2 bg-white mt-4 max-w-3xl">
+    <div class="flex center items-center pt-4 pb-4 px-2 md:px-4 rounded-lg border-2 glass-effect mt-4 max-w-5xl">
         <template v-if="blog">
             <article>
                 <div class="flex items-center justify-between">
@@ -15,11 +15,11 @@
                     </span>
                     <span
                         class="inline-flex items-center bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 group-hover:bg-green-700">
-                        <img :src="images[blog.lang]" :alt="blog.lang" class="w-6 rounded-full">
+                        <img :src="`/images/flags/${blog.lang}.svg`" :alt="blog.lang" class="w-6 rounded-full">
                     </span>
                 </div>
                 <hr class="mb-4">
-                <ContentRenderer :value="blog" class="text-left" />
+                <ContentRenderer :value="blog" class="text-left whitespace-pre-wrap" />
             </article>
         </template>
         <template v-else>
@@ -33,12 +33,6 @@ import { useRoute } from 'vue-router';
 import { filename } from 'pathe/utils';
 
 const { locale } = useI18n();
-
-const glob = import.meta.glob('@/assets/images/flags/*.svg', { eager: true });
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-);
-
 const path = useUnlocalePath(useRoute().path);
 
 const { data: blog } = await useAsyncData("blog", () => {

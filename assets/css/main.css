@@ -9,24 +9,12 @@ body
     justify-content: center;
     font-weight: bold;
     overflow-y: overlay;
-    background-image: url("~/assets/images/bg.jpg");
-    background-size: 250px;
+    @apply bg-gradient-to-br from-neutral-800 to-black;
 }
 
 a
 {
-    @apply text-green-600 hover:text-green-800;
-}
-
-html
-{
-    position: relative;
-    min-height: 100%;
-}
-
-body
-{
-    margin-bottom: 150px;
+    @apply text-gift hover:text-neutral-400;
 }
 
 .page
@@ -47,37 +35,37 @@ footer
 
 p
 {
-    @apply text-lg;
+    @apply text-lg text-white;
 }
 
 h1
 {
-    @apply text-4xl;
+    @apply text-4xl text-white;
 }
 
 h2
 {
-    @apply text-3xl;
+    @apply text-3xl text-white;
 }
 
 h3
 {
-    @apply text-2xl;
+    @apply text-2xl text-white;
 }
 
 h4
 {
-    @apply text-xl;
+    @apply text-xl text-white;
 }
 
 h5
 {
-    @apply text-lg;
+    @apply text-lg text-white;
 }
 
 h6
 {
-    @apply text-sm;
+    @apply text-sm text-white;
 }
 
 li
@@ -94,7 +82,32 @@ li:marker
 
 hr
 {
-    @apply rounded border border-gray-400
+    @apply rounded border border-neutral-400
+}
+
+
+.glass-effect {
+  @apply bg-neutral-800 backdrop-filter backdrop-blur-sm bg-opacity-80;
+}
+
+.glass-effect-inverted
+{
+    @apply bg-white backdrop-filter backdrop-blur-sm bg-opacity-5;
+}
+
+.hover-lift
+{
+    @apply transition-transform hover:scale-105;
+}
+
+.hover-lift-button
+{
+    @apply transition-transform hover:scale-110;
+}
+
+.hover-lift-icon
+{
+    @apply transition-transform hover:scale-125;
 }
 
 .footer-text

@@ -6,7 +6,7 @@
         </NuxtLink>
 
         <div v-if="dropdownOpen" class="mt-2 flex">
-            <div class="w-[2px] bg-gray-400" />
+            <div class="w-[2px] bg-white" />
             <div class="flex flex-col space-y-4 p-1">
                 <div v-for="item in items" :key="item.name" class="ml-2">
                     <NuxtLink :to="localePath(item.link)" class="navbar-element" @click="emit('item-clicked')">{{

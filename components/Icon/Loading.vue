@@ -4,19 +4,19 @@
         xmlns:xlink="http://www.w3.org/1999/xlink">
         <g>
             <g>
-                <circle fill="#000000" r="4" cy="50" cx="60">
+                <circle fill="#ffffff" r="4" cy="50" cx="60">
                     <animate begin="-1.34s" keyTimes="0;1" values="95;35" dur="0.5s" repeatCount="indefinite"
                         attributeName="cx"/>
                     <animate begin="-1.34s" keyTimes="0;0.2;1" values="0;1;1" dur="0.5s" repeatCount="indefinite"
                         attributeName="fill-opacity"/>
                 </circle>
-                <circle fill="#000000" r="4" cy="50" cx="60">
+                <circle fill="#ffffff" r="4" cy="50" cx="60">
                     <animate begin="-0.66s" keyTimes="0;1" values="95;35" dur="0.5s" repeatCount="indefinite"
                         attributeName="cx"/>
                     <animate begin="-0.66s" keyTimes="0;0.2;1" values="0;1;1" dur="0.5s" repeatCount="indefinite"
                         attributeName="fill-opacity"/>
                 </circle>
-                <circle fill="#000000" r="4" cy="50" cx="60">
+                <circle fill="#ffffff" r="4" cy="50" cx="60">
                     <animate begin="0s" keyTimes="0;1" values="95;35" dur="0.5s" repeatCount="indefinite"
                         attributeName="cx"/>
                     <animate begin="0s" keyTimes="0;0.2;1" values="0;1;1" dur="0.5s" repeatCount="indefinite"
@@ -24,12 +24,12 @@
                 </circle>
             </g>
             <g transform="translate(-15 0)">
-                <path transform="rotate(90 50 50)" fill="#000000" d="M50 50L20 50A30 30 0 0 0 80 50Z"/>
-                <path fill="#000000" d="M50 50L20 50A30 30 0 0 0 80 50Z">
+                <path transform="rotate(90 50 50)" fill="#ffffff" d="M50 50L20 50A30 30 0 0 0 80 50Z"/>
+                <path fill="#ffffff" d="M50 50L20 50A30 30 0 0 0 80 50Z">
                     <animateTransform keyTimes="0;0.5;1" values="0 50 50;45 50 50;0 50 50" dur="0.5s"
                         repeatCount="indefinite" type="rotate" attributeName="transform"/>
                 </path>
-                <path fill="#000000" d="M50 50L20 50A30 30 0 0 1 80 50Z">
+                <path fill="#ffffff" d="M50 50L20 50A30 30 0 0 1 80 50Z">
                     <animateTransform keyTimes="0;0.5;1" values="0 50 50;-45 50 50;0 50 50" dur="0.5s"
                         repeatCount="indefinite" type="rotate" attributeName="transform"/>
                 </path>

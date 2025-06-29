@@ -6,9 +6,9 @@
         </div>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.christmas-quiz.text") }}</p>
         <div v-if="!allQuestionsAnswered"
-            class="sticky top-4 max-w-xl mx-auto p-4 bg-red-600 border-2 border-black rounded-lg mb-8 z-10 candycane-border outline outline-2">
+            class="sticky top-24 max-w-xl mx-auto p-4 bg-red-600 rounded-lg mb-8 z-10 candycane-border outline outline-2">
             <div class="w-full bg-white h-2 rounded-full outline outline-2">
-                <div class="bg-black h-2 rounded-full candycane-progress"
+                <div class="h-2 rounded-full candycane-progress"
                     :style="{ width: percentageAnswered + '%' }" />
             </div>
             <p class="mt-2 text-center text-white">
@@ -19,8 +19,8 @@
             <li v-for="(question, index) in questions" :key="index"
                 class="bg-yellow-400 border-2 rounded-lg p-2 christmas-border">
                 <div class="relative flex items-start pb-2" :class="{ 'opacity-50': question.isCorrect !== undefined }">
-                    <p class="absolute left-0 text-left">{{ index + 1 }}.</p>
-                    <p class="pl-8 text-left">
+                    <p class="absolute left-0 text-left text-black">{{ index + 1 }}.</p>
+                    <p class="pl-8 text-left text-black">
                         {{ question.text }}
                     </p>
                 </div>
@@ -76,13 +76,13 @@
                 <div class="relative">
                     <h1>{{ $t("page.christmas-quiz.rank.name." + rank) }}</h1>
                     <button v-if="shareSupported"
-                        class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 transition ease-in-out text-black border-black bg-yellow-400 hover:bg-yellow-600 hover:text-black disabled:opacity-50 disabled:pointer-events-none"
+                        class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 text-black border-black bg-yellow-400 hover:bg-yellow-600 hover-lift-button disabled:opacity-50 disabled:pointer-events-none"
                         @click="share">
                         <IconShare :alt="$t('button.share')"/>
                     </button>
                 </div>
                 <h4 class="mb-4">{{ $t("page.christmas-quiz.rank.description." + rank) }}</h4>
-                <img :src="images[`${rank}`]" class="mb-2 rounded-lg w-full center"
+                <img :src="`/images/christmas-quiz/${rank}.jpg`" class="mb-2 rounded-lg w-full center"
                     :alt="$t('page.christmas-quiz.rank.name.' + rank)">
             </div>
         </section>
@@ -133,11 +133,6 @@ onMounted(() => {
 
     */
 });
-
-const glob = import.meta.glob('@/assets/images/christmas-quiz/*.jpg', { eager: true })
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-)
 
 const { tm, t, rt } = useI18n();
 
@@ -274,19 +269,19 @@ const share = async () =>
 .christmas-border
 {
     border: 15px solid transparent;
-    border-image: url(~/assets/images/christmas-quiz/border.png) 20% round;
+    border-image: url(/images/christmas-quiz/border.png) 20% round;
     border-image-outset: 8px;
 }
 
 .candycane-border
 {
     border: 10px solid transparent;
-    border-image: url(~/assets/images/christmas-quiz/border-candycane.png) 20% round;
+    border-image: url(/images/christmas-quiz/border-candycane.png) 20% round;
     border-image-outset: 1px;
 }
 
 .candycane-progress
 {
-    background-image: url(~/assets/images/christmas-quiz/progress-candycane.png);
+    background-image: url(/images/christmas-quiz/progress-candycane.png);
 }
 </style>

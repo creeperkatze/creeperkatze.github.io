@@ -1,5 +1,5 @@
 <template>
-    <span class="text-green-600 fancy-shadow">{{ displayedPhrase }}</span><span class="blinking-cursor text-black">|</span>
+    <span class="text-gift fancy-shadow">{{ displayedPhrase }}</span><span class="blinking-cursor text-white">|</span>
 </template>
 
 <script>
@@ -93,7 +93,7 @@ export default {
 <style>
 .fancy-shadow
 {
-    text-shadow: 0px 3px 0 black, 0px 10px 4px #aba8a8;
+    text-shadow: 0px 3px 0 black, 0px 10px 4px #5c5c5c;
 }
 
 .blinking-cursor

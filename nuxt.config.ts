@@ -1,125 +1,114 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import svgLoader from "vite-svg-loader"
+import { defineNuxtConfig } from "nuxt/config";
+import svgLoader from "vite-svg-loader";
 
 export default defineNuxtConfig({
-    compatibilityDate: "2024-04-03",
-    telemetry: false,
-    devtools: { enabled: true },
-    css: ["~/assets/css/main.css"],
-    modules:
-        [
-            "@nuxtjs/google-fonts",
-            "@nuxtjs/tailwindcss",
-            "@nuxtjs/sitemap",
-            "@nuxtjs/i18n",
-            "@nuxt/content",
-            "@nuxt/eslint",
-            "nuxt-schema-org",
-            "nuxt-seo-utils",
-            "nuxt-link-checker"
-        ],
+  compatibilityDate: "2024-04-03",
+  telemetry: false,
+  devtools: { enabled: true },
+  css: ["~/assets/css/main.css"],
+  modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "nuxt-schema-org", "nuxt-seo-utils", "nuxt-link-checker", "@nuxt/image"],
 
-    devServer: {
-        port: 8000
+  devServer: {
+    port: 8000,
+  },
+
+  googleFonts: {
+    // Never change this, it is illegal in germany if fonts are loaded from google at runtime🤦
+    download: true,
+
+    families: {
+      Lexend: true,
     },
+  },
 
-    googleFonts:
-    {
-        // Never change this, it is illegal in germany if fonts are loaded from google at runtime🤦
-        download: true,
+  vite: {
+    plugins: [
+      svgLoader({
+        defaultImport: "url",
+      }),
+    ],
+  },
 
-        families: {
-            Lexend: true
-        }
+  app: {
+    head: {
+      titleTemplate: "",
     },
+  },
+  site: {
+    trailingSlash: true,
+    url: "https://creeperkatze.de",
+    name: "Creeperkatze",
+  },
 
-    vite:
-    {
-        plugins: [svgLoader({
-            defaultImport: "url"
-        })]
+  i18n: {
+    baseUrl: "https://creeperkatze.de",
+    strategy: "prefix_except_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n",
     },
+    langDir: "locales/",
+    defaultLocale: "de",
+    lazy: true,
+    locales: [
+      {
+        code: "de",
+        language: "de-DE",
+        name: "Deutsch",
+        files: ["de.json", "idiot-test/de.json", "christmas-quiz/de.json"],
+      },
+      {
+        code: "en",
+        language: "en-US",
+        name: "English",
+        files: ["en.json", "idiot-test/en.json", "christmas-quiz/en.json"],
+      },
+    ],
+  },
 
-    app: {
-        head: {
-            titleTemplate: '',
-        },
-    },
-    site: {
-        trailingSlash: true,
-        url: "https://creeperkatze.de",
-        name: "Creeperkatze",
-    },
+  content: {
+    contentHead: false,
+  },
 
-    i18n: {
-        baseUrl: "https://creeperkatze.de",
-        strategy: "prefix_except_default",
-        detectBrowserLanguage: {
-            useCookie: true,
-            cookieKey: "i18n",
-        },
-        langDir: 'locales/',
-        defaultLocale: "de",
-        lazy: true,
-        locales: [
-            {
-                code: "de",
-                language: "de-DE",
-                name: "Deutsch",
-                files: ['de.json', 'idiot-test/de.json', 'christmas-quiz/de.json'],
-            },
-            {
-                code: "en",
-                language: "en-US",
-                name: "English",
-                files: ['en.json', 'idiot-test/en.json', 'christmas-quiz/en.json'],
-            }
-        ]
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
     },
+  },
 
-    content: {
-        contentHead: false
+  schemaOrg: {
+    identity: {
+      type: "Person",
+      name: "Creeperkatze",
+      image: "/images/Logo512.png",
+      sameAs: ["https://www.instagram.com/creeperkatze/", "https://creeperkatze.itch.io/", "https://github.com/creeperkatze"],
     },
+  },
 
-    router: {
-        options: {
-            scrollBehaviorType: 'smooth',
-        }
+  runtimeConfig: {
+    public: {
+      superslideServerUrl: "http://127.0.0.1:3000",
     },
+  },
 
-    schemaOrg: {
-        identity: {
-            type: 'Person',
-            name: 'Creeperkatze',
-            image: '/images/Logo512.png',
-            sameAs: [
-                'https://www.instagram.com/creeperkatze/',
-                'https://creeperkatze.itch.io/',
-                'https://github.com/creeperkatze'
-            ]
-        }
-    },
+  routeRules: {
+    "/joke/": { redirect: "/generators/joke/" },
+    "/en/joke/": { redirect: "/en/generators/joke/" },
+    "/cat/": { redirect: "/generators/cat/" },
+    "/en/cat/": { redirect: "/en/generators/cat/" },
+    "/projects/": { redirect: "/games//" },
+    "/en/projects/": { redirect: "/en/games/" },
+    "/projects/superslide/": { redirect: "/games/superslide/" },
+    "/en/projects/superslide/": { redirect: "/en/games/superslide/" },
+    "/projects/flappy-christmas/": { redirect: "/games/flappy-christmas/" },
+    "/en/projects/flappy-christmas/": { redirect: "/en/games/flappy-christmas/" },
+  },
 
-    runtimeConfig: {
-        public: {
-            superslideServerUrl: "http://127.0.0.1:3000"
-        }
-    },
+  seo: {
+    fallbackTitle: false,
+  },
 
-    routeRules: {
-        '/joke/': { redirect: '/generators/joke/' },
-        '/en/joke/': { redirect: '/en/generators/joke/' },
-        '/cat/': { redirect: '/generators/cat/' },
-        '/en/cat/': { redirect: '/en/generators/cat/' },
-        '/projects/': { redirect: '/games//' },
-        '/en/projects/': { redirect: '/en/games/' },
-        '/projects/superslide/': { redirect: '/games/superslide/' },
-        '/en/projects/superslide/': { redirect: '/en/games/superslide/' },
-        '/projects/flappy-christmas/': { redirect: '/games/flappy-christmas/' },
-        '/en/projects/flappy-christmas/': { redirect: '/en/games/flappy-christmas/' },
-    },
-
-    seo: {
-        fallbackTitle: false
-    }
+  image: {
+    provider: "ipx",
+  },
 });
