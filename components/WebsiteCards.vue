@@ -6,7 +6,7 @@
             <Card :link="localePath('/blog/first-website/')" image="/images/CardWebsite.png" alt="Website card"
                 :title="$t('page.projects.project.website.title')"
                 :description="$t('page.projects.project.website.description')" />
-            <div class="grid grid-cols-2 grid-rows-2 gap-2">
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 max-w-md max-h-[400px]">
                 <SmallCard :link="localePath('/idiot-test/')" image="/images/seo/idiot-test.jpg" alt="Idiot Test card"
                     :title="$t('page.projects.project.idiot-test.title')" />
                 <SmallCard :link="localePath('/christmas-quiz/')" image="/images/seo/christmas-quiz.jpg" alt="Christmas Quiz card"
