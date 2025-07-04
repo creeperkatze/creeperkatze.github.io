@@ -2,7 +2,7 @@
     <header class="top-4 z-40 sticky glass-effect border-2 xl:max-w-7xl xl:mx-auto mx-2 rounded-lg shadow-lg"
         data-nosnippet>
         <!-- Desktop -->
-        <div class="wrapper items-center justify-between px-2 space-x-4 h-16 hidden lg:flex">
+        <div class="wrapper items-center justify-between px-4 space-x-4 h-16 hidden lg:flex">
             <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
                 <NuxtImg :src="isDecember ? '/images/LogoBannerChristmas.png' : '/images/LogoBanner.png'" class="w-52"
                     alt="Banner" />
