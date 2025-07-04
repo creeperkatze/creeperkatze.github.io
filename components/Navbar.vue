@@ -1,10 +1,11 @@
 <template>
-    <header class="top-4 z-40 sticky glass-effect border-2 xl:max-w-7xl xl:mx-auto mx-2 rounded-lg shadow-lg" data-nosnippet>
+    <header class="top-4 z-40 sticky glass-effect border-2 xl:max-w-7xl xl:mx-auto mx-2 rounded-lg shadow-lg"
+        data-nosnippet>
         <!-- Desktop -->
         <div class="wrapper items-center justify-between px-2 space-x-4 h-16 hidden lg:flex">
             <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
-                <NuxtImg :src="isDecember ? '/images/LogoBannerChristmas.png' : '/images/LogoBanner.png'"
-                    class="w-52" alt="Banner" />
+                <NuxtImg :src="isDecember ? '/images/LogoBannerChristmas.png' : '/images/LogoBanner.png'" class="w-52"
+                    alt="Banner" />
             </NuxtLink>
             <nav class="max-w-5xl mx-auto px-6">
                 <div class="flex flex-row items-center justify-between space-x-4">
@@ -32,6 +33,9 @@
                 <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
                     <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
+                <NuxtLink to="https://www.tiktok.com/@creeperkatze" target="_blank" class="hover-lift-icon">
+                    <IconTikTok class="w-7 h-7 text-white hover:text-gift" />
+                </NuxtLink>
                 <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
                     <IconItch class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
@@ -57,6 +61,9 @@
                 <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
                     <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
+                <NuxtLink to="https://www.tiktok.com/@creeperkatze" target="_blank" class="hover-lift-icon">
+                    <IconTikTok class="w-7 h-7 text-white hover:text-gift" />
+                </NuxtLink>
                 <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
                     <IconItch class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
@@ -72,27 +79,30 @@
     <Transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-y-full"
         enter-to-class="transform translate-y-0" leave-active-class="transition duration-100 ease-in"
         leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
-        <div v-show="drawerOpen" class="glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-2 right-2" style="top:5.5rem;" data-nosnippet>
+        <div v-show="drawerOpen" class="glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-2 right-2"
+            style="top:5.5rem;" data-nosnippet>
             <nav class="flex flex-col text-left space-y-4 ml-4">
-                <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{$t('navbar.home') }}</NuxtLink>
+                <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">
+                    {{ $t('navbar.home') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
                     { name: $t('navbar.superslide'), link: 'https://supersli.de' },
                     { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' },
                     { name: $t('navbar.divebomb'), link: '/games/divebomb/' }
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
                 <NuxtLink :to="localePath('/skills/')" class="navbar-element text-left"
-                    @click="drawerOpen = !drawerOpen">{{$t('navbar.skills')}}</NuxtLink>
-                <NuxtLink :to="localePath('/blog/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{$t('navbar.blog') }}</NuxtLink>
+                    @click="drawerOpen = !drawerOpen">{{ $t('navbar.skills') }}</NuxtLink>
+                <NuxtLink :to="localePath('/blog/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">
+                    {{ $t('navbar.blog') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
                     { name: $t('navbar.joke'), link: '/generators/joke' },
                     { name: $t('navbar.cat'), link: '/generators/cat/' },
                     { name: $t('navbar.dog'), link: '/generators/dog/' }
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
                 <NuxtLink :to="localePath('/idiot-test/')" class="navbar-element text-left"
-                    @click="drawerOpen = !drawerOpen">{{$t('navbar.idiot-test') }}</NuxtLink>
+                    @click="drawerOpen = !drawerOpen">{{ $t('navbar.idiot-test') }}</NuxtLink>
                 <NuxtLink :to="localePath('/christmas-quiz/')"
                     :class="['navbar-element text-left', { 'christmas-stripes-drawer': isDecember }]"
-                    @click="drawerOpen = !drawerOpen">{{$t('navbar.christmas-quiz') }}</NuxtLink>
+                    @click="drawerOpen = !drawerOpen">{{ $t('navbar.christmas-quiz') }}</NuxtLink>
             </nav>
         </div>
     </Transition>
