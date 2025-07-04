@@ -42,7 +42,7 @@ function update() {
             {
                 rel: "icon",
                 type: "image/png",
-                href: "/images/icon.png"
+                href: "/images/Logo.png"
             }
         ],
         meta: [

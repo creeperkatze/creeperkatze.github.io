@@ -4,7 +4,7 @@
         <div class="wrapper items-center justify-between px-2 space-x-4 h-16 hidden lg:flex">
             <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
                 <NuxtImg :src="isDecember ? '/images/LogoBannerChristmas.png' : '/images/LogoBanner.png'"
-                    class="w-60 md:w-72 object-contain rounded-sm" alt="Banner" style="image-rendering: pixelated;" />
+                    class="w-52" alt="Banner" />
             </NuxtLink>
             <nav class="max-w-5xl mx-auto px-6">
                 <div class="flex flex-row items-center justify-between space-x-4">
@@ -47,7 +47,7 @@
             <div class="flex items-center ml-2 space-x-2">
                 <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
                     <NuxtImg :src="isDecember ? '/images/LogoChristmas.png' : '/images/Logo.png'"
-                        class="w-10 object-contain rounded-sm" alt="Banner" style="image-rendering: pixelated;" />
+                        class="w-10 object-contain rounded-sm" alt="Banner" />
                 </NuxtLink>
                 <button @click="drawerOpen = !drawerOpen">
                     <IconDrawer class="h-10 w-10 text-white" :alt="$t('button.drawer')" />
@@ -72,7 +72,7 @@
     <Transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-y-full"
         enter-to-class="transform translate-y-0" leave-active-class="transition duration-100 ease-in"
         leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
-        <div v-show="drawerOpen" class="w-full glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-0 right-0" style="top:5.5rem;" data-nosnippet>
+        <div v-show="drawerOpen" class="glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-2 right-2" style="top:5.5rem;" data-nosnippet>
             <nav class="flex flex-col text-left space-y-4 ml-4">
                 <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">{{$t('navbar.home') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
