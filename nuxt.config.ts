@@ -102,6 +102,8 @@ export default defineNuxtConfig({
     "/en/projects/superslide/": { redirect: "/en/games/superslide/" },
     "/projects/flappy-christmas/": { redirect: "/games/flappy-christmas/" },
     "/en/projects/flappy-christmas/": { redirect: "/en/games/flappy-christmas/" },
+    "/games/superslide/": { redirect: "https://supersli.de/de" },
+    "/en/games/superslide/": { redirect: "https://supersli.de/en" },
   },
 
   seo: {
