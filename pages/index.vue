@@ -13,6 +13,6 @@
 definePageMeta({
   title: 'page.index.title',
   description: 'page.index.description',
-  image: '/images/Logo.png'
+  image: '/images/LogoDark.png'
 })
 </script>

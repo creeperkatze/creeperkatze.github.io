@@ -6,6 +6,6 @@
 definePageMeta({
     title: 'page.games.title',
     description: 'page.games.description',
-    image: '/images/seo/Logo.png'
+    image: '/images/seo/LogoDark.png'
 })
 </script>
