@@ -8,7 +8,7 @@
         <h2 v-else class="mb-5">
             {{ $t("page.error.else") }}
         </h2>
-        <NuxtImg src="/images/error/soggy-cat-cat.gif" :alt="$t('page.error.image.cat')"
+        <img src="/images/error/soggy-cat-cat.gif" :alt="$t('page.error.image.cat')"
             class="center w-[400px] mb-5 rounded-lg border-2" />
         <Button link="/">{{ $t('button.home') }}</Button>
     </NuxtLayout>
