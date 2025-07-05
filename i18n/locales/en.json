@@ -8,6 +8,7 @@
   "navbar.blog": "Blog",
   "navbar.generators": "Generators",
   "navbar.joke": "Joke",
+  "navbar.quote": "Quote",
   "navbar.cat": "Cat",
   "navbar.dog": "Dog",
   "navbar.idiot-test": "Idiot Test",
@@ -52,6 +53,7 @@
   "page.projects.project.idiot-test.title": "Idiot Test",
   "page.projects.project.christmas-quiz.title": "Christmas Quiz",
   "page.projects.project.joke.title": "Joke Generator",
+  "page.projects.project.quote.title": "Quote Generator",
   "page.projects.project.cat.title": "Cat Generator",
   "page.projects.project.dog.title": "Dog Generator",
   "page.projects.project.coming_soon.title": "Coming Soon",
@@ -129,7 +131,12 @@
   "page.dog.image.dog": "Generated dog photo",
   "page.dog.credits_part1": "Dogs by ",
   "page.dog.credits_part2": "TheDogAPI",
-  "page.dog.credits": " ",
+
+  "page.quote.title": "Quote Generator",
+  "page.quote.description": "Generate a random quote using Zitat Service.",
+  "page.quote.loading": "Loading...",
+  "page.quote.credits_part1": "Quotes by ",
+  "page.quote.credits_part2": "Zitat Service",
 
   "page.idiot_test.title": "Idiot Test - How smart are you really?",
   "page.idiot_test.description": "Test whether you're an idiot with these crazy and tricky questions!",
@@ -190,6 +197,7 @@
   "button.drawer": "Menu",
   "button.new_joke": "Another one!",
   "button.new_cat": "More!",
+  "button.new_quote": "Another one!",
   "button.yippee": "Yippee!",
 
   "consent_panel.text_part1": "This website uses content from third-party sources (e.g. ",

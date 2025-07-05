@@ -26,7 +26,7 @@ export default function useJoke()
     const jokeData = ref<Joke | null>(null);
     const error = ref<string | null>(null);
 
-    const fetchJoke = async (lang: string = 'de') =>
+    const fetchJoke = async (lang: string) =>
     {
         jokeData.value = null;
         try

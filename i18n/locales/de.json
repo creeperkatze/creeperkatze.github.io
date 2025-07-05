@@ -8,6 +8,7 @@
   "navbar.blog": "Blog",
   "navbar.generators": "Generatoren",
   "navbar.joke": "Witz",
+  "navbar.quote": "Zitat",
   "navbar.cat": "Kadze",
   "navbar.dog": "Hund",
   "navbar.idiot-test": "Idiotentest",
@@ -52,6 +53,7 @@
   "page.projects.project.idiot-test.title": "Idiotentest",
   "page.projects.project.christmas-quiz.title": "Weihnachtsquiz",
   "page.projects.project.joke.title": "Witzgenerator",
+  "page.projects.project.quote.title": "Zitatgenerator",
   "page.projects.project.cat.title": "Kadzengenerator",
   "page.projects.project.dog.title": "Hundegenerator",
   "page.projects.project.coming_soon.title": "Kommt bald",
@@ -129,7 +131,12 @@
   "page.dog.image.dog": "Generiertes Hundefoto",
   "page.dog.credits_part1": "Hunde von ",
   "page.dog.credits_part2": "TheDogAPI",
-  "page.dog.credits": " ",
+
+  "page.quote.title": "Zitatgenerator",
+  "page.quote.description": "Generieren ein zufälliges Zitat von Zitat Service.",
+  "page.quote.loading": "Lädt...",
+  "page.quote.credits_part1": "Zitate von ",
+  "page.quote.credits_part2": "Zitat Service",
 
   "page.idiot_test.title": "Idiotentest - Wie schlau bist du wirklich?",
   "page.idiot_test.description": "Teste mit diesen verrückten und kniffligen Fragen, ob du ein Idiot bist!",
@@ -190,6 +197,7 @@
   "button.drawer": "Menü",
   "button.new_joke": "Noch einer!",
   "button.new_cat": "Mehr!",
+  "button.new_quote": "Noch eins!",
   "button.yippee": "Yippee!",
 
   "consent_panel.text_part1": "Diese Website verwendet Inhalte von Drittanbietern (z. B. ",

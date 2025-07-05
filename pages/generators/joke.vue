@@ -33,7 +33,6 @@ definePageMeta({
 })
 
 const { locale } = useI18n()
-
 const { jokeData, error, fetchJoke } = useJoke();
 
 onMounted(() =>

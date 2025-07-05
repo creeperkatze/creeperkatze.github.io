@@ -4,6 +4,8 @@
         <div class="grid grid-cols-2 grid-rows-2 gap-2 max-w-md max-h-[400px]">
             <SmallCard :link="localePath('/generators/joke/')" image="/images/seo/joke.jpg"
                 :alt="$t('page.projects.project.joke.title')" :title="$t('page.projects.project.joke.title')" />
+            <SmallCard :link="localePath('/generators/quote/')" image="/images/seo/quote.jpg"
+                :alt="$t('page.projects.project.quote.title')" :title="$t('page.projects.project.quote.title')" />
             <SmallCard :link="localePath('/generators/cat/')" image="/images/seo/cat.jpg"
                 :alt="$t('page.projects.project.cat.title')" :title="$t('page.projects.project.cat.title')" />
             <SmallCard :link="localePath('/generators/dog/')" image="/images/seo/dog.jpg"
