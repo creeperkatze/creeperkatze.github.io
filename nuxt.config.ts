@@ -34,6 +34,7 @@ export default defineNuxtConfig({
       titleTemplate: "",
     },
   },
+  
   site: {
     trailingSlash: true,
     url: "https://creeperkatze.de",

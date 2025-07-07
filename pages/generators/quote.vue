@@ -5,10 +5,10 @@
                 <figure v-if="quoteData" class="mb-4">
                     <blockquote class="mb-4" :cite="quoteData.sourceLink">
                         <IconQuote class="w-8 h-8 text-gray-400 mb-2" />
-                        <h1>{{ quoteData.quote }}</h1>
+                        <h1 class="md:text-4xl text-2xl">{{ quoteData.quote }}</h1>
                     </blockquote>
                     <figcaption>
-                        <h2>—{{ quoteData.authorName }}</h2>
+                        <h2 class="md:text-3xl text-xl">—{{ quoteData.authorName }}</h2>
                     </figcaption>
                 </figure>
                 <div v-else>

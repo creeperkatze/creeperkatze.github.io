@@ -5,8 +5,8 @@
                 <div v-if="jokeData" class="mb-4">
                     <h1 v-if="jokeData.type === 'single'">{{ jokeData.joke }}</h1>
                     <div v-else>
-                        <h1 class="mb-4">{{ jokeData.setup }}</h1>
-                        <h3>{{ jokeData.delivery }}</h3>
+                        <h1 class="md:text-4xl text-2xl mb-4">{{ jokeData.setup }}</h1>
+                        <h2 class="md:text-3xl text-xl">{{ jokeData.delivery }}</h2>
                     </div>
                 </div>
                 <div v-else>
