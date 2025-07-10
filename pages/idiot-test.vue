@@ -4,7 +4,7 @@
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
         <div v-if="!allQuestionsAnswered"
             class="sticky top-24 max-w-xl mx-auto p-4 glass-effect border-gray-400 border-2 rounded-lg mb-4 z-10">
-            <div class="w-full bg-neutral-600 h-2 rounded-full">
+            <div class="w-full bg-neutral-500 h-2 rounded-full">
                 <div class="bg-white h-2 rounded-full" :style="{ width: percentageAnswered + '%' }" />
             </div>
             <p class="mt-2 text-center">
