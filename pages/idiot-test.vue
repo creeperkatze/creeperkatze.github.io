@@ -5,14 +5,14 @@
         <div v-if="!allQuestionsAnswered"
             class="sticky top-24 max-w-xl mx-auto p-4 glass-effect border-gray-400 border-2 rounded-lg mb-4 z-10">
             <div class="w-full bg-gray-200 h-2 rounded-full">
-                <div class="bg-black h-2 rounded-full" :style="{ width: percentageAnswered + '%' }" />
+                <div class="bg-neutral-600 h-2 rounded-full" :style="{ width: percentageAnswered + '%' }" />
             </div>
             <p class="mt-2 text-center">
                 {{ $t("page.idiot_test.progress") }}{{ percentageAnswered }}%
             </p>
         </div>
         <ul class="space-y-4">
-            <li v-for="(question, index) in questions" :key="index" class="glass-effect border-2 rounded-lg p-2" :class="{
+            <li v-for="(question, index) in questions" :key="index" class="border-2 rounded-lg p-2" :class="{
                 'border-green-600': question.isCorrect,
                 'border-red-600': !question.isCorrect && question.isCorrect != undefined,
             }">
@@ -24,11 +24,11 @@
                 </div>
                 <div class="answers flex flex-shrink justify-center gap-2">
                     <input v-model="question.answer" type="text" :placeholder="$t('page.idiot_test.input')"
-                        class="glass-effect-inverted text-white no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none"
+                        class="bg-transparent text-white no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none"
                         :class="{
                         }" :disabled="question.isCorrect !== undefined" @keydown.enter="checkAnswer(index)">
                     <button
-                        class="no-outline min-w-0 px-4 rounded-lg border-2 hover-lift-button text-neutral-400 glass-effect-inverted hover:border-white hover:text-white disabled:opacity-50 disabled:pointer-events-none"
+                        class="no-outline min-w-0 px-4 rounded-lg border-2 hover-lift-button text-neutral-400 hover:border-white hover:text-white disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
                         <IconSubmit :alt="$t('button.submit')"/>
                     </button>
@@ -48,7 +48,7 @@
             <hr class="rounded border-[1px] mt-4 mb-4">
             <h1 class="mt-4">{{ $t("page.idiot_test.rank_title") }}</h1>
             <p class="mb-4">{{ $t("page.idiot_test.disclaimer") }}</p>
-            <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-8 border-yellow-600">
+            <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-2 border-yellow-600">
                 <div class="relative">
                     <h1 class="text-black">{{ $t("page.idiot_test.rank.name." + rank) }}</h1>
                     <button v-if="shareSupported"

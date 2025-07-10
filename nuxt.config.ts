@@ -7,11 +7,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "nuxt-schema-org", "nuxt-seo-utils", "nuxt-link-checker", "@nuxt/image"],
-
   devServer: {
     port: 8000,
   },
-
   googleFonts: {
     // Never change this, it is illegal in germany if fonts are loaded from google at runtime🤦
     download: true,
@@ -20,7 +18,6 @@ export default defineNuxtConfig({
       Lexend: true,
     },
   },
-
   vite: {
     plugins: [
       svgLoader({
@@ -28,19 +25,16 @@ export default defineNuxtConfig({
       }),
     ],
   },
-
   app: {
     head: {
       titleTemplate: "",
     },
   },
-  
   site: {
     trailingSlash: true,
     url: "https://creeperkatze.de",
     name: "Creeperkatze",
   },
-
   i18n: {
     baseUrl: "https://creeperkatze.de",
     strategy: "prefix_except_default",
@@ -66,17 +60,14 @@ export default defineNuxtConfig({
       },
     ],
   },
-
   content: {
     contentHead: false,
   },
-
   router: {
     options: {
       scrollBehaviorType: "smooth",
     },
   },
-
   schemaOrg: {
     identity: {
       type: "Person",
@@ -85,13 +76,11 @@ export default defineNuxtConfig({
       sameAs: ["https://www.instagram.com/creeperkatze/", "https://creeperkatze.itch.io/", "https://github.com/creeperkatze"],
     },
   },
-
   runtimeConfig: {
     public: {
       superslideServerUrl: "http://127.0.0.1:3000",
     },
   },
-
   routeRules: {
     "/joke/": { redirect: "/generators/joke/" },
     "/en/joke/": { redirect: "/en/generators/joke/" },
@@ -106,12 +95,15 @@ export default defineNuxtConfig({
     "/games/superslide/": { redirect: "https://supersli.de/de" },
     "/en/games/superslide/": { redirect: "https://supersli.de/en" },
   },
-
   seo: {
     fallbackTitle: false,
   },
-
   image: {
     provider: "ipx",
+    ipx: {
+      modifiers: {
+        format: "webp",
+      },
+    },
   },
 });
