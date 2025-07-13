@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html
+{
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
 body
 {
+
     margin: auto;
     text-align: center;
     justify-content: center;
@@ -86,8 +93,9 @@ hr
 }
 
 
-.glass-effect {
-  @apply bg-neutral-800 backdrop-filter backdrop-blur-sm bg-opacity-80;
+.glass-effect
+{
+    @apply bg-neutral-800 backdrop-filter backdrop-blur-sm bg-opacity-80;
 }
 
 .glass-effect-inverted
