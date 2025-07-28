@@ -59,6 +59,9 @@ export default defineNuxtConfig({
         files: ["en.json", "idiot-test/en.json", "christmas-quiz/en.json"],
       },
     ],
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
   content: {
     contentHead: false,
