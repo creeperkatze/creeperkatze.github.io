@@ -39,7 +39,7 @@ update();
 function update() {
     useHead({
         link: [
-            { rel: "icon", type: "image/png", href: "/images/logo_dark_border_512.png", sizes: "96x96" },
+            { rel: "icon", type: "image/png", href: "/images/logo_dark_border_96.png", sizes: "96x96" },
             { rel: "icon", type: "image/svg+xml", href: "/images/logo.svg" },
             { rel: "apple-touch-icon", sizes: "180x180", href: "/images/logo_dark_border_180.png" },
         ],
