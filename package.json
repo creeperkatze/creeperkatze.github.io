@@ -20,7 +20,9 @@
         "nuxt": "^4.0.1",
         "nuxt-schema-org": "^5.0.6",
         "nuxt-seo-utils": "^7.0.14",
-        "sharp": "^0.34.3"
+        "sharp": "^0.34.3",
+        "vue": "^3.5.18",
+        "vue-router": "^4.5.1"
     },
     "devDependencies": {
         "@nuxt/eslint": "^1.7.1",
