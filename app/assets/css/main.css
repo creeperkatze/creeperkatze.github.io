@@ -10,12 +10,9 @@ html
 
 body
 {
-
-    margin: auto;
     text-align: center;
     justify-content: center;
     font-weight: bold;
-    overflow-y: overlay;
     @apply bg-gradient-to-br from-neutral-800 to-black;
 }
 
