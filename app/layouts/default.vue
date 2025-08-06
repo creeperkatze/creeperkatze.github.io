@@ -40,7 +40,7 @@ function update() {
     useHead({
         link: [
             { rel: "icon", type: "image/png", href: "/images/logo_smaller_dark_border_96.png", sizes: "96x96" },
-            { rel: "icon", type: "image/svg+xml", href: "/images/logo.svg" },
+            { rel: "icon", type: "image/svg+xml", href: "/images/logo_smaller_dark_border.svg" },
             { rel: "apple-touch-icon", sizes: "180x180", href: "/images/logo_smaller_dark_border_180.png" },
         ],
         meta: [
