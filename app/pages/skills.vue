@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto max-w-4xl">
+    <div class="mx-auto max-w-3xl">
         <h1 class="mb-5">{{ $t("page.skills.title_software") }}</h1>
         <div class="flex flex-wrap justify-center gap-4">
             <a v-for="(item, index) in softwareItems" :key="item.name" :href="item.link" target="_blank"
@@ -29,11 +29,6 @@ definePageMeta({
     image: '/images/seo/skills.jpg'
 })
 
-const glob = import.meta.glob('@/assets/images/skills/*', { eager: true })
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-)
-
 const softwareItems = [
     { name: 'Unity', link: 'https://unity.com/', icon: 'unity.svg' },
     { name: 'Visual Studio', link: 'https://visualstudio.microsoft.com/', icon: 'vs.svg' },
@@ -45,7 +40,7 @@ const techItems = [
     { name: 'Python', link: 'https://www.python.org/', icon: 'python.svg' },
     { name: 'HTML', link: 'https://www.w3.org/standards/', icon: 'html.svg' },
     { name: 'CSS', link: 'https://www.w3.org/standards/', icon: 'css.svg' },
-    { name: 'JavaScript', link: 'https://www.w3.org/standards/', icon: 'js.svg' },
+    { name: 'JavaScript', link: 'https://www.w3.org/standards/', icon: 'javascript.svg' },
     { name: 'Node', link: 'https://nodejs.org/', icon: 'node.svg' },
     { name: 'Vue', link: 'https://vuejs.org/', icon: 'vue.svg' },
     { name: 'Nuxt', link: 'https://nuxt.com/', icon: 'nuxt.svg' },
@@ -53,6 +48,8 @@ const techItems = [
     { name: 'Git', link: 'https://git-scm.com/', icon: 'git.svg' },
     { name: 'Express', link: 'https://expressjs.com/', icon: 'express.png' },
     { name: 'MongoDB', link: 'https://www.mongodb.com/', icon: 'mongodb.svg' },
+    { name: 'Docker', link: 'https://www.docker.com/', icon: 'docker.svg' },
+    { name: 'Nginx', link: 'https://nginx.org/', icon: 'nginx.svg' },
 ];
 </script>
 
