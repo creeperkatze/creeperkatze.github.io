@@ -24,19 +24,20 @@
 </template>
 
 <script setup>
-const route = useRoute()
-const { t } = useI18n()
-const head = useLocaleHead()
+const route = useRoute();
+const { t } = useI18n();
+const head = useLocaleHead();
 const title = computed(() => route.meta.title ? t(route.meta.title) : undefined);
 const description = computed(() => route.meta.description ? t(route.meta.description) : undefined);
 const image = computed(() => route.meta.image ?? undefined);
 
 // i18n thinks it can just set the canonical link incorrectly
-head.value.link = head.value.link?.filter(link => link.rel !== 'canonical')
+head.value.link = head.value.link?.filter(link => link.rel !== 'canonical');
 
 update();
 
-function update() {
+function update()
+{
     useHead({
         link: [
             { rel: "icon", type: "image/png", href: "/images/logo_smaller_dark_border_96.png", sizes: "96x96" },
@@ -46,7 +47,14 @@ function update() {
         meta: [
             { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' }
         ],
-    })
+        script: [
+            {
+                async: true,
+                src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3613753082519650',
+                crossorigin: 'anonymous'
+            }
+        ]
+    });
 
     useSeoMeta({
         title: title.value ? `${title.value}` : "",
@@ -58,10 +66,11 @@ function update() {
         ogImage: image,
         twitterImage: image,
         twitterCard: "summary"
-    })
+    });
 }
 
-watch(route, () => {
+watch(route, () =>
+{
     update();
 });
 </script>
