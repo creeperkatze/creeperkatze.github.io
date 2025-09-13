@@ -26,6 +26,7 @@
 <script setup>
 const route = useRoute();
 const { t } = useI18n();
+const runtimeConfig = useRuntimeConfig()
 const head = useLocaleHead();
 const title = computed(() => route.meta.title ? t(route.meta.title) : undefined);
 const description = computed(() => route.meta.description ? t(route.meta.description) : undefined);
@@ -45,12 +46,12 @@ function update()
             { rel: "apple-touch-icon", sizes: "180x180", href: "/images/logo_smaller_dark_border_180.png" },
         ],
         meta: [
-            { name: 'google-site-verification', content: '2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY' }
+            { name: 'google-site-verification', content: runtimeConfig.public.siteVerificationId }
         ],
         script: [
             {
                 async: true,
-                src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3613753082519650',
+                src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${runtimeConfig.public.adSenseId}`,
                 crossorigin: 'anonymous'
             }
         ]

@@ -1,4 +1,5 @@
 <template>
+    <GoogleAd adSlot="1247762080" adStyle="display:block" :responsive="true" />
     <div class="max-w-screen-md mx-auto">
         <h1>{{ $t("page.idiot_test.heading") }}</h1>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
@@ -30,7 +31,7 @@
                     <button
                         class="no-outline min-w-0 px-4 rounded-lg border-2 hover-lift-button text-neutral-400 hover:border-white hover:text-white disabled:opacity-50 disabled:pointer-events-none"
                         :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
-                        <IconSubmit :alt="$t('button.submit')"/>
+                        <IconSubmit :alt="$t('button.submit')" />
                     </button>
                 </div>
                 <p v-if="question.isCorrect != undefined" :class="{
@@ -54,7 +55,7 @@
                     <button v-if="shareSupported"
                         class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 text-black border-black bg-purple-500 hover:bg-purple-700 hover-lift-button disabled:opacity-50 disabled:pointer-events-none"
                         @click="share">
-                        <IconShare :alt="$t('button.share')"/>
+                        <IconShare :alt="$t('button.share')" />
                     </button>
                 </div>
                 <h4 class="mb-4 text-black">{{ $t("page.idiot_test.rank.description." + rank) }}</h4>
@@ -67,7 +68,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import { filename } from 'pathe/utils'
+import { filename } from 'pathe/utils';
 
 definePageMeta({
     title: "page.idiot_test.title",
@@ -201,7 +202,7 @@ function validateAnswer(userAnswer, correctAnswers)
         // 1. Exact match (always check for exact match)
         if (normalizedInput === normalizedCorrect)
         {
-            console.log("Answer was an exact match")
+            console.log("Answer was an exact match");
             return true;
         }
 
@@ -209,12 +210,12 @@ function validateAnswer(userAnswer, correctAnswers)
         // Only do this if the correct answer is longer than 2 characters
         if (normalizedCorrect.length > 2 && normalizedInput.includes(normalizedCorrect))
         {
-            console.log("Answer was included")
+            console.log("Answer was included");
             return true;
         }
 
-        console.log("Answer was not found")
-        return false
+        console.log("Answer was not found");
+        return false;
     });
 }
 

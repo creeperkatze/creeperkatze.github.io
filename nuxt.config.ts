@@ -81,7 +81,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      superslideServerUrl: "http://127.0.0.1:3000",
+      siteVerificationId: "2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY",
+      adSenseId: "ca-pub-3613753082519650",
     },
   },
   routeRules: {
