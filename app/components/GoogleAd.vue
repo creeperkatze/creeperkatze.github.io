@@ -23,7 +23,7 @@ onMounted(() =>
 </script>
 
 <template>
-    <div class="rounded-lg border-2">
+    <div class="rounded-lg border-2 p-2">
         <ins class="adsbygoogle" :style="props.adStyle" :data-ad-client="runtimeConfig.public.adSenseId"
             :data-ad-slot="props.adSlot" data-ad-format="auto" :data-full-width-responsive="responsive" />
     </div>

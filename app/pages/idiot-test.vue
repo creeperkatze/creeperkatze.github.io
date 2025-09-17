@@ -1,5 +1,5 @@
 <template>
-    <GoogleAd adSlot="1247762080" adStyle="display:block" :responsive="true" class="mb-8" />
+    <GoogleAd adSlot="1247762080" adStyle="" :responsive="true" class="mb-8" />
     <div class="max-w-screen-md mx-auto">
         <h1>{{ $t("page.idiot_test.heading") }}</h1>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
