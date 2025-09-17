@@ -22,8 +22,6 @@ onMounted(() =>
 </script>
 
 <template>
-    <div class="rounded-lg border-2 p-2 m-auto">
-        <ins class="adsbygoogle w-[800px] h-[100px] inline-block" :data-ad-client="runtimeConfig.public.adSenseId"
+        <ins class="adsbygoogle rounded-lg border-2 p-2 m-auto w-[800px] h-[100px] inline-block" :data-ad-client="runtimeConfig.public.adSenseId"
             :data-ad-slot="props.adSlot" data-ad-format="auto" :data-full-width-responsive="responsive" />
-    </div>
 </template>
