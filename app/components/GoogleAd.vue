@@ -21,10 +21,14 @@ onMounted(() =>
 </script>
 
 <template>
-    <div class="w-[800px] h-[100px] overflow-hidden m-auto border-2 rounded-lg p-2">
-        <ins class="adsbygoogle block max-w-full max-h-full" style="width:800px; height:100px;"
-            :data-ad-client="runtimeConfig.public.adSenseId" :data-ad-slot="props.adSlot" data-ad-format="auto"
-            data-full-width-responsive="false">
-        </ins>
-    </div>
+<div class="w-full max-w-[800px] mx-auto overflow-hidden border-2 rounded-lg p-2">
+  <ins
+    class="adsbygoogle block w-full h-[100px]"
+    style="display:block;"
+    :data-ad-client="runtimeConfig.public.adSenseId"
+    :data-ad-slot="props.adSlot"
+    data-ad-format="auto"
+    data-full-width-responsive="true">
+  </ins>
+</div>
 </template>
