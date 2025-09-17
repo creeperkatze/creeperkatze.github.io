@@ -1,6 +1,6 @@
 <template>
     <GoogleAd adSlot="1247762080" adStyle="display:block" :responsive="true" />
-    <div class="max-w-screen-md mx-auto">
+    <div class="max-w-screen-md mx-auto mt-20">
         <h1>{{ $t("page.idiot_test.heading") }}</h1>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
         <div v-if="!allQuestionsAnswered"
