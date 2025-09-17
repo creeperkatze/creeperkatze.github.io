@@ -64,7 +64,7 @@
             </div>
         </section>
     </div>
-        <GoogleAd adSlot="3613753082519650" adStyle="display:block" :responsive="true" />
+        <GoogleAd adSlot="1659158767" adStyle="display:block" :responsive="true" />
 </template>
 
 <script setup>
