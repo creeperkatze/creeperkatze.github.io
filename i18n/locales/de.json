@@ -15,12 +15,6 @@
   "navbar.christmas-quiz": "Weihnachtsquiz",
 
   "footer.copyright": "Creeperkatze. Alle Rechte vorbehalten.",
-  "footer.text_part1": "Erstellt mit ",
-  "footer.text_part2": " und ",
-  "footer.text_part3": ". Quelle verfügbar auf ",
-  "footer.link_nuxt": "Nuxt",
-  "footer.link_tailwind": "Tailwind",
-  "footer.link_github": "Github",
   "footer.badge.problem.shield": "https://img.shields.io/badge/problem-melden-blue?logo=github",
   "footer.badge.problem.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=Problem%3A+",
   "footer.badge.problem.alt": "Problem melden",
@@ -36,7 +30,7 @@
   "page.index.typing_effect.web_dev": "Web-Entwickler",
   "page.index.typing_effect.pixel_artist": "Pixelartist",
   "page.index.typing_effect.stardew_modder": "Stardew Valley Modder",
-  "page.index.welcome": "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nDiese Website befindet sich noch in der Entwicklung und wird sich im Laufe der Zeit drastisch verändern.",
+  "page.index.welcome": "Ein Unity-Spieleentwickler aus Deutschland, dessen aktuelles großes Projekt Superslide ist.\nHier auf meiner Website findest du Inhalte zu mir, spannende Rätsel und Katzenbilder.",
   "page.index.title_projects": "Meine Projekte",
 
   "page.games.title": "Spiele",
@@ -183,6 +177,9 @@
   "page.christmas-quiz.rank.description.4": "Du hast ALLE Fragen richtig beantwortet... Respekt! Du bist der Weihnachtsstern, und perfekt vorbereitet auf die Festtage!",
   "page.christmas-quiz.share.title": "Weihnachtsquiz - Teste dein Wissen",
   "page.christmas-quiz.share.text": "🎄Ich bin ein: %rank%, mit %score% von %questionsLength% Fragen richtig!\n\n🫵Probiere dieses Weihnachtsquiz aus und finde heraus, ob du ein wahrer Weihnachtsprofi bist!",
+
+  "page.privacy.title": "Datenschutzerklärung",
+  "page.privacy.description": "",
 
   "page.error.404": "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
   "page.error.else": "Diese süße Katze ist verwirrt. Es ist ein Fehler aufgetreten ;(",

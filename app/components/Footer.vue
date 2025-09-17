@@ -5,15 +5,7 @@
             ©<span v-text="currentYear" /> {{ $t("footer.copyright") }}
         </p>
         <p class="text-white mb-2 mx-4 text-center text-sm md:text-lg">
-            {{ $t("footer.text_part1") }}
-            <a href="https://nuxt.com/" target="_blank">{{
-                $t("footer.link_nuxt")
-            }}</a>{{ $t("footer.text_part2")
-            }}<a href="https://tailwindcss.com/" target="_blank">{{
-                $t("footer.link_tailwind")
-            }}</a>{{ $t("footer.text_part3")
-            }}<a href="https://github.com/creeperkatze/website" target="_blank">{{
-                $t("footer.link_github") }}</a>.
+            <NuxtLink href="/privacy" class="text-white">{{ $t("page.privacy.title") }}</NuxtLink>
         </p>
         <a href="https://github.com/creeperkatze/website/commits/main" target="_blank">
             <img class="h-6 px-1 inline"

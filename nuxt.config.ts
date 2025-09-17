@@ -65,6 +65,9 @@ export default defineNuxtConfig({
   },
   content: {
     contentHead: false,
+    renderer: {
+      anchorLinks: false,
+    },
   },
   router: {
     options: {

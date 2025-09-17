@@ -15,12 +15,6 @@
   "navbar.christmas-quiz": "Christmas Quiz",
 
   "footer.copyright": "Creeperkatze. All rights reserved.",
-  "footer.text_part1": "Built with ",
-  "footer.text_part2": " and ",
-  "footer.text_part3": ". Source available on ",
-  "footer.link_nuxt": "Nuxt",
-  "footer.link_tailwind": "Tailwind",
-  "footer.link_github": "Github",
   "footer.badge.problem.shield": "https://img.shields.io/badge/report-broblem-blue?logo=github",
   "footer.badge.problem.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=bug&projects=&template=3-bug_report.md&title=Problem%3A+",
   "footer.badge.problem.alt": "Report problem",
@@ -183,6 +177,9 @@
   "page.christmas-quiz.rank.description.4": "You answered ALL questions correctly... Respect! You are the Christmas star, and perfectly prepared for the festive season!",
   "page.christmas-quiz.share.title": "Christmas Quiz - Test your knowledge",
   "page.christmas-quiz.share.text": "🎄I am a: %rank%, with %score% of %questionsLength% questions correct!\n\n🫵Try out this Christmas quiz and find out if you are a true Christmas expert!",
+
+  "page.privacy.title": "Privacy Policy",
+  "page.privacy.description": "",
 
   "page.error.404": "Even this cute cat couldn't find the page you were looking for ;(",
   "page.error.else": "This cute cat is puzzled. An error occured ;(",
