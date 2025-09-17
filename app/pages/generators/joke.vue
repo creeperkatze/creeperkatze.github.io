@@ -13,7 +13,7 @@
                     <div v-if="error" class="mb-4">
                         <p v-if="error" class="text-red-600">Error: {{ error }}</p>
                     </div>
-                    <IconLoading :alt="$t('page.joke.loading')" class="center w-16"/>
+                    <IconLoading :alt="$t('page.joke.loading')" class="center w-16" />
                 </div>
             </div>
             <hr class="mt-4 mb-4">
@@ -21,6 +21,7 @@
         </div>
         <p class="my-4">{{ $t("page.joke.credits_part1") }}<a href='https://sv443.net/jokeapi/v2/' target='_blank'>{{
             $t("page.joke.credits_part2") }}</a></p>
+        <GoogleAd adSlot="8897191390" class="mb-8" />
     </div>
 </template>
 
@@ -30,9 +31,9 @@ definePageMeta({
     title: 'page.joke.title',
     description: 'page.joke.description',
     image: '/images/seo/joke.jpg'
-})
+});
 
-const { locale } = useI18n()
+const { locale } = useI18n();
 const { jokeData, error, fetchJoke } = useJoke();
 
 onMounted(() =>

@@ -21,9 +21,9 @@
             <hr class="mt-4 mb-4">
             <Button :rainbowBackground="true" @click="getQuote">{{ $t('button.new_quote') }}</Button>
         </div>
-        <p class="my-4">{{ $t("page.quote.credits_part1") }}<a href='https://www.zitat-service.de/'
-                target='_blank'>{{
-                    $t("page.quote.credits_part2") }}</a></p>
+        <p class="my-4">{{ $t("page.quote.credits_part1") }}<a href='https://www.zitat-service.de/' target='_blank'>{{
+            $t("page.quote.credits_part2") }}</a></p>
+        <GoogleAd adSlot="6271028052" class="mb-8" />   
     </div>
 </template>
 
@@ -33,16 +33,18 @@ definePageMeta({
     title: 'page.quote.title',
     description: 'page.quote.description',
     image: '/images/seo/quote.jpg'
-})
+});
 
-const { locale } = useI18n()
+const { locale } = useI18n();
 const { quoteData, error, fetchQuote } = useQuote();
 
-onMounted(() => {
+onMounted(() =>
+{
     getQuote();
 });
 
-const getQuote = async () => {
+const getQuote = async () =>
+{
     await fetchQuote(locale.value);
 };
 </script>

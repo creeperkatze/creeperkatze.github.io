@@ -5,7 +5,6 @@ import { onMounted } from 'vue'
 interface Props
 {
     adSlot: string
-    responsive: boolean
 }
 
 const props = defineProps<Props>()

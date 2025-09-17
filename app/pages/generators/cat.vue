@@ -7,7 +7,7 @@
                 </div>
                 <div v-else>
                     <p v-if="error" class="text-red-600">Error: {{ error }}</p>
-                    <IconLoading :alt="$t('page.cat.loading')" class="center w-16"/>
+                    <IconLoading :alt="$t('page.cat.loading')" class="center w-16" />
                 </div>
             </div>
             <hr class="mt-4 mb-4">
@@ -16,6 +16,7 @@
     </div>
     <p class="my-4">{{ $t("page.cat.credits_part1") }}<a href='https://thecatapi.com/' target='_blank'>{{
         $t("page.cat.credits_part2") }}</a></p>
+    <GoogleAd adSlot="1944770232" class="mb-8" />
 </template>
 
 <script setup>
@@ -23,7 +24,7 @@ definePageMeta({
     title: 'page.cat.title',
     description: 'page.cat.description',
     image: '/images/seo/cat.jpg'
-})
+});
 
 const { catData, error, fetchCatImage } = useCatImage();
 
