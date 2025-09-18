@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <div
     class="w-full max-w-[800px] mx-auto overflow-hidden rounded-lg p-2"
-    :class="adLoaded ? "border-2 " + props.customClass : ''"
+    :class="[ adLoaded ? ['border-2', props.customClass] : '' ]"
   >
     <ins
       class="adsbygoogle block w-full h-[100px]"
