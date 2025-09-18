@@ -1,5 +1,5 @@
 <template>
-    <GoogleAd adSlot="1247762080" class="mb-8" />
+    <GoogleAd adSlot="1247762080" customClass="mb-8" />
     <div class="max-w-screen-md mx-auto">
         <h1>{{ $t("page.idiot_test.heading") }}</h1>
         <p class="mb-4 whitespace-pre-wrap">{{ $t("page.idiot_test.text") }}</p>
@@ -64,7 +64,7 @@
             </div>
         </section>
     </div>
-        <GoogleAd adSlot="1659158767" class="mt-8" />
+        <GoogleAd adSlot="1659158767" customClass="mt-8" />
 </template>
 
 <script setup>
