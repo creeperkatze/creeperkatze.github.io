@@ -4,7 +4,6 @@ import { onMounted, ref } from 'vue'
 
 interface Props {
   adSlot: string
-  customClass?: string
 }
 
 const props = defineProps<Props>()
@@ -34,7 +33,7 @@ onMounted(() => {
 <template>
   <div
     class="w-full max-w-[800px] mx-auto overflow-hidden rounded-lg p-2"
-    :class="[props.customClass, adLoaded ? 'border-2' : '']"
+    :class="adLoaded ? '' : 'hidden'"
   >
     <ins
       class="adsbygoogle block w-full h-[100px]"
