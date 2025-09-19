@@ -37,16 +37,6 @@ head.value.link = head.value.link?.filter(link => link.rel !== 'canonical');
 
 update();
 
-onMounted(() => {
-  const observer = new MutationObserver(() => {
-    const ipr = document.getElementById('ipr-container');
-    if (ipr) {
-      ipr.remove();
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-});
-
 function update()
 {
     useHead({
