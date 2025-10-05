@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://creeperkatze.de">
-    <img src="logo_banner_1024.png" width="400" alt="Creeperkatze banner">
+    <img src="LogoBanner256.png" width="400" alt="Creeperkatze banner">
   </a>
 </p>
 
