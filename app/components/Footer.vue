@@ -6,7 +6,7 @@
             ©<span v-text="currentYear" /> {{ $t("footer.copyright") }}
         </p>
         <p class="text-white mb-2 mx-4 text-center text-sm md:text-lg">
-            <NuxtLink href="/privacy" class="text-white">{{ $t("page.privacy.title") }}</NuxtLink>
+            <NuxtLink href="/privacy/" class="text-white">{{ $t("page.privacy.title") }}</NuxtLink>
             <span class="mx-2">|</span>
             <a href="https://status.creeperkatze.de" class="text-white">{{ $t("footer.status") }}</a>
         </p>
