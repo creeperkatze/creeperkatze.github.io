@@ -16,12 +16,6 @@
 
     "footer.copyright": "Creeperkatze. All rights reserved.",
     "footer.status": "Status",
-    "footer.badge.problem.shield": "https://img.shields.io/badge/report-broblem-blue?logo=github",
-    "footer.badge.problem.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=bug&projects=&template=3-bug_report.md&title=Problem%3A+",
-    "footer.badge.problem.alt": "Report problem",
-    "footer.badge.suggestion.shield": "https://img.shields.io/badge/submit-idea-blue?logo=github",
-    "footer.badge.suggestion.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=enhancement&projects=&template=4-feature_request.md&title=Idea%3A+",
-    "footer.badge.suggestion.alt": "Submit idea",
 
     "page.index.title": "Home",
     "page.index.description": "I'm Creeperkatze, a Unity game developer from Germany, with my current big project being Superslide. Currently also stumbling into web development.",
@@ -31,7 +25,7 @@
     "page.index.typing_effect.web_dev": "Web Developer",
     "page.index.typing_effect.pixel_artist": "Pixel Artist",
     "page.index.typing_effect.stardew_modder": "Stardew Valley Modder",
-    "page.index.welcome": "A Unity game developer from Germany, with my current big project being Superslide.\nThis website is still in early developement, and will change drastically over time.",
+    "page.index.welcome": "A Unity game developer from Germany, with my current big project being Superslide.\nHere on my website, you will find information about me, exciting puzzles, and cat pictures.",
     "page.index.title_projects": "My Projects",
 
     "page.games.title": "Games",

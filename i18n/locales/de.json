@@ -16,16 +16,10 @@
 
     "footer.copyright": "Creeperkatze. Alle Rechte vorbehalten.",
     "footer.status": "Status",
-    "footer.badge.problem.shield": "https://img.shields.io/badge/problem-melden-blue?logo=github",
-    "footer.badge.problem.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=bug&projects=&template=1-bug_report_de.md&title=Problem%3A+",
-    "footer.badge.problem.alt": "Problem melden",
-    "footer.badge.suggestion.shield": "https://img.shields.io/badge/idee-einreichen-blue?logo=github",
-    "footer.badge.suggestion.link": "https://github.com/creeperkatze/website/issues/new?assignees=&labels=enhancement&projects=&template=2-feature_request_de.md&title=Idee%3A+",
-    "footer.badge.suggestion.alt": "Idee einreichen",
 
     "page.index.title": "Startseite",
     "page.index.description": "Ich bin Creeperkatze, ein Unity-Spieleentwickler aus Deutschland. Mein aktuelles großes Projekt ist Superslide. Momentan beschäftige ich mich auch mit Webentwicklung.",
-    "page.index.introdyuction": "Hallo! Ich bin Creeperkatze",
+    "page.index.introduction": "Hallo! Ich bin Creeperkatze",
     "page.index.typing_effect.unity_dev": "Unity Spieleentwickler",
     "page.index.typing_effect.mobile_game_dev": "Handyspiel-Entwickler",
     "page.index.typing_effect.web_dev": "Web-Entwickler",
