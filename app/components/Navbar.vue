@@ -5,7 +5,7 @@
         <div class="wrapper items-center justify-between px-4 space-x-4 h-16 hidden lg:flex">
             <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
                 <NuxtImg :src="isDecember ? '/images/logo_banner_christmas.png' : '/images/logo_banner_1024.png'" class="w-52"
-                    alt="Banner" />
+                    :style="isDecember ? 'image-rendering: pixelated' : ''" alt="Banner" />
             </NuxtLink>
             <nav class="max-w-5xl mx-auto px-6">
                 <div class="flex flex-row items-center justify-between space-x-4">
@@ -52,7 +52,7 @@
             <div class="flex items-center ml-2 space-x-2">
                 <NuxtLink :to="localePath('/')" class="hover-lift w-auto flex justify-center md:justify-start">
                     <NuxtImg :src="isDecember ? '/images/logo_christmas.png' : '/images/logo_512.png'"
-                        class="w-10 object-contain rounded-sm" alt="Logo" />
+                        class="w-10 object-contain rounded-sm" :style="isDecember ? 'image-rendering: pixelated' : ''" alt="Logo" />
                 </NuxtLink>
                 <button @click="drawerOpen = !drawerOpen">
                     <IconDrawer class="h-10 w-10 text-white" :alt="$t('button.drawer')" />
