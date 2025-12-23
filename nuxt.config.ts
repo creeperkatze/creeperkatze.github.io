@@ -6,18 +6,10 @@ export default defineNuxtConfig({
     telemetry: false,
     devtools: { enabled: true },
     css: ["~/assets/css/main.css"],
-    modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "nuxt-schema-org", "nuxt-seo-utils", "nuxt-link-checker", "@nuxt/image"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "nuxt-schema-org", "nuxt-seo-utils", "nuxt-link-checker", "@nuxt/image", "@nuxt/fonts"],
     nitro: {
         prerender: {
             failOnError: false,
-        },
-    },
-    googleFonts: {
-        // Never change this, it is illegal in germany if fonts are loaded from google at runtime🤦
-        download: true,
-
-        families: {
-            Lexend: true,
         },
     },
     vite: {
