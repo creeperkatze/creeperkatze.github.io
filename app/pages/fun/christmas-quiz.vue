@@ -1,4 +1,5 @@
 <template>
+    <GoogleAd adSlot="9507131339" customClass="mb-8" />
     <div class="mx-auto max-w-3xl">
         <div class="relative text-center">
             <h1 class="christmas-stripes-title">{{ $t('page.christmas-quiz.heading') }}</h1>
@@ -8,8 +9,7 @@
         <div v-if="!allQuestionsAnswered"
             class="sticky top-24 max-w-xl mx-auto p-4 bg-red-600 rounded-lg mb-8 z-10 candycane-border outline outline-2">
             <div class="w-full bg-white h-2 rounded-full outline outline-2">
-                <div class="h-2 rounded-full candycane-progress"
-                    :style="{ width: percentageAnswered + '%' }" />
+                <div class="h-2 rounded-full candycane-progress" :style="{ width: percentageAnswered + '%' }" />
             </div>
             <p class="mt-2 text-center text-white">
                 {{ $t("page.idiot_test.progress") }}{{ percentageAnswered }}%
@@ -78,7 +78,7 @@
                     <button v-if="shareSupported"
                         class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 text-black border-black bg-yellow-400 hover:bg-yellow-600 hover-lift-button disabled:opacity-50 disabled:pointer-events-none"
                         @click="share">
-                        <IconShare :alt="$t('button.share')"/>
+                        <IconShare :alt="$t('button.share')" />
                     </button>
                 </div>
                 <h4 class="mb-4">{{ $t("page.christmas-quiz.rank.description." + rank) }}</h4>
@@ -87,11 +87,11 @@
             </div>
         </section>
     </div>
+    <GoogleAd adSlot="9148038688" customClass="mt-8" />
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router';
-import { filename } from 'pathe/utils'
 
 definePageMeta({
     title: "page.christmas-quiz.title",
@@ -114,7 +114,8 @@ const rankThresholds = {
     0: [0, 24],
 };
 
-onMounted(() => {
+onMounted(() =>
+{
     correctSound = new Audio("/audio/correct.mp3");
     wrongSound = new Audio("/audio/wrong.mp3");
 
@@ -198,7 +199,7 @@ function checkAnswer(index, answer)
 {
     let sound;
 
-    questions[index].answer = answer
+    questions[index].answer = answer;
 
     if (questions[index].correctAnswer == answer)
     {

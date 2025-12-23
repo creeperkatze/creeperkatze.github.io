@@ -64,7 +64,7 @@
             </div>
         </section>
     </div>
-        <GoogleAd adSlot="1659158767" customClass="mt-8" />
+    <GoogleAd adSlot="1659158767" customClass="mt-8" />
 </template>
 
 <script setup>
