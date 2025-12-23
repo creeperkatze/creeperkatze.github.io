@@ -6,13 +6,13 @@
             <Card :link="'https://supersli.de'" image="/images/superslide/SplashBackgroundGameTitle.png"
                 alt="Superslide Banner" :title="$t('page.games.project.superslide.title')"
                 :description="$t('page.games.project.superslide.description')" />
-            <Card :link="localePath('/games/flappy-christmas/')" image="/images/flappy-christmas/Cover.png"
-                alt="Flappy Christmas Banner" :title="$t('page.games.project.flappy_christmas.title')"
-                :description="$t('page.games.project.flappy_christmas.description')" />
+            <Card :link="localePath('/games/divebomb/')" image="/images/divebomb/preview.png"
+                alt="Divebomb Banner" :title="$t('page.games.project.divebomb.title')"
+                :description="$t('page.games.project.divebomb.description')" />
         </div>
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const localePath = useLocalePath()
 </script>

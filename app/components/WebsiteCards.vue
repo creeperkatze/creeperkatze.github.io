@@ -7,9 +7,9 @@
                 :title="$t('page.projects.project.website.title')"
                 :description="$t('page.projects.project.website.description')" />
             <div class="grid grid-cols-2 grid-rows-2 gap-2 max-w-md max-h-[400px]">
-                <SmallCard :link="localePath('/idiot-test/')" image="/images/seo/idiot-test.jpg" alt="Idiot Test card"
+                <SmallCard :link="localePath('/fun/idiot-test/')" image="/images/seo/idiot-test.jpg" alt="Idiot Test card"
                     :title="$t('page.projects.project.idiot-test.title')" />
-                <SmallCard :link="localePath('/christmas-quiz/')" image="/images/seo/christmas-quiz.jpg" alt="Christmas Quiz card"
+                <SmallCard :link="localePath('/fun/christmas-quiz/')" image="/images/seo/christmas-quiz.jpg" alt="Christmas Quiz card"
                     :title="$t('page.projects.project.christmas-quiz.title')" />
                 <SmallCard :link="localePath('/generators/joke/')" image="/images/seo/joke.jpg" alt="Joke Generator card"
                     :title="$t('page.projects.project.joke.title')" />

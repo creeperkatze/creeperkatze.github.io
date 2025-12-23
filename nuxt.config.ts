@@ -12,9 +12,6 @@ export default defineNuxtConfig({
             failOnError: false,
         },
     },
-    devServer: {
-        port: 8000,
-    },
     googleFonts: {
         // Never change this, it is illegal in germany if fonts are loaded from google at runtime🤦
         download: true,
@@ -106,6 +103,10 @@ export default defineNuxtConfig({
         "/en/projects/flappy-christmas/": { redirect: "/en/games/flappy-christmas/" },
         "/games/superslide/": { redirect: "https://supersli.de/de" },
         "/en/games/superslide/": { redirect: "https://supersli.de/en" },
+        "/idiot-test/": { redirect: "/fun/idiot-test/" },
+        "/en/idiot-test/": { redirect: "/en/fun/idiot-test/" },
+        "/christmas-quiz/": { redirect: "/fun/christmas-quiz/" },
+        "/en/christmas-quiz/": { redirect: "/en/fun/christmas-quiz/" },
     },
     seo: {
         fallbackTitle: false,

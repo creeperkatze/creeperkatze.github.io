@@ -11,6 +11,7 @@
     "navbar.quote": "Zitat",
     "navbar.cat": "Kadze",
     "navbar.dog": "Hund",
+    "navbar.fun": "Spaß",
     "navbar.idiot-test": "Idiotentest",
     "navbar.christmas-quiz": "Weihnachtsquiz",
 
@@ -35,10 +36,12 @@
     "page.games.project.superslide.description": "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
     "page.games.project.flappy_christmas.title": "Flappy Christmas",
     "page.games.project.flappy_christmas.description": "Springe durch die Schornsteine!",
+    "page.games.project.divebomb.title": "Divebomb Racing",
+    "page.games.project.divebomb.description": "Kommt bald!",
 
     "page.projects.subtitle.webdev": "Webentwicklung",
     "page.projects.project.website.title": "Persönliche Website",
-    "page.projects.project.website.description": "Wie ich diese persönliche Website mit Nuxt und Tailwind erstellt habe✨",
+    "page.projects.project.website.description": "Wie ich diese persönliche Website mit Nuxt und Tailwind erstellt habe",
     "page.projects.project.idiot-test.title": "Idiotentest",
     "page.projects.project.christmas-quiz.title": "Weihnachtsquiz",
     "page.projects.project.joke.title": "Witzgenerator",
@@ -172,6 +175,9 @@
     "page.christmas-quiz.rank.description.4": "Du hast ALLE Fragen richtig beantwortet... Respekt! Du bist der Weihnachtsstern, und perfekt vorbereitet auf die Festtage!",
     "page.christmas-quiz.share.title": "Weihnachtsquiz - Teste dein Wissen",
     "page.christmas-quiz.share.text": "🎄Ich bin ein: %rank%, mit %score% von %questionsLength% Fragen richtig!\n\n🫵Probiere dieses Weihnachtsquiz aus und finde heraus, ob du ein wahrer Weihnachtsprofi bist!",
+
+    "page.fun.title": "Spaß",
+    "page.fun.description": "Entdecke unterhaltsame Spiele und Quizze, die dein Wissen testen.",
 
     "page.privacy.title": "Datenschutzerklärung",
     "page.privacy.description": "",

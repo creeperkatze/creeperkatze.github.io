@@ -11,6 +11,7 @@
     "navbar.quote": "Quote",
     "navbar.cat": "Cat",
     "navbar.dog": "Dog",
+    "navbar.fun": "Fun",
     "navbar.idiot-test": "Idiot Test",
     "navbar.christmas-quiz": "Christmas Quiz",
 
@@ -35,10 +36,12 @@
     "page.games.project.superslide.description": "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
     "page.games.project.flappy_christmas.title": "Flappy Christmas",
     "page.games.project.flappy_christmas.description": "Jump through the chimneys!",
+    "page.games.project.divebomb.title": "Divebomb Racing",
+    "page.games.project.divebomb.description": "Coming soon!",
 
     "page.projects.subtitle.webdev": "Web Developement",
     "page.projects.project.website.title": "Personal Website",
-    "page.projects.project.website.description": "How I created this personal website using Nuxt and Tailwind✨",
+    "page.projects.project.website.description": "How I created this personal website using Nuxt and Tailwind",
     "page.projects.project.idiot-test.title": "Idiot Test",
     "page.projects.project.christmas-quiz.title": "Christmas Quiz",
     "page.projects.project.joke.title": "Joke Generator",
@@ -172,6 +175,9 @@
     "page.christmas-quiz.rank.description.4": "You answered ALL questions correctly... Respect! You are the Christmas star, and perfectly prepared for the festive season!",
     "page.christmas-quiz.share.title": "Christmas Quiz - Test your knowledge",
     "page.christmas-quiz.share.text": "🎄I am a: %rank%, with %score% of %questionsLength% questions correct!\n\n🫵Try out this Christmas quiz and find out if you are a true Christmas expert!",
+
+    "page.fun.title": "Fun",
+    "page.fun.description": "Discover entertaining games and quizzes that test your knowledge.",
 
     "page.privacy.title": "Privacy Policy",
     "page.privacy.description": "",
