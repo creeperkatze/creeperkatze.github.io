@@ -9,6 +9,8 @@
             <NuxtLink href="/privacy/" class="text-white">{{ $t("page.privacy.title") }}</NuxtLink>
             <span class="mx-2">|</span>
             <a href="https://status.creeperkatze.de" class="text-white">{{ $t("footer.status") }}</a>
+            <span class="mx-2">|</span>
+            <a href="mailto:contact@creeperkatze.de" class="text-white">{{ $t("footer.contact") }}</a>
         </p>
     </footer>
 </template>
