@@ -1,0 +1,28 @@
+.content h1 {
+  @apply text-center mb-4;
+}
+
+.content h2 {
+  @apply mt-4 mb-2;
+}
+
+.content h2::after {
+  content: "";
+  @apply block w-full h-0.5 bg-neutral-400;
+}
+
+.content h3 {
+  @apply mb-2;
+}
+
+.content p {
+  @apply mb-2;
+}
+
+.content ul {
+  @apply mb-2 list-disc;
+}
+
+.content li:not(:has(h3)) {
+    @apply text-white;
+}

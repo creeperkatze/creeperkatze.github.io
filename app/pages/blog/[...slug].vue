@@ -19,7 +19,7 @@
                     </span>
                 </div>
                 <hr class="mb-4">
-                <ContentRenderer :value="blog" class="text-left whitespace-pre-wrap" />
+                <ContentRenderer :value="blog" class="text-left content" />
             </article>
         </template>
         <template v-else>

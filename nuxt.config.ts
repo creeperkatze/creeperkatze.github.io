@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     compatibilityDate: "2024-04-03",
     telemetry: false,
     devtools: { enabled: true },
-    css: ["~/assets/css/main.css"],
+    css: ["~/assets/styles/main.css", "~/assets/styles/content.css"],
     modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "nuxt-schema-org", "nuxt-seo-utils", "nuxt-link-checker", "@nuxt/image", "@nuxt/fonts"],
     nitro: {
         prerender: {

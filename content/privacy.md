@@ -1,41 +1,49 @@
-<h1 class="text-center">Privacy Policy</h1>
+# Privacy Policy
 
 Last updated: September 17, 2025
 
-<br>
-
-This Privacy Policy explains how we and our advertising partners collect and use information when you visit our website.
-
-<br>
+This Privacy Policy describes how information is collected and used when you visit our website, including the use of third-party advertising and services.
 
 ## Cookies and Third-Party Ads
-<br>
 
-This website uses Google AdSense, a service provided by Google LLC, to display ads.
-Third-party vendors, including Google, use cookies to serve ads based on a user’s previous visits to this or other websites.
+This website uses Google AdSense, an advertising service provided by Google LLC, to display advertisements.
 
-Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to creeperkatze.de and/or other sites on the Internet.
+Third-party vendors, including Google, use cookies and similar technologies to serve ads based on a user’s previous visits to this website or other websites. These cookies allow Google and its partners to display ads that may be relevant to your interests.
 
-You may opt out of personalized advertising by visiting Google Ads Settings or www.aboutads.info.
-
-<br>
+For more information on how Google processes data, please refer to [Google’s Privacy Policy](https://policies.google.com/privacy).
 
 ## Data Collection
-<br>
 
-We do not directly collect personally identifiable information from visitors. However, third-party vendors, including Google, may collect information (such as IP address, browser type, or interests) through cookies or other technologies for the purpose of showing relevant ads.
+We do not directly collect personally identifiable information from visitors.
 
-<br>
+However, third-party vendors, including Google, may collect certain information automatically through cookies or similar technologies. This information may include, but is not limited to:
+
+- IP address
+- Browser type and version
+- Device information
+- Approximate location
+- Interests inferred for advertising purposes
+
+This data is used primarily to deliver and optimize personalized or non-personalized advertisements.
+
+## Google Fonts
+
+This website uses Google Fonts, a service provided by Google LLC, to ensure consistent and visually appealing typography.
+
+When you access a page, your browser may establish a connection to Google servers to download the required font files. During this process, technical information such as your IP address, browser or device details, and the requested font files may be transmitted to Google.
+
+For more details, please see [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ## Managing Cookies and Consent
-<br>
 
-You can control how cookies are used via our cookie/consent banner (powered by Google CMP) and through your browser settings. If you decline cookies, you may still see ads, but they may be less relevant.
+You can manage your privacy preferences and cookie consent at any time using the link below:
 
-<br>
+<a href="javascript:googlefc.callbackQueue.push(googlefc.showRevocationMessage)">Privacy and cookie settings</a>
+
+Our website uses a cookie and consent banner powered by Google CMP. You may also control or disable cookies through your browser settings. Please note that if you decline cookies, advertisements may still be displayed, but they may be less relevant to you.
+
 
 ## Contact Us
-<br>
 
 If you have any questions about this Privacy Policy, you can reach us at:
-contact@creeperkatze.de
+[contact@creeperkatze.de]
