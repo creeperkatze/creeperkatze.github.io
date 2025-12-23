@@ -41,7 +41,7 @@
                     }">{{ question.explanation }}</p>
                 </li>
 
-                <li v-if="(index + 1) % 5 === 0">
+                <li v-if="(index + 1) % 5 === 0 && index !== questions.length - 1">
                     <GoogleAd
                         adSlot="7204401620"
                         customClass="my-2"
