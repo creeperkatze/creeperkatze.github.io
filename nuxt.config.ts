@@ -29,9 +29,6 @@ export default defineNuxtConfig({
         url: "https://creeperkatze.de",
         name: "Creeperkatze",
     },
-    fonts: {
-        provider: "local"
-    },
     i18n: {
         baseUrl: "https://creeperkatze.de",
         strategy: "prefix_except_default",
