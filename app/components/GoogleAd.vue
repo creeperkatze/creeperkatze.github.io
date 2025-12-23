@@ -5,9 +5,13 @@ import { onMounted, ref } from 'vue'
 interface Props {
   adSlot: string
   customClass: string
+  type?: 'display' | 'infeed'
+  layoutKey?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  type: 'display',
+})
 const runtimeConfig = useRuntimeConfig()
 
 const adLoaded = ref(false)
@@ -41,7 +45,8 @@ onMounted(() => {
       style="display:block;"
       :data-ad-client="runtimeConfig.public.adSenseId"
       :data-ad-slot="props.adSlot"
-      data-ad-format="auto"
+      :data-ad-format="props.type === 'infeed' ? 'fluid' : 'auto'"
+      :data-ad-layout-key="props.type === 'infeed' ? props.layoutKey : undefined"
       data-full-width-responsive="true"
     />
   </div>

@@ -16,8 +16,8 @@
             </p>
         </div>
         <ul class="space-y-10">
-            <li v-for="(question, index) in questions" :key="index"
-                class="bg-yellow-400 border-2 rounded-lg p-2 christmas-border">
+            <template v-for="(question, index) in questions" :key="index">
+                <li class="bg-yellow-400 border-2 rounded-lg p-2 christmas-border">
                 <div class="relative flex items-start pb-2" :class="{ 'opacity-50': question.isCorrect !== undefined }">
                     <p class="absolute left-0 text-left text-black">{{ index + 1 }}.</p>
                     <p class="pl-8 text-left text-black">
@@ -62,7 +62,17 @@
                     'text-green-600': question.isCorrect,
                     'text-red-600': !question.isCorrect && question.isCorrect != undefined,
                 }">{{ question.explanation }}</p>
-            </li>
+                </li>
+
+                <li v-if="index === 4">
+                    <GoogleAd
+                        adSlot="1022136650"
+                        customClass="my-4"
+                        type="infeed"
+                        layoutKey="-fb+5w+4e-db+86"
+                    />
+                </li>
+            </template>
         </ul>
 
         <section v-if="allQuestionsAnswered" id="results" class="mt-4">
