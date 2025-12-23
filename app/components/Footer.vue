@@ -7,8 +7,8 @@
         </p>
         <p class="text-white mx-4 text-center text-sm md:text-lg flex flex-row gap-2 justify-center">
             <NuxtLink href="/privacy/" class="text-neutral-400 hover:text-gift">{{ $t("page.privacy.title") }}</NuxtLink>
-            <a href="https://status.creeperkatze.de" class="text-neutral-400 hover:text-gift">{{ $t("footer.status") }}</a>
-            <a href="mailto:contact@creeperkatze.de" class="text-neutral-400 hover:text-gift">{{ $t("footer.contact") }}</a>
+            <a href="https://status.creeperkatze.de" target="_blank" class="text-neutral-400 hover:text-gift">{{ $t("footer.status") }}</a>
+            <a href="mailto:contact@creeperkatze.de" target="_blank" class="text-neutral-400 hover:text-gift">{{ $t("footer.contact") }}</a>
         </p>
     </footer>
 </template>
