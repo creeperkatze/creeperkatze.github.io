@@ -99,9 +99,9 @@
             },
             "16": {
                 "text": "Wie heißt die Währung der Schweiz?",
-                "answers": ["Dollar", "Euro", "Schweizer Franken", "Pfund"],
+                "answers": ["Dollar", "Euro", "Franken", "Pfund"],
                 "correctAnswer": "2",
-                "explanation": "In der Schweiz bezahlt man mit dem Schweizer Franken (CHF)."
+                "explanation": "In der Schweiz bezahlt man mit dem Schweizer Franken."
             },
             "17": {
                 "text": "Wie heißt die größte heiße Wüste der Welt?",

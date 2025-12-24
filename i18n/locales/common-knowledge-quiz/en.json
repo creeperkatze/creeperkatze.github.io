@@ -99,9 +99,9 @@
             },
             "16": {
                 "text": "What is the currency of Switzerland?",
-                "answers": ["Dollar", "Euro", "Swiss franc", "Pound"],
+                "answers": ["Dollar", "Euro", "Franc", "Pound"],
                 "correctAnswer": "2",
-                "explanation": "Switzerland uses the Swiss franc (CHF)."
+                "explanation": "Switzerland uses the Swiss franc."
             },
             "17": {
                 "text": "What is the largest hot desert in the world?",
