@@ -60,11 +60,6 @@ onMounted(() => {
   })
 
   observer.observe(ins, { childList: true, subtree: true, attributes: true })
-
-  // Fallback: if nothing loads after a short time, collapse the ad.
-  loadTimeout = window.setTimeout(() => {
-    if (adState.value !== 'loaded') markBlocked()
-  }, 3000)
 })
 
 onBeforeUnmount(() => {
