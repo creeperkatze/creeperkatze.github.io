@@ -22,8 +22,7 @@ const insEl = ref<HTMLElement | null>(null)
 let observer: MutationObserver | null = null
 let loadTimeout: number | null = null
 
-const markBlocked = () => {
-  if (adState.value !== 'loaded') adState.value = 'blocked'
+const cleanup = () => {
   if (observer) {
     observer.disconnect()
     observer = null
@@ -34,6 +33,11 @@ const markBlocked = () => {
   }
 }
 
+const markBlocked = () => {
+  if (adState.value !== 'loaded') adState.value = 'blocked'
+  cleanup()
+}
+
 onMounted(() => {
   if (typeof window !== 'undefined') {
     (window as any).adsbygoogle = (window as any).adsbygoogle || []
@@ -42,16 +46,17 @@ onMounted(() => {
 
   const ins = insEl.value
   if (!ins) return
+  loadTimeout = window.setTimeout(() => {
+    if (adState.value !== 'loaded') markBlocked()
+  }, 1500)
 
   observer = new MutationObserver(() => {
     if (ins.querySelector('iframe')) {
       adState.value = 'loaded'
-      markBlocked() // clears observer + timeout without switching away from 'loaded'
-      adState.value = 'loaded'
+      cleanup()
       return
     }
 
-    // AdSense can mark an ad as "done" but no iframe ever appears when blocked.
     const status = ins.getAttribute('data-adsbygoogle-status')
     const adStatus = ins.getAttribute('data-ad-status')
     if ((status === 'done' || adStatus === 'unfilled') && !ins.querySelector('iframe')) {
@@ -63,14 +68,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  if (observer) {
-    observer.disconnect()
-    observer = null
-  }
-  if (loadTimeout != null) {
-    window.clearTimeout(loadTimeout)
-    loadTimeout = null
-  }
+  cleanup()
 })
 </script>
 
@@ -78,12 +76,16 @@ onBeforeUnmount(() => {
   <div
     v-if="adState !== 'blocked'"
     class="w-full max-w-[800px] mx-auto"
-    :class="[ adState === 'loaded' ? ['border-2 border-yellow-400 p-2 rounded-lg overflow-hidden', props.customClass] : '' ]"
+    :class="[
+      adState === 'loaded'
+        ? ['border-2 border-yellow-400 p-2 rounded-lg overflow-hidden', props.customClass]
+        : 'relative h-0 overflow-hidden'
+    ]"
   >
     <ins
       ref="insEl"
       class="adsbygoogle block w-full"
-      :class="adState === 'loading' ? 'min-h-[100px] max-h-[120px] overflow-hidden' : ''"
+      :class="adState === 'loading' ? 'absolute left-0 top-0 h-[100px]' : ''"
       style="display:block;"
       :data-ad-client="runtimeConfig.public.adSenseId"
       :data-ad-slot="props.adSlot"
