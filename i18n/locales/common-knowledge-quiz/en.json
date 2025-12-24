@@ -1,0 +1,156 @@
+{
+    "common-knowledge-quiz": {
+        "questions": {
+            "0": {
+                "text": "What is the capital of Germany?",
+                "answers": ["Munich", "Berlin", "Hamburg", "Cologne"],
+                "correctAnswer": "1",
+                "explanation": "Berlin is the capital of Germany."
+            },
+            "1": {
+                "text": "What is the capital of France?",
+                "answers": ["Marseille", "Lyon", "Paris", "Nice"],
+                "correctAnswer": "2",
+                "explanation": "Paris is the capital of France."
+            },
+            "2": {
+                "text": "Which planet is the largest in our solar system?",
+                "answers": ["Earth", "Saturn", "Neptune", "Jupiter"],
+                "correctAnswer": "3",
+                "explanation": "Jupiter is the largest planet in our solar system."
+            },
+            "3": {
+                "text": "What is the chemical symbol for oxygen?",
+                "answers": ["S", "O", "Ox", "So"],
+                "correctAnswer": "1",
+                "explanation": "Oxygen has the chemical symbol O."
+            },
+            "4": {
+                "text": "How many continents are there on Earth?",
+                "answers": ["6", "5", "7", "8"],
+                "correctAnswer": "2",
+                "explanation": "Most commonly, 7 continents are counted."
+            },
+            "5": {
+                "text": "What is the approximate speed of light?",
+                "answers": ["3,000,000 km/s", "30,000 km/s", "3,000 km/s", "300,000 km/s"],
+                "correctAnswer": "3",
+                "explanation": "The speed of light is roughly 300,000 km/s."
+            },
+            "6": {
+                "text": "Who painted the Mona Lisa?",
+                "answers": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+                "correctAnswer": "1",
+                "explanation": "The Mona Lisa is attributed to Leonardo da Vinci."
+            },
+            "7": {
+                "text": "Which element has atomic number 1?",
+                "answers": ["Oxygen", "Helium", "Hydrogen", "Carbon"],
+                "correctAnswer": "2",
+                "explanation": "Hydrogen is the first element in the periodic table."
+            },
+            "8": {
+                "text": "Which language has the most native speakers?",
+                "answers": ["German", "English", "Spanish", "Mandarin Chinese"],
+                "correctAnswer": "3",
+                "explanation": "Mandarin has the most native speakers worldwide."
+            },
+            "9": {
+                "text": "Which mountain is the highest above sea level?",
+                "answers": ["K2", "Mount Everest", "Kilimanjaro", "Mont Blanc"],
+                "correctAnswer": "1",
+                "explanation": "Mount Everest is the highest mountain above sea level."
+            },
+            "10": {
+                "text": "Which organ pumps blood through the body?",
+                "answers": ["Liver", "Lungs", "Heart", "Stomach"],
+                "correctAnswer": "2",
+                "explanation": "The heart pumps blood through the circulatory system."
+            },
+            "11": {
+                "text": "What does H2O stand for?",
+                "answers": ["Salt", "Hydrogen", "Oxygen", "Water"],
+                "correctAnswer": "3",
+                "explanation": "H2O is the chemical formula for water."
+            },
+            "12": {
+                "text": "In which year did World War II end in Europe?",
+                "answers": ["1939", "1945", "1918", "1955"],
+                "correctAnswer": "1",
+                "explanation": "World War II ended in 1945."
+            },
+            "13": {
+                "text": "Which country is often called the \"Land of the Rising Sun\"?",
+                "answers": ["Australia", "China", "Japan", "Canada"],
+                "correctAnswer": "2",
+                "explanation": "Japan is commonly referred to as the \"Land of the Rising Sun\"."
+            },
+            "14": {
+                "text": "What is the largest mammal on Earth?",
+                "answers": ["Orca", "Elephant", "Giraffe", "Blue whale"],
+                "correctAnswer": "3",
+                "explanation": "The blue whale is the largest known mammal."
+            },
+            "15": {
+                "text": "Which gas do plants primarily absorb during photosynthesis?",
+                "answers": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
+                "correctAnswer": "1",
+                "explanation": "Plants absorb carbon dioxide (CO₂) and release oxygen."
+            },
+            "16": {
+                "text": "What is the currency of Switzerland?",
+                "answers": ["Dollar", "Euro", "Swiss franc", "Pound"],
+                "correctAnswer": "2",
+                "explanation": "Switzerland uses the Swiss franc (CHF)."
+            },
+            "17": {
+                "text": "What is the largest hot desert in the world?",
+                "answers": ["Atacama", "Gobi", "Kalahari", "Sahara"],
+                "correctAnswer": "3",
+                "explanation": "The Sahara is the largest hot desert in the world."
+            },
+            "18": {
+                "text": "Who wrote \"Romeo and Juliet\"?",
+                "answers": ["Johann Wolfgang von Goethe", "William Shakespeare", "Friedrich Schiller", "Jane Austen"],
+                "correctAnswer": "1",
+                "explanation": "\"Romeo and Juliet\" was written by William Shakespeare."
+            },
+            "19": {
+                "text": "What is the square root of 81?",
+                "answers": ["7", "8", "9", "6"],
+                "correctAnswer": "2",
+                "explanation": "9 × 9 = 81."
+            },
+            "20": {
+                "text": "Which planet is also known as the \"Red Planet\"?",
+                "answers": ["Mercury", "Venus", "Jupiter", "Mars"],
+                "correctAnswer": "3",
+                "explanation": "Mars is called the \"Red Planet\" because of its reddish appearance."
+            },
+            "21": {
+                "text": "How many minutes are in an hour?",
+                "answers": ["100", "60", "30", "24"],
+                "correctAnswer": "1",
+                "explanation": "There are 60 minutes in one hour."
+            },
+            "22": {
+                "text": "Which metal is liquid at room temperature?",
+                "answers": ["Gold", "Iron", "Mercury", "Aluminum"],
+                "correctAnswer": "2",
+                "explanation": "Mercury is liquid at room temperature."
+            },
+            "23": {
+                "text": "What is the smallest prime number?",
+                "answers": ["5", "1", "3", "2"],
+                "correctAnswer": "3",
+                "explanation": "2 is the smallest prime number and the only even prime."
+            },
+            "24": {
+                "text": "Which instrument measures earthquakes?",
+                "answers": ["Thermometer", "Seismograph", "Barometer", "Tachometer"],
+                "correctAnswer": "1",
+                "explanation": "A seismograph (seismometer) records vibrations of the Earth."
+            }
+        }
+    }
+}

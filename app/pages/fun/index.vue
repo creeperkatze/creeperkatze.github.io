@@ -6,6 +6,8 @@
                 :alt="$t('page.idiot-test.title')" :title="$t('page.idiot_test.heading')" />
             <SmallCard :link="localePath('/fun/christmas-quiz/')" image="/images/seo/christmas-quiz.jpg"
                 :alt="$t('page.christmas-quiz.title')" :title="$t('page.christmas-quiz.heading')" />
+            <SmallCard :link="localePath('/fun/common-knowledge-quiz/')" image="/images/seo/common-knowledge-quiz.jpg"
+                :alt="$t('page.common-knowledge-quiz.title')" :title="$t('page.common-knowledge-quiz.heading')" />
         </div>
     </div>
 </template>

@@ -44,13 +44,13 @@ export default defineNuxtConfig({
                 code: "de",
                 language: "de-DE",
                 name: "Deutsch",
-                files: ["de.json", "idiot-test/de.json", "christmas-quiz/de.json"],
+                files: ["de.json", "idiot-test/de.json", "christmas-quiz/de.json", "common-knowledge-quiz/de.json"],
             },
             {
                 code: "en",
                 language: "en-US",
                 name: "English",
-                files: ["en.json", "idiot-test/en.json", "christmas-quiz/en.json"],
+                files: ["en.json", "idiot-test/en.json", "christmas-quiz/en.json", "common-knowledge-quiz/en.json"],
             },
         ],
         bundle: {
@@ -99,6 +99,8 @@ export default defineNuxtConfig({
         "/en/idiot-test/": { redirect: { to: "/en/fun/idiot-test/", statusCode: 301 } },
         "/christmas-quiz/": { redirect: { to: "/fun/christmas-quiz/", statusCode: 301 } },
         "/en/christmas-quiz/": { redirect: { to: "/en/fun/christmas-quiz/", statusCode: 301 } },
+        "/common-knowledge-quiz/": { redirect: { to: "/fun/common-knowledge-quiz/", statusCode: 301 } },
+        "/en/common-knowledge-quiz/": { redirect: { to: "/en/fun/common-knowledge-quiz/", statusCode: 301 } },
     },
     seo: {
         fallbackTitle: false,

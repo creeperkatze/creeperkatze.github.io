@@ -26,6 +26,7 @@
                     <Dropdown :title="$t('navbar.fun')" :titleLink="localePath('/fun/')" :items="[
                         { name: $t('navbar.idiot-test'), link: '/fun/idiot-test/' },
                         { name: $t('navbar.christmas-quiz'), link: '/fun/christmas-quiz/' },
+                        { name: $t('navbar.common-knowledge-quiz'), link: '/fun/common-knowledge-quiz/' },
                     ]" />
                 </div>
             </nav>
@@ -102,6 +103,7 @@
                 <DropdownDrawer :title="$t('navbar.fun')" :titleLink="localePath('/fun/')" :items="[
                     { name: $t('navbar.idiot-test'), link: '/fun/idiot-test' },
                     { name: $t('navbar.christmas-quiz'), link: '/fun/christmas-quiz/' },
+                    { name: $t('navbar.common-knowledge-quiz'), link: '/fun/common-knowledge-quiz/' },
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
             </nav>
         </div>
