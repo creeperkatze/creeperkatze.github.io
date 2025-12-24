@@ -38,10 +38,9 @@ For more details, please see [Google's Privacy Policy](https://policies.google.c
 
 You can manage your privacy preferences and cookie consent at any time using the link below:
 
-<a href="javascript:googlefc.callbackQueue.push(googlefc.showRevocationMessage)">Privacy and cookie settings</a>
+<ConsentRevocationLink>Privacy and cookie settings</ConsentRevocationLink>
 
 Our website uses a cookie and consent banner powered by Google CMP. You may also control or disable cookies through your browser settings. Please note that if you decline cookies, advertisements may still be displayed, but they may be less relevant to you.
-
 
 ## Contact Us
 
