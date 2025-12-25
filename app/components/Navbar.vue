@@ -27,6 +27,7 @@
                         { name: $t('navbar.idiot-test'), link: '/fun/idiot-test/' },
                         { name: $t('navbar.christmas-quiz'), link: '/fun/christmas-quiz/' },
                         { name: $t('navbar.common-knowledge-quiz'), link: '/fun/common-knowledge-quiz/' },
+                        { name: $t('navbar.new-year-quiz'), link: '/fun/new-year-quiz/' },
                     ]" />
                 </div>
             </nav>
@@ -104,6 +105,7 @@
                     { name: $t('navbar.idiot-test'), link: '/fun/idiot-test' },
                     { name: $t('navbar.christmas-quiz'), link: '/fun/christmas-quiz/' },
                     { name: $t('navbar.common-knowledge-quiz'), link: '/fun/common-knowledge-quiz/' },
+                    { name: $t('navbar.new-year-quiz'), link: '/fun/new-year-quiz/' },
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
             </nav>
         </div>

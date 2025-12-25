@@ -8,6 +8,8 @@
                 :alt="$t('page.christmas-quiz.title')" :title="$t('page.christmas-quiz.heading')" />
             <SmallCard :link="localePath('/fun/common-knowledge-quiz/')" image="/images/seo/common-knowledge-quiz.jpg"
                 :alt="$t('page.common-knowledge-quiz.title')" :title="$t('page.common-knowledge-quiz.heading')" />
+            <SmallCard :link="localePath('/fun/new-year-quiz/')" image="/images/seo/new-year-quiz.jpg"
+                :alt="$t('page.new-year-quiz.title')" :title="$t('page.new-year-quiz.heading')" />
         </div>
     </div>
 </template>

@@ -1,16 +1,16 @@
 <template>
-    <GoogleAd adSlot="8150296562" customClass="mb-8" />
+    <GoogleAd adSlot="1652993368" customClass="mb-8" />
     <div class="mx-auto max-w-3xl">
-        <h1 class="mb-2">{{ $t('page.common-knowledge-quiz.heading') }}</h1>
-        <p class="mb-4 whitespace-pre-wrap">{{ $t('page.common-knowledge-quiz.text') }}</p>
+        <h1 class="mb-2">{{ $t('page.new-year-quiz.heading') }}</h1>
+        <p class="mb-4 whitespace-pre-wrap">{{ $t('page.new-year-quiz.text') }}</p>
 
         <Quiz
             :questions="questions"
             :adEvery="5"
             :rankThresholds="rankThresholds"
             :rankLabel="rankLabel"
-            :shareTitle="$t('page.common-knowledge-quiz.share.title')"
-            :shareTextTemplate="$t('page.common-knowledge-quiz.share.text')"
+            :shareTitle="$t('page.new-year-quiz.share.title')"
+            :shareTextTemplate="$t('page.new-year-quiz.share.text')"
         >
             <template #progress="{ percentageAnswered }">
                 <div class="sticky top-24 max-w-xl mx-auto p-4 glass-effect border-gray-400 border-2 rounded-lg mb-6 z-10">
@@ -18,7 +18,7 @@
                         <div class="bg-white h-2 rounded-full" :style="{ width: percentageAnswered + '%' }" />
                     </div>
                     <p class="mt-2 text-center">
-                        {{ $t('page.common-knowledge-quiz.progress') }}{{ percentageAnswered }}%
+                        {{ $t('page.new-year-quiz.progress') }}{{ percentageAnswered }}%
                     </p>
                 </div>
             </template>
@@ -69,44 +69,48 @@
             </template>
 
             <template #infeed-ad>
-                <GoogleAd adSlot="6011218382" customClass="mb-6" type="infeed" layoutKey="-fb+5w+4e-db+86" />
+                <GoogleAd adSlot="8026830021" customClass="mb-6" type="infeed" layoutKey="-fb+5w+4e-db+86" />
             </template>
 
             <template #results="{ questions: quizQuestions, score, percentageCorrect, rank, shareSupported, share }">
                 <section id="results" class="mt-4">
                     <hr class="rounded border-[1px] mt-4 mb-4">
-                    <h1 class="mb-4">{{ $t("page.common-knowledge-quiz.results") }}</h1>
-                    <h3>{{ $t("page.common-knowledge-quiz.score") }}{{ score }} / {{ quizQuestions.length }}</h3>
-                    <h3>{{ $t("page.common-knowledge-quiz.percentage") }}{{ percentageCorrect }}%</h3>
+                    <h1 class="mb-4">{{ $t('page.new-year-quiz.results') }}</h1>
+                    <h3>{{ $t('page.new-year-quiz.score') }}{{ score }} / {{ quizQuestions.length }}</h3>
+                    <h3>{{ $t('page.new-year-quiz.percentage') }}{{ percentageCorrect }}%</h3>
                     <hr class="rounded border-[1px] mt-4 mb-4">
-                    <h1 class="mt-4">{{ $t("page.common-knowledge-quiz.rank_title") }}</h1>
-                    <p class="mb-4">{{ $t("page.common-knowledge-quiz.disclaimer") }}</p>
+                    <h1 class="mt-4">{{ $t('page.new-year-quiz.rank_title') }}</h1>
+                    <p class="mb-4">{{ $t('page.new-year-quiz.disclaimer') }}</p>
                     <div class="bg-yellow-400 mb-2 rounded-lg p-2 border-2 border-yellow-600">
                         <div class="relative">
-                            <h1 class="text-black">{{ $t("page.common-knowledge-quiz.rank.name." + rank) }}</h1>
-                            <button v-if="shareSupported"
+                            <h1 class="text-black">{{ $t('page.new-year-quiz.rank.name.' + rank) }}</h1>
+                            <button
+                                v-if="shareSupported"
                                 class="absolute top-0 right-0 no-outline w-10 h-10 px-2 rounded-lg border-2 text-black border-black bg-purple-500 hover:bg-purple-700 hover-lift-button disabled:opacity-50 disabled:pointer-events-none"
-                                @click="share()">
+                                @click="share()"
+                            >
                                 <IconShare :alt="$t('button.share')" />
                             </button>
                         </div>
-                        <h4 class="mb-4 text-black">{{ $t("page.common-knowledge-quiz.rank.description." + rank) }}</h4>
-                        <img :src="`/images/common-knowledge-quiz/${rank}.jpg`"
+                        <h4 class="mb-4 text-black">{{ $t('page.new-year-quiz.rank.description.' + rank) }}</h4>
+                        <img
+                            :src="`/images/new-year-quiz/${rank}.jpg`"
                             class="mb-2 rounded-lg w-full center"
-                            :alt="$t('page.common-knowledge-quiz.rank.name.' + rank)">
+                            :alt="$t('page.new-year-quiz.rank.name.' + rank)"
+                        >
                     </div>
                 </section>
             </template>
         </Quiz>
     </div>
-    <GoogleAd adSlot="8475204976" customClass="mt-8" />
+    <GoogleAd adSlot="9339911697" customClass="mt-8" />
 </template>
 
 <script setup>
 definePageMeta({
-    title: 'page.common-knowledge-quiz.title',
-    description: 'page.common-knowledge-quiz.description',
-    image: '/images/seo/common-knowledge-quiz.jpg'
+    title: 'page.new-year-quiz.title',
+    description: 'page.new-year-quiz.description',
+    image: '/images/seo/new-year-quiz.jpg',
 })
 
 const rankThresholds = {
@@ -119,17 +123,17 @@ const rankThresholds = {
 
 const { tm, t, rt } = useI18n()
 
-const rankLabel = (rank) => t('page.common-knowledge-quiz.rank.name.' + rank)
+const rankLabel = (rank) => t('page.new-year-quiz.rank.name.' + rank)
 
-const questions = reactive(Object.keys(tm('common-knowledge-quiz.questions')).map((key) =>
+const questions = reactive(Object.keys(tm('new-year-quiz.questions')).map((key) =>
 {
     return {
         id: key,
         type: 'choice',
-        text: t(`common-knowledge-quiz.questions.${key}.text`),
-        options: toRaw(tm(`common-knowledge-quiz.questions.${key}.answers`)).map(answer => rt(answer)),
-        correctAnswers: [t(`common-knowledge-quiz.questions.${key}.correctAnswer`)],
-        explanation: t(`common-knowledge-quiz.questions.${key}.explanation`),
+        text: t(`new-year-quiz.questions.${key}.text`),
+        options: toRaw(tm(`new-year-quiz.questions.${key}.answers`)).map((answer) => rt(answer)),
+        correctAnswers: [t(`new-year-quiz.questions.${key}.correctAnswer`)],
+        explanation: t(`new-year-quiz.questions.${key}.explanation`),
     }
 }))
 </script>

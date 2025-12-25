@@ -1,0 +1,156 @@
+{
+    "new-year-quiz": {
+        "questions": {
+            "0": {
+                "text": "In welchem Monat beginnt das neue Jahr im gregorianischen Kalender?",
+                "answers": ["März", "Januar", "September", "Dezember"],
+                "correctAnswer": "1",
+                "explanation": "Im gregorianischen Kalender beginnt das neue Jahr im Januar."
+            },
+            "1": {
+                "text": "Wie heißt der Abend am 31. Dezember?",
+                "answers": ["Karfreitag", "Silvester", "Heilige Drei Könige", "Ostermontag"],
+                "correctAnswer": "1",
+                "explanation": "Der 31. Dezember wird im Deutschen 'Silvester' genannt."
+            },
+            "2": {
+                "text": "Welche Stadt ist für den 'Ball Drop' an Silvester bekannt?",
+                "answers": ["Los Angeles", "New York City", "Chicago", "Miami"],
+                "correctAnswer": "1",
+                "explanation": "Am Times Square in New York City findet der berühmte Ball Drop statt."
+            },
+            "3": {
+                "text": "Wie nennt man es, wenn Menschen sich Ziele für das neue Jahr setzen?",
+                "answers": ["Neujahrsvorsätze", "Frühjahrsputz", "Erntegelübde", "Mitternachtswünsche"],
+                "correctAnswer": "0",
+                "explanation": "Viele Menschen fassen Neujahrsvorsätze, um Ziele für das kommende Jahr zu setzen."
+            },
+            "4": {
+                "text": "Was ist ein typisches Symbol für Neujahrsfeiern?",
+                "answers": ["Kürbis", "Feuerwerk", "Ostereier", "Schneemann"],
+                "correctAnswer": "1",
+                "explanation": "Feuerwerk wird weltweit häufig an Neujahr gezündet."
+            },
+            "5": {
+                "text": "Was passiert direkt, wenn der Countdown bei Null ankommt?",
+                "answers": ["Die Sonne geht auf", "Das neue Jahr beginnt", "Es wird Frühling", "Uhren bleiben stehen"],
+                "correctAnswer": "1",
+                "explanation": "Wenn der Countdown bei Null ist, beginnt das neue Jahr."
+            },
+            "6": {
+                "text": "Wie heißt der erste Tag des Jahres?",
+                "answers": ["Neujahr", "Karfreitag", "Tag der Arbeit", "Muttertag"],
+                "correctAnswer": "0",
+                "explanation": "Der 1. Januar wird Neujahr genannt."
+            },
+            "7": {
+                "text": "Wie wünscht man sich am 1. Januar häufig?",
+                "answers": ["Frohes neues Jahr!", "Frohe Ostern!", "Schönen Halloween!", "Frohes Erntedankfest!"],
+                "correctAnswer": "0",
+                "explanation": "Ein typischer Gruß ist 'Frohes neues Jahr!'."
+            },
+            "8": {
+                "text": "Womit wird an Neujahr oft um Mitternacht angestoßen?",
+                "answers": ["Milch", "Champagner", "Tee", "Orangensaft"],
+                "correctAnswer": "1",
+                "explanation": "Champagner ist ein klassisches Getränk für den Neujahrs-Toast."
+            },
+            "9": {
+                "text": "Zu welcher Uhrzeit wird der Countdown in vielen Ländern gemacht?",
+                "answers": ["Mittags", "Um Mitternacht", "Bei Sonnenaufgang", "Um 18 Uhr"],
+                "correctAnswer": "1",
+                "explanation": "Der Countdown findet meistens um Mitternacht statt."
+            },
+            "10": {
+                "text": "Was ist ein typisches Party-Accessoire an Silvester?",
+                "answers": ["Partyhüte", "Osterkörbe", "Kürbisgewürz", "Strandtücher"],
+                "correctAnswer": "0",
+                "explanation": "Partyhüte werden oft bei Silvesterfeiern getragen."
+            },
+            "11": {
+                "text": "Wie nennt man die letzten Sekunden vor dem Jahreswechsel?",
+                "answers": ["Rückblick", "Countdown", "Halbzeit", "Zurückspulen"],
+                "correctAnswer": "1",
+                "explanation": "Die letzten Sekunden werden als 'Countdown' heruntergezählt."
+            },
+            "12": {
+                "text": "In welcher Jahreszeit liegt Neujahr auf der Nordhalbkugel?",
+                "answers": ["Sommer", "Winter", "Frühling", "Herbst"],
+                "correctAnswer": "1",
+                "explanation": "Auf der Nordhalbkugel ist Neujahr im Winter."
+            },
+            "13": {
+                "text": "Welche Tradition gilt in manchen Kulturen als 'Glücksbringer' an Neujahr?",
+                "answers": ["Konfetti werfen", "Linsen essen", "Kürbisse schnitzen", "Eier verstecken"],
+                "correctAnswer": "1",
+                "explanation": "In einigen Ländern gelten Linsen an Neujahr als Symbol für Glück und Wohlstand."
+            },
+            "14": {
+                "text": "Welcher Monat ist der letzte im Jahr?",
+                "answers": ["November", "Dezember", "Januar", "Oktober"],
+                "correctAnswer": "1",
+                "explanation": "Dezember ist der letzte Monat des Jahres."
+            },
+            "15": {
+                "text": "Welche Deko sieht man häufig auf Neujahrspartys?",
+                "answers": ["Luftballons", "Kürbisse", "Osterhasen", "Herbstblätter"],
+                "correctAnswer": "0",
+                "explanation": "Luftballons sind typische Party-Dekorationen, auch an Silvester."
+            },
+            "16": {
+                "text": "Wofür steht die Abkürzung 'A.D.' bei Jahreszahlen?",
+                "answers": ["After December", "Anno Domini", "Around Dawn", "Annual Day"],
+                "correctAnswer": "1",
+                "explanation": "A.D. ist Latein und steht für 'Anno Domini' (im Jahr des Herrn)."
+            },
+            "17": {
+                "text": "Wie viele Monate hat ein Jahr?",
+                "answers": ["10", "11", "12", "13"],
+                "correctAnswer": "2",
+                "explanation": "Ein Jahr hat 12 Monate."
+            },
+            "18": {
+                "text": "Wie viele Stunden hat ein Tag?",
+                "answers": ["12", "18", "24", "36"],
+                "correctAnswer": "2",
+                "explanation": "Ein Tag hat 24 Stunden."
+            },
+            "19": {
+                "text": "Wie heißt der heute weltweit am häufigsten verwendete Kalender?",
+                "answers": ["Julianischer Kalender", "Gregorianischer Kalender", "Maya-Kalender", "Mondkalender"],
+                "correctAnswer": "1",
+                "explanation": "Der Gregorianische Kalender ist heute der am weitesten verbreitete bürgerliche Kalender."
+            },
+            "20": {
+                "text": "Welchen Himmelskörper umkreist die Erde?",
+                "answers": ["Mars", "Die Sonne", "Den Mond", "Jupiter"],
+                "correctAnswer": "1",
+                "explanation": "Die Erde umkreist die Sonne."
+            },
+            "21": {
+                "text": "Was ist ein Schaltjahr?",
+                "answers": ["Ein Jahr mit 52 Wochen", "Ein Jahr mit einem zusätzlichen Tag", "Ein Jahr mit 13 Monaten", "Ein Jahr mit kürzeren Tagen"],
+                "correctAnswer": "1",
+                "explanation": "Ein Schaltjahr hat einen zusätzlichen Tag (29. Februar), damit der Kalender im Takt bleibt."
+            },
+            "22": {
+                "text": "Welcher Monat hat normalerweise 28 Tage (29 im Schaltjahr)?",
+                "answers": ["Januar", "Februar", "April", "Juni"],
+                "correctAnswer": "1",
+                "explanation": "Der Februar hat normalerweise 28 Tage, im Schaltjahr 29."
+            },
+            "23": {
+                "text": "Wie heißt der letzte Tag des Jahres?",
+                "answers": ["Silvester", "Neujahr", "Erster Tag", "Wintertag"],
+                "correctAnswer": "0",
+                "explanation": "Der letzte Tag des Jahres ist Silvester (31. Dezember)."
+            },
+            "24": {
+                "text": "Was wird in vielen Ländern häufig mit dem Jahreswechsel verbunden?",
+                "answers": ["Countdown und Feuerwerk", "Kürbisschnitzen", "Eiersuche", "Laub harken"],
+                "correctAnswer": "0",
+                "explanation": "Countdowns und Feuerwerk gehören in vielen Ländern zu den typischen Neujahrsbräuchen."
+            }
+        }
+    }
+}

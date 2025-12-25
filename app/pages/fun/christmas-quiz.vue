@@ -43,7 +43,7 @@
                         'flex flex-wrap': ![2, 3, 4].includes(question.options?.length ?? 0),
                     }">
                         <button v-for="(option, optionIndex) in (question.options ?? [])" :key="optionIndex"
-                            class="text-black border-black hover:bg-yellow-600 min-w-0 px-2 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none md:flex-grow"
+                            class="text-black border-black hover:bg-yellow-600 hover:scale-95 min-w-0 px-2 pt-2 pb-2 rounded-lg border-2 transition  disabled:opacity-50 disabled:pointer-events-none md:flex-grow"
                             :class="{
                                 'bg-green-600': (question.isCorrect && question.answer == String(optionIndex) || !question.isCorrect && (question.correctAnswers?.[0] == String(optionIndex))) && question.isCorrect != undefined,
                                 'bg-red-600': !question.isCorrect && question.answer == String(optionIndex) && question.isCorrect != undefined,

@@ -38,7 +38,7 @@
                             class="bg-transparent text-white no-outline min-w-0 px-4 pt-2 pb-2 rounded-lg border-2 transition ease-in-out disabled:opacity-50 disabled:pointer-events-none"
                             :disabled="question.isCorrect !== undefined" @keydown.enter="checkAnswer(index)">
                         <button
-                            class="no-outline min-w-0 px-4 rounded-lg border-2 hover-lift-button text-neutral-400 hover:border-white hover:text-white disabled:opacity-50 disabled:pointer-events-none"
+                            class="no-outline min-w-0 px-4 rounded-lg border-2 hover:scale-90 text-neutral-400 hover:border-white hover:text-white disabled:opacity-50 disabled:pointer-events-none"
                             :disabled="question.isCorrect !== undefined" @click="checkAnswer(index)">
                             <IconSubmit :alt="$t('button.submit')" />
                         </button>

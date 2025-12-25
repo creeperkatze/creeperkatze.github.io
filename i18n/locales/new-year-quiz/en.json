@@ -1,0 +1,156 @@
+{
+    "new-year-quiz": {
+        "questions": {
+            "0": {
+                "text": "Which month marks the start of a new year in the Gregorian calendar?",
+                "answers": ["March", "January", "September", "December"],
+                "correctAnswer": "1",
+                "explanation": "In the Gregorian calendar, the new year starts in January."
+            },
+            "1": {
+                "text": "What is the name of the evening on December 31st?",
+                "answers": ["Boxing Day", "New Year's Eve", "Epiphany", "Good Friday"],
+                "correctAnswer": "1",
+                "explanation": "December 31st is commonly called New Year's Eve."
+            },
+            "2": {
+                "text": "Which city is famous for the ball drop on New Year's Eve?",
+                "answers": ["Los Angeles", "New York City", "Chicago", "Miami"],
+                "correctAnswer": "1",
+                "explanation": "Times Square in New York City is known for the New Year's Eve ball drop."
+            },
+            "3": {
+                "text": "What is a common tradition called when people set goals for the coming year?",
+                "answers": ["New Year resolutions", "Spring cleaning", "Harvest vows", "Midnight wishes"],
+                "correctAnswer": "0",
+                "explanation": "Many people make New Year resolutions to set goals for the year ahead."
+            },
+            "4": {
+                "text": "Which is a common symbol of New Year celebrations?",
+                "answers": ["Pumpkin", "Fireworks", "Easter eggs", "Snowman"],
+                "correctAnswer": "1",
+                "explanation": "Fireworks are widely used to celebrate New Year around the world."
+            },
+            "5": {
+                "text": "What happens right after the countdown reaches zero?",
+                "answers": ["The sun rises", "The new year begins", "It becomes spring", "Clocks stop"],
+                "correctAnswer": "1",
+                "explanation": "When the countdown hits zero, it marks the start of the new year."
+            },
+            "6": {
+                "text": "What is the name of the first day of the year?",
+                "answers": ["New Year's Day", "Boxing Day", "May Day", "Labor Day"],
+                "correctAnswer": "0",
+                "explanation": "January 1st is called New Year's Day."
+            },
+            "7": {
+                "text": "What is a common way to greet someone on January 1st?",
+                "answers": ["Happy New Year!", "Happy Halloween!", "Merry Easter!", "Happy Thanksgiving!"],
+                "correctAnswer": "0",
+                "explanation": "A typical greeting is 'Happy New Year!'"
+            },
+            "8": {
+                "text": "Which of these is often used for a midnight toast?",
+                "answers": ["Milk", "Champagne", "Tea", "Orange juice"],
+                "correctAnswer": "1",
+                "explanation": "Champagne is a common drink used for New Year toasts."
+            },
+            "9": {
+                "text": "In many places, what time is the countdown usually done?",
+                "answers": ["At noon", "At midnight", "At sunrise", "At 6 PM"],
+                "correctAnswer": "1",
+                "explanation": "The countdown is typically done at midnight."
+            },
+            "10": {
+                "text": "Which is a typical New Year party item?",
+                "answers": ["Party hats", "Easter baskets", "Pumpkin spice", "Beach towels"],
+                "correctAnswer": "0",
+                "explanation": "Party hats are often worn at New Year celebrations."
+            },
+            "11": {
+                "text": "Which term describes the final seconds of the old year?",
+                "answers": ["The recap", "The countdown", "The halftime", "The rewind"],
+                "correctAnswer": "1",
+                "explanation": "The final seconds are counted down in a 'countdown'."
+            },
+            "12": {
+                "text": "In the Northern Hemisphere, New Year happens during which season?",
+                "answers": ["Summer", "Winter", "Spring", "Autumn"],
+                "correctAnswer": "1",
+                "explanation": "In the Northern Hemisphere, New Year is in winter."
+            },
+            "13": {
+                "text": "Which of these is a common 'good luck' New Year tradition in some cultures?",
+                "answers": ["Throwing confetti", "Eating lentils", "Carving pumpkins", "Hiding eggs"],
+                "correctAnswer": "1",
+                "explanation": "Eating lentils is a known New Year tradition in some countries for good luck and prosperity."
+            },
+            "14": {
+                "text": "What is the last month of the year?",
+                "answers": ["November", "December", "January", "October"],
+                "correctAnswer": "1",
+                "explanation": "December is the last month of the year."
+            },
+            "15": {
+                "text": "Which of these is a common decoration for New Year parties?",
+                "answers": ["Balloons", "Pumpkins", "Easter bunnies", "Autumn leaves"],
+                "correctAnswer": "0",
+                "explanation": "Balloons are common party decorations, including for New Year."
+            },
+            "16": {
+                "text": "What does the abbreviation 'A.D.' stand for in dates?",
+                "answers": ["After December", "Anno Domini", "Around Dawn", "Annual Day"],
+                "correctAnswer": "1",
+                "explanation": "A.D. is Latin for 'Anno Domini', meaning 'in the year of our Lord'."
+            },
+            "17": {
+                "text": "How many months are in a year?",
+                "answers": ["10", "11", "12", "13"],
+                "correctAnswer": "2",
+                "explanation": "A year has 12 months."
+            },
+            "18": {
+                "text": "How many hours are in a day?",
+                "answers": ["12", "18", "24", "36"],
+                "correctAnswer": "2",
+                "explanation": "A day has 24 hours."
+            },
+            "19": {
+                "text": "What is the name of the calendar most commonly used worldwide today?",
+                "answers": ["Julian calendar", "Gregorian calendar", "Mayan calendar", "Lunar calendar"],
+                "correctAnswer": "1",
+                "explanation": "The Gregorian calendar is the most widely used civil calendar today."
+            },
+            "20": {
+                "text": "Which planet does Earth orbit?",
+                "answers": ["Mars", "The Sun", "The Moon", "Jupiter"],
+                "correctAnswer": "1",
+                "explanation": "Earth orbits the Sun."
+            },
+            "21": {
+                "text": "What is a leap year?",
+                "answers": ["A year with 52 weeks", "A year with an extra day", "A year with 13 months", "A year with shorter days"],
+                "correctAnswer": "1",
+                "explanation": "A leap year includes an extra day (February 29th) to keep the calendar aligned."
+            },
+            "22": {
+                "text": "Which month usually has 28 days (29 in leap years)?",
+                "answers": ["January", "February", "April", "June"],
+                "correctAnswer": "1",
+                "explanation": "February typically has 28 days, and 29 days in leap years."
+            },
+            "23": {
+                "text": "What is the common name for the last day of the year?",
+                "answers": ["New Year's Eve", "New Year's Day", "First Day", "Winter Day"],
+                "correctAnswer": "0",
+                "explanation": "The last day of the year is New Year's Eve (December 31st)."
+            },
+            "24": {
+                "text": "Which of these is often associated with New Year's celebrations in many countries?",
+                "answers": ["Countdown and fireworks", "Pumpkin carving", "Egg hunts", "Leaf raking"],
+                "correctAnswer": "0",
+                "explanation": "Countdowns and fireworks are common New Year celebration elements worldwide."
+            }
+        }
+    }
+}
