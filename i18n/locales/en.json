@@ -18,7 +18,7 @@
     "navbar.new-year-quiz": "New Year Quiz",
     "navbar.tools": "Tools",
     "navbar.password-generator": "Password Generator",
-    "navbar.case-converter": "Convert text format",
+    "navbar.case-converter": "Convert Text format",
     "navbar.unit-converter": "Unit Converter",
     "navbar.stopwatch": "Stopwatch",
 
@@ -249,7 +249,7 @@
     "page.tools.tool.password-generator.symbols": "Symbols (!{'@'}#$)",
     "page.tools.tool.password-generator.generate": "Generate Password",
 
-    "page.tools.tool.case-converter.title": "Convert text format",
+    "page.tools.tool.case-converter.title": "Convert Text format",
     "page.tools.tool.case-converter.description": "Convert text formats such as lowercase, uppercase, camel case, pascal case, and generate slugs.",
     "page.tools.tool.case-converter.input.placeholder": "Type or paste text here...",
     "page.tools.tool.case-converter.mode": "Mode",
