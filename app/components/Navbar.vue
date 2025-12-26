@@ -10,20 +10,30 @@
             <nav class="max-w-5xl mx-auto px-6">
                 <div class="flex flex-row items-center justify-between space-x-4">
                     <NuxtLink :to="localePath('/')" class="navbar-element">{{ $t('navbar.home') }}</NuxtLink>
-                    <Dropdown :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
+                    <Dropdown :title="$t('navbar.games')" titleLink="/games/" :items="[
                         { name: $t('navbar.superslide'), link: 'https://supersli.de' },
                         { name: $t('navbar.divebomb'), link: '/games/divebomb/' },
                         { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' },
                     ]" />
                     <NuxtLink :to="localePath('/skills/')" class="navbar-element">{{ $t('navbar.skills') }}</NuxtLink>
                     <NuxtLink :to="localePath('/blog/')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
-                    <Dropdown :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
-                        { name: $t('navbar.joke'), link: '/generators/joke/' },
-                        { name: $t('navbar.quote'), link: '/generators/quote/' },
-                        { name: $t('navbar.cat'), link: '/generators/cat/' },
-                        { name: $t('navbar.dog'), link: '/generators/dog/' },
+                    <Dropdown :title="$t('navbar.tools')" titleLink="/tools/" :items="[
+                        { name: $t('navbar.password-generator'), link: '/tools/password-generator/' },
+                        { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
+                        { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
+                        { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
+                        {
+                            name: $t('navbar.generators'),
+                            link: '/tools/generators/',
+                            children: [
+                                { name: $t('navbar.joke'), link: '/tools/generators/joke/' },
+                                { name: $t('navbar.quote'), link: '/tools/generators/quote/' },
+                                { name: $t('navbar.cat'), link: '/tools/generators/cat/' },
+                                { name: $t('navbar.dog'), link: '/tools/generators/dog/' },
+                            ]
+                        }
                     ]" />
-                    <Dropdown :title="$t('navbar.fun')" :titleLink="localePath('/fun/')" :items="[
+                    <Dropdown :title="$t('navbar.fun')" titleLink="/fun/" :items="[
                         { name: $t('navbar.idiot-test'), link: '/fun/idiot-test/' },
                         { name: $t('navbar.christmas-quiz'), link: '/fun/christmas-quiz/' },
                         { name: $t('navbar.common-knowledge-quiz'), link: '/fun/common-knowledge-quiz/' },
@@ -86,7 +96,7 @@
             <nav class="flex flex-col text-left space-y-4 ml-4">
                 <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">
                     {{ $t('navbar.home') }}</NuxtLink>
-                <DropdownDrawer :title="$t('navbar.games')" :titleLink="localePath('/games/')" :items="[
+                <DropdownDrawer :title="$t('navbar.games')" titleLink="/games/" :items="[
                     { name: $t('navbar.superslide'), link: 'https://supersli.de' },
                     { name: $t('navbar.divebomb'), link: '/games/divebomb/' },
                     { name: $t('navbar.flappy-christmas'), link: '/games/flappy-christmas/' }
@@ -95,13 +105,23 @@
                     @click="drawerOpen = !drawerOpen">{{ $t('navbar.skills') }}</NuxtLink>
                 <NuxtLink :to="localePath('/blog/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">
                     {{ $t('navbar.blog') }}</NuxtLink>
-                <DropdownDrawer :title="$t('navbar.generators')" :titleLink="localePath('/generators/')" :items="[
-                    { name: $t('navbar.joke'), link: '/generators/joke' },
-                    { name: $t('navbar.quote'), link: '/generators/quote/' },
-                    { name: $t('navbar.cat'), link: '/generators/cat/' },
-                    { name: $t('navbar.dog'), link: '/generators/dog/' }
+                <DropdownDrawer :title="$t('navbar.tools')" titleLink="/tools/" :items="[
+                    { name: $t('navbar.password-generator'), link: '/tools/password-generator/' },
+                    { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
+                    { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
+                    { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
+                    {
+                        name: $t('navbar.generators'),
+                        link: '/tools/generators/',
+                        children: [
+                            { name: $t('navbar.joke'), link: '/tools/generators/joke/' },
+                            { name: $t('navbar.quote'), link: '/tools/generators/quote/' },
+                            { name: $t('navbar.cat'), link: '/tools/generators/cat/' },
+                            { name: $t('navbar.dog'), link: '/tools/generators/dog/' },
+                        ]
+                    }
                 ]" :drawerOpen="drawerOpen" @item-clicked="drawerOpen = !drawerOpen" />
-                <DropdownDrawer :title="$t('navbar.fun')" :titleLink="localePath('/fun/')" :items="[
+                <DropdownDrawer :title="$t('navbar.fun')" titleLink="/fun/" :items="[
                     { name: $t('navbar.idiot-test'), link: '/fun/idiot-test' },
                     { name: $t('navbar.christmas-quiz'), link: '/fun/christmas-quiz/' },
                     { name: $t('navbar.common-knowledge-quiz'), link: '/fun/common-knowledge-quiz/' },

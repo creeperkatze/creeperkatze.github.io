@@ -42,6 +42,16 @@ p
     @apply text-lg text-white;
 }
 
+label
+{
+    @apply text-lg text-white;
+}
+
+button
+{
+    @apply text-white
+}
+
 h1
 {
     @apply text-4xl text-white;
@@ -87,7 +97,6 @@ hr
 {
     @apply rounded border border-neutral-400
 }
-
 
 .glass-effect
 {

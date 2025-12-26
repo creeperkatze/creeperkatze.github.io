@@ -1,6 +1,6 @@
 <template>
     <NuxtLink :to="link"
-        class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-2 border-white hover:border-gift overflow-hidden">
+        class="no-underline relative rounded-xl transition ease-in-out hover:scale-95 border-2 border-white hover:border-gift overflow-hidden max-w-96 max-h-56">
         <div class="rounded-lg glass-effect h-full w-full flex flex-col">
             <div class="flex-shrink-0 w-full h-2/3">
                 <img :src="image" class="object-cover w-full h-full" :alt="alt" />

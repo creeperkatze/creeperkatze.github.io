@@ -11,9 +11,9 @@
                     :title="$t('page.projects.project.idiot-test.title')" />
                 <SmallCard :link="localePath('/fun/christmas-quiz/')" image="/images/seo/christmas-quiz.jpg" alt="Christmas Quiz card"
                     :title="$t('page.projects.project.christmas-quiz.title')" />
-                <SmallCard :link="localePath('/generators/joke/')" image="/images/seo/joke.jpg" alt="Joke Generator card"
+                <SmallCard :link="localePath('/tools/generators/joke/')" image="/images/seo/joke.jpg" alt="Joke Generator card"
                     :title="$t('page.projects.project.joke.title')" />
-                <SmallCard :link="localePath('/generators/cat/')" image="/images/seo/cat.jpg" alt="Joke Generator card"
+                <SmallCard :link="localePath('/tools/generators/cat/')" image="/images/seo/cat.jpg" alt="Joke Generator card"
                     :title="$t('page.projects.project.cat.title')" />
             </div>
         </div>
