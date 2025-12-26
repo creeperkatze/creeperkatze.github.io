@@ -56,7 +56,7 @@ function update()
             },
             {
                 key: 'gtag-inline',
-                children: `window.dataLayer = window.dataLayer || [];
+                innerHTML: `window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
 
