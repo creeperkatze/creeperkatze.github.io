@@ -249,8 +249,8 @@
     "page.tools.tool.password-generator.symbols": "Symbole (!{'@'}#$)",
     "page.tools.tool.password-generator.generate": "Passwort generieren",
 
-    "page.tools.tool.case-converter.title": "Case Converter",
-    "page.tools.tool.case-converter.description": "Konvertiere Text-Schreibweisen und generiere Slugs",
+    "page.tools.tool.case-converter.title": "Textformat Umwandeln",
+    "page.tools.tool.case-converter.description": "Konvertiere Text-Schreibweisen wie Kleinschreibung, Großschreibung, Camel-Case, Pascal-Case und generiere Slugs",
     "page.tools.tool.case-converter.input.placeholder": "Text hier eingeben oder einfügen...",
     "page.tools.tool.case-converter.mode": "Modus",
     "page.tools.tool.case-converter.mode.lower": "kleinschreibung",
@@ -265,7 +265,7 @@
     "page.tools.tool.case-converter.copied": "Kopiert!",
 
     "page.tools.tool.unit-converter.title": "Einheitenrechner",
-    "page.tools.tool.unit-converter.description": "Konvertiere gängige Einheiten",
+    "page.tools.tool.unit-converter.description": "Konvertiere gängige Einheiten wie Längen, Massen und Temperaturen",
     "page.tools.tool.unit-converter.category": "Kategorie",
     "page.tools.tool.unit-converter.category.length": "Länge",
     "page.tools.tool.unit-converter.category.mass": "Masse",
