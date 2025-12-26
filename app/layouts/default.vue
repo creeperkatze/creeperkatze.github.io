@@ -26,7 +26,7 @@
 <script setup>
 const route = useRoute();
 const { t } = useI18n();
-const runtimeConfig = useRuntimeConfig()
+const runtimeConfig = useRuntimeConfig();
 const head = useLocaleHead();
 const title = computed(() => route.meta.title ? t(route.meta.title) : undefined);
 const description = computed(() => route.meta.description ? t(route.meta.description) : undefined);
@@ -50,6 +50,20 @@ function update()
         ],
         script: [
             {
+                key: 'gtag-src',
+                async: true,
+                src: 'https://www.googletagmanager.com/gtag/js?id=G-XSCLLTBRFJ'
+            },
+            {
+                key: 'gtag-inline',
+                children: `window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+
+                            gtag('config', 'G-XSCLLTBRFJ');`
+            },
+            {
+                key: 'adsense',
                 async: true,
                 src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${runtimeConfig.public.adSenseId}`,
                 crossorigin: 'anonymous'
