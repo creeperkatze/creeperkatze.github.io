@@ -38,6 +38,8 @@
             </div>
         </div>
     </div>
+
+    <GoogleAd adSlot="8111193145" customClass="mt-8" />
 </template>
 
 <script setup>
