@@ -2,7 +2,7 @@
     <select
         v-bind="$attrs"
         :value="modelValue"
-        class="text-white p-2 bg-neutral-600 rounded-lg focus:outline-none border-2 border-transparent"
+        class="text-white p-2 bg-neutral-600 rounded-lg focus:outline-none border-2 border-transparent focus:border-gift"
         @change="onChange"
     >
         <slot />

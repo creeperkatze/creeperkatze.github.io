@@ -2,7 +2,7 @@
     <template v-if="link">
         <NuxtLink :to="localePath(link)" class="text-white hover:text-gift">
             <button
-                :class="['text-white hover:text-gift no-outline center max-w-fit px-4 pt-2 pb-2 glass-effect hover-lift-button disabled:opacity-50 disabled:pointer-events-none rounded-lg items-center border-2 border-white hover:border-gift', rainbowBackground ? 'rainbow-background' : '']">
+                :class="['text-white hover:text-gift focus:text-gift outline-none center max-w-fit px-4 pt-2 pb-2 glass-effect hover-lift-button disabled:opacity-50 disabled:pointer-events-none rounded-lg items-center border-2 border-white hover:border-gift focus:border-gift', rainbowBackground ? 'rainbow-background' : '']">
                 <slot>
                     <p class="text-white">Button</p>
                 </slot>
@@ -11,7 +11,7 @@
     </template>
     <template v-else>
         <button
-            :class="['text-white hover:text-gift no-outline center max-w-fit px-4 pt-2 pb-2 glass-effect hover-lift-button disabled:opacity-50 disabled:pointer-events-none rounded-lg items-center border-2 border-white hover:border-gift', rainbowBackground ? 'rainbow-background' : '']">
+            :class="['text-white hover:text-gift focus:text-gift outline-none center max-w-fit px-4 pt-2 pb-2 glass-effect hover-lift-button disabled:opacity-50 disabled:pointer-events-none rounded-lg items-center border-2 border-white hover:border-gift focus:border-gift', rainbowBackground ? 'rainbow-background' : '']">
             <slot>
                 <p class="text-white">Button</p>
             </slot>

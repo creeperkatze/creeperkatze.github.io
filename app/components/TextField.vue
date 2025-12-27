@@ -4,7 +4,7 @@
         :type="type"
         :value="modelValue"
         class="text-white rounded-lg focus:outline-none"
-        :class="type === 'range' ? 'cursor-pointer' : 'p-2 bg-neutral-600 border-2 border-transparent'"
+        :class="type === 'range' ? 'cursor-pointer' : 'p-2 bg-neutral-600 border-2 border-transparent focus:border-gift'"
         @input="onInput"
     />
 </template>
