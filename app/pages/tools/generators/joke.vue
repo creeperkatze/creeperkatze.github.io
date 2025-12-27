@@ -34,7 +34,42 @@ definePageMeta({
 });
 
 const { locale } = useI18n();
-const { jokeData, error, fetchJoke } = useJoke();
+
+const jokeData = ref(null);
+const error = ref(null);
+
+const fetchJoke = async (lang) =>
+{
+    jokeData.value = null;
+    try
+    {
+        const url = `https://v2.jokeapi.dev/joke/Any?lang=${encodeURIComponent(lang)}&blacklistFlags=nsfw,religious,racist,sexist,explicit`;
+        const data = await $fetch(url);
+
+        if (data.type === 'single' && data.joke)
+        {
+            data.joke = decodeHTMLEntities(data.joke);
+        } else if (data.type === 'twopart' && data.setup && data.delivery)
+        {
+            data.setup = decodeHTMLEntities(data.setup);
+            data.delivery = decodeHTMLEntities(data.delivery);
+        }
+
+        jokeData.value = data;
+    }
+    catch (err)
+    {
+        error.value = (err).message || 'An unknown error occurred.';
+        jokeData.value = null;
+    }
+};
+
+function decodeHTMLEntities(text)
+{
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = text;
+    return textArea.value;
+}
 
 onMounted(() =>
 {

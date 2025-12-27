@@ -36,7 +36,24 @@ definePageMeta({
 });
 
 const { locale } = useI18n();
-const { quoteData, error, fetchQuote } = useQuote();
+
+const quoteData = ref(null);
+const error = ref(null);
+
+const fetchQuote = async (lang) =>
+{
+    quoteData.value = null;
+    try
+    {
+        const data = await $fetch(`https://api.zitat-service.de/v1/quote?language=${encodeURIComponent(lang)}`);
+        quoteData.value = data;
+    }
+    catch (err)
+    {
+        error.value = (err).message || 'An unknown error occurred.';
+        quoteData.value = null;
+    }
+};
 
 onMounted(() =>
 {

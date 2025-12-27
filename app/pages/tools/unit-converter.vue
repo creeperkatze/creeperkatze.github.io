@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.unit-converter.title') }}</h1>
-        <div class="w-full max-w-2xl p-6 glass-effect rounded-lg space-y-4">
+        <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                 <label class="sm:w-40">{{ $t('page.tools.tool.unit-converter.category') }}:</label>
                 <SelectField v-model="category" class="flex-1">

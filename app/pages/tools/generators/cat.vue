@@ -26,7 +26,23 @@ definePageMeta({
     image: '/images/seo/cat.jpg'
 });
 
-const { catData, error, fetchCatImage } = useCatImage();
+const catData = ref(null);
+const error = ref(null);
+
+const fetchCatImage = async () =>
+{
+    catData.value = null;
+    try
+    {
+        const data = await $fetch('https://api.thecatapi.com/v1/images/search');
+        catData.value = data[0];
+    }
+    catch (err)
+    {
+        error.value = (err).message || 'An unknown error occurred.';
+        catData.value = null;
+    }
+};
 
 onMounted(() =>
 {

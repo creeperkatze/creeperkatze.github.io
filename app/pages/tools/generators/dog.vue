@@ -26,7 +26,23 @@ definePageMeta({
     image: '/images/seo/dog.jpg'
 });
 
-const { dogData, error, fetchDogImage } = useDogImage();
+const dogData = ref(null);
+const error = ref(null);
+
+const fetchDogImage = async () =>
+{
+    dogData.value = null;
+    try
+    {
+        const data = await $fetch('https://api.thedogapi.com/v1/images/search');
+        dogData.value = data[0];
+    }
+    catch (err)
+    {
+        error.value = (err).message || 'An unknown error occurred.';
+        dogData.value = null;
+    }
+};
 
 onMounted(() =>
 {

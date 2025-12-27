@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.stopwatch.title') }}</h1>
-        <div class="w-full max-w-md p-8 glass-effect rounded-lg flex flex-col items-center space-y-6">
+        <div class="w-full max-w-md p-8 glass-effect border-2 rounded-lg flex flex-col items-center space-y-6">
             <div class="text-6xl font-mono font-bold tracking-wider text-white">
                 {{ formattedTime }}
             </div>
