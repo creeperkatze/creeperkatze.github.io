@@ -359,7 +359,7 @@
     "page.tools.tool.stopwatch.rounds": "Runden",
 
     "page.tools.tool.encoder-decoder.title": "Enkodierer / Dekodierer",
-    "page.tools.tool.encoder-decoder.description": "Kodiere und dekodiere Text mit verschiedenen Methoden wie Base64, URL, Hex und mehr.",
+    "page.tools.tool.encoder-decoder.description": "Kodiere und dekodiere Text mit verschiedenen Methoden wie Base64, URL, Hex, HTML Entities, ROT13, Morsecode und mehr.",
     "page.tools.tool.encoder-decoder.input.placeholder": "Text hier eingeben oder einfügen...",
     "page.tools.tool.encoder-decoder.method": "Methode",
     "page.tools.tool.encoder-decoder.action": "Aktion",
