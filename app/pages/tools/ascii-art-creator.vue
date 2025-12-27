@@ -107,6 +107,7 @@ const inverted = ref(false)
 const asciiArt = ref('')
 const copied = ref(false)
 let originalImage = null
+let fileName = ''
 let debounceTimer = null
 
 const ASCII_CHARS = ['@', '%', '#', '*', '+', '=', '-', ':', '.', ' ']
@@ -115,6 +116,7 @@ const handleImageUpload = (event) => {
     const file = event.target.files[0]
     if (!file) return
 
+    fileName = file.name
     const reader = new FileReader()
     reader.onload = (e) => {
         const img = new Image()
@@ -207,7 +209,10 @@ const downloadAscii = () => {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'ascii-art.txt'
+    
+    const nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName
+    a.download = `${nameWithoutExt}-ascii.txt`
+    
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
