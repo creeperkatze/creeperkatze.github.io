@@ -18,7 +18,8 @@
                     <option value="lower">{{ $t('page.tools.tool.case-converter.mode.lower') }}</option>
                     <option value="upper">{{ $t('page.tools.tool.case-converter.mode.upper') }}</option>
                     <option value="title">{{ $t('page.tools.tool.case-converter.mode.title') }}</option>
-                    <option value="sentence">{{ $t('page.tools.tool.case-converter.mode.sentence') }}</option>
+                    <option value="swap">{{ $t('page.tools.tool.case-converter.mode.swap') }}</option>
+                    <option value="alternating">{{ $t('page.tools.tool.case-converter.mode.alternating') }}</option>
                     <option value="camel">{{ $t('page.tools.tool.case-converter.mode.camel') }}</option>
                     <option value="pascal">{{ $t('page.tools.tool.case-converter.mode.pascal') }}</option>
                     <option value="snake">{{ $t('page.tools.tool.case-converter.mode.snake') }}</option>
@@ -26,8 +27,6 @@
                     <option value="kebab">{{ $t('page.tools.tool.case-converter.mode.kebab') }}</option>
                     <option value="dot">{{ $t('page.tools.tool.case-converter.mode.dot') }}</option>
                     <option value="path">{{ $t('page.tools.tool.case-converter.mode.path') }}</option>
-                    <option value="swap">{{ $t('page.tools.tool.case-converter.mode.swap') }}</option>
-                    <option value="alternating">{{ $t('page.tools.tool.case-converter.mode.alternating') }}</option>
                     <option value="slug">{{ $t('page.tools.tool.case-converter.mode.slug') }}</option>
                 </SelectField>
                 <div class="sm:ml-auto">
@@ -133,12 +132,6 @@ const output = computed(() =>
     if (mode.value === 'lower') return raw.toLowerCase();
     if (mode.value === 'upper') return raw.toUpperCase();
     if (mode.value === 'title') return words.map(capitalize).join(' ');
-    if (mode.value === 'sentence')
-    {
-        if (words.length === 0) return '';
-        const sentence = words.join(' ');
-        return sentence.charAt(0).toUpperCase() + sentence.slice(1);
-    }
     if (mode.value === 'camel')
     {
         if (words.length === 0) return '';
