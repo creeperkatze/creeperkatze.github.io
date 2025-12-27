@@ -47,6 +47,11 @@ label
     @apply text-lg text-white;
 }
 
+span
+{
+    @apply text-lg text-white;
+}
+
 button
 {
     @apply text-white

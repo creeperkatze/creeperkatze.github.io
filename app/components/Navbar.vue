@@ -21,8 +21,10 @@
                         { name: $t('navbar.password-generator'), link: '/tools/password-generator/' },
                         { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
                         { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
+                        { name: $t('navbar.color-converter'), link: '/tools/color-converter/' },
                         { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
                         { name: $t('navbar.encoder-decoder'), link: '/tools/encoder-decoder/' },
+                        { name: $t('navbar.ascii-art-creator'), link: '/tools/ascii-art-creator/' },
                         {
                             name: $t('navbar.generators'),
                             link: '/tools/generators/',
@@ -110,8 +112,10 @@
                     { name: $t('navbar.password-generator'), link: '/tools/password-generator/' },
                     { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
                     { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
+                    { name: $t('navbar.color-converter'), link: '/tools/color-converter/' },
                     { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
                     { name: $t('navbar.encoder-decoder'), link: '/tools/encoder-decoder/' },
+                    { name: $t('navbar.ascii-art-creator'), link: '/tools/ascii-art-creator/' },
                     {
                         name: $t('navbar.generators'),
                         link: '/tools/generators/',
