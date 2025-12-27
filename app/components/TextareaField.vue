@@ -2,7 +2,7 @@
     <textarea
         v-bind="$attrs"
         :value="modelValue"
-        class="text-white w-full p-4 bg-neutral-600 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-gift"
+        class="text-white w-full p-4 bg-neutral-600 rounded-lg resize-none border-2 border-white/10 focus:outline-none focus:border-gift"
         @input="onInput"
     />
 </template>

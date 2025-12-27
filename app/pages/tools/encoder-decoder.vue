@@ -7,7 +7,7 @@
                 :placeholder="$t('page.tools.tool.encoder-decoder.input.placeholder')" @scroll="onInputScroll" />
 
             <div ref="outputRef"
-                class="text-left h-60 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto"
+                class="text-left h-60 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto border-2 border-white/10"
                 @scroll="onOutputScroll">
                 {{ output }}
             </div>

@@ -150,7 +150,7 @@
             <div class="space-y-4">
                 <h3>{{ $t('page.tools.tool.color-converter.accessibility') }}</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/10"
+                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/20"
                         :style="{ backgroundColor: hexString }">
                         <span class="text-white">{{ $t('page.tools.tool.color-converter.text_color') }}
                             (White)</span>
@@ -161,7 +161,7 @@
                             <span v-else class="text-red-400">Fail</span>
                         </div>
                     </div>
-                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/10"
+                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/20"
                         :style="{ backgroundColor: hexString }">
                         <span class="text-black">{{ $t('page.tools.tool.color-converter.text_color') }}
                             (Black)</span>

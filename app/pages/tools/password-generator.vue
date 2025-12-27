@@ -4,7 +4,7 @@
         <p>{{ $t('page.tools.tool.password-generator.description') }}</p>
         <div class="w-full max-w-md p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex items-center space-x-2">
-                <TextField type="text" readonly :value="password" class="flex-1" />
+                <div class="flex-1 text-left text-white p-2 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto border-2 border-white/10">{{ password }}</div>
                 <Button @click="copyToClipboard">
                     {{ copied ? $t('page.tools.tool.password-generator.copied') : $t('page.tools.tool.password-generator.copy') }}
                 </Button>

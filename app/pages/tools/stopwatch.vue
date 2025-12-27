@@ -23,7 +23,7 @@
                 <h2 class="text-xl font-bold text-center">{{ $t('page.tools.tool.stopwatch.rounds') }}</h2>
                 <div class="max-h-60 overflow-y-auto space-y-2 pr-2 custom-scrollbar">
                     <div v-for="(round, index) in rounds" :key="index"
-                        class="flex justify-between text-white bg-neutral-600 p-2 rounded-lg">
+                        class="flex justify-between text-white bg-neutral-600 p-2 rounded-lg border-2 border-white/10">
                         <span>#{{ rounds.length - index }}</span>
                         <span class="font-mono">{{ formatTime(round) }}</span>
                     </div>
