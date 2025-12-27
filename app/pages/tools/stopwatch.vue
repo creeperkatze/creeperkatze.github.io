@@ -7,7 +7,7 @@
                 {{ formattedTime }}
             </div>
 
-            <div class="flex space-x-4">
+            <div class="flex flex-wrap justify-center gap-4">
                 <Button @click="toggleTimer">
                     {{ isRunning ? $t('page.tools.tool.stopwatch.stop') : $t('page.tools.tool.stopwatch.start') }}
                 </Button>

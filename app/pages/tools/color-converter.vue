@@ -19,7 +19,7 @@
                 <div class="w-full md:w-2/3 grid grid-cols-1 gap-4 content-center">
                     <div class="flex flex-col gap-1">
                         <label class="font-bold text-sm text-gray-300">{{ $t('page.tools.tool.color-converter.hex') }}</label>
-                        <div class="flex gap-2">
+                        <div class="flex flex-wrap gap-2">
                             <TextField v-model="hexInput" @blur="updateFromHex" @keyup.enter="updateFromHex" placeholder="#000000" class="flex-1 font-mono" />
                             <Button @click="copyToClipboard(hexString)">
                                 <IconShare v-if="copied === hexString" class="w-5 h-5" />
@@ -30,7 +30,7 @@
 
                     <div class="flex flex-col gap-1">
                         <label class="font-bold text-sm text-gray-300">{{ $t('page.tools.tool.color-converter.rgb') }}</label>
-                        <div class="flex gap-2">
+                        <div class="flex flex-wrap gap-2">
                             <TextField v-model="rgbInput" @blur="updateFromRgb" @keyup.enter="updateFromRgb" placeholder="rgb(0, 0, 0)" class="flex-1 font-mono" />
                             <Button @click="copyToClipboard(rgbInput)">
                                 <IconShare v-if="copied === rgbInput" class="w-5 h-5" />
@@ -41,7 +41,7 @@
 
                     <div class="flex flex-col gap-1">
                         <label class="font-bold text-sm text-gray-300">{{ $t('page.tools.tool.color-converter.hsl') }}</label>
-                        <div class="flex gap-2">
+                        <div class="flex flex-wrap gap-2">
                             <TextField v-model="hslInput" @blur="updateFromHsl" @keyup.enter="updateFromHsl" placeholder="hsl(0, 0%, 0%)" class="flex-1 font-mono" />
                             <Button @click="copyToClipboard(hslInput)">
                                 <IconShare v-if="copied === hslInput" class="w-5 h-5" />
@@ -58,7 +58,7 @@
 
                 <div class="flex flex-col gap-1">
                     <label class="font-bold text-sm text-gray-300">{{ $t('page.tools.tool.color-converter.hsv') }}</label>
-                    <div class="flex gap-2">
+                    <div class="flex flex-wrap gap-2">
                         <TextField v-model="hsvInput" @blur="updateFromHsv" @keyup.enter="updateFromHsv" placeholder="hsv(0, 0%, 0%)" class="flex-1 font-mono" />
                         <Button @click="copyToClipboard(hsvInput)">
                             <IconShare v-if="copied === hsvInput" class="w-5 h-5" />
@@ -69,7 +69,7 @@
 
                 <div class="flex flex-col gap-1">
                     <label class="font-bold text-sm text-gray-300">{{ $t('page.tools.tool.color-converter.cmyk') }}</label>
-                    <div class="flex gap-2">
+                    <div class="flex flex-wrap gap-2">
                         <TextField v-model="cmykInput" @blur="updateFromCmyk" @keyup.enter="updateFromCmyk" placeholder="cmyk(0%, 0%, 0%, 0%)" class="flex-1 font-mono" />
                         <Button @click="copyToClipboard(cmykInput)">
                             <IconShare v-if="copied === cmykInput" class="w-5 h-5" />

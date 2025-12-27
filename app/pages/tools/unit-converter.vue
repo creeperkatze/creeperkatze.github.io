@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-wrap gap-2">
                 <TextField type="text" readonly :value="formattedOutput" class="flex-1" />
                 <Button @click="copyToClipboard">
                     {{ copied ? $t('page.tools.tool.unit-converter.copied') : $t('page.tools.tool.unit-converter.copy') }}
