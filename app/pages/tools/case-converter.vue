@@ -22,7 +22,7 @@
                 </Button>
             </div>
 
-            <div class="text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words">
+            <div class="text-left text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words">
                 {{ output }}
             </div>
         </div>
