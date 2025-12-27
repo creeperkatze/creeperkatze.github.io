@@ -10,9 +10,23 @@
                 <Button @click="toggleTimer">
                     {{ isRunning ? $t('page.tools.tool.stopwatch.stop') : $t('page.tools.tool.stopwatch.start') }}
                 </Button>
+                <Button @click="addRound" :disabled="time === 0">
+                    {{ $t('page.tools.tool.stopwatch.round') }}
+                </Button>
                 <Button @click="resetTimer">
                     {{ $t('page.tools.tool.stopwatch.reset') }}
                 </Button>
+            </div>
+
+            <div v-if="rounds.length > 0" class="w-full space-y-2">
+                <h2 class="text-xl font-bold text-center">{{ $t('page.tools.tool.stopwatch.rounds') }}</h2>
+                <div class="max-h-60 overflow-y-auto space-y-2 pr-2 custom-scrollbar">
+                    <div v-for="(round, index) in rounds" :key="index"
+                        class="flex justify-between text-white bg-neutral-600 p-2 rounded-lg">
+                        <span>#{{ rounds.length - index }}</span>
+                        <span class="font-mono">{{ formatTime(round) }}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,15 +37,18 @@
 <script setup>
 const time = ref(0)
 const isRunning = ref(false)
+const rounds = ref([])
 let interval = null
 
-const formattedTime = computed(() => {
-    const minutes = Math.floor(time.value / 60000)
-    const seconds = Math.floor((time.value % 60000) / 1000)
-    const milliseconds = Math.floor((time.value % 1000) / 10)
-    
+const formatTime = (ms) => {
+    const minutes = Math.floor(ms / 60000)
+    const seconds = Math.floor((ms % 60000) / 1000)
+    const milliseconds = Math.floor((ms % 1000) / 10)
+
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds.toString().padStart(2, '0')}`
-})
+}
+
+const formattedTime = computed(() => formatTime(time.value))
 
 const toggleTimer = () => {
     if (isRunning.value) {
@@ -45,10 +62,15 @@ const toggleTimer = () => {
     isRunning.value = !isRunning.value
 }
 
+const addRound = () => {
+    rounds.value.unshift(time.value)
+}
+
 const resetTimer = () => {
     clearInterval(interval)
     isRunning.value = false
     time.value = 0
+    rounds.value = []
 }
 
 onUnmounted(() => {

@@ -3,11 +3,15 @@
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.unit-converter.title') }}</h1>
         <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                <label class="sm:w-40">{{ $t('page.tools.tool.unit-converter.category') }}:</label>
+                <label>{{ $t('page.tools.tool.unit-converter.category') }}:</label>
                 <SelectField v-model="category" class="flex-1">
                     <option value="length">{{ $t('page.tools.tool.unit-converter.category.length') }}</option>
                     <option value="mass">{{ $t('page.tools.tool.unit-converter.category.mass') }}</option>
                     <option value="temperature">{{ $t('page.tools.tool.unit-converter.category.temperature') }}</option>
+                    <option value="volume">{{ $t('page.tools.tool.unit-converter.category.volume') }}</option>
+                    <option value="area">{{ $t('page.tools.tool.unit-converter.category.area') }}</option>
+                    <option value="time">{{ $t('page.tools.tool.unit-converter.category.time') }}</option>
+                    <option value="digital">{{ $t('page.tools.tool.unit-converter.category.digital') }}</option>
                 </SelectField>
             </div>
 
@@ -68,9 +72,53 @@ const massToKg = {
     lb: 0.45359237
 }
 
+const volumeToLiters = {
+    ml: 0.001,
+    l: 1,
+    gal: 3.78541,
+    qt: 0.946353,
+    pt: 0.473176,
+    cup: 0.24,
+    floz: 0.0295735
+}
+
+const areaToSquareMeters = {
+    m2: 1,
+    km2: 1000000,
+    ft2: 0.092903,
+    mi2: 2589988.11,
+    ac: 4046.86,
+    ha: 10000
+}
+
+const timeToSeconds = {
+    ms: 0.001,
+    s: 1,
+    min: 60,
+    h: 3600,
+    d: 86400,
+    wk: 604800,
+    mo: 2628000,
+    y: 31536000
+}
+
+const digitalToBytes = {
+    b: 0.125,
+    B: 1,
+    KB: 1024,
+    MB: 1048576,
+    GB: 1073741824,
+    TB: 1099511627776,
+    PB: 1125899906842624
+}
+
 const units = computed(() => {
     if (category.value === 'length') return Object.keys(lengthToMeters)
     if (category.value === 'mass') return Object.keys(massToKg)
+    if (category.value === 'volume') return Object.keys(volumeToLiters)
+    if (category.value === 'area') return Object.keys(areaToSquareMeters)
+    if (category.value === 'time') return Object.keys(timeToSeconds)
+    if (category.value === 'digital') return Object.keys(digitalToBytes)
     return ['C', 'F', 'K']
 })
 
@@ -83,6 +131,26 @@ watch(category, () => {
     if (category.value === 'mass') {
         fromUnit.value = 'kg'
         toUnit.value = 'g'
+        return
+    }
+    if (category.value === 'volume') {
+        fromUnit.value = 'l'
+        toUnit.value = 'ml'
+        return
+    }
+    if (category.value === 'area') {
+        fromUnit.value = 'm2'
+        toUnit.value = 'ft2'
+        return
+    }
+    if (category.value === 'time') {
+        fromUnit.value = 'min'
+        toUnit.value = 's'
+        return
+    }
+    if (category.value === 'digital') {
+        fromUnit.value = 'MB'
+        toUnit.value = 'KB'
         return
     }
     fromUnit.value = 'C'
@@ -119,6 +187,38 @@ const outputValue = computed(() => {
         if (!fromFactor || !toFactor) return ''
         const kg = n * fromFactor
         return kg / toFactor
+    }
+
+    if (category.value === 'volume') {
+        const fromFactor = volumeToLiters[fromUnit.value]
+        const toFactor = volumeToLiters[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const liters = n * fromFactor
+        return liters / toFactor
+    }
+
+    if (category.value === 'area') {
+        const fromFactor = areaToSquareMeters[fromUnit.value]
+        const toFactor = areaToSquareMeters[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const sqMeters = n * fromFactor
+        return sqMeters / toFactor
+    }
+
+    if (category.value === 'time') {
+        const fromFactor = timeToSeconds[fromUnit.value]
+        const toFactor = timeToSeconds[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const seconds = n * fromFactor
+        return seconds / toFactor
+    }
+
+    if (category.value === 'digital') {
+        const fromFactor = digitalToBytes[fromUnit.value]
+        const toFactor = digitalToBytes[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const bytes = n * fromFactor
+        return bytes / toFactor
     }
 
     const c = convertTemperatureToC(n, fromUnit.value)
