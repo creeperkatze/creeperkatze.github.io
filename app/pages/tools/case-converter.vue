@@ -12,13 +12,8 @@
                 {{ output }}
             </div>
 
-            <div class="flex items-center space-x-2">
-                <label>{{ $t('page.tools.tool.case-converter.syncScroll') }}</label>
-                <CheckboxField v-model="syncScroll" />
-            </div>
-            
-            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                <label>{{ $t('page.tools.tool.case-converter.mode') }}:</label>
+            <div class="flex flex-col sm:flex-row sm:items-end gap-3">
+                <label class="sm:self-center">{{ $t('page.tools.tool.case-converter.mode') }}:</label>
                 <SelectField v-model="mode">
                     <option value="lower">{{ $t('page.tools.tool.case-converter.mode.lower') }}</option>
                     <option value="upper">{{ $t('page.tools.tool.case-converter.mode.upper') }}</option>
@@ -34,9 +29,14 @@
                     <option value="path">{{ $t('page.tools.tool.case-converter.mode.path') }}</option>
                     <option value="slug">{{ $t('page.tools.tool.case-converter.mode.slug') }}</option>
                 </SelectField>
-                <div class="sm:ml-auto">
+                <div class="flex items-center gap-3 sm:ml-auto sm:self-end">
+                    <div class="flex items-center space-x-2">
+                        <label>{{ $t('page.tools.tool.case-converter.syncScroll') }}</label>
+                        <CheckboxField v-model="syncScroll" />
+                    </div>
                     <Button @click="copyToClipboard">
-                        {{ copied ? $t('page.tools.tool.case-converter.copied') : $t('page.tools.tool.case-converter.copy') }}
+                        {{ copied ? $t('page.tools.tool.case-converter.copied') :
+                            $t('page.tools.tool.case-converter.copy') }}
                     </Button>
                 </div>
 

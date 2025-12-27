@@ -12,12 +12,7 @@
                 {{ output }}
             </div>
 
-            <div class="flex items-center space-x-2">
-                <label>{{ $t('page.tools.tool.encoder-decoder.syncScroll') }}</label>
-                <CheckboxField v-model="syncScroll" />
-            </div>
-
-            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-end gap-3">
                 <div class="flex flex-col gap-1 flex-1">
                     <label>{{ $t('page.tools.tool.encoder-decoder.method') }}:</label>
                     <SelectField v-model="method">
@@ -40,7 +35,11 @@
                         <option value="decode">{{ $t('page.tools.tool.encoder-decoder.action.decode') }}</option>
                     </SelectField>
                 </div>
-                <div class="sm:ml-auto sm:self-end">
+                <div class="flex items-center gap-3 sm:ml-auto sm:self-end">
+                    <div class="flex items-center space-x-2">
+                        <label>{{ $t('page.tools.tool.encoder-decoder.syncScroll') }}</label>
+                        <CheckboxField v-model="syncScroll" />
+                    </div>
                     <Button @click="copyToClipboard">
                         {{ copied ? $t('page.tools.tool.encoder-decoder.copied') :
                             $t('page.tools.tool.encoder-decoder.copy') }}
