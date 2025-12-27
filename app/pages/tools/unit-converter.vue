@@ -83,14 +83,14 @@ const volumeToLiters = {
     gal: 3.78541,
     qt: 0.946353,
     pt: 0.473176,
-    cup: 0.24,
+    cup: 0.236588,
     floz: 0.0295735
 }
 
 const areaToSquareMeters = {
     m2: 1,
     km2: 1000000,
-    ft2: 0.092903,
+    ft2: 0.09290304,
     mi2: 2589988.11,
     ac: 4046.86,
     ha: 10000
@@ -119,9 +119,9 @@ const digitalToBytes = {
 
 const speedToMetersPerSecond = {
     mps: 1,
-    kmh: 0.277778,
+    kmh: 1 / 3.6,
     mph: 0.44704,
-    kn: 0.514444
+    kn: 1852 / 3600
 }
 
 const pressureToPascals = {
