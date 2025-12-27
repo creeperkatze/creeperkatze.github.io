@@ -10,7 +10,6 @@
                 <SelectField v-model="mode" class="flex-1">
                     <option value="lower">{{ $t('page.tools.tool.case-converter.mode.lower') }}</option>
                     <option value="upper">{{ $t('page.tools.tool.case-converter.mode.upper') }}</option>
-                    <option value="title">{{ $t('page.tools.tool.case-converter.mode.title') }}</option>
                     <option value="camel">{{ $t('page.tools.tool.case-converter.mode.camel') }}</option>
                     <option value="pascal">{{ $t('page.tools.tool.case-converter.mode.pascal') }}</option>
                     <option value="snake">{{ $t('page.tools.tool.case-converter.mode.snake') }}</option>
@@ -33,7 +32,7 @@
 
 <script setup>
 const input = ref('')
-const mode = ref('slug')
+const mode = ref('lower')
 const copied = ref(false)
 
 const normalizeForWords = (value) => {
@@ -72,7 +71,6 @@ const output = computed(() => {
 
     if (mode.value === 'lower') return raw.toLowerCase()
     if (mode.value === 'upper') return raw.toUpperCase()
-    if (mode.value === 'title') return words.map(capitalize).join(' ')
     if (mode.value === 'camel') {
         if (words.length === 0) return ''
         return words[0] + words.slice(1).map(capitalize).join('')
