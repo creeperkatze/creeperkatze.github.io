@@ -269,6 +269,7 @@
     "page.tools.tool.case-converter.mode.dot": "dot.case",
     "page.tools.tool.case-converter.mode.path": "path/case",
     "page.tools.tool.case-converter.mode.slug": "Slug",
+    "page.tools.tool.case-converter.syncScroll": "Sync scrolling",
     "page.tools.tool.case-converter.copy": "Copy",
     "page.tools.tool.case-converter.copied": "Copied!",
 
@@ -377,6 +378,7 @@
     "page.tools.tool.encoder-decoder.method.reverse": "Reverse",
     "page.tools.tool.encoder-decoder.method.atbash": "Atbash",
     "page.tools.tool.encoder-decoder.method.morse": "Morse Code",
+    "page.tools.tool.encoder-decoder.syncScroll": "Sync scrolling",
     "page.tools.tool.encoder-decoder.copy": "Copy",
     "page.tools.tool.encoder-decoder.copied": "Copied!",
 

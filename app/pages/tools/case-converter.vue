@@ -2,14 +2,19 @@
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.case-converter.title') }}</h1>
         <p>{{ $t('page.tools.tool.case-converter.description') }}</p>
-        <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
-            <TextareaField ref="inputRef" v-model="input" class="h-40"
+        <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
+            <TextareaField ref="inputRef" v-model="input" class="h-60"
                 :placeholder="$t('page.tools.tool.case-converter.input.placeholder')" @scroll="onInputScroll" />
 
             <div ref="outputRef"
-                class="text-left h-40 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto"
+                class="text-left h-60 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto"
                 @scroll="onOutputScroll">
                 {{ output }}
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <label>{{ $t('page.tools.tool.case-converter.syncScroll') }}</label>
+                <CheckboxField v-model="syncScroll" />
             </div>
             
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
@@ -46,12 +51,14 @@
 const input = ref('');
 const mode = ref('lower');
 const copied = ref(false);
+const syncScroll = ref(true);
 const inputRef = ref(null);
 const outputRef = ref(null);
 let isSyncing = false;
 
 const onInputScroll = (e) =>
 {
+    if (!syncScroll.value) return;
     if (isSyncing) return;
     isSyncing = true;
     if (outputRef.value)
@@ -63,6 +70,7 @@ const onInputScroll = (e) =>
 
 const onOutputScroll = (e) =>
 {
+    if (!syncScroll.value) return;
     if (isSyncing) return;
     isSyncing = true;
     if (inputRef.value?.$el)

@@ -2,13 +2,19 @@
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.encoder-decoder.title') }}</h1>
         <p>{{ $t('page.tools.tool.encoder-decoder.description') }}</p>
-        <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
-            <TextareaField v-model="input" class="h-40"
-                :placeholder="$t('page.tools.tool.encoder-decoder.input.placeholder')" />
+        <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
+            <TextareaField ref="inputRef" v-model="input" class="h-60"
+                :placeholder="$t('page.tools.tool.encoder-decoder.input.placeholder')" @scroll="onInputScroll" />
 
-            <div
-                class="text-left h-40 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto">
+            <div ref="outputRef"
+                class="text-left h-60 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto"
+                @scroll="onOutputScroll">
                 {{ output }}
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <label>{{ $t('page.tools.tool.encoder-decoder.syncScroll') }}</label>
+                <CheckboxField v-model="syncScroll" />
             </div>
 
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
@@ -52,6 +58,34 @@ const input = ref('');
 const method = ref('base64');
 const action = ref('encode');
 const copied = ref(false);
+const syncScroll = ref(true);
+const inputRef = ref(null);
+const outputRef = ref(null);
+let isSyncing = false;
+
+const onInputScroll = (e) =>
+{
+    if (!syncScroll.value) return;
+    if (isSyncing) return;
+    isSyncing = true;
+    if (outputRef.value)
+    {
+        outputRef.value.scrollTop = e.target.scrollTop;
+    }
+    setTimeout(() => isSyncing = false, 10);
+};
+
+const onOutputScroll = (e) =>
+{
+    if (!syncScroll.value) return;
+    if (isSyncing) return;
+    isSyncing = true;
+    if (inputRef.value?.$el)
+    {
+        inputRef.value.$el.scrollTop = e.target.scrollTop;
+    }
+    setTimeout(() => isSyncing = false, 10);
+};
 
 const utf8_to_b64 = (str) =>
 {
