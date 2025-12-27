@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.unit-converter.title') }}</h1>
+        <P>{{ $t('page.tools.tool.unit-converter.description') }}</P>
         <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                 <label>{{ $t('page.tools.tool.unit-converter.category') }}:</label>
@@ -12,6 +13,10 @@
                     <option value="area">{{ $t('page.tools.tool.unit-converter.category.area') }}</option>
                     <option value="time">{{ $t('page.tools.tool.unit-converter.category.time') }}</option>
                     <option value="digital">{{ $t('page.tools.tool.unit-converter.category.digital') }}</option>
+                    <option value="speed">{{ $t('page.tools.tool.unit-converter.category.speed') }}</option>
+                    <option value="pressure">{{ $t('page.tools.tool.unit-converter.category.pressure') }}</option>
+                    <option value="energy">{{ $t('page.tools.tool.unit-converter.category.energy') }}</option>
+                    <option value="power">{{ $t('page.tools.tool.unit-converter.category.power') }}</option>
                 </SelectField>
             </div>
 
@@ -112,6 +117,34 @@ const digitalToBytes = {
     PB: 1125899906842624
 }
 
+const speedToMetersPerSecond = {
+    mps: 1,
+    kmh: 0.277778,
+    mph: 0.44704,
+    kn: 0.514444
+}
+
+const pressureToPascals = {
+    Pa: 1,
+    bar: 100000,
+    psi: 6894.76,
+    atm: 101325
+}
+
+const energyToJoules = {
+    J: 1,
+    kJ: 1000,
+    cal: 4.184,
+    kcal: 4184,
+    kWh: 3600000
+}
+
+const powerToWatts = {
+    W: 1,
+    kW: 1000,
+    hp: 745.7
+}
+
 const units = computed(() => {
     if (category.value === 'length') return Object.keys(lengthToMeters)
     if (category.value === 'mass') return Object.keys(massToKg)
@@ -119,6 +152,10 @@ const units = computed(() => {
     if (category.value === 'area') return Object.keys(areaToSquareMeters)
     if (category.value === 'time') return Object.keys(timeToSeconds)
     if (category.value === 'digital') return Object.keys(digitalToBytes)
+    if (category.value === 'speed') return Object.keys(speedToMetersPerSecond)
+    if (category.value === 'pressure') return Object.keys(pressureToPascals)
+    if (category.value === 'energy') return Object.keys(energyToJoules)
+    if (category.value === 'power') return Object.keys(powerToWatts)
     return ['C', 'F', 'K']
 })
 
@@ -151,6 +188,26 @@ watch(category, () => {
     if (category.value === 'digital') {
         fromUnit.value = 'MB'
         toUnit.value = 'KB'
+        return
+    }
+    if (category.value === 'speed') {
+        fromUnit.value = 'kmh'
+        toUnit.value = 'mps'
+        return
+    }
+    if (category.value === 'pressure') {
+        fromUnit.value = 'bar'
+        toUnit.value = 'Pa'
+        return
+    }
+    if (category.value === 'energy') {
+        fromUnit.value = 'kJ'
+        toUnit.value = 'kcal'
+        return
+    }
+    if (category.value === 'power') {
+        fromUnit.value = 'kW'
+        toUnit.value = 'hp'
         return
     }
     fromUnit.value = 'C'
@@ -219,6 +276,38 @@ const outputValue = computed(() => {
         if (!fromFactor || !toFactor) return ''
         const bytes = n * fromFactor
         return bytes / toFactor
+    }
+
+    if (category.value === 'speed') {
+        const fromFactor = speedToMetersPerSecond[fromUnit.value]
+        const toFactor = speedToMetersPerSecond[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const ms = n * fromFactor
+        return ms / toFactor
+    }
+
+    if (category.value === 'pressure') {
+        const fromFactor = pressureToPascals[fromUnit.value]
+        const toFactor = pressureToPascals[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const pa = n * fromFactor
+        return pa / toFactor
+    }
+
+    if (category.value === 'energy') {
+        const fromFactor = energyToJoules[fromUnit.value]
+        const toFactor = energyToJoules[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const j = n * fromFactor
+        return j / toFactor
+    }
+
+    if (category.value === 'power') {
+        const fromFactor = powerToWatts[fromUnit.value]
+        const toFactor = powerToWatts[toUnit.value]
+        if (!fromFactor || !toFactor) return ''
+        const w = n * fromFactor
+        return w / toFactor
     }
 
     const c = convertTemperatureToC(n, fromUnit.value)

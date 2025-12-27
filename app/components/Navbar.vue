@@ -22,6 +22,7 @@
                         { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
                         { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
                         { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
+                        { name: $t('navbar.encoder-decoder'), link: '/tools/encoder-decoder/' },
                         {
                             name: $t('navbar.generators'),
                             link: '/tools/generators/',
@@ -110,6 +111,7 @@
                     { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
                     { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
                     { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
+                    { name: $t('navbar.encoder-decoder'), link: '/tools/encoder-decoder/' },
                     {
                         name: $t('navbar.generators'),
                         link: '/tools/generators/',

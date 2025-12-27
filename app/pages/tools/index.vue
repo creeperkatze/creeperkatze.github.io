@@ -10,6 +10,8 @@
                 :alt="$t('page.tools.tool.unit-converter.title')" :title="$t('page.tools.tool.unit-converter.title')" />
             <SmallCard :link="localePath('/tools/stopwatch/')" image="/images/seo/stopwatch.jpg"
                 :alt="$t('page.tools.tool.stopwatch.title')" :title="$t('page.tools.tool.stopwatch.title')" />
+            <SmallCard :link="localePath('/tools/encoder-decoder/')" image="/images/seo/encoder-decoder.jpg"
+                :alt="$t('page.tools.tool.encoder-decoder.title')" :title="$t('page.tools.tool.encoder-decoder.title')" />
         </div>
     </div>
 </template>

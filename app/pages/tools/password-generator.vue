@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.password-generator.title') }}</h1>
+        <p>{{ $t('page.tools.tool.password-generator.description') }}</p>
         <div class="w-full max-w-md p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex items-center space-x-2">
                 <TextField type="text" readonly :value="password" class="flex-1" />

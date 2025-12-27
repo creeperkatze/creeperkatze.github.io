@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.case-converter.title') }}</h1>
+        <p>{{ $t('page.tools.tool.case-converter.description') }}</p>
         <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <TextareaField ref="inputRef" v-model="input" class="h-40"
                 :placeholder="$t('page.tools.tool.case-converter.input.placeholder')" @scroll="onInputScroll" />
