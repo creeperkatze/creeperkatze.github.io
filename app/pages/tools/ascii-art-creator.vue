@@ -21,33 +21,131 @@
                     <hr />
 
                     <div class="space-y-4">
-                        <div class="flex flex-col gap-2">
-                            <label>{{ $t('page.tools.ascii-art-creator.width_label') }}</label>
-                            <TextField type="number" v-model="width" @input="updateAscii" min="10" max="100000" />
-                        </div>
+                        <details open class="group border-2 border-white/10 rounded-lg p-4">
+                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                                <span>{{ $t('page.tools.ascii-art-creator.section.size') }}</span>
+                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                            </summary>
 
-                        <div class="flex flex-col gap-2">
-                            <div class="flex justify-between">
-                                <label>{{ $t('page.tools.ascii-art-creator.contrast_label') }}</label>
-                                <span>{{ contrast }}</span>
+                            <div class="mt-4 space-y-4">
+                                <div class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.width_label') }}</label>
+                                    <TextField type="number" v-model="width" @input="updateAscii" min="10" max="100000" />
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.height_mode_label') }}</label>
+                                    <SelectField v-model="heightMode" @change="updateAscii">
+                                        <option value="auto">{{ $t('page.tools.ascii-art-creator.height_mode.auto') }}</option>
+                                        <option value="fixed">{{ $t('page.tools.ascii-art-creator.height_mode.fixed') }}</option>
+                                    </SelectField>
+                                </div>
+
+                                <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.height_label') }}</label>
+                                    <TextField type="number" v-model="height" @input="updateAscii" min="5" max="100000" />
+                                </div>
+
+                                <div v-else class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                        <label>{{ $t('page.tools.ascii-art-creator.aspect_correction_label') }}</label>
+                                        <span>{{ aspectCorrection.toFixed(2) }}</span>
+                                    </div>
+                                    <TextField type="range" min="0.30" max="1.00" step="0.01" v-model.number="aspectCorrection"
+                                        @input="updateAscii" class="accent-gift w-full" />
+                                </div>
+
+                                <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.fit_mode_label') }}</label>
+                                    <SelectField v-model="fitMode" @change="updateAscii">
+                                        <option value="contain">{{ $t('page.tools.ascii-art-creator.fit_mode.contain') }}</option>
+                                        <option value="cover">{{ $t('page.tools.ascii-art-creator.fit_mode.cover') }}</option>
+                                    </SelectField>
+                                </div>
                             </div>
-                            <TextField type="range" min="-128" max="128" v-model.number="contrast" @input="updateAscii"
-                                class="accent-gift w-full" />
-                        </div>
+                        </details>
 
-                        <div class="flex flex-col gap-2">
-                            <div class="flex justify-between">
-                                <label>{{ $t('page.tools.ascii-art-creator.brightness_label') }}</label>
-                                <span>{{ brightness }}</span>
+                        <details open class="group border-2 border-white/10 rounded-lg p-4">
+                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                                <span>{{ $t('page.tools.ascii-art-creator.section.image') }}</span>
+                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                            </summary>
+
+                            <div class="mt-4 space-y-4">
+                                <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.background_label') }}</label>
+                                    <SelectField v-model="background" @change="updateAscii">
+                                        <option value="white">{{ $t('page.tools.ascii-art-creator.background.white') }}</option>
+                                        <option value="black">{{ $t('page.tools.ascii-art-creator.background.black') }}</option>
+                                    </SelectField>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                        <label>{{ $t('page.tools.ascii-art-creator.contrast_label') }}</label>
+                                        <span>{{ contrast }}</span>
+                                    </div>
+                                    <TextField type="range" min="-128" max="128" v-model.number="contrast" @input="updateAscii"
+                                        class="accent-gift w-full" />
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                        <label>{{ $t('page.tools.ascii-art-creator.brightness_label') }}</label>
+                                        <span>{{ brightness }}</span>
+                                    </div>
+                                    <TextField type="range" min="-128" max="128" v-model.number="brightness" @input="updateAscii"
+                                        class="accent-gift w-full" />
+                                </div>
+
+                                <div class="pt-2 flex items-center justify-between">
+                                    <label>{{ $t('page.tools.ascii-art-creator.inverted_label') }}</label>
+                                    <CheckboxField v-model="inverted" @change="updateAscii" />
+                                </div>
                             </div>
-                            <TextField type="range" min="-128" max="128" v-model.number="brightness" @input="updateAscii"
-                                class="accent-gift w-full" />
-                        </div>
+                        </details>
 
-                        <div class="pt-2 flex items-center justify-between">
-                            <label>{{ $t('page.tools.ascii-art-creator.inverted_label') }}</label>
-                            <CheckboxField v-model="inverted" @change="updateAscii" />
-                        </div>
+                        <details open class="group border-2 border-white/10 rounded-lg p-4">
+                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                                <span>{{ $t('page.tools.ascii-art-creator.section.characters') }}</span>
+                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                            </summary>
+
+                            <div class="mt-4 space-y-4">
+                                <div class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.charset_label') }}</label>
+                                    <SelectField v-model="charsetPreset" @change="updateAscii">
+                                        <option value="standard">{{ $t('page.tools.ascii-art-creator.charset.standard') }}</option>
+                                        <option value="dense">{{ $t('page.tools.ascii-art-creator.charset.dense') }}</option>
+                                        <option value="blocks">{{ $t('page.tools.ascii-art-creator.charset.blocks') }}</option>
+                                        <option value="binary">{{ $t('page.tools.ascii-art-creator.charset.binary') }}</option>
+                                        <option value="custom">{{ $t('page.tools.ascii-art-creator.charset.custom') }}</option>
+                                    </SelectField>
+                                </div>
+
+                                <div v-if="charsetPreset === 'custom'" class="flex flex-col gap-2">
+                                    <label>{{ $t('page.tools.ascii-art-creator.custom_charset_label') }}</label>
+                                    <TextField v-model="customCharset" @input="updateAscii" />
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="group border-2 border-white/10 rounded-lg p-4">
+                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                                <span>{{ $t('page.tools.ascii-art-creator.section.preview') }}</span>
+                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                            </summary>
+
+                            <div class="mt-4 space-y-4">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                        <label>{{ $t('page.tools.ascii-art-creator.preview_size_label') }}</label>
+                                        <span>{{ previewSize }}px</span>
+                                    </div>
+                                    <TextField type="range" min="4" max="14" v-model.number="previewSize" class="accent-gift w-full" />
+                                </div>
+                            </div>
+                        </details>
                     </div>
 
                     <hr />
@@ -62,15 +160,30 @@
                             </Button>
                         </div>
                         <div>
+                            <Button @click="copyHtmlToClipboard" :disabled="!asciiArt">
+                                {{ $t('page.tools.ascii-art-creator.copy_html_button') }}
+                            </Button>
+                        </div>
+                        <div>
                             <Button @click="downloadAscii" :disabled="!asciiArt">
                                 {{ $t('page.tools.ascii-art-creator.download_button') }}
+                            </Button>
+                        </div>
+                        <div>
+                            <Button @click="downloadHtml" :disabled="!asciiArt">
+                                {{ $t('page.tools.ascii-art-creator.download_html_button') }}
+                            </Button>
+                        </div>
+                        <div>
+                            <Button @click="resetSettings" :disabled="!originalImage">
+                                {{ $t('page.tools.ascii-art-creator.reset_button') }}
                             </Button>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col h-full min-h-[500px]">
-                    <div class="flex-1 bg-black rounded-lg border-2 border-white/20 overflow-hidden relative">
+                <div class="w-full">
+                    <div class="w-full aspect-square bg-black rounded-lg border-2 border-white/20 overflow-hidden relative">
                         <div v-if="!asciiArt"
                             class="absolute inset-0 flex flex-col items-center justify-center text-neutral-400 p-8 text-center">
                             <p>{{ $t('page.tools.ascii-art-creator.no_image_selected') }}</p>
@@ -79,7 +192,9 @@
 
                         <div v-else class="absolute inset-0 overflow-auto p-4">
                             <pre
-                                class="text-[6px] md:text-[8px] leading-[6px] md:leading-[8px] font-mono text-white whitespace-pre select-all">{{ asciiArt }}</pre>
+                                class="font-mono text-white whitespace-pre select-all"
+                                :style="{ fontSize: `${previewSize}px`, lineHeight: `${previewSize}px` }"
+                            >{{ asciiArt }}</pre>
                         </div>
                     </div>
                 </div>
@@ -100,16 +215,44 @@ definePageMeta({
 })
 
 const width = ref(100)
+const heightMode = ref('auto')
+const height = ref(60)
+const aspectCorrection = ref(0.5)
+const fitMode = ref('contain')
+const background = ref('white')
+const charsetPreset = ref('standard')
+const customCharset = ref('@%#*+=-:. ')
 const contrast = ref(0)
 const brightness = ref(0)
 const inverted = ref(false)
+const previewSize = ref(8)
 const asciiArt = ref('')
 const copied = ref(false)
 let originalImage = null
 let fileName = ''
 let debounceTimer = null
 
-const ASCII_CHARS = ['@', '%', '#', '*', '+', '=', '-', ':', '.', ' ']
+const CHARSETS = {
+    standard: '@%#*+=-:. ',
+    dense: '@$B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:",^`\'. ',
+    blocks: '█▓▒░ ',
+    binary: '10 '
+}
+
+const activeCharset = computed(() =>
+{
+    const selected = charsetPreset.value === 'custom'
+        ? String(customCharset.value ?? '')
+        : String(CHARSETS[charsetPreset.value] ?? CHARSETS.standard)
+
+    // Keep first occurrence order, avoid empty/1-char palettes.
+    const unique = Array.from(new Set(Array.from(selected)))
+    if (unique.length < 2)
+    {
+        return Array.from(CHARSETS.standard)
+    }
+    return unique
+})
 
 const handleImageUpload = (event) => {
     const file = event.target.files[0]
@@ -133,28 +276,76 @@ const updateAscii = () => {
     debounceTimer = setTimeout(generateAscii, 100)
 }
 
+const toIntOr = (value, fallback) =>
+{
+    const parsed = Number.parseInt(String(value ?? ''), 10)
+    return Number.isFinite(parsed) ? parsed : fallback
+}
+
 const generateAscii = () => {
     if (!originalImage) return
 
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
 
-    const aspectRatio = originalImage.height / originalImage.width
+    if (!ctx) return
 
-    const finalWidth = parseInt(width.value)
-    const finalHeight = Math.floor(finalWidth * aspectRatio * 0.5)
+    const finalWidth = Math.max(1, toIntOr(width.value, 100))
+
+    const aspectRatio = originalImage.height / originalImage.width
+    const computedHeight = Math.floor(finalWidth * aspectRatio * aspectCorrection.value)
+    const finalHeight = heightMode.value === 'fixed'
+        ? Math.max(1, toIntOr(height.value, computedHeight))
+        : Math.max(1, computedHeight)
+
+    // Basic safety guard to avoid freezing the tab on huge outputs.
+    const estimatedChars = finalWidth * finalHeight
+    const MAX_CHARS = 2_000_000
+    if (estimatedChars > MAX_CHARS)
+    {
+        asciiArt.value = t('page.tools.ascii-art-creator.too_large', { chars: estimatedChars.toLocaleString() })
+        return
+    }
 
     canvas.width = finalWidth
     canvas.height = finalHeight
 
-    ctx.drawImage(originalImage, 0, 0, finalWidth, finalHeight)
+    ctx.imageSmoothingEnabled = true
+    ctx.imageSmoothingQuality = 'high'
+
+    // In auto mode, we draw the image stretched to the ASCII grid size.
+    // The aspect correction is already encoded in the number of rows.
+    if (heightMode.value !== 'fixed')
+    {
+        ctx.drawImage(originalImage, 0, 0, finalWidth, finalHeight)
+    } else
+    {
+        ctx.fillStyle = background.value === 'black' ? 'black' : 'white'
+        ctx.fillRect(0, 0, finalWidth, finalHeight)
+
+        const srcW = originalImage.width
+        const srcH = originalImage.height
+        const scale = fitMode.value === 'cover'
+            ? Math.max(finalWidth / srcW, finalHeight / srcH)
+            : Math.min(finalWidth / srcW, finalHeight / srcH)
+
+        const drawW = srcW * scale
+        const drawH = srcH * scale
+        const dx = (finalWidth - drawW) / 2
+        const dy = (finalHeight - drawH) / 2
+
+        ctx.drawImage(originalImage, dx, dy, drawW, drawH)
+    }
 
     const imageData = ctx.getImageData(0, 0, finalWidth, finalHeight)
     const data = imageData.data
     
+    const chars = activeCharset.value
+    const charsLen = chars.length
     let ascii = ''
 
     for (let y = 0; y < finalHeight; y++) {
+        let line = ''
         for (let x = 0; x < finalWidth; x++) {
             const offset = (y * finalWidth + x) * 4
             let r = data[offset]
@@ -179,15 +370,15 @@ const generateAscii = () => {
 
             const gray = 0.2126 * r + 0.7152 * g + 0.0722 * b
 
-            let charIndex = Math.floor((gray / 255) * (ASCII_CHARS.length - 1))
+            let charIndex = Math.floor((gray / 255) * (charsLen - 1))
             
             if (inverted.value) {
-                charIndex = ASCII_CHARS.length - 1 - charIndex
+                charIndex = charsLen - 1 - charIndex
             }
 
-            ascii += ASCII_CHARS[charIndex]
+            line += chars[charIndex]
         }
-        ascii += '\n'
+        ascii += line + '\n'
     }
 
     asciiArt.value = ascii
@@ -200,6 +391,44 @@ const copyToClipboard = async () => {
         setTimeout(() => copied.value = false, 2000)
     } catch (err) {
         console.error('Failed to copy:', err)
+    }
+}
+
+const buildHtml = () =>
+{
+    const safeTitle = (fileName || 'ascii').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    const safeText = String(asciiArt.value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+
+        return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${safeTitle} - ASCII</title>
+  <style>
+        body { margin: 0; background: black; color: white; }
+    pre { margin: 0; padding: 16px; white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 8px; line-height: 8px; }
+  </style>
+</head>
+<body>
+  <pre>${safeText}</pre>
+</body>
+</html>`
+}
+
+const copyHtmlToClipboard = async () =>
+{
+    try
+    {
+        await navigator.clipboard.writeText(buildHtml())
+        copied.value = true
+        setTimeout(() => copied.value = false, 2000)
+    } catch (err)
+    {
+        console.error('Failed to copy HTML:', err)
     }
 }
 
@@ -216,5 +445,38 @@ const downloadAscii = () => {
     a.click()
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
+}
+
+const downloadHtml = () =>
+{
+    const blob = new Blob([buildHtml()], { type: 'text/html' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+
+    const nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName || 'ascii'
+    a.download = `${nameWithoutExt}-ascii.html`
+
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
+}
+
+const resetSettings = () =>
+{
+    width.value = 100
+    heightMode.value = 'auto'
+    height.value = 60
+    aspectCorrection.value = 0.5
+    fitMode.value = 'contain'
+    background.value = 'white'
+    charsetPreset.value = 'standard'
+    customCharset.value = '@%#*+=-:. '
+    contrast.value = 0
+    brightness.value = 0
+    inverted.value = false
+    previewSize.value = 8
+    generateAscii()
 }
 </script>
