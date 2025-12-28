@@ -1,4 +1,5 @@
 <template>
+    <GoogleAd adSlot="8188350235" customClass="mb-8" />
     <div class="max-w-screen-2xl mx-auto flex flex-col items-center">
         <h1>{{ $t("page.reaction-time.heading") }}</h1>
         <p class="mb-4 text-center whitespace-pre-wrap">{{ $t("page.reaction-time.instructions") }}</p>
@@ -74,6 +75,7 @@
             </div>
         </div>
     </div>
+    <GoogleAd adSlot="9501431902" customClass="mt-8" />
 </template>
 
 <script setup>
