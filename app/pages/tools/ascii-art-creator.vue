@@ -7,182 +7,17 @@
 
         <div class="w-full max-w-6xl p-6 glass-effect border-2 rounded-lg">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="space-y-6">
-                    <div class="flex flex-col gap-2">
-                        <label>{{ $t('page.tools.ascii-art-creator.upload_label') }}</label>
-                        <input
-                            type="file"
-                            accept="image/*"
-                            @change="handleImageUpload"
-                            class="w-full text-white p-2 bg-neutral-600 rounded-lg border-2 border-white/10"
-                        />
-                    </div>
-
-                    <hr />
-
-                    <div class="space-y-4">
-                        <details open class="group border-2 border-white/10 rounded-lg p-4">
-                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
-                                <span>{{ $t('page.tools.ascii-art-creator.section.size') }}</span>
-                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
-                            </summary>
-
-                            <div class="mt-4 space-y-4">
-                                <div class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.width_label') }}</label>
-                                    <TextField type="number" v-model="width" @input="updateAscii" min="10" max="100000" />
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.height_mode_label') }}</label>
-                                    <SelectField v-model="heightMode" @change="updateAscii">
-                                        <option value="auto">{{ $t('page.tools.ascii-art-creator.height_mode.auto') }}</option>
-                                        <option value="fixed">{{ $t('page.tools.ascii-art-creator.height_mode.fixed') }}</option>
-                                    </SelectField>
-                                </div>
-
-                                <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.height_label') }}</label>
-                                    <TextField type="number" v-model="height" @input="updateAscii" min="5" max="100000" />
-                                </div>
-
-                                <div v-else class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                        <label>{{ $t('page.tools.ascii-art-creator.aspect_correction_label') }}</label>
-                                        <span>{{ aspectCorrection.toFixed(2) }}</span>
-                                    </div>
-                                    <TextField type="range" min="0.30" max="1.00" step="0.01" v-model.number="aspectCorrection"
-                                        @input="updateAscii" class="accent-gift w-full" />
-                                </div>
-
-                                <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.fit_mode_label') }}</label>
-                                    <SelectField v-model="fitMode" @change="updateAscii">
-                                        <option value="contain">{{ $t('page.tools.ascii-art-creator.fit_mode.contain') }}</option>
-                                        <option value="cover">{{ $t('page.tools.ascii-art-creator.fit_mode.cover') }}</option>
-                                    </SelectField>
-                                </div>
-                            </div>
-                        </details>
-
-                        <details open class="group border-2 border-white/10 rounded-lg p-4">
-                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
-                                <span>{{ $t('page.tools.ascii-art-creator.section.image') }}</span>
-                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
-                            </summary>
-
-                            <div class="mt-4 space-y-4">
-                                <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.background_label') }}</label>
-                                    <SelectField v-model="background" @change="updateAscii">
-                                        <option value="white">{{ $t('page.tools.ascii-art-creator.background.white') }}</option>
-                                        <option value="black">{{ $t('page.tools.ascii-art-creator.background.black') }}</option>
-                                    </SelectField>
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                        <label>{{ $t('page.tools.ascii-art-creator.contrast_label') }}</label>
-                                        <span>{{ contrast }}</span>
-                                    </div>
-                                    <TextField type="range" min="-128" max="128" v-model.number="contrast" @input="updateAscii"
-                                        class="accent-gift w-full" />
-                                </div>
-
-                                <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                        <label>{{ $t('page.tools.ascii-art-creator.brightness_label') }}</label>
-                                        <span>{{ brightness }}</span>
-                                    </div>
-                                    <TextField type="range" min="-128" max="128" v-model.number="brightness" @input="updateAscii"
-                                        class="accent-gift w-full" />
-                                </div>
-
-                                <div class="pt-2 flex items-center justify-between">
-                                    <label>{{ $t('page.tools.ascii-art-creator.inverted_label') }}</label>
-                                    <CheckboxField v-model="inverted" @change="updateAscii" />
-                                </div>
-                            </div>
-                        </details>
-
-                        <details open class="group border-2 border-white/10 rounded-lg p-4">
-                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
-                                <span>{{ $t('page.tools.ascii-art-creator.section.characters') }}</span>
-                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
-                            </summary>
-
-                            <div class="mt-4 space-y-4">
-                                <div class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.charset_label') }}</label>
-                                    <SelectField v-model="charsetPreset" @change="updateAscii">
-                                        <option value="standard">{{ $t('page.tools.ascii-art-creator.charset.standard') }}</option>
-                                        <option value="dense">{{ $t('page.tools.ascii-art-creator.charset.dense') }}</option>
-                                        <option value="blocks">{{ $t('page.tools.ascii-art-creator.charset.blocks') }}</option>
-                                        <option value="binary">{{ $t('page.tools.ascii-art-creator.charset.binary') }}</option>
-                                        <option value="custom">{{ $t('page.tools.ascii-art-creator.charset.custom') }}</option>
-                                    </SelectField>
-                                </div>
-
-                                <div v-if="charsetPreset === 'custom'" class="flex flex-col gap-2">
-                                    <label>{{ $t('page.tools.ascii-art-creator.custom_charset_label') }}</label>
-                                    <TextField v-model="customCharset" @input="updateAscii" />
-                                </div>
-                            </div>
-                        </details>
-
-                        <details class="group border-2 border-white/10 rounded-lg p-4">
-                            <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
-                                <span>{{ $t('page.tools.ascii-art-creator.section.preview') }}</span>
-                                <IconDown class="size-4 transform transition-all group-open:rotate-180" />
-                            </summary>
-
-                            <div class="mt-4 space-y-4">
-                                <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                        <label>{{ $t('page.tools.ascii-art-creator.preview_size_label') }}</label>
-                                        <span>{{ previewSize }}px</span>
-                                    </div>
-                                    <TextField type="range" min="4" max="14" v-model.number="previewSize" class="accent-gift w-full" />
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-
-                    <hr />
-
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <div>
-                            <Button @click="copyToClipboard" :disabled="!asciiArt">
-                                <div class="flex items-center justify-center gap-2">
-                                    <IconShare v-if="copied" class="size-6 fill-white" />
-                                    <span>{{ copied ? $t('page.tools.ascii-art-creator.copied') : $t('page.tools.ascii-art-creator.copy_button') }}</span>
-                                </div>
-                            </Button>
-                        </div>
-                        <div>
-                            <Button @click="copyHtmlToClipboard" :disabled="!asciiArt">
-                                {{ $t('page.tools.ascii-art-creator.copy_html_button') }}
-                            </Button>
-                        </div>
-                        <div>
-                            <Button @click="downloadAscii" :disabled="!asciiArt">
-                                {{ $t('page.tools.ascii-art-creator.download_button') }}
-                            </Button>
-                        </div>
-                        <div>
-                            <Button @click="downloadHtml" :disabled="!asciiArt">
-                                {{ $t('page.tools.ascii-art-creator.download_html_button') }}
-                            </Button>
-                        </div>
-                        <div>
-                            <Button @click="resetSettings" :disabled="!originalImage">
-                                {{ $t('page.tools.ascii-art-creator.reset_button') }}
-                            </Button>
-                        </div>
-                    </div>
+                <div class="order-1 lg:order-1 flex flex-col gap-2">
+                    <FileUploadField
+                        v-model="uploadedFile"
+                        accept="image/*"
+                        :label="$t('page.tools.ascii-art-creator.upload_label')"
+                        :hint="$t('page.tools.ascii-art-creator.upload_hint')"
+                        @change="handleImageUpload"
+                    />
                 </div>
 
-                <div class="w-full">
+                <div class="order-2 lg:order-2 lg:row-span-3 w-full">
                     <div class="w-full aspect-square bg-black rounded-lg border-2 border-white/20 overflow-hidden relative">
                         <div v-if="!asciiArt"
                             class="absolute inset-0 flex flex-col items-center justify-center text-neutral-400 p-8 text-center">
@@ -190,13 +25,170 @@
                             <p class="text-sm">{{ $t('page.tools.ascii-art-creator.no_image_help') }}</p>
                         </div>
 
-                        <div v-else class="absolute inset-0 overflow-auto p-4">
+                        <div v-else class="absolute inset-0 overflow-auto p-4" @wheel.prevent="onPreviewWheel">
                             <pre
                                 class="font-mono text-white whitespace-pre select-all"
-                                :style="{ fontSize: `${previewSize}px`, lineHeight: `${previewSize}px` }"
+                                :style="{ fontSize: `${previewPx}px`, lineHeight: `${previewPx}px` }"
                             >{{ asciiArt }}</pre>
                         </div>
                     </div>
+                </div>
+
+                <div class="order-3 lg:order-3 lg:col-start-1 space-y-6">
+                    <hr class="hidden lg:block" />
+                    <hr class="lg:hidden" />
+
+                    <div class="space-y-4">
+                    <details open class="group border-2 border-white/10 rounded-lg p-4">
+                        <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                            <span>{{ $t('page.tools.ascii-art-creator.section.size') }}</span>
+                            <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                        </summary>
+
+                        <div class="mt-4 space-y-4">
+                            <div class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.width_label') }}</label>
+                                <TextField type="number" v-model="width" @input="updateAscii" min="10" max="100000" />
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.height_mode_label') }}</label>
+                                <SelectField v-model="heightMode" @change="updateAscii">
+                                    <option value="auto">{{ $t('page.tools.ascii-art-creator.height_mode.auto') }}</option>
+                                    <option value="fixed">{{ $t('page.tools.ascii-art-creator.height_mode.fixed') }}</option>
+                                </SelectField>
+                            </div>
+
+                            <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.height_label') }}</label>
+                                <TextField type="number" v-model="height" @input="updateAscii" min="5" max="100000" />
+                            </div>
+
+                            <div v-else class="flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <label>{{ $t('page.tools.ascii-art-creator.aspect_correction_label') }}</label>
+                                    <span>{{ aspectCorrection.toFixed(2) }}</span>
+                                </div>
+                                <TextField type="range" min="0.30" max="1.00" step="0.01" v-model.number="aspectCorrection"
+                                    @input="updateAscii" class="accent-gift w-full" />
+                            </div>
+
+                            <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.fit_mode_label') }}</label>
+                                <SelectField v-model="fitMode" @change="updateAscii">
+                                    <option value="contain">{{ $t('page.tools.ascii-art-creator.fit_mode.contain') }}</option>
+                                    <option value="cover">{{ $t('page.tools.ascii-art-creator.fit_mode.cover') }}</option>
+                                </SelectField>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details open class="group border-2 border-white/10 rounded-lg p-4">
+                        <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                            <span>{{ $t('page.tools.ascii-art-creator.section.image') }}</span>
+                            <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                        </summary>
+
+                        <div class="mt-4 space-y-4">
+                            <div v-if="heightMode === 'fixed'" class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.background_label') }}</label>
+                                <SelectField v-model="background" @change="updateAscii">
+                                    <option value="white">{{ $t('page.tools.ascii-art-creator.background.white') }}</option>
+                                    <option value="black">{{ $t('page.tools.ascii-art-creator.background.black') }}</option>
+                                </SelectField>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <label>{{ $t('page.tools.ascii-art-creator.contrast_label') }}</label>
+                                    <span>{{ contrast }}</span>
+                                </div>
+                                <TextField type="range" min="-128" max="128" v-model.number="contrast" @input="updateAscii"
+                                    class="accent-gift w-full" />
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <label>{{ $t('page.tools.ascii-art-creator.brightness_label') }}</label>
+                                    <span>{{ brightness }}</span>
+                                </div>
+                                <TextField type="range" min="-128" max="128" v-model.number="brightness" @input="updateAscii"
+                                    class="accent-gift w-full" />
+                            </div>
+
+                            <div class="pt-2 flex items-center justify-between">
+                                <label>{{ $t('page.tools.ascii-art-creator.inverted_label') }}</label>
+                                <CheckboxField v-model="inverted" @change="updateAscii" />
+                            </div>
+                        </div>
+                    </details>
+
+                    <details open class="group border-2 border-white/10 rounded-lg p-4">
+                        <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                            <span>{{ $t('page.tools.ascii-art-creator.section.characters') }}</span>
+                            <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                        </summary>
+
+                        <div class="mt-4 space-y-4">
+                            <div class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.charset_label') }}</label>
+                                <SelectField v-model="charsetPreset" @change="updateAscii">
+                                    <option value="standard">{{ $t('page.tools.ascii-art-creator.charset.standard') }}</option>
+                                    <option value="dense">{{ $t('page.tools.ascii-art-creator.charset.dense') }}</option>
+                                    <option value="blocks">{{ $t('page.tools.ascii-art-creator.charset.blocks') }}</option>
+                                    <option value="binary">{{ $t('page.tools.ascii-art-creator.charset.binary') }}</option>
+                                    <option value="custom">{{ $t('page.tools.ascii-art-creator.charset.custom') }}</option>
+                                </SelectField>
+                            </div>
+
+                            <div v-if="charsetPreset === 'custom'" class="flex flex-col gap-2">
+                                <label>{{ $t('page.tools.ascii-art-creator.custom_charset_label') }}</label>
+                                <TextField v-model="customCharset" @input="updateAscii" />
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="group border-2 border-white/10 rounded-lg p-4">
+                        <summary class="flex items-center justify-between text-white cursor-pointer select-none [&::-webkit-details-marker]:hidden">
+                            <span>{{ $t('page.tools.ascii-art-creator.section.preview') }}</span>
+                            <IconDown class="size-4 transform transition-all group-open:rotate-180" />
+                        </summary>
+
+                        <div class="mt-4 space-y-4">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <label>{{ $t('page.tools.ascii-art-creator.zoom_label') }}</label>
+                                    <span>{{ zoom.toFixed(2) }}×</span>
+                                </div>
+                                <TextField type="range" min="0.10" max="10.00" step="0.10" v-model.number="zoom" class="accent-gift w-full" />
+                                <p class="text-sm text-left  text-neutral-400">{{ $t('page.tools.ascii-art-creator.zoom_help') }}</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <hr />
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div>
+                        <Button @click="copyToClipboard" :disabled="!asciiArt">
+                            <div class="flex items-center justify-center gap-2">
+                                <IconShare v-if="copied" class="size-6 fill-white" />
+                                <span>{{ copied ? $t('page.tools.ascii-art-creator.copied') : $t('page.tools.ascii-art-creator.copy_button') }}</span>
+                            </div>
+                        </Button>
+                    </div>
+                    <div>
+                        <Button @click="downloadAscii" :disabled="!asciiArt">
+                            {{ $t('page.tools.ascii-art-creator.download_button') }}
+                        </Button>
+                    </div>
+                    <div>
+                        <Button @click="resetSettings" :disabled="!originalImage">
+                            {{ $t('page.tools.ascii-art-creator.reset_button') }}
+                        </Button>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -225,12 +217,33 @@ const customCharset = ref('@%#*+=-:. ')
 const contrast = ref(0)
 const brightness = ref(0)
 const inverted = ref(false)
-const previewSize = ref(8)
+const zoom = ref(1)
+const uploadedFile = ref(null)
+const PREVIEW_BASE_PX = 8
+const previewPx = computed(() =>
+{
+    const value = Number(zoom.value)
+    const safe = Number.isFinite(value) ? value : 1
+    return Math.max(1, Math.round(PREVIEW_BASE_PX * safe))
+})
 const asciiArt = ref('')
 const copied = ref(false)
 let originalImage = null
 let fileName = ''
 let debounceTimer = null
+
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value))
+
+const onPreviewWheel = (event) =>
+{
+    if (!event?.ctrlKey) return
+    event.preventDefault()
+
+    const delta = event.deltaY
+    const direction = delta > 0 ? -1 : 1
+    const next = clamp(Number(zoom.value) + direction * 0.1, 0.1, 10)
+    zoom.value = Number(next.toFixed(2))
+}
 
 const CHARSETS = {
     standard: '@%#*+=-:. ',
@@ -254,8 +267,7 @@ const activeCharset = computed(() =>
     return unique
 })
 
-const handleImageUpload = (event) => {
-    const file = event.target.files[0]
+const handleImageUpload = (file) => {
     if (!file) return
 
     fileName = file.name
@@ -394,44 +406,6 @@ const copyToClipboard = async () => {
     }
 }
 
-const buildHtml = () =>
-{
-    const safeTitle = (fileName || 'ascii').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    const safeText = String(asciiArt.value ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-
-        return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${safeTitle} - ASCII</title>
-  <style>
-        body { margin: 0; background: black; color: white; }
-    pre { margin: 0; padding: 16px; white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 8px; line-height: 8px; }
-  </style>
-</head>
-<body>
-  <pre>${safeText}</pre>
-</body>
-</html>`
-}
-
-const copyHtmlToClipboard = async () =>
-{
-    try
-    {
-        await navigator.clipboard.writeText(buildHtml())
-        copied.value = true
-        setTimeout(() => copied.value = false, 2000)
-    } catch (err)
-    {
-        console.error('Failed to copy HTML:', err)
-    }
-}
-
 const downloadAscii = () => {
     const blob = new Blob([asciiArt.value], { type: 'text/plain' })
     const url = URL.createObjectURL(blob)
@@ -441,22 +415,6 @@ const downloadAscii = () => {
     const nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName
     a.download = `${nameWithoutExt}-ascii.txt`
     
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
-}
-
-const downloadHtml = () =>
-{
-    const blob = new Blob([buildHtml()], { type: 'text/html' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-
-    const nameWithoutExt = fileName.substring(0, fileName.lastIndexOf('.')) || fileName || 'ascii'
-    a.download = `${nameWithoutExt}-ascii.html`
-
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -476,7 +434,7 @@ const resetSettings = () =>
     contrast.value = 0
     brightness.value = 0
     inverted.value = false
-    previewSize.value = 8
+    zoom.value = 1
     generateAscii()
 }
 </script>
