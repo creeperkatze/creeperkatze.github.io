@@ -6,18 +6,11 @@
         <div class="w-full max-w-xl p-6 glass-effect border-2 rounded-lg flex flex-col items-center space-y-4">
             <button
                 class="w-full h-48 rounded-lg border-2 transition select-none outline-none flex items-center justify-center text-2xl font-bold"
-                :class="areaClass"
-                @click="onAreaClick"
-                :disabled="state === 'idle'"
-            >
+                :class="areaClass" @click="onAreaClick" :disabled="state === 'idle'">
                 <div class="flex flex-col items-center justify-center gap-5">
                     <div class="flex items-center justify-center gap-3" aria-hidden="true">
-                        <span
-                            v-for="i in lightsTotal"
-                            :key="i"
-                            class="h-8 w-8 rounded-full border-2 transition"
-                            :class="lightClass(i)"
-                        />
+                        <span v-for="i in lightsTotal" :key="i" class="h-8 w-8 rounded-full border-2 transition"
+                            :class="lightClass(i)" />
                     </div>
                     <div>{{ areaText }}</div>
                 </div>
@@ -44,83 +37,39 @@
             </div>
 
             <div class="w-full">
-                <h3 class="text-center mb-2">{{ $t('page.reaction-time.graph.title') }}</h3>
+                <h3 class="text-center mb-2">{{ $t("page.reaction-time.graph.title") }}</h3>
                 <div class="w-full rounded-lg border-2 border-white/10 bg-neutral-600/40 p-2">
                     <svg class="w-full h-40" viewBox="0 0 400 180" role="img"
-                        :aria-label="$t('page.reaction-time.graph.aria')">
+                        :aria-label="$t("page.reaction-time.graph.aria")">
                         <rect x="0" y="0" width="400" height="160" fill="transparent" />
 
-                        <path
-                            v-if="curvePath"
-                            :d="curvePath"
-                            fill="none"
-                            stroke="currentColor"
-                            class="text-white"
-                            stroke-width="3"
-                            vector-effect="non-scaling-stroke"
-                        />
+                        <path v-if="curvePath" :d="curvePath" fill="none" stroke="currentColor" class="text-white"
+                            stroke-width="3" vector-effect="non-scaling-stroke" />
 
-                        <line
-                            :x1="meanX"
-                            y1="12"
-                            :x2="meanX"
-                            y2="148"
-                            stroke="currentColor"
-                            class="text-white/40"
-                            stroke-width="3"
-                            vector-effect="non-scaling-stroke"
-                        />
+                        <line :x1="meanX" y1="12" :x2="meanX" y2="148" stroke="currentColor" class="text-white/40"
+                            stroke-width="3" vector-effect="non-scaling-stroke" />
 
-                        <line
-                            v-if="bestMs !== null"
-                            :x1="bestMarkerX"
-                            y1="12"
-                            :x2="bestMarkerX"
-                            y2="148"
-                            stroke="currentColor"
-                            class="text-yellow-400"
-                            stroke-width="3"
-                            vector-effect="non-scaling-stroke"
-                        />
+                        <line v-if="bestMs !== null" :x1="bestMarkerX" y1="12" :x2="bestMarkerX" y2="148"
+                            stroke="currentColor" class="text-yellow-400" stroke-width="3"
+                            vector-effect="non-scaling-stroke" />
 
-                        <line
-                            v-if="lastMs !== null"
-                            :x1="markerX"
-                            y1="12"
-                            :x2="markerX"
-                            y2="148"
-                            stroke="currentColor"
-                            class="text-gift"
-                            stroke-width="3"
-                            vector-effect="non-scaling-stroke"
-                        />
+                        <line v-if="lastMs !== null" :x1="markerX" y1="12" :x2="markerX" y2="148" stroke="currentColor"
+                            class="text-gift" stroke-width="3" vector-effect="non-scaling-stroke" />
 
-                        <text
-                            v-if="lastMs !== null"
-                            :x="Math.min(392, Math.max(8, markerX + 6))"
-                            y="24"
-                            fill="currentColor"
-                            class="text-gift"
-                            font-size="18"
-                        >
-                            {{ $t('page.reaction-time.graph.your_time') }}: {{ lastMs }} ms
+                        <text v-if="lastMs !== null" :x="Math.min(392, Math.max(8, markerX + 6))" y="24"
+                            fill="currentColor" class="text-gift" font-size="18">
+                            {{ $t("page.reaction-time.graph.your_time") }}: {{ lastMs }} ms
                         </text>
 
-                        <text
-                            x="200"
-                            y="170"
-                            text-anchor="middle"
-                            fill="currentColor"
-                            class="text-white/70"
-                            font-size="18"
-                        >
-                            {{ $t('page.reaction-time.graph.axis_hint') }}
+                        <text x="200" y="170" text-anchor="middle" fill="currentColor" class="text-white/70"
+                            font-size="18">
+                            {{ $t("page.reaction-time.graph.axis_hint") }}
                         </text>
                     </svg>
                 </div>
 
                 <p v-if="bestMs !== null" class="mt-3 text-center">
-                    {{ $t('page.reaction-time.rank.top', { pct: bestTopPct }) }}
+                    {{ $t("page.reaction-time.rank.top", { pct: bestTopPct }) }}
                 </p>
             </div>
         </div>
@@ -316,7 +265,7 @@ const curvePath = computed(() =>
         const x = min + (i / samples) * (max - min);
         maxY = Math.max(maxY, normal(x));
     }
-    if (maxY <= 0) return '';
+    if (maxY <= 0) return "";
 
     const points = [];
     for (let i = 0; i <= samples; i++)
@@ -375,34 +324,34 @@ const meanX = computed(() =>
 
 const primaryLabel = computed(() =>
 {
-    if (state.value === 'idle') return t("page.reaction-time.button.start");
-    if (state.value === 'waiting') return t("page.reaction-time.button.cancel");
+    if (state.value === "idle") return t("page.reaction-time.button.start");
+    if (state.value === "waiting") return t("page.reaction-time.button.cancel");
     return t("page.reaction-time.button.try_again");
 });
 
 const areaText = computed(() =>
 {
-    if (state.value === 'idle') return t('page.reaction-time.status.idle');
-    if (state.value === 'waiting') return t('page.reaction-time.status.waiting');
-    if (state.value === 'ready') return t('page.reaction-time.status.ready');
-    if (state.value === 'tooSoon') return t('page.reaction-time.status.tooSoon');
-    return t('page.reaction-time.status.finished');
+    if (state.value === "idle") return t("page.reaction-time.status.idle");
+    if (state.value === "waiting") return t("page.reaction-time.status.waiting");
+    if (state.value === "ready") return t("page.reaction-time.status.ready");
+    if (state.value === "tooSoon") return t("page.reaction-time.status.tooSoon");
+    return t("page.reaction-time.status.finished");
 });
 
 const areaClass = computed(() =>
 {
-    if (state.value === 'waiting') return 'bg-red-600 border-red-300 text-white';
-    if (state.value === 'ready') return 'bg-green-600 border-green-300 text-white';
-    if (state.value === 'tooSoon') return 'bg-yellow-400 border-yellow-600 text-black';
-    return 'bg-neutral-600 border-white/20 text-white disabled:opacity-60 disabled:cursor-not-allowed';
+    if (state.value === "waiting") return "bg-red-600 border-red-300 text-white";
+    if (state.value === "ready") return "bg-green-600 border-green-300 text-white";
+    if (state.value === "tooSoon") return "bg-yellow-400 border-yellow-600 text-black";
+    return "bg-neutral-600 border-white/20 text-white disabled:opacity-60 disabled:cursor-not-allowed";
 });
 
 const lightClass = (index) =>
 {
-    const isLit = state.value === 'waiting' && index <= lightsOnCount.value;
+    const isLit = state.value === "waiting" && index <= lightsOnCount.value;
     return isLit
-        ? 'bg-red-600 border-red-300'
-        : 'bg-neutral-900/40 border-white/20';
+        ? "bg-red-600 border-red-300"
+        : "bg-neutral-900/40 border-white/20";
 };
 
 onUnmounted(() =>
