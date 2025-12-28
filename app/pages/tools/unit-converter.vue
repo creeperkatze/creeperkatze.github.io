@@ -1,6 +1,8 @@
 <template>
+    <GoogleAd adSlot="7373127864" customClass="mb-8" />
+
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.unit-converter.title') }}</h1>
+        <h1>{{ $t('page.tools.tool.unit-converter.title') }}</h1>
         <P>{{ $t('page.tools.tool.unit-converter.description') }}</P>
         <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">

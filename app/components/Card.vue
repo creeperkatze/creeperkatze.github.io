@@ -4,7 +4,7 @@
         <div class="h-full flex flex-col">
             <NuxtImg :src="image" class="object-cover w-full" :alt="alt" />
             <div class="p-5">
-                <h3 class="mb-2 font-bold text-white">{{ title }}</h3>
+                <h3 class="mb-2 text-white">{{ title }}</h3>
                 <p class="mb-3 text-white">{{ description }}</p>
             </div>
         </div>

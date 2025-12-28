@@ -1,23 +1,28 @@
 <template>
+    <GoogleAd adSlot="2157278442" customClass="mb-8" />
+
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.ascii-art-creator.title') }}</h1>
+        <h1>{{ $t('page.tools.tool.ascii-art-creator.title') }}</h1>
         <p>{{ $t('page.tools.tool.ascii-art-creator.description') }}</p>
 
-        <div class="w-full max-w-7xl p-6 glass-effect border-2 rounded-lg">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                
-                <div class="lg:col-span-4 space-y-6">
-                    
+        <div class="w-full max-w-6xl p-6 glass-effect border-2 rounded-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="space-y-6">
                     <div class="flex flex-col gap-2">
-                        <label class="font-bold">{{ $t('page.tools.ascii-art-creator.upload_label') }}</label>
-                        <input type="file" accept="image/*" @change="handleImageUpload" class="file-input file-input-bordered w-full text-white" />
+                        <label>{{ $t('page.tools.ascii-art-creator.upload_label') }}</label>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            @change="handleImageUpload"
+                            class="w-full text-white p-2 bg-neutral-600 rounded-lg border-2 border-white/10"
+                        />
                     </div>
 
                     <hr />
 
                     <div class="space-y-4">
                         <div class="flex flex-col gap-2">
-                            <label class="font-bold">{{ $t('page.tools.ascii-art-creator.width_label') }}</label>
+                            <label>{{ $t('page.tools.ascii-art-creator.width_label') }}</label>
                             <TextField type="number" v-model="width" @input="updateAscii" min="10" max="100000" />
                         </div>
 
@@ -26,7 +31,8 @@
                                 <label>{{ $t('page.tools.ascii-art-creator.contrast_label') }}</label>
                                 <span>{{ contrast }}</span>
                             </div>
-                            <TextField type="range" min="-128" max="128" v-model.number="contrast" @input="updateAscii" class="accent-gift w-full" />
+                            <TextField type="range" min="-128" max="128" v-model.number="contrast" @input="updateAscii"
+                                class="accent-gift w-full" />
                         </div>
 
                         <div class="flex flex-col gap-2">
@@ -34,7 +40,8 @@
                                 <label>{{ $t('page.tools.ascii-art-creator.brightness_label') }}</label>
                                 <span>{{ brightness }}</span>
                             </div>
-                            <TextField type="range" min="-128" max="128" v-model.number="brightness" @input="updateAscii" class="accent-gift w-full" />
+                            <TextField type="range" min="-128" max="128" v-model.number="brightness" @input="updateAscii"
+                                class="accent-gift w-full" />
                         </div>
 
                         <div class="pt-2 flex items-center justify-between">
@@ -45,45 +52,37 @@
 
                     <hr />
 
-                    <div class="grid grid-cols-2 gap-3">
-                        <Button @click="copyToClipboard" class="w-full" :disabled="!asciiArt">
-                            <div class="flex items-center justify-center gap-2">
-                                <IconShare v-if="copied" class="w-5 h-5" />
-                                <span>{{ copied ? $t('page.tools.ascii-art-creator.copied') : $t('page.tools.ascii-art-creator.copy_button') }}</span>
-                            </div>
-                        </Button>
-                        <Button @click="downloadAscii" class="w-full" :disabled="!asciiArt">
-                            {{ $t('page.tools.ascii-art-creator.download_button') }}
-                        </Button>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div>
+                            <Button @click="copyToClipboard" :disabled="!asciiArt">
+                                <div class="flex items-center justify-center gap-2">
+                                    <IconShare v-if="copied" class="size-6 fill-white" />
+                                    <span>{{ copied ? $t('page.tools.ascii-art-creator.copied') : $t('page.tools.ascii-art-creator.copy_button') }}</span>
+                                </div>
+                            </Button>
+                        </div>
+                        <div>
+                            <Button @click="downloadAscii" :disabled="!asciiArt">
+                                {{ $t('page.tools.ascii-art-creator.download_button') }}
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-8 flex flex-col h-full min-h-[500px]">
-                    <div class="flex-1 bg-black rounded-lg border-2 border-white/20 shadow-inner overflow-hidden relative group">
-                        <div v-if="!asciiArt" class="absolute inset-0 flex flex-col items-center justify-center text-gray-500 space-y-4 p-8 text-center">
-                            <div class="w-20 h-20 border-4 border-dashed border-gray-600 rounded-full flex items-center justify-center">
-                                <span class="text-4xl font-bold opacity-50">?</span>
-                            </div>
-                            <div>
-                                <p class="text-lg font-bold">No Image Selected</p>
-                                <p class="text-sm opacity-70">Upload an image to generate ASCII art</p>
-                            </div>
+                <div class="flex flex-col h-full min-h-[500px]">
+                    <div class="flex-1 bg-black rounded-lg border-2 border-white/20 overflow-hidden relative">
+                        <div v-if="!asciiArt"
+                            class="absolute inset-0 flex flex-col items-center justify-center text-neutral-400 p-8 text-center">
+                            <p>{{ $t('page.tools.ascii-art-creator.no_image_selected') }}</p>
+                            <p class="text-sm">{{ $t('page.tools.ascii-art-creator.no_image_help') }}</p>
                         </div>
 
                         <div v-else class="absolute inset-0 overflow-auto p-4">
-                            <pre class="text-[6px] md:text-[8px] leading-[6px] md:leading-[8px] font-mono text-white whitespace-pre font-bold select-all" 
-                                 style="font-family: 'Courier New', Courier, monospace;">{{ asciiArt }}</pre>
-                        </div>
-                        
-                        <div v-if="asciiArt" class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            <button @click="copyToClipboard" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white p-2 rounded-lg border border-white/10 transition-colors">
-                                <IconShare v-if="copied" class="w-5 h-5 text-green-400" />
-                                <span v-else>Copy</span>
-                            </button>
+                            <pre
+                                class="text-[6px] md:text-[8px] leading-[6px] md:leading-[8px] font-mono text-white whitespace-pre select-all">{{ asciiArt }}</pre>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

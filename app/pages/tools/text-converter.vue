@@ -1,11 +1,12 @@
 <template>
+    <GoogleAd adSlot="9464104582" customClass="mb-8" />
+
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.case-converter.title') }}</h1>
-        <p>{{ $t('page.tools.tool.case-converter.description') }}</p>
+        <h1>{{ $t('page.tools.tool.text-converter.title') }}</h1>
+        <p>{{ $t('page.tools.tool.text-converter.description') }}</p>
         <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <TextareaField ref="inputRef" v-model="input" class="h-60"
-                :placeholder="$t('page.tools.tool.case-converter.input.placeholder')" @scroll="onInputScroll" />
-
+                :placeholder="$t('page.tools.tool.text-converter.input.placeholder')" @scroll="onInputScroll" />
             <div ref="outputRef"
                 class="text-left h-60 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto border-2 border-white/10"
                 @scroll="onOutputScroll">
@@ -13,30 +14,30 @@
             </div>
 
             <div class="flex flex-col sm:flex-row sm:items-end gap-3">
-                <label class="sm:self-center">{{ $t('page.tools.tool.case-converter.mode') }}:</label>
+                <label class="sm:self-center">{{ $t('page.tools.tool.text-converter.mode') }}:</label>
                 <SelectField v-model="mode">
-                    <option value="lower">{{ $t('page.tools.tool.case-converter.mode.lower') }}</option>
-                    <option value="upper">{{ $t('page.tools.tool.case-converter.mode.upper') }}</option>
-                    <option value="title">{{ $t('page.tools.tool.case-converter.mode.title') }}</option>
-                    <option value="swap">{{ $t('page.tools.tool.case-converter.mode.swap') }}</option>
-                    <option value="alternating">{{ $t('page.tools.tool.case-converter.mode.alternating') }}</option>
-                    <option value="camel">{{ $t('page.tools.tool.case-converter.mode.camel') }}</option>
-                    <option value="pascal">{{ $t('page.tools.tool.case-converter.mode.pascal') }}</option>
-                    <option value="snake">{{ $t('page.tools.tool.case-converter.mode.snake') }}</option>
-                    <option value="constant">{{ $t('page.tools.tool.case-converter.mode.constant') }}</option>
-                    <option value="kebab">{{ $t('page.tools.tool.case-converter.mode.kebab') }}</option>
-                    <option value="dot">{{ $t('page.tools.tool.case-converter.mode.dot') }}</option>
-                    <option value="path">{{ $t('page.tools.tool.case-converter.mode.path') }}</option>
-                    <option value="slug">{{ $t('page.tools.tool.case-converter.mode.slug') }}</option>
+                    <option value="lower">{{ $t('page.tools.tool.text-converter.mode.lower') }}</option>
+                    <option value="upper">{{ $t('page.tools.tool.text-converter.mode.upper') }}</option>
+                    <option value="title">{{ $t('page.tools.tool.text-converter.mode.title') }}</option>
+                    <option value="swap">{{ $t('page.tools.tool.text-converter.mode.swap') }}</option>
+                    <option value="alternating">{{ $t('page.tools.tool.text-converter.mode.alternating') }}</option>
+                    <option value="camel">{{ $t('page.tools.tool.text-converter.mode.camel') }}</option>
+                    <option value="pascal">{{ $t('page.tools.tool.text-converter.mode.pascal') }}</option>
+                    <option value="snake">{{ $t('page.tools.tool.text-converter.mode.snake') }}</option>
+                    <option value="constant">{{ $t('page.tools.tool.text-converter.mode.constant') }}</option>
+                    <option value="kebab">{{ $t('page.tools.tool.text-converter.mode.kebab') }}</option>
+                    <option value="dot">{{ $t('page.tools.tool.text-converter.mode.dot') }}</option>
+                    <option value="path">{{ $t('page.tools.tool.text-converter.mode.path') }}</option>
+                    <option value="slug">{{ $t('page.tools.tool.text-converter.mode.slug') }}</option>
                 </SelectField>
                 <div class="flex items-center gap-3 sm:ml-auto sm:self-end">
                     <div class="flex items-center space-x-2">
-                        <label>{{ $t('page.tools.tool.case-converter.syncScroll') }}</label>
+                        <label>{{ $t('page.tools.tool.text-converter.syncScroll') }}</label>
                         <CheckboxField v-model="syncScroll" />
                     </div>
                     <Button @click="copyToClipboard">
-                        {{ copied ? $t('page.tools.tool.case-converter.copied') :
-                            $t('page.tools.tool.case-converter.copy') }}
+                        {{ copied ? $t('page.tools.tool.text-converter.copied') :
+                            $t('page.tools.tool.text-converter.copy') }}
                     </Button>
                 </div>
 
@@ -167,8 +168,8 @@ const copyToClipboard = () =>
 };
 
 definePageMeta({
-    title: 'page.tools.tool.case-converter.title',
-    description: 'page.tools.tool.case-converter.description',
-    image: '/images/seo/case-converter.jpg'
+    title: 'page.tools.tool.text-converter.title',
+    description: 'page.tools.tool.text-converter.description',
+    image: '/images/seo/text-converter.jpg'
 });
 </script>

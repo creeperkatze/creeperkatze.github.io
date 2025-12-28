@@ -19,7 +19,8 @@
                     <NuxtLink :to="localePath('/blog/')" class="navbar-element">{{ $t('navbar.blog') }}</NuxtLink>
                     <Dropdown :title="$t('navbar.tools')" titleLink="/tools/" :items="[
                         { name: $t('navbar.password-generator'), link: '/tools/password-generator/' },
-                        { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
+                        { name: $t('navbar.text-converter'), link: '/tools/text-converter/' },
+                        { name: $t('navbar.font-changer'), link: '/tools/font-changer/' },
                         { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
                         { name: $t('navbar.color-converter'), link: '/tools/color-converter/' },
                         { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },
@@ -110,7 +111,8 @@
                     {{ $t('navbar.blog') }}</NuxtLink>
                 <DropdownDrawer :title="$t('navbar.tools')" titleLink="/tools/" :items="[
                     { name: $t('navbar.password-generator'), link: '/tools/password-generator/' },
-                    { name: $t('navbar.case-converter'), link: '/tools/case-converter/' },
+                    { name: $t('navbar.text-converter'), link: '/tools/text-converter/' },
+                    { name: $t('navbar.font-changer'), link: '/tools/font-changer/' },
                     { name: $t('navbar.unit-converter'), link: '/tools/unit-converter/' },
                     { name: $t('navbar.color-converter'), link: '/tools/color-converter/' },
                     { name: $t('navbar.stopwatch'), link: '/tools/stopwatch/' },

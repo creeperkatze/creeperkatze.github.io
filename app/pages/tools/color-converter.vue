@@ -1,4 +1,6 @@
 <template>
+    <GoogleAd adSlot="8438140988" customClass="mb-8" />
+
     <div class="flex flex-col items-center justify-center space-y-4">
         <h1>{{ $t('page.tools.tool.color-converter.title') }}</h1>
         <p>{{ $t('page.tools.tool.color-converter.description') }}</p>
@@ -6,23 +8,14 @@
         <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-8">
 
             <div class="flex flex-col md:flex-row gap-6">
-                <div
-                    class="w-full md:w-1/3 aspect-square rounded-2xl shadow-lg relative overflow-hidden group border-2 border-white/10">
-                    <div class="absolute inset-0 transition-colors duration-200"
-                        :style="{ backgroundColor: hexString }"></div>
-                    <input type="color" v-model="hexString"
-                        class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
-                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <span
-                            class="bg-black/50 text-white px-3 py-1 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                            {{ $t('page.tools.tool.color-converter.picker') }}
-                        </span>
-                    </div>
+                <div class="w-full md:w-1/3 aspect-square rounded-lg relative overflow-hidden border-2 border-white/10">
+                    <div class="absolute inset-0" :style="{ backgroundColor: hexString }"></div>
+                    <input type="color" v-model="hexString" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
                 </div>
 
                 <div class="w-full md:w-2/3 grid grid-cols-1 gap-4 content-center">
                     <div class="flex flex-col gap-1">
-                        <label class="text-gray-300">{{ $t('page.tools.tool.color-converter.hex') }}</label>
+                        <label>{{ $t('page.tools.tool.color-converter.hex') }}</label>
                         <div class="flex flex-wrap gap-2">
                             <TextField v-model="hexInput" @blur="updateFromHex" @keyup.enter="updateFromHex"
                                 placeholder="#000000" class="flex-1 font-mono" />
@@ -34,7 +27,7 @@
                     </div>
 
                     <div class="flex flex-col gap-1">
-                        <label class="text-gray-300">{{ $t('page.tools.tool.color-converter.rgb') }}</label>
+                        <label>{{ $t('page.tools.tool.color-converter.rgb') }}</label>
                         <div class="flex flex-wrap gap-2">
                             <TextField v-model="rgbInput" @blur="updateFromRgb" @keyup.enter="updateFromRgb"
                                 placeholder="rgb(0, 0, 0)" class="flex-1 font-mono" />
@@ -46,7 +39,7 @@
                     </div>
 
                     <div class="flex flex-col gap-1">
-                        <label class="text-gray-300">{{ $t('page.tools.tool.color-converter.hsl') }}</label>
+                        <label>{{ $t('page.tools.tool.color-converter.hsl') }}</label>
                         <div class="flex flex-wrap gap-2">
                             <TextField v-model="hslInput" @blur="updateFromHsl" @keyup.enter="updateFromHsl"
                                 placeholder="hsl(0, 0%, 0%)" class="flex-1 font-mono" />
@@ -64,7 +57,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div class="flex flex-col gap-1">
-                    <label class="text-gray-300">{{ $t('page.tools.tool.color-converter.hsv') }}</label>
+                    <label>{{ $t('page.tools.tool.color-converter.hsv') }}</label>
                     <div class="flex flex-wrap gap-2">
                         <TextField v-model="hsvInput" @blur="updateFromHsv" @keyup.enter="updateFromHsv"
                             placeholder="hsv(0, 0%, 0%)" class="flex-1 font-mono" />
@@ -76,7 +69,7 @@
                 </div>
 
                 <div class="flex flex-col gap-1">
-                    <label class="text-gray-300">{{ $t('page.tools.tool.color-converter.cmyk') }}</label>
+                    <label>{{ $t('page.tools.tool.color-converter.cmyk') }}</label>
                     <div class="flex flex-wrap gap-2">
                         <TextField v-model="cmykInput" @blur="updateFromCmyk" @keyup.enter="updateFromCmyk"
                             placeholder="cmyk(0%, 0%, 0%, 0%)" class="flex-1 font-mono" />
@@ -94,10 +87,10 @@
                 <h3>{{ $t('page.tools.tool.color-converter.schemes') }}</h3>
 
                 <div class="space-y-2">
-                    <h4 class="text-gray-300">{{ $t('page.tools.tool.color-converter.scheme.complementary') }}</h4>
+                    <h4>{{ $t('page.tools.tool.color-converter.scheme.complementary') }}</h4>
                     <div class="flex h-16 rounded-lg overflow-hidden border-2 border-white/10 cursor-pointer">
-                        <div class="flex-1 transition-colors" :style="{ backgroundColor: hexString }"></div>
-                        <div class="flex-1 transition-colors hover:opacity-90"
+                        <div class="flex-1" :style="{ backgroundColor: hexString }"></div>
+                        <div class="flex-1"
                             :style="{ backgroundColor: complementaryColor }" @click="setColor(complementaryColor)"
                             :title="complementaryColor">
                         </div>
@@ -105,20 +98,20 @@
                 </div>
 
                 <div class="space-y-2">
-                    <h4 class="text-gray-300">{{ $t('page.tools.tool.color-converter.scheme.analogous') }}</h4>
+                    <h4>{{ $t('page.tools.tool.color-converter.scheme.analogous') }}</h4>
                     <div class="flex h-16 rounded-lg overflow-hidden border-2 border-white/10 cursor-pointer">
                         <div v-for="color in analogousColors" :key="color"
-                            class="flex-1 transition-colors hover:opacity-90" :style="{ backgroundColor: color }"
+                            class="flex-1" :style="{ backgroundColor: color }"
                             @click="setColor(color)" :title="color">
                         </div>
                     </div>
                 </div>
 
                 <div class="space-y-2">
-                    <h4 class="text-gray-300">{{ $t('page.tools.tool.color-converter.scheme.triadic') }}</h4>
+                    <h4>{{ $t('page.tools.tool.color-converter.scheme.triadic') }}</h4>
                     <div class="flex h-16 rounded-lg overflow-hidden border-2 border-white/10 cursor-pointer">
                         <div v-for="color in triadicColors" :key="color"
-                            class="flex-1 transition-colors hover:opacity-90" :style="{ backgroundColor: color }"
+                            class="flex-1" :style="{ backgroundColor: color }"
                             @click="setColor(color)" :title="color">
                         </div>
                     </div>
@@ -132,14 +125,14 @@
                 <div class="flex flex-col gap-2">
                     <div class="flex h-12 rounded-lg overflow-hidden border-2 border-white/10">
                         <div v-for="color in tints" :key="color"
-                            class="flex-1 transition-colors hover:opacity-90 cursor-pointer"
-                            :style="{ backgroundColor: color }" @click="setColor(color)" :title="color">
+                            class="flex-1 cursor-pointer" :style="{ backgroundColor: color }"
+                            @click="setColor(color)" :title="color">
                         </div>
                     </div>
                     <div class="flex h-12 rounded-lg overflow-hidden border-2 border-white/10">
                         <div v-for="color in shades" :key="color"
-                            class="flex-1 transition-colors hover:opacity-90 cursor-pointer"
-                            :style="{ backgroundColor: color }" @click="setColor(color)" :title="color">
+                            class="flex-1 cursor-pointer" :style="{ backgroundColor: color }"
+                            @click="setColor(color)" :title="color">
                         </div>
                     </div>
                 </div>
@@ -150,26 +143,22 @@
             <div class="space-y-4">
                 <h3>{{ $t('page.tools.tool.color-converter.accessibility') }}</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/20"
-                        :style="{ backgroundColor: hexString }">
-                        <span class="text-white">{{ $t('page.tools.tool.color-converter.text_color') }}
-                            (White)</span>
-                        <div class="bg-black/50 backdrop-blur-md px-3 py-1 rounded text-white">
+                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/20" :style="{ backgroundColor: hexString }">
+                        <span class="text-white">{{ $t('page.tools.tool.color-converter.text_color') }} (White)</span>
+                        <div class="px-3 py-1 rounded text-white">
                             {{ contrastWhite.toFixed(2) }}:1
-                            <span v-if="contrastWhite >= 7" class="text-green-400">AAA</span>
-                            <span v-else-if="contrastWhite >= 4.5" class="text-green-400">AA</span>
-                            <span v-else class="text-red-400">Fail</span>
+                            <span v-if="contrastWhite >= 7">AAA</span>
+                            <span v-else-if="contrastWhite >= 4.5">AA</span>
+                            <span v-else>Fail</span>
                         </div>
                     </div>
-                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/20"
-                        :style="{ backgroundColor: hexString }">
-                        <span class="text-black">{{ $t('page.tools.tool.color-converter.text_color') }}
-                            (Black)</span>
-                        <div class="bg-white/50 backdrop-blur-md px-3 py-1 rounded text-black">
-                            {{ contrastBlack.toFixed(2) }}:1    
-                            <span v-if="contrastBlack >= 7" class="text-green-600">AAA</span>
-                            <span v-else-if="contrastBlack >= 4.5" class="text-green-600">AA</span>
-                            <span v-else class="text-red-600">Fail</span>
+                    <div class="p-4 rounded-lg flex items-center justify-between border-2 border-white/20" :style="{ backgroundColor: hexString }">
+                        <span class="text-black">{{ $t('page.tools.tool.color-converter.text_color') }} (Black)</span>
+                        <div class="px-3 py-1 rounded text-black">
+                            {{ contrastBlack.toFixed(2) }}:1
+                            <span v-if="contrastBlack >= 7">AAA</span>
+                            <span v-else-if="contrastBlack >= 4.5">AA</span>
+                            <span v-else>Fail</span>
                         </div>
                     </div>
                 </div>

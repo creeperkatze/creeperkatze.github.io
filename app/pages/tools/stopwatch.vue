@@ -1,9 +1,11 @@
 <template>
+    <GoogleAd adSlot="8657632835" customClass="mb-8" />
+
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1 class="text-3xl font-bold">{{ $t('page.tools.tool.stopwatch.title') }}</h1>
+        <h1>{{ $t('page.tools.tool.stopwatch.title') }}</h1>
         <p>{{ $t('page.tools.tool.stopwatch.description') }}</p>
         <div class="w-full max-w-md p-8 glass-effect border-2 rounded-lg flex flex-col items-center space-y-6">
-            <div class="text-6xl font-mono font-bold tracking-wider text-white">
+            <div class="text-6xl font-mono text-white">
                 {{ formattedTime }}
             </div>
 
@@ -20,8 +22,8 @@
             </div>
 
             <div v-if="rounds.length > 0" class="w-full space-y-2">
-                <h2 class="text-xl font-bold text-center">{{ $t('page.tools.tool.stopwatch.rounds') }}</h2>
-                <div class="max-h-60 overflow-y-auto space-y-2 pr-2 custom-scrollbar">
+                <h3 class="text-center">{{ $t('page.tools.tool.stopwatch.rounds') }}</h3>
+                <div class="max-h-60 overflow-y-auto space-y-2 pr-2">
                     <div v-for="(round, index) in rounds" :key="index"
                         class="flex justify-between text-white bg-neutral-600 p-2 rounded-lg border-2 border-white/10">
                         <span>#{{ rounds.length - index }}</span>

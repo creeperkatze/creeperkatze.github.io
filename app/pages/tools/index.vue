@@ -4,8 +4,10 @@
         <div class="grid grid-cols-3 gap-2">
             <SmallCard :link="localePath('/tools/password-generator/')" image="/images/seo/password-generator.jpg"
                 :alt="$t('page.tools.tool.password-generator.title')" :title="$t('page.tools.tool.password-generator.title')" />
-            <SmallCard :link="localePath('/tools/case-converter/')" image="/images/seo/case-converter.jpg"
-                :alt="$t('page.tools.tool.case-converter.title')" :title="$t('page.tools.tool.case-converter.title')" />
+            <SmallCard :link="localePath('/tools/text-converter/')" image="/images/seo/text-converter.jpg"
+                :alt="$t('page.tools.tool.text-converter.title')" :title="$t('page.tools.tool.text-converter.title')" />
+            <SmallCard :link="localePath('/tools/font-changer/')" image="/images/seo/font-changer.jpg"
+                :alt="$t('page.tools.tool.font-changer.title')" :title="$t('page.tools.tool.font-changer.title')" />
             <SmallCard :link="localePath('/tools/unit-converter/')" image="/images/seo/unit-converter.jpg"
                 :alt="$t('page.tools.tool.unit-converter.title')" :title="$t('page.tools.tool.unit-converter.title')" />
             <SmallCard :link="localePath('/tools/stopwatch/')" image="/images/seo/stopwatch.jpg"
