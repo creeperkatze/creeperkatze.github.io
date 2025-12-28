@@ -67,7 +67,7 @@
     "page.superslide.description": "Slide through epic levels, spend your time in endless mode and climb the leaderboards!",
     "page.superslide.mirror_reminder": "Mirror version coming here soon...",
     "page.superslide.legal": "Legal",
-    "page.superslide.privacy_policy": "Privacy Policy",
+    "page.superslide.privacy_policy": "Privacy",
     "page.superslide.terms": "Terms & Conditions",
     "page.superslide.disclaimer.text": "This is the web version of Superslide. Your progress is only saved locally for this browser and website combination.",
     "page.superslide.disclaimer.button": "Continue",
@@ -488,7 +488,7 @@
     "page.tools.ascii-art-creator.no_image_help": "Upload an image to generate ASCII art",
     "page.tools.ascii-art-creator.too_large": "Output too large ({chars} characters). Reduce width/height.",
 
-    "page.privacy.title": "Privacy Policy",
+    "page.privacy.title": "Privacy",
     "page.privacy.description": "",
 
     "page.error.404": "Even this cute cat couldn't find the page you were looking for ;(",
