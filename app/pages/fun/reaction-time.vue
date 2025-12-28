@@ -101,7 +101,7 @@
                             y="24"
                             fill="currentColor"
                             class="text-gift"
-                            font-size="12"
+                            font-size="18"
                         >
                             {{ $t('page.reaction-time.graph.your_time') }}: {{ lastMs }} ms
                         </text>
@@ -112,7 +112,7 @@
                             text-anchor="middle"
                             fill="currentColor"
                             class="text-white/70"
-                            font-size="16"
+                            font-size="18"
                         >
                             {{ $t('page.reaction-time.graph.axis_hint') }}
                         </text>
