@@ -67,7 +67,7 @@
     "page.superslide.description": "Slide durch epische Level, verbringe deine Zeit im Endlosmodus und erklimme die Ranglisten!",
     "page.superslide.mirror_reminder": "Hier erscheint bald eine Mirror-Version...",
     "page.superslide.legal": "Legales",
-    "page.superslide.privacy_policy": "Datenschutzerklärung",
+    "page.superslide.privacy_policy": "Datenschutz",
     "page.superslide.terms": "Nutzungsbedingungen",
     "page.superslide.disclaimer.text": "Dies ist die Web-Version von Superslide. Dein Fortschritt wird nur für diese Browser- und diese Websitenkombination lokal gespeichert.",
     "page.superslide.disclaimer.button": "Fortfahren",
@@ -488,7 +488,7 @@
     "page.tools.ascii-art-creator.no_image_help": "Lade ein Bild hoch, um ASCII-Art zu erzeugen",
     "page.tools.ascii-art-creator.too_large": "Ausgabe ist zu groß ({chars} Zeichen). Reduziere Breite/Höhe.",
 
-    "page.privacy.title": "Datenschutzerklärung",
+    "page.privacy.title": "Datenschutz",
     "page.privacy.description": "",
 
     "page.error.404": "Selbst diese süße Katze konnte die gesuchte Seite nicht finden ;(",
