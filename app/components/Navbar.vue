@@ -95,8 +95,9 @@
     <Transition enter-active-class="transition duration-100 ease-out" enter-from-class="transform -translate-y-full"
         enter-to-class="transform translate-y-0" leave-active-class="transition duration-100 ease-in"
         leave-from-class="transform translate-y-0" leave-to-class="transform -translate-y-full">
-        <div v-show="drawerOpen" class="glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-2 right-2"
-            style="top:5.5rem;" data-nosnippet>
+        <div v-show="drawerOpen"
+            class="glass-effect border-2 rounded-lg py-4 z-30 lg:hidden fixed left-2 right-2 overflow-y-auto scrollbar-hidden"
+            style="top:5.5rem; max-height: calc(100vh - 6.5rem); -webkit-overflow-scrolling: touch;" data-nosnippet>
             <nav class="flex flex-col text-left space-y-4 ml-4">
                 <NuxtLink :to="localePath('/')" class="navbar-element text-left" @click="drawerOpen = !drawerOpen">
                     {{ $t('navbar.home') }}</NuxtLink>
@@ -226,5 +227,16 @@ nav,
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.scrollbar-hidden
+{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar
+{
+    display: none;
 }
 </style>
