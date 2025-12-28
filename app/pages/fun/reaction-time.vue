@@ -40,7 +40,7 @@
                 <h3 class="text-center mb-2">{{ $t("page.reaction-time.graph.title") }}</h3>
                 <div class="w-full rounded-lg border-2 border-white/10 bg-neutral-600/40 p-2">
                     <svg class="w-full h-40" viewBox="0 0 400 180" role="img"
-                        :aria-label="$t("page.reaction-time.graph.aria")">
+                        :aria-label="$t('page.reaction-time.graph.aria')">
                         <rect x="0" y="0" width="400" height="160" fill="transparent" />
 
                         <path v-if="curvePath" :d="curvePath" fill="none" stroke="currentColor" class="text-white"
@@ -61,7 +61,7 @@
                             {{ $t("page.reaction-time.graph.your_time") }}: {{ lastMs }} ms
                         </text>
 
-                        <text x="200" y="170" text-anchor="middle" fill="currentColor" class="text-white/70"
+                        <text x="200" y="175" text-anchor="middle" fill="currentColor" class="text-white/70"
                             font-size="18">
                             {{ $t("page.reaction-time.graph.axis_hint") }}
                         </text>
