@@ -15,11 +15,13 @@
 
                 <div class="w-full md:w-2/3 grid grid-cols-1 gap-4 content-center">
                     <div class="flex flex-col gap-1">
-                        <label>{{ $t('page.tools.tool.color-converter.hex') }}</label>
                         <div class="flex flex-wrap gap-2">
-                            <TextField v-model="hexInput" @blur="updateFromHex" @keyup.enter="updateFromHex"
-                                placeholder="#000000" class="flex-1 font-mono" />
-                            <Button @click="copyToClipboard(hexString)">
+                            <div class="flex-1 flex flex-col gap-1">
+                                <label class="text-center">{{ $t('page.tools.tool.color-converter.hex') }}</label>
+                                <TextField v-model="hexInput" @blur="updateFromHex" @keyup.enter="updateFromHex"
+                                    placeholder="#000000" class="font-mono" />
+                            </div>
+                            <Button class="self-end" @click="copyToClipboard(hexString)">
                                 <IconShare v-if="copied === hexString" class="w-5 h-5" />
                                 <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                             </Button>
@@ -27,11 +29,13 @@
                     </div>
 
                     <div class="flex flex-col gap-1">
-                        <label>{{ $t('page.tools.tool.color-converter.rgb') }}</label>
                         <div class="flex flex-wrap gap-2">
-                            <TextField v-model="rgbInput" @blur="updateFromRgb" @keyup.enter="updateFromRgb"
-                                placeholder="rgb(0, 0, 0)" class="flex-1 font-mono" />
-                            <Button @click="copyToClipboard(rgbInput)">
+                            <div class="flex-1 flex flex-col gap-1">
+                                <label class="text-center">{{ $t('page.tools.tool.color-converter.rgb') }}</label>
+                                <TextField v-model="rgbInput" @blur="updateFromRgb" @keyup.enter="updateFromRgb"
+                                    placeholder="rgb(0, 0, 0)" class="font-mono" />
+                            </div>
+                            <Button class="self-end" @click="copyToClipboard(rgbInput)">
                                 <IconShare v-if="copied === rgbInput" class="w-5 h-5" />
                                 <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                             </Button>
@@ -39,11 +43,13 @@
                     </div>
 
                     <div class="flex flex-col gap-1">
-                        <label>{{ $t('page.tools.tool.color-converter.hsl') }}</label>
                         <div class="flex flex-wrap gap-2">
-                            <TextField v-model="hslInput" @blur="updateFromHsl" @keyup.enter="updateFromHsl"
-                                placeholder="hsl(0, 0%, 0%)" class="flex-1 font-mono" />
-                            <Button @click="copyToClipboard(hslInput)">
+                            <div class="flex-1 flex flex-col gap-1">
+                                <label class="text-center">{{ $t('page.tools.tool.color-converter.hsl') }}</label>
+                                <TextField v-model="hslInput" @blur="updateFromHsl" @keyup.enter="updateFromHsl"
+                                    placeholder="hsl(0, 0%, 0%)" class="font-mono" />
+                            </div>
+                            <Button class="self-end" @click="copyToClipboard(hslInput)">
                                 <IconShare v-if="copied === hslInput" class="w-5 h-5" />
                                 <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                             </Button>
@@ -57,11 +63,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div class="flex flex-col gap-1">
-                    <label>{{ $t('page.tools.tool.color-converter.hsv') }}</label>
                     <div class="flex flex-wrap gap-2">
-                        <TextField v-model="hsvInput" @blur="updateFromHsv" @keyup.enter="updateFromHsv"
-                            placeholder="hsv(0, 0%, 0%)" class="flex-1 font-mono" />
-                        <Button @click="copyToClipboard(hsvInput)">
+                        <div class="flex-1 flex flex-col gap-1">
+                            <label class="text-center">{{ $t('page.tools.tool.color-converter.hsv') }}</label>
+                            <TextField v-model="hsvInput" @blur="updateFromHsv" @keyup.enter="updateFromHsv"
+                                placeholder="hsv(0, 0%, 0%)" class="font-mono" />
+                        </div>
+                        <Button class="self-end" @click="copyToClipboard(hsvInput)">
                             <IconShare v-if="copied === hsvInput" class="w-5 h-5" />
                             <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                         </Button>
@@ -69,11 +77,13 @@
                 </div>
 
                 <div class="flex flex-col gap-1">
-                    <label>{{ $t('page.tools.tool.color-converter.cmyk') }}</label>
                     <div class="flex flex-wrap gap-2">
-                        <TextField v-model="cmykInput" @blur="updateFromCmyk" @keyup.enter="updateFromCmyk"
-                            placeholder="cmyk(0%, 0%, 0%, 0%)" class="flex-1 font-mono" />
-                        <Button @click="copyToClipboard(cmykInput)">
+                        <div class="flex-1 flex flex-col gap-1">
+                            <label class="text-center">{{ $t('page.tools.tool.color-converter.cmyk') }}</label>
+                            <TextField v-model="cmykInput" @blur="updateFromCmyk" @keyup.enter="updateFromCmyk"
+                                placeholder="cmyk(0%, 0%, 0%, 0%)" class="font-mono" />
+                        </div>
+                        <Button class="self-end" @click="copyToClipboard(cmykInput)">
                             <IconShare v-if="copied === cmykInput" class="w-5 h-5" />
                             <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                         </Button>

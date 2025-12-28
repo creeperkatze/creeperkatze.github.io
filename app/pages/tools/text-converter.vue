@@ -15,7 +15,7 @@
 
             <div class="flex flex-col sm:flex-row sm:items-end gap-3">
                 <label class="sm:self-center">{{ $t('page.tools.tool.text-converter.mode') }}:</label>
-                <SelectField v-model="mode">
+                <SelectField v-model="mode" class="w-72">
                     <option value="lower">{{ $t('page.tools.tool.text-converter.mode.lower') }}</option>
                     <option value="upper">{{ $t('page.tools.tool.text-converter.mode.upper') }}</option>
                     <option value="title">{{ $t('page.tools.tool.text-converter.mode.title') }}</option>

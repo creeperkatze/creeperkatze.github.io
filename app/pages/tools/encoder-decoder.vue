@@ -16,7 +16,7 @@
 
             <div class="flex flex-col sm:flex-row sm:items-end gap-3">
                 <div class="flex flex-col gap-1 flex-1">
-                    <label>{{ $t('page.tools.tool.encoder-decoder.method') }}:</label>
+                    <label>{{ $t('page.tools.tool.encoder-decoder.method') }}</label>
                     <SelectField v-model="method">
                         <option value="base64">{{ $t('page.tools.tool.encoder-decoder.method.base64') }}</option>
                         <option value="url">{{ $t('page.tools.tool.encoder-decoder.method.url') }}</option>
@@ -31,7 +31,7 @@
                     </SelectField>
                 </div>
                 <div class="flex flex-col gap-1 flex-1">
-                    <label>{{ $t('page.tools.tool.encoder-decoder.action') }}:</label>
+                    <label>{{ $t('page.tools.tool.encoder-decoder.action') }}</label>
                     <SelectField v-model="action">
                         <option value="encode">{{ $t('page.tools.tool.encoder-decoder.action.encode') }}</option>
                         <option value="decode">{{ $t('page.tools.tool.encoder-decoder.action.decode') }}</option>

@@ -16,7 +16,7 @@
 
             <div class="flex flex-col sm:flex-row sm:items-end gap-3">
                 <label class="sm:self-center">{{ $t('page.tools.tool.font-changer.font') }}:</label>
-                <SelectField v-model="font" class="w-full sm:w-72">
+                <SelectField v-model="font" class="w-72">
                     <option value="bold">{{ fontLabel('bold', $t('page.tools.tool.font-changer.font.bold')) }}</option>
                     <option value="italic">{{ fontLabel('italic', $t('page.tools.tool.font-changer.font.italic')) }}</option>
                     <option value="boldItalic">{{ fontLabel('boldItalic', $t('page.tools.tool.font-changer.font.boldItalic')) }}</option>

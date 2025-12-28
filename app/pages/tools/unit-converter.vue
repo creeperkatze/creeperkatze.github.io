@@ -6,7 +6,7 @@
         <P>{{ $t('page.tools.tool.unit-converter.description') }}</P>
         <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                <label>{{ $t('page.tools.tool.unit-converter.category') }}:</label>
+                <label>{{ $t('page.tools.tool.unit-converter.category') }}</label>
                 <SelectField v-model="category" class="flex-1">
                     <option value="length">{{ $t('page.tools.tool.unit-converter.category.length') }}</option>
                     <option value="mass">{{ $t('page.tools.tool.unit-converter.category.mass') }}</option>
