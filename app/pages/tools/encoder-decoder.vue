@@ -25,6 +25,8 @@
                         <option value="binary">{{ $t('page.tools.tool.encoder-decoder.method.binary') }}</option>
                         <option value="base32">{{ $t('page.tools.tool.encoder-decoder.method.base32') }}</option>
                         <option value="rot13">{{ $t('page.tools.tool.encoder-decoder.method.rot13') }}</option>
+                        <option value="caesar">{{ $t('page.tools.tool.encoder-decoder.method.caesar') }}</option>
+                        <option value="vigenere">{{ $t('page.tools.tool.encoder-decoder.method.vigenere') }}</option>
                         <option value="reverse">{{ $t('page.tools.tool.encoder-decoder.method.reverse') }}</option>
                         <option value="atbash">{{ $t('page.tools.tool.encoder-decoder.method.atbash') }}</option>
                         <option value="morse">{{ $t('page.tools.tool.encoder-decoder.method.morse') }}</option>
@@ -36,6 +38,17 @@
                         <option value="encode">{{ $t('page.tools.tool.encoder-decoder.action.encode') }}</option>
                         <option value="decode">{{ $t('page.tools.tool.encoder-decoder.action.decode') }}</option>
                     </SelectField>
+                </div>
+                <div v-if="method === 'caesar'" class="flex flex-col gap-1 flex-1">
+                    <div class="flex justify-between">
+                        <label>{{ $t('page.tools.tool.encoder-decoder.caesar.shift') }}</label>
+                        <span>{{ caesarShift }}</span>
+                    </div>
+                    <TextField type="range" min="-25" max="25" v-model.number="caesarShift" class="accent-gift w-full" />
+                </div>
+                <div v-if="method === 'vigenere'" class="flex flex-col gap-1 flex-1">
+                    <label>{{ $t('page.tools.tool.encoder-decoder.vigenere.key') }}</label>
+                    <TextField v-model.trim="vigenereKey" :placeholder="$t('page.tools.tool.encoder-decoder.vigenere.key_placeholder')" />
                 </div>
                 <div class="flex items-center gap-3 sm:ml-auto sm:self-end">
                     <div class="flex items-center space-x-2">
@@ -55,9 +68,13 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
+
 const input = ref('');
 const method = ref('base64');
 const action = ref('encode');
+const caesarShift = ref(13);
+const vigenereKey = ref('');
 const copied = ref(false);
 const syncScroll = ref(true);
 const inputRef = ref(null);
@@ -169,6 +186,48 @@ const rot13 = (str) =>
     return str.replace(/[a-zA-Z]/g, function (c)
     {
         return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+    });
+};
+
+const caesar = (str, shift) =>
+{
+    const normalizedShift = ((shift % 26) + 26) % 26;
+    if (normalizedShift === 0) return str;
+
+    return str.replace(/[a-zA-Z]/g, (char) =>
+    {
+        const code = char.charCodeAt(0);
+        const base = code >= 97 ? 97 : 65;
+        const offset = code - base;
+        return String.fromCharCode(base + ((offset + normalizedShift) % 26));
+    });
+};
+
+const vigenere = (str, key, decode = false) =>
+{
+    const cleanedKey = String(key ?? '').replace(/[^a-zA-Z]/g, '');
+    if (!cleanedKey)
+    {
+        return t('page.tools.tool.encoder-decoder.vigenere.key_required');
+    }
+
+    let keyIndex = 0;
+    const keyLen = cleanedKey.length;
+
+    return String(str ?? '').replace(/[a-zA-Z]/g, (char) =>
+    {
+        const code = char.charCodeAt(0);
+        const base = code >= 97 ? 97 : 65;
+
+        const keyChar = cleanedKey[keyIndex % keyLen];
+        keyIndex++;
+
+        const keyCode = keyChar.charCodeAt(0);
+        const keyShift = (keyCode >= 97 ? keyCode - 97 : keyCode - 65) % 26;
+        const shift = decode ? (26 - keyShift) : keyShift;
+
+        const offset = code - base;
+        return String.fromCharCode(base + ((offset + shift) % 26));
     });
 };
 
@@ -326,6 +385,17 @@ const output = computed(() =>
     if (method.value === 'rot13')
     {
         return rot13(raw);
+    }
+    if (method.value === 'caesar')
+    {
+        const shift = Number(caesarShift.value) || 0;
+        return action.value === 'encode' ? caesar(raw, shift) : caesar(raw, -shift);
+    }
+    if (method.value === 'vigenere')
+    {
+        return action.value === 'encode'
+            ? vigenere(raw, vigenereKey.value, false)
+            : vigenere(raw, vigenereKey.value, true);
     }
     if (method.value === 'base32')
     {
