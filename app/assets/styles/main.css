@@ -4,6 +4,7 @@
 
 html
 {
+    color-scheme: dark;
     overflow-y: scroll;
     min-height: 100%;
 }

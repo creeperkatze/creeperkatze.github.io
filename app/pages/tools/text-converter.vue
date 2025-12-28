@@ -7,11 +7,7 @@
         <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <TextareaField ref="inputRef" v-model="input" class="h-60"
                 :placeholder="$t('page.tools.tool.text-converter.input.placeholder')" @scroll="onInputScroll" />
-            <div ref="outputRef"
-                class="text-left h-60 text-white p-4 bg-neutral-600 rounded-lg whitespace-pre-wrap break-words overflow-y-auto border-2 border-white/10"
-                @scroll="onOutputScroll">
-                {{ output }}
-            </div>
+            <OutputField ref="outputRef" class="h-60" :value="output" @scroll="onOutputScroll" />
 
             <div class="flex flex-col sm:flex-row sm:items-end gap-3">
                 <label class="sm:self-center">{{ $t('page.tools.tool.text-converter.mode') }}:</label>
@@ -62,9 +58,9 @@ const onInputScroll = (e) =>
     if (!syncScroll.value) return;
     if (isSyncing) return;
     isSyncing = true;
-    if (outputRef.value)
+    if (outputRef.value?.el?.value)
     {
-        outputRef.value.scrollTop = e.target.scrollTop;
+        outputRef.value.el.value.scrollTop = e.target.scrollTop;
     }
     setTimeout(() => isSyncing = false, 10);
 };

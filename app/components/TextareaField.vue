@@ -1,13 +1,22 @@
 <template>
-    <textarea
-        v-bind="$attrs"
-        :value="modelValue"
-        class="text-white w-full p-4 bg-neutral-600 rounded-lg resize-none border-2 border-white/10 focus:outline-none focus:border-gift"
-        @input="onInput"
-    />
+    <div
+        class="w-full bg-neutral-600 rounded-lg border-2 border-white/10 overflow-hidden focus-within:border-gift"
+        :class="wrapperClass"
+    >
+        <textarea
+            v-bind="textareaAttrs"
+            :value="modelValue"
+            class="text-white w-full h-full p-4 bg-transparent resize-none focus:outline-none"
+            @input="onInput"
+        />
+    </div>
 </template>
 
 <script setup>
+defineOptions({
+    inheritAttrs: false
+})
+
 const props = defineProps({
     modelValue: {
         type: String,
@@ -20,6 +29,15 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['update:modelValue'])
+
+const attrs = useAttrs()
+
+const wrapperClass = computed(() => attrs.class)
+const textareaAttrs = computed(() => {
+    const cloned = { ...attrs }
+    delete cloned.class
+    return cloned
+})
 
 const onInput = (event) => {
     let value = event?.target?.value ?? ''
