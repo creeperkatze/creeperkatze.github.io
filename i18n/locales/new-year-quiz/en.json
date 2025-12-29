@@ -1,156 +1,156 @@
 {
-    "new-year-quiz": {
-        "questions": {
-            "0": {
-                "text": "Which month marks the start of a new year in the Gregorian calendar?",
-                "answers": ["March", "January", "September", "December"],
-                "correctAnswer": "1",
-                "explanation": "In the Gregorian calendar, the new year starts in January."
-            },
-            "1": {
-                "text": "What is the name of the evening on December 31st?",
-                "answers": ["Boxing Day", "New Year's Eve", "Epiphany", "Good Friday"],
-                "correctAnswer": "1",
-                "explanation": "December 31st is commonly called New Year's Eve."
-            },
-            "2": {
-                "text": "Which city is famous for the ball drop on New Year's Eve?",
-                "answers": ["Los Angeles", "New York City", "Chicago", "Miami"],
-                "correctAnswer": "1",
-                "explanation": "Times Square in New York City is known for the New Year's Eve ball drop."
-            },
-            "3": {
-                "text": "What is a common tradition called when people set goals for the coming year?",
-                "answers": ["New Year resolutions", "Spring cleaning", "Harvest vows", "Midnight wishes"],
-                "correctAnswer": "0",
-                "explanation": "Many people make New Year resolutions to set goals for the year ahead."
-            },
-            "4": {
-                "text": "Which is a common symbol of New Year celebrations?",
-                "answers": ["Pumpkin", "Fireworks", "Easter eggs", "Snowman"],
-                "correctAnswer": "1",
-                "explanation": "Fireworks are widely used to celebrate New Year around the world."
-            },
-            "5": {
-                "text": "What happens right after the countdown reaches zero?",
-                "answers": ["The sun rises", "The new year begins", "It becomes spring", "Clocks stop"],
-                "correctAnswer": "1",
-                "explanation": "When the countdown hits zero, it marks the start of the new year."
-            },
-            "6": {
-                "text": "What is the name of the first day of the year?",
-                "answers": ["New Year's Day", "Boxing Day", "May Day", "Labor Day"],
-                "correctAnswer": "0",
-                "explanation": "January 1st is called New Year's Day."
-            },
-            "7": {
-                "text": "What is a common way to greet someone on January 1st?",
-                "answers": ["Happy New Year!", "Happy Halloween!", "Merry Easter!", "Happy Thanksgiving!"],
-                "correctAnswer": "0",
-                "explanation": "A typical greeting is 'Happy New Year!'"
-            },
-            "8": {
-                "text": "Which of these is often used for a midnight toast?",
-                "answers": ["Milk", "Champagne", "Tea", "Orange juice"],
-                "correctAnswer": "1",
-                "explanation": "Champagne is a common drink used for New Year toasts."
-            },
-            "9": {
-                "text": "In many places, what time is the countdown usually done?",
-                "answers": ["At noon", "At midnight", "At sunrise", "At 6 PM"],
-                "correctAnswer": "1",
-                "explanation": "The countdown is typically done at midnight."
-            },
-            "10": {
-                "text": "Which is a typical New Year party item?",
-                "answers": ["Party hats", "Easter baskets", "Pumpkin spice", "Beach towels"],
-                "correctAnswer": "0",
-                "explanation": "Party hats are often worn at New Year celebrations."
-            },
-            "11": {
-                "text": "Which term describes the final seconds of the old year?",
-                "answers": ["The recap", "The countdown", "The halftime", "The rewind"],
-                "correctAnswer": "1",
-                "explanation": "The final seconds are counted down in a 'countdown'."
-            },
-            "12": {
-                "text": "In the Northern Hemisphere, New Year happens during which season?",
-                "answers": ["Summer", "Winter", "Spring", "Autumn"],
-                "correctAnswer": "1",
-                "explanation": "In the Northern Hemisphere, New Year is in winter."
-            },
-            "13": {
-                "text": "Which of these is a common 'good luck' New Year tradition in some cultures?",
-                "answers": ["Throwing confetti", "Eating lentils", "Carving pumpkins", "Hiding eggs"],
-                "correctAnswer": "1",
-                "explanation": "Eating lentils is a known New Year tradition in some countries for good luck and prosperity."
-            },
-            "14": {
-                "text": "What is the last month of the year?",
-                "answers": ["November", "December", "January", "October"],
-                "correctAnswer": "1",
-                "explanation": "December is the last month of the year."
-            },
-            "15": {
-                "text": "Which of these is a common decoration for New Year parties?",
-                "answers": ["Balloons", "Pumpkins", "Easter bunnies", "Autumn leaves"],
-                "correctAnswer": "0",
-                "explanation": "Balloons are common party decorations, including for New Year."
-            },
-            "16": {
-                "text": "What does the abbreviation 'A.D.' stand for in dates?",
-                "answers": ["After December", "Anno Domini", "Around Dawn", "Annual Day"],
-                "correctAnswer": "1",
-                "explanation": "A.D. is Latin for 'Anno Domini', meaning 'in the year of our Lord'."
-            },
-            "17": {
-                "text": "How many months are in a year?",
-                "answers": ["10", "11", "12", "13"],
-                "correctAnswer": "2",
-                "explanation": "A year has 12 months."
-            },
-            "18": {
-                "text": "How many hours are in a day?",
-                "answers": ["12", "18", "24", "36"],
-                "correctAnswer": "2",
-                "explanation": "A day has 24 hours."
-            },
-            "19": {
-                "text": "What is the name of the calendar most commonly used worldwide today?",
-                "answers": ["Julian calendar", "Gregorian calendar", "Mayan calendar", "Lunar calendar"],
-                "correctAnswer": "1",
-                "explanation": "The Gregorian calendar is the most widely used civil calendar today."
-            },
-            "20": {
-                "text": "Which planet does Earth orbit?",
-                "answers": ["Mars", "The Sun", "The Moon", "Jupiter"],
-                "correctAnswer": "1",
-                "explanation": "Earth orbits the Sun."
-            },
-            "21": {
-                "text": "What is a leap year?",
-                "answers": ["A year with 52 weeks", "A year with an extra day", "A year with 13 months", "A year with shorter days"],
-                "correctAnswer": "1",
-                "explanation": "A leap year includes an extra day (February 29th) to keep the calendar aligned."
-            },
-            "22": {
-                "text": "Which month usually has 28 days (29 in leap years)?",
-                "answers": ["January", "February", "April", "June"],
-                "correctAnswer": "1",
-                "explanation": "February typically has 28 days, and 29 days in leap years."
-            },
-            "23": {
-                "text": "What is the common name for the last day of the year?",
-                "answers": ["New Year's Eve", "New Year's Day", "First Day", "Winter Day"],
-                "correctAnswer": "0",
-                "explanation": "The last day of the year is New Year's Eve (December 31st)."
-            },
-            "24": {
-                "text": "Which of these is often associated with New Year's celebrations in many countries?",
-                "answers": ["Countdown and fireworks", "Pumpkin carving", "Egg hunts", "Leaf raking"],
-                "correctAnswer": "0",
-                "explanation": "Countdowns and fireworks are common New Year celebration elements worldwide."
-            }
-        }
+  "new-year-quiz": {
+    "questions": {
+      "0": {
+        "text": "Where does the world's most famous New Year's Eve countdown with the \"Ball Drop\" take place?",
+        "answers": ["Las Vegas Strip", "Times Square", "Central Park", "Brooklyn Bridge"],
+        "correctAnswer": "1",
+        "explanation": "The famous Ball Drop has taken place every year at Times Square in New York City since 1907."
+      },
+      "1": {
+        "text": "Which country celebrates the New Year first due to its location near the International Date Line?",
+        "answers": ["South Korea", "New Zealand", "Japan", "Hawaii"],
+        "correctAnswer": "1",
+        "explanation": "New Zealand is among the first countries in the world to welcome the New Year."
+      },
+      "2": {
+        "text": "Which country is known for one of the largest New Year's Eve fireworks displays in the world?",
+        "answers": ["Canada", "Australia", "South Africa", "Norway"],
+        "correctAnswer": "1",
+        "explanation": "The New Year's Eve fireworks in Sydney are among the most spectacular worldwide."
+      },
+      "3": {
+        "text": "Which song is commonly sung at midnight on New Year's Eve in Scotland?",
+        "answers": ["Imagine", "Happy New Year", "Auld Lang Syne", "Let It Be"],
+        "correctAnswer": "2",
+        "explanation": "\"Auld Lang Syne\" originates from Scotland and is a worldwide symbol of farewell and new beginnings."
+      },
+      "4": {
+        "text": "Which Roman god gave the month of January its name?",
+        "answers": ["Mars", "Saturn", "Janus", "Jupiter"],
+        "correctAnswer": "2",
+        "explanation": "Janus is the god of doors, transitions, and beginnings — fitting for the turn of the year."
+      },
+      "5": {
+        "text": "Which color traditionally symbolizes luck and prosperity during the Chinese New Year?",
+        "answers": ["Blue", "Green", "Red", "White"],
+        "correctAnswer": "2",
+        "explanation": "In Chinese culture, red represents luck, protection, and success."
+      },
+      "6": {
+        "text": "What do many people in Spain traditionally eat at midnight on New Year's Eve?",
+        "answers": ["12 grapes", "12 dates", "12 almonds", "12 figs"],
+        "correctAnswer": "0",
+        "explanation": "One grape is eaten with each of the 12 clock chimes, one for every month of the new year."
+      },
+      "7": {
+        "text": "Which unusual New Year's tradition is common in Denmark?",
+        "answers": ["Breaking glasses", "Jumping off chairs", "Throwing plates at doors", "Going outside barefoot"],
+        "correctAnswer": "2",
+        "explanation": "Smashing plates on friends' doorsteps is meant to bring friendship and good luck."
+      },
+      "8": {
+        "text": "What is the first day of the year officially called?",
+        "answers": ["New Year's Eve", "New Year's Day", "Silvester Day", "Beginning of the Year"],
+        "correctAnswer": "1",
+        "explanation": "January 1st is officially called New Year's Day."
+      },
+      "9": {
+        "text": "Which food symbolizes wealth and prosperity in Italy on New Year's Day?",
+        "answers": ["Beans", "Lentils", "Chickpeas", "Peas"],
+        "correctAnswer": "1",
+        "explanation": "Lentils resemble coins and therefore symbolize financial prosperity."
+      },
+      "10": {
+        "text": "Which country celebrates New Year's Eve in summer with large beach parties?",
+        "answers": ["Portugal", "Brazil", "Mexico", "Spain"],
+        "correctAnswer": "1",
+        "explanation": "In Brazil, New Year's Eve falls in summer and is often celebrated with beach parties."
+      },
+      "11": {
+        "text": "Which tradition is part of the New Year celebrations in Japan?",
+        "answers": ["108 bell rings in temples", "Firework marathons", "Mask dances", "Midnight runs"],
+        "correctAnswer": "0",
+        "explanation": "The 108 bell rings are meant to cleanse people of worldly desires."
+      },
+      "12": {
+        "text": "Which calendar is used worldwide as the official civil calendar?",
+        "answers": ["Julian calendar", "Lunar calendar", "Gregorian calendar", "Solar calendar"],
+        "correctAnswer": "2",
+        "explanation": "The Gregorian calendar was introduced in 1582 and is the international standard today."
+      },
+      "13": {
+        "text": "Why do leap years exist?",
+        "answers": ["Because of lunar phases", "To align with the solar year", "Because of the seasons", "To simplify timekeeping"],
+        "correctAnswer": "1",
+        "explanation": "A solar year is slightly longer than 365 days, so an extra day is added every four years."
+      },
+      "14": {
+        "text": "Which animal is NOT part of the Chinese zodiac?",
+        "answers": ["Dragon", "Tiger", "Horse", "Eagle"],
+        "correctAnswer": "3",
+        "explanation": "The eagle is not one of the twelve animals of the Chinese zodiac."
+      },
+      "15": {
+        "text": "What is the last day of the year called in German?",
+        "answers": ["Old Year's Day", "New Year's Eve", "End of the Year", "Silvester"],
+        "correctAnswer": "3",
+        "explanation": "December 31st is called Silvester, named after Pope Sylvester I."
+      },
+      "16": {
+        "text": "Which drink is most commonly used worldwide to toast the New Year?",
+        "answers": ["Grain alcohol", "Sparkling wine", "Beer", "Whiskey"],
+        "correctAnswer": "1",
+        "explanation": "Sparkling wine is internationally considered the classic New Year's drink."
+      },
+      "17": {
+        "text": "Which country is known for its New Year's Day swim in icy waters?",
+        "answers": ["Iceland", "Netherlands", "Russia", "Finland"],
+        "correctAnswer": "1",
+        "explanation": "New Year's swimming has a long tradition in the Netherlands."
+      },
+      "18": {
+        "text": "What does the German New Year's greeting \"Guten Rutsch\" originally mean?",
+        "answers": ["Good slip", "Good start into the new year", "Rich harvest", "Safe journey"],
+        "correctAnswer": "1",
+        "explanation": "The phrase likely originates from the Yiddish word \"rosch\" meaning beginning."
+      },
+      "19": {
+        "text": "Which city hosts one of the largest organized New Year's Eve fireworks displays in Europe?",
+        "answers": ["London", "Paris", "Berlin", "Vienna"],
+        "correctAnswer": "0",
+        "explanation": "London's fireworks along the River Thames attract millions of spectators."
+      },
+      "20": {
+        "text": "Which traditional form of fortune-telling was long part of German New Year's Eve customs?",
+        "answers": ["Reading coffee grounds", "Lead pouring", "Card reading", "Rune casting"],
+        "correctAnswer": "1",
+        "explanation": "Lead pouring was used to interpret the future from the shapes formed."
+      },
+      "21": {
+        "text": "Which color do people in Brazil traditionally wear on New Year's Eve for good luck?",
+        "answers": ["Black", "Red", "White", "Yellow"],
+        "correctAnswer": "2",
+        "explanation": "White clothing symbolizes peace and a positive new beginning in Brazil."
+      },
+      "22": {
+        "text": "What is the most common New Year's resolution worldwide?",
+        "answers": ["Save more money", "Exercise more", "Work less", "Travel more"],
+        "correctAnswer": "1",
+        "explanation": "Improving fitness and physical activity is the most popular resolution internationally."
+      },
+      "23": {
+        "text": "Which classical music piece traditionally concludes the Vienna New Year's Concert?",
+        "answers": ["Emperor Waltz", "Radetzky March", "Blue Danube Waltz", "Vienna Blood"],
+        "correctAnswer": "1",
+        "explanation": "The Radetzky March traditionally serves as the energetic finale."
+      },
+      "24": {
+        "text": "Which event officially marks the beginning of a new year worldwide?",
+        "answers": ["The first sunrise", "Midnight according to local time", "The first fireworks", "The UN New Year's greeting"],
+        "correctAnswer": "1",
+        "explanation": "The New Year officially begins at 12:00 a.m. according to local time."
+      }
     }
+  }
 }

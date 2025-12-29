@@ -1,156 +1,156 @@
 {
-    "new-year-quiz": {
-        "questions": {
-            "0": {
-                "text": "In welchem Monat beginnt das neue Jahr im gregorianischen Kalender?",
-                "answers": ["März", "Januar", "September", "Dezember"],
-                "correctAnswer": "1",
-                "explanation": "Im gregorianischen Kalender beginnt das neue Jahr im Januar."
-            },
-            "1": {
-                "text": "Wie heißt der Abend am 31. Dezember?",
-                "answers": ["Karfreitag", "Silvester", "Heilige Drei Könige", "Ostermontag"],
-                "correctAnswer": "1",
-                "explanation": "Der 31. Dezember wird im Deutschen 'Silvester' genannt."
-            },
-            "2": {
-                "text": "Welche Stadt ist für den 'Ball Drop' an Silvester bekannt?",
-                "answers": ["Los Angeles", "New York City", "Chicago", "Miami"],
-                "correctAnswer": "1",
-                "explanation": "Am Times Square in New York City findet der berühmte Ball Drop statt."
-            },
-            "3": {
-                "text": "Wie nennt man es, wenn Menschen sich Ziele für das neue Jahr setzen?",
-                "answers": ["Neujahrsvorsätze", "Frühjahrsputz", "Erntegelübde", "Mitternachtswünsche"],
-                "correctAnswer": "0",
-                "explanation": "Viele Menschen fassen Neujahrsvorsätze, um Ziele für das kommende Jahr zu setzen."
-            },
-            "4": {
-                "text": "Was ist ein typisches Symbol für Neujahrsfeiern?",
-                "answers": ["Kürbis", "Feuerwerk", "Ostereier", "Schneemann"],
-                "correctAnswer": "1",
-                "explanation": "Feuerwerk wird weltweit häufig an Neujahr gezündet."
-            },
-            "5": {
-                "text": "Was passiert direkt, wenn der Countdown bei Null ankommt?",
-                "answers": ["Die Sonne geht auf", "Das neue Jahr beginnt", "Es wird Frühling", "Uhren bleiben stehen"],
-                "correctAnswer": "1",
-                "explanation": "Wenn der Countdown bei Null ist, beginnt das neue Jahr."
-            },
-            "6": {
-                "text": "Wie heißt der erste Tag des Jahres?",
-                "answers": ["Neujahr", "Karfreitag", "Tag der Arbeit", "Muttertag"],
-                "correctAnswer": "0",
-                "explanation": "Der 1. Januar wird Neujahr genannt."
-            },
-            "7": {
-                "text": "Wie wünscht man sich am 1. Januar häufig?",
-                "answers": ["Frohes neues Jahr!", "Frohe Ostern!", "Schönen Halloween!", "Frohes Erntedankfest!"],
-                "correctAnswer": "0",
-                "explanation": "Ein typischer Gruß ist 'Frohes neues Jahr!'."
-            },
-            "8": {
-                "text": "Womit wird an Neujahr oft um Mitternacht angestoßen?",
-                "answers": ["Milch", "Champagner", "Tee", "Orangensaft"],
-                "correctAnswer": "1",
-                "explanation": "Champagner ist ein klassisches Getränk für den Neujahrs-Toast."
-            },
-            "9": {
-                "text": "Zu welcher Uhrzeit wird der Countdown in vielen Ländern gemacht?",
-                "answers": ["Mittags", "Um Mitternacht", "Bei Sonnenaufgang", "Um 18 Uhr"],
-                "correctAnswer": "1",
-                "explanation": "Der Countdown findet meistens um Mitternacht statt."
-            },
-            "10": {
-                "text": "Was ist ein typisches Party-Accessoire an Silvester?",
-                "answers": ["Partyhüte", "Osterkörbe", "Kürbisgewürz", "Strandtücher"],
-                "correctAnswer": "0",
-                "explanation": "Partyhüte werden oft bei Silvesterfeiern getragen."
-            },
-            "11": {
-                "text": "Wie nennt man die letzten Sekunden vor dem Jahreswechsel?",
-                "answers": ["Rückblick", "Countdown", "Halbzeit", "Zurückspulen"],
-                "correctAnswer": "1",
-                "explanation": "Die letzten Sekunden werden als 'Countdown' heruntergezählt."
-            },
-            "12": {
-                "text": "In welcher Jahreszeit liegt Neujahr auf der Nordhalbkugel?",
-                "answers": ["Sommer", "Winter", "Frühling", "Herbst"],
-                "correctAnswer": "1",
-                "explanation": "Auf der Nordhalbkugel ist Neujahr im Winter."
-            },
-            "13": {
-                "text": "Welche Tradition gilt in manchen Kulturen als 'Glücksbringer' an Neujahr?",
-                "answers": ["Konfetti werfen", "Linsen essen", "Kürbisse schnitzen", "Eier verstecken"],
-                "correctAnswer": "1",
-                "explanation": "In einigen Ländern gelten Linsen an Neujahr als Symbol für Glück und Wohlstand."
-            },
-            "14": {
-                "text": "Welcher Monat ist der letzte im Jahr?",
-                "answers": ["November", "Dezember", "Januar", "Oktober"],
-                "correctAnswer": "1",
-                "explanation": "Dezember ist der letzte Monat des Jahres."
-            },
-            "15": {
-                "text": "Welche Deko sieht man häufig auf Neujahrspartys?",
-                "answers": ["Luftballons", "Kürbisse", "Osterhasen", "Herbstblätter"],
-                "correctAnswer": "0",
-                "explanation": "Luftballons sind typische Party-Dekorationen, auch an Silvester."
-            },
-            "16": {
-                "text": "Wofür steht die Abkürzung 'A.D.' bei Jahreszahlen?",
-                "answers": ["After December", "Anno Domini", "Around Dawn", "Annual Day"],
-                "correctAnswer": "1",
-                "explanation": "A.D. ist Latein und steht für 'Anno Domini' (im Jahr des Herrn)."
-            },
-            "17": {
-                "text": "Wie viele Monate hat ein Jahr?",
-                "answers": ["10", "11", "12", "13"],
-                "correctAnswer": "2",
-                "explanation": "Ein Jahr hat 12 Monate."
-            },
-            "18": {
-                "text": "Wie viele Stunden hat ein Tag?",
-                "answers": ["12", "18", "24", "36"],
-                "correctAnswer": "2",
-                "explanation": "Ein Tag hat 24 Stunden."
-            },
-            "19": {
-                "text": "Wie heißt der heute weltweit am häufigsten verwendete Kalender?",
-                "answers": ["Julianischer Kalender", "Gregorianischer Kalender", "Maya-Kalender", "Mondkalender"],
-                "correctAnswer": "1",
-                "explanation": "Der Gregorianische Kalender ist heute der am weitesten verbreitete bürgerliche Kalender."
-            },
-            "20": {
-                "text": "Welchen Himmelskörper umkreist die Erde?",
-                "answers": ["Mars", "Die Sonne", "Den Mond", "Jupiter"],
-                "correctAnswer": "1",
-                "explanation": "Die Erde umkreist die Sonne."
-            },
-            "21": {
-                "text": "Was ist ein Schaltjahr?",
-                "answers": ["Ein Jahr mit 52 Wochen", "Ein Jahr mit einem zusätzlichen Tag", "Ein Jahr mit 13 Monaten", "Ein Jahr mit kürzeren Tagen"],
-                "correctAnswer": "1",
-                "explanation": "Ein Schaltjahr hat einen zusätzlichen Tag (29. Februar), damit der Kalender im Takt bleibt."
-            },
-            "22": {
-                "text": "Welcher Monat hat normalerweise 28 Tage (29 im Schaltjahr)?",
-                "answers": ["Januar", "Februar", "April", "Juni"],
-                "correctAnswer": "1",
-                "explanation": "Der Februar hat normalerweise 28 Tage, im Schaltjahr 29."
-            },
-            "23": {
-                "text": "Wie heißt der letzte Tag des Jahres?",
-                "answers": ["Silvester", "Neujahr", "Erster Tag", "Wintertag"],
-                "correctAnswer": "0",
-                "explanation": "Der letzte Tag des Jahres ist Silvester (31. Dezember)."
-            },
-            "24": {
-                "text": "Was wird in vielen Ländern häufig mit dem Jahreswechsel verbunden?",
-                "answers": ["Countdown und Feuerwerk", "Kürbisschnitzen", "Eiersuche", "Laub harken"],
-                "correctAnswer": "0",
-                "explanation": "Countdowns und Feuerwerk gehören in vielen Ländern zu den typischen Neujahrsbräuchen."
-            }
-        }
+  "new-year-quiz": {
+    "questions": {
+      "0": {
+        "text": "Wo findet der weltweit berühmteste Silvester-Countdown mit dem \"Ball Drop\" statt?",
+        "answers": ["Las Vegas Strip", "Times Square", "Central Park", "Brooklyn Bridge"],
+        "correctAnswer": "1",
+        "explanation": "Der berühmte Ball Drop findet seit 1907 jedes Jahr am Times Square in New York City statt."
+      },
+      "1": {
+        "text": "Welches Land feiert aufgrund seiner Lage nahe der Datumsgrenze als erstes das neue Jahr?",
+        "answers": ["Südkorea", "Neuseeland", "Japan", "Hawaii"],
+        "correctAnswer": "1",
+        "explanation": "Neuseeland gehört zu den ersten Ländern weltweit, die das neue Jahr begrüßen."
+      },
+      "2": {
+        "text": "Welches Land ist für eines der größten Neujahrsfeuerwerke der Welt bekannt?",
+        "answers": ["Kanada", "Australien", "Südafrika", "Norwegen"],
+        "correctAnswer": "1",
+        "explanation": "Das Neujahrsfeuerwerk in Sydney zählt zu den spektakulärsten weltweit."
+      },
+      "3": {
+        "text": "Welches Lied wird in Schottland häufig zu Mitternacht an Neujahr gesungen?",
+        "answers": ["Imagine", "Happy New Year", "Auld Lang Syne", "Let It Be"],
+        "correctAnswer": "2",
+        "explanation": "\"Auld Lang Syne\" stammt aus Schottland und ist weltweit ein Symbol für Abschied und Neubeginn."
+      },
+      "4": {
+        "text": "Welcher römische Gott gab dem Monat Januar seinen Namen?",
+        "answers": ["Mars", "Saturn", "Janus", "Jupiter"],
+        "correctAnswer": "2",
+        "explanation": "Janus ist der Gott der Türen, Übergänge und Anfänge. Passend für den Jahreswechsel."
+      },
+      "5": {
+        "text": "Welche Farbe symbolisiert im chinesischen Neujahr traditionell Glück und Wohlstand?",
+        "answers": ["Blau", "Grün", "Rot", "Weiß"],
+        "correctAnswer": "2",
+        "explanation": "Rot steht im chinesischen Kulturraum für Glück, Schutz und Erfolg."
+      },
+      "6": {
+        "text": "Was essen viele Menschen in Spanien traditionell zu Mitternacht an Silvester?",
+        "answers": ["12 Trauben", "12 Datteln", "12 Mandeln", "12 Feigen"],
+        "correctAnswer": "0",
+        "explanation": "Zu jedem der 12 Glockenschläge wird eine Traube gegessen, eine für jeden Monat des neuen Jahres."
+      },
+      "7": {
+        "text": "Welches ungewöhnliche Neujahrsritual ist in Dänemark verbreitet?",
+        "answers": ["Gläser zerbrechen", "Von Stühlen springen", "Teller an Türen werfen", "Barfuß ins Freie gehen"],
+        "correctAnswer": "2",
+        "explanation": "Das Zerschlagen von Tellern an Haustüren soll Freundschaft und Glück bringen."
+      },
+      "8": {
+        "text": "Wie heißt der erste Tag des Jahres offiziell?",
+        "answers": ["Neujahrsabend", "Neujahrstag", "Silvestertag", "Jahresbeginn"],
+        "correctAnswer": "1",
+        "explanation": "Der 1. Januar wird offiziell als Neujahrstag bezeichnet."
+      },
+      "9": {
+        "text": "Welches Lebensmittel steht in Italien an Neujahr für Reichtum und Wohlstand?",
+        "answers": ["Bohnen", "Linsen", "Kichererbsen", "Erbsen"],
+        "correctAnswer": "1",
+        "explanation": "Linsen symbolisieren Münzen und damit finanziellen Wohlstand."
+      },
+      "10": {
+        "text": "Welches Land feiert Neujahr im Sommer mit großen Strandfesten?",
+        "answers": ["Portugal", "Brasilien", "Mexiko", "Spanien"],
+        "correctAnswer": "1",
+        "explanation": "In Brasilien fällt Silvester in den Sommer und wird oft mit Strandfeiern begangen."
+      },
+      "11": {
+        "text": "Welche Tradition gehört in Japan zum Jahreswechsel?",
+        "answers": ["108 Glockenschläge in Tempeln", "Feuerwerksmarathons", "Maskentänze", "Mitternachtsläufe"],
+        "correctAnswer": "0",
+        "explanation": "Die 108 Glockenschläge sollen die irdischen Begierden vertreiben."
+      },
+      "12": {
+        "text": "Welcher Kalender wird weltweit als offizieller Zivilkalender verwendet?",
+        "answers": ["Julianischer Kalender", "Mondkalender", "Gregorianischer Kalender", "Sonnenkalender"],
+        "correctAnswer": "2",
+        "explanation": "Der Gregorianische Kalender wurde 1582 eingeführt und ist heute internationaler Standard."
+      },
+      "13": {
+        "text": "Warum gibt es Schaltjahre?",
+        "answers": ["Wegen der Mondphasen", "Zur Anpassung an das Sonnenjahr", "Wegen der Jahreszeiten", "Zur Vereinfachung der Zeitrechnung"],
+        "correctAnswer": "1",
+        "explanation": "Ein Sonnenjahr ist etwas länger als 365 Tage, daher wird alle vier Jahre ein Tag hinzugefügt."
+      },
+      "14": {
+        "text": "Welches Tier ist kein Bestandteil des chinesischen Tierkreiszeichens?",
+        "answers": ["Drache", "Tiger", "Pferd", "Adler"],
+        "correctAnswer": "3",
+        "explanation": "Der Adler gehört nicht zu den zwölf Tieren des chinesischen Tierkreises."
+      },
+      "15": {
+        "text": "Wie nennt man den letzten Tag des Jahres im Deutschen?",
+        "answers": ["Altjahrstag", "Neujahrsabend", "Jahresende", "Silvester"],
+        "correctAnswer": "3",
+        "explanation": "Der 31. Dezember heißt Silvester, benannt nach Papst Silvester I."
+      },
+      "16": {
+        "text": "Welches Getränk wird weltweit am häufigsten zum Anstoßen an Neujahr verwendet?",
+        "answers": ["Korn", "Sekt", "Bier", "Whisky"],
+        "correctAnswer": "1",
+        "explanation": "Sekt gilt international als klassisches Neujahrsgetränk."
+      },
+      "17": {
+        "text": "Welches Land ist für das Neujahrsschwimmen im eiskalten Meer bekannt?",
+        "answers": ["Island", "Niederlande", "Russland", "Finnland"],
+        "correctAnswer": "1",
+        "explanation": "Das Neujahrsschwimmen hat in den Niederlanden eine lange Tradition."
+      },
+      "18": {
+        "text": "Was bedeutet der Neujahrsgruß \"Guten Rutsch\" ursprünglich?",
+        "answers": ["Gutes Ausrutschen", "Guter Start ins neue Jahr", "Reiche Ernte", "Gesunde Reise"],
+        "correctAnswer": "1",
+        "explanation": "Der Gruß leitet sich vermutlich vom jiddischen \"rosch\" (Anfang) ab."
+      },
+      "19": {
+        "text": "Welche Stadt veranstaltet eines der größten organisierten Neujahrsfeuerwerke Europas?",
+        "answers": ["London", "Paris", "Berlin", "Wien"],
+        "correctAnswer": "0",
+        "explanation": "Das Londoner Feuerwerk an der Themse zieht Millionen Zuschauer an."
+      },
+      "20": {
+        "text": "Welches traditionelle Orakel war lange Teil deutscher Silvesterbräuche?",
+        "answers": ["Kaffeesatzlesen", "Bleigießen", "Kartenlegen", "Runenwerfen"],
+        "correctAnswer": "1",
+        "explanation": "Beim Bleigießen wurden aus Formen Zukunftsdeutungen abgeleitet."
+      },
+      "21": {
+        "text": "Welche Farbe tragen Menschen in Brasilien traditionell an Silvester für Glück?",
+        "answers": ["Schwarz", "Rot", "Weiß", "Gelb"],
+        "correctAnswer": "2",
+        "explanation": "Weiße Kleidung steht in Brasilien für Frieden und einen positiven Neuanfang."
+      },
+      "22": {
+        "text": "Was ist der häufigste Neujahrsvorsatz weltweit?",
+        "answers": ["Mehr sparen", "Mehr Sport treiben", "Weniger arbeiten", "Mehr reisen"],
+        "correctAnswer": "1",
+        "explanation": "Mehr Bewegung und Fitness sind international die beliebtesten Vorsätze."
+      },
+      "23": {
+        "text": "Welches klassische Musikstück beendet traditionell das Wiener Neujahrskonzert?",
+        "answers": ["Kaiserwalzer", "Radetzky-Marsch", "Donauwalzer", "Wiener Blut"],
+        "correctAnswer": "1",
+        "explanation": "Der Radetzky-Marsch bildet traditionell den schwungvollen Abschluss."
+      },
+      "24": {
+        "text": "Welches Ereignis markiert weltweit offiziell den Beginn eines neuen Jahres?",
+        "answers": ["Der erste Sonnenaufgang", "Mitternacht nach Ortszeit", "Das erste Feuerwerk", "Der Neujahrsgruß der UNO"],
+        "correctAnswer": "1",
+        "explanation": "Der Jahreswechsel erfolgt offiziell um 00:00 Uhr nach der jeweiligen Ortszeit."
+      }
     }
+  }
 }
