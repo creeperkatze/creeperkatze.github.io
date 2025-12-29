@@ -22,7 +22,7 @@
                                     placeholder="#000000" class="font-mono" />
                             </div>
                             <Button class="self-end" @click="copyToClipboard(hexString)">
-                                <IconShare v-if="copied === hexString" class="w-5 h-5" />
+                                <span v-if="copied === hexString">{{ $t('page.tools.ascii-art-creator.copied') }}</span>
                                 <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                             </Button>
                         </div>
@@ -36,7 +36,7 @@
                                     placeholder="rgb(0, 0, 0)" class="font-mono" />
                             </div>
                             <Button class="self-end" @click="copyToClipboard(rgbInput)">
-                                <IconShare v-if="copied === rgbInput" class="w-5 h-5" />
+                                <span v-if="copied === rgbInput">{{ $t('page.tools.ascii-art-creator.copied') }}</span>
                                 <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                             </Button>
                         </div>
@@ -50,7 +50,7 @@
                                     placeholder="hsl(0, 0%, 0%)" class="font-mono" />
                             </div>
                             <Button class="self-end" @click="copyToClipboard(hslInput)">
-                                <IconShare v-if="copied === hslInput" class="w-5 h-5" />
+                                <span v-if="copied === hslInput">{{ $t('page.tools.ascii-art-creator.copied') }}</span>
                                 <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                             </Button>
                         </div>
@@ -70,7 +70,7 @@
                                 placeholder="hsv(0, 0%, 0%)" class="font-mono" />
                         </div>
                         <Button class="self-end" @click="copyToClipboard(hsvInput)">
-                            <IconShare v-if="copied === hsvInput" class="w-5 h-5" />
+                            <span v-if="copied === hsvInput">{{ $t('page.tools.ascii-art-creator.copied') }}</span>
                             <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                         </Button>
                     </div>
@@ -84,7 +84,7 @@
                                 placeholder="cmyk(0%, 0%, 0%, 0%)" class="font-mono" />
                         </div>
                         <Button class="self-end" @click="copyToClipboard(cmykInput)">
-                            <IconShare v-if="copied === cmykInput" class="w-5 h-5" />
+                            <span v-if="copied === cmykInput">{{ $t('page.tools.ascii-art-creator.copied') }}</span>
                             <span v-else>{{ $t('page.tools.tool.color-converter.copy') }}</span>
                         </Button>
                     </div>
@@ -181,14 +181,14 @@
 </template>
 
 <script setup>
-const rgb = reactive({ r: 0, g: 0, b: 0 });
+const rgb = reactive({ r: 255, g: 0, b: 0 });
 const copied = ref('');
 
-const hexInput = ref('#000000');
-const rgbInput = ref('rgb(0, 0, 0)');
-const hslInput = ref('hsl(0, 0%, 0%)');
-const hsvInput = ref('hsv(0, 0%, 0%)');
-const cmykInput = ref('cmyk(0%, 0%, 0%, 100%)');
+const hexInput = ref('#FF0000');
+const rgbInput = ref('rgb(255, 0, 0)');
+const hslInput = ref('hsl(0, 100%, 50%)');
+const hsvInput = ref('hsv(0, 100%, 100%)');
+const cmykInput = ref('cmyk(0%, 100%, 100%, 0%)');
 
 const hexString = computed({
     get: () => rgbToHex(rgb.r, rgb.g, rgb.b),

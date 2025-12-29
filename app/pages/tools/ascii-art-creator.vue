@@ -172,10 +172,7 @@
                 <div class="flex flex-wrap justify-center gap-4">
                     <div>
                         <Button @click="copyToClipboard" :disabled="!asciiArt">
-                            <div class="flex items-center justify-center gap-2">
-                                <IconShare v-if="copied" class="size-6 fill-white" />
-                                <span>{{ copied ? $t('page.tools.ascii-art-creator.copied') : $t('page.tools.ascii-art-creator.copy_button') }}</span>
-                            </div>
+                            {{ copied ? $t('page.tools.ascii-art-creator.copied') : $t('page.tools.ascii-art-creator.copy_button') }}
                         </Button>
                     </div>
                     <div>
