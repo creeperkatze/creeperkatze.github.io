@@ -80,6 +80,9 @@ export default defineNuxtConfig({
         public: {
             siteVerificationId: "2aNXioZyl8kTKYULVcW_ttKMJtgM6xShP2v8bxjWGbY",
             adSenseId: "ca-pub-3613753082519650",
+            posthogPublicKey: 'phc_9JpvRCixbtwy7G3rjbNOwnnSQljPWxiavUNE8C4oeE5',
+            posthogHost: 'https://eu.i.posthog.com',
+            posthogDefaults: '2025-11-30'
         },
     },
     routeRules: {
