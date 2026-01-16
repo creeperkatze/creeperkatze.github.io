@@ -23,39 +23,40 @@
             </article>
         </template>
         <template v-else>
-            <h1>{{ $t('page.blog.not_found') }}</h1>
+            <h1>{{ $t("page.blog.not_found") }}</h1>
         </template>
     </div>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
-import { filename } from 'pathe/utils';
+import { useRoute } from "vue-router";
+import { computed } from "vue";
 
 const { locale } = useI18n();
-const path = useUnlocalePath(useRoute().path);
+const route = useRoute();
 
-const { data: blog } = await useAsyncData("blog", () => {
-    return queryCollection(`blogs`)
-        .path(path)
-        .first()
-})
+const path = computed(() => getUnlocalizedPath(route.path));
 
-function useUnlocalePath() {
-    const path = useRoute().path;
-    for (const locale of useI18n().availableLocales) {
-        const prefix = "/" + locale;
-        if (path.startsWith(prefix)) {
-            return path.slice(prefix.length);
+const { data: blog } = await useAsyncData(
+    `blog-${path.value}-${locale.value}`,
+    () => queryCollection("blogs").path(path.value).first(),
+    { watch: [path, locale] }
+);
+
+function getUnlocalizedPath(currentPath) {
+    for (const loc of useI18n().availableLocales) {
+        const prefix = "/" + loc;
+        if (currentPath.startsWith(prefix)) {
+            return currentPath.slice(prefix.length);
         }
     }
-    return path;
+    return currentPath;
 }
 
 definePageMeta({
-    title: 'page.blog.title',
-    description: 'page.blog.description',
-    image: '/images/seo/blog.jpg'
+    title: "page.blog.title",
+    description: "page.blog.description",
+    image: "/images/seo/blog.jpg"
 })
 
 useSeoMeta({
