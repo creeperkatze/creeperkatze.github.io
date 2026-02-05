@@ -11,10 +11,10 @@
 
         <Transition name="dropdown-fade">
             <div v-if="dropdownOpen"
-                class="absolute left-0 mt-8 w-48 rounded-md bg-neutral-800 border-2 max-h-[80vh] overflow-y-auto">
+                class="absolute left-0 mt-8 w-52 rounded-md bg-neutral-800 border-2 max-h-[80vh] overflow-y-auto">
                 <template v-for="item in items" :key="item.name">
                     <div v-if="item.children" @mouseenter="openSubmenu(item.name)" @mouseleave="closeSubmenu(item.name)">
-                        <NuxtLink :to="resolveTo(item.link)" class="text-lg flex items-center cursor-pointer px-4 py-2 navbar-element"
+                        <NuxtLink :to="resolveTo(item.link)" class="text-lg flex items-center cursor-pointer px-4 py-2 navbar-element pr-4"
                             :class="{ 'router-link-active': isItemActive(item) }">
                             {{ item.name }}
                             <IconDown class="size-4 transform transition-all"
@@ -22,7 +22,7 @@
                         </NuxtLink>
                         <div v-if="openSubmenus[item.name]" class="flex flex-col space-y-4 border-l-2 border-white ml-4 mb-2">
                             <NuxtLink v-for="child in item.children" :key="child.name" :to="localePath(child.link)"
-                                class="text-left navbar-element block px-4" :class="{ 'router-link-active': isLinkExactActive(child.link) }">
+                                class="text-left navbar-element block px-2" :class="{ 'router-link-active': isLinkExactActive(child.link) }">
                                 {{ child.name }}
                             </NuxtLink>
                         </div>

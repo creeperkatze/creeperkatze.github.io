@@ -3,21 +3,21 @@
     <div class="flex justify-center mx-auto flex-col w-fit">
         <div class="grid grid-cols-3 gap-2">
             <SmallCard :link="localePath('/tools/password-generator/')" image="/images/seo/password-generator.jpg"
-                :alt="$t('page.tools.tool.password-generator.title')" :title="$t('page.tools.tool.password-generator.title')" />
+                :alt="$t('page.tools.tool.password-generator.title')" :title="$t('page.tools.tool.password-generator.heading')" />
             <SmallCard :link="localePath('/tools/text-converter/')" image="/images/seo/text-converter.jpg"
-                :alt="$t('page.tools.tool.text-converter.title')" :title="$t('page.tools.tool.text-converter.title')" />
+                :alt="$t('page.tools.tool.text-converter.title')" :title="$t('page.tools.tool.text-converter.heading')" />
             <SmallCard :link="localePath('/tools/font-changer/')" image="/images/seo/font-changer.jpg"
-                :alt="$t('page.tools.tool.font-changer.title')" :title="$t('page.tools.tool.font-changer.title')" />
+                :alt="$t('page.tools.tool.font-changer.title')" :title="$t('page.tools.tool.font-changer.heading')" />
             <SmallCard :link="localePath('/tools/unit-converter/')" image="/images/seo/unit-converter.jpg"
-                :alt="$t('page.tools.tool.unit-converter.title')" :title="$t('page.tools.tool.unit-converter.title')" />
+                :alt="$t('page.tools.tool.unit-converter.title')" :title="$t('page.tools.tool.unit-converter.heading')" />
             <SmallCard :link="localePath('/tools/stopwatch/')" image="/images/seo/stopwatch.jpg"
-                :alt="$t('page.tools.tool.stopwatch.title')" :title="$t('page.tools.tool.stopwatch.title')" />
+                :alt="$t('page.tools.tool.stopwatch.title')" :title="$t('page.tools.tool.stopwatch.heading')" />
             <SmallCard :link="localePath('/tools/encoder-decoder/')" image="/images/seo/encoder-decoder.jpg"
-                :alt="$t('page.tools.tool.encoder-decoder.title')" :title="$t('page.tools.tool.encoder-decoder.title')" />
+                :alt="$t('page.tools.tool.encoder-decoder.title')" :title="$t('page.tools.tool.encoder-decoder.heading')" />
             <SmallCard :link="localePath('/tools/color-converter/')" image="/images/seo/color-converter.jpg"
-                :alt="$t('page.tools.tool.color-converter.title')" :title="$t('page.tools.tool.color-converter.title')" />
+                :alt="$t('page.tools.tool.color-converter.title')" :title="$t('page.tools.tool.color-converter.heading')" />
             <SmallCard :link="localePath('/tools/ascii-art-creator/')" image="/images/seo/ascii-art-creator.jpg"
-                :alt="$t('page.tools.tool.ascii-art-creator.title')" :title="$t('page.tools.tool.ascii-art-creator.title')" />
+                :alt="$t('page.tools.tool.ascii-art-creator.title')" :title="$t('page.tools.tool.ascii-art-creator.heading')" />
         </div>
     </div>
 </template>

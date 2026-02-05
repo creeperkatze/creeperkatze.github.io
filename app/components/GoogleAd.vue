@@ -1,3 +1,18 @@
+<template>
+    <div v-if="adState !== 'blocked'" class="w-full max-w-[800px] mx-auto" :class="[
+        adState === 'loaded'
+            ? ['border-2 border-yellow-400 p-2 rounded-lg overflow-hidden', props.customClass]
+            : 'relative h-0 overflow-hidden'
+    ]">
+        <ins ref="insEl" class="adsbygoogle block w-full"
+            :class="adState === 'loading' ? 'absolute left-0 top-0 h-[100px]' : ''" style="display:block;"
+            :data-ad-client="runtimeConfig.public.adSenseId" :data-ad-slot="props.adSlot"
+            :data-ad-format="props.type === 'infeed' ? 'fluid' : 'auto'"
+            :data-ad-layout-key="props.type === 'infeed' ? props.layoutKey : undefined"
+            data-full-width-responsive="true" />
+    </div>
+</template>
+
 <script setup lang="ts">
 import { useRuntimeConfig } from 'nuxt/app'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
@@ -78,18 +93,3 @@ onBeforeUnmount(() =>
     cleanup()
 })
 </script>
-
-<template>
-    <div v-if="adState !== 'blocked'" class="w-full max-w-[800px] mx-auto" :class="[
-        adState === 'loaded'
-            ? ['border-2 border-yellow-400 p-2 rounded-lg overflow-hidden', props.customClass]
-            : 'relative h-0 overflow-hidden'
-    ]">
-        <ins ref="insEl" class="adsbygoogle block w-full"
-            :class="adState === 'loading' ? 'absolute left-0 top-0 h-[100px]' : ''" style="display:block;"
-            :data-ad-client="runtimeConfig.public.adSenseId" :data-ad-slot="props.adSlot"
-            :data-ad-format="props.type === 'infeed' ? 'fluid' : 'auto'"
-            :data-ad-layout-key="props.type === 'infeed' ? props.layoutKey : undefined"
-            data-full-width-responsive="true" />
-    </div>
-</template>

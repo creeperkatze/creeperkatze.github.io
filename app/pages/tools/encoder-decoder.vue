@@ -2,8 +2,8 @@
     <GoogleAd adSlot="7218033439" customClass="mb-8" />
 
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1>{{ $t('page.tools.tool.encoder-decoder.title') }}</h1>
-        <p>{{ $t('page.tools.tool.encoder-decoder.description') }}</p>
+        <h1>{{ $t('page.tools.tool.encoder-decoder.heading') }}</h1>
+        <p class="whitespace-pre-wrap mb-4 max-w-4xl text-center">{{ $t('page.tools.tool.encoder-decoder.description') }}</p>
         <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <TextareaField ref="inputRef" v-model="input" class="h-60"
                 :placeholder="$t('page.tools.tool.encoder-decoder.input.placeholder')" @scroll="onInputScroll" />
@@ -61,6 +61,13 @@
     </div>
 
     <GoogleAd adSlot="5485848047" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.tools.tool.encoder-decoder.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
@@ -76,6 +83,64 @@ const syncScroll = ref(true);
 const inputRef = ref(null);
 const outputRef = ref(null);
 let isSyncing = false;
+
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.tools.tool.encoder-decoder.title'),
+    description: t('page.tools.tool.encoder-decoder.description'),
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        'Base64, URL, Hex encoding/decoding',
+        'HTML Entities, Binary, Base32',
+        'ROT13, Caesar cipher, Vigenère cipher',
+        'Atbash cipher, Reverse text',
+        'Morse code encoding/decoding'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.encoder-decoder.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.encoder-decoder.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.encoder-decoder.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.encoder-decoder.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.encoder-decoder.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.encoder-decoder.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.encoder-decoder.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.encoder-decoder.faq.4.a')
+            }
+        }
+    ]
+});
 
 const onInputScroll = (e) =>
 {
@@ -420,6 +485,25 @@ const copyToClipboard = () =>
     copied.value = true;
     setTimeout(() => copied.value = false, 2000);
 };
+
+const faqItems = computed(() => [
+    {
+        question: t('page.tools.tool.encoder-decoder.faq.1.q'),
+        answer: t('page.tools.tool.encoder-decoder.faq.1.a')
+    },
+    {
+        question: t('page.tools.tool.encoder-decoder.faq.2.q'),
+        answer: t('page.tools.tool.encoder-decoder.faq.2.a')
+    },
+    {
+        question: t('page.tools.tool.encoder-decoder.faq.3.q'),
+        answer: t('page.tools.tool.encoder-decoder.faq.3.a')
+    },
+    {
+        question: t('page.tools.tool.encoder-decoder.faq.4.q'),
+        answer: t('page.tools.tool.encoder-decoder.faq.4.a')
+    }
+]);
 
 definePageMeta({
     title: 'page.tools.tool.encoder-decoder.title',

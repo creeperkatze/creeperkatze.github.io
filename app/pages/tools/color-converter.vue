@@ -2,8 +2,8 @@
     <GoogleAd adSlot="8438140988" customClass="mb-8" />
 
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1>{{ $t('page.tools.tool.color-converter.title') }}</h1>
-        <p>{{ $t('page.tools.tool.color-converter.description') }}</p>
+        <h1>{{ $t('page.tools.tool.color-converter.heading') }}</h1>
+        <p class="whitespace-pre-wrap mb-4 max-w-4xl text-center">{{ $t('page.tools.tool.color-converter.description') }}</p>
 
         <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-8">
 
@@ -178,11 +178,77 @@
     </div>
 
     <GoogleAd adSlot="5422268863" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.tools.tool.color-converter.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
+const { t } = useI18n();
 const rgb = reactive({ r: 255, g: 0, b: 0 });
 const copied = ref('');
+
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.tools.tool.color-converter.title'),
+    description: t('page.tools.tool.color-converter.description'),
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        'HEX, RGB, HSL, CMYK, HSV conversion',
+        'Color schemes (complementary, analogous, triadic)',
+        'Shades and tints generation',
+        'Accessibility contrast ratio checker',
+        'Interactive color picker'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.color-converter.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.color-converter.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.color-converter.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.color-converter.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.color-converter.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.color-converter.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.color-converter.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.color-converter.faq.4.a')
+            }
+        }
+    ]
+});
 
 const hexInput = ref('#FF0000');
 const rgbInput = ref('rgb(255, 0, 0)');
@@ -558,6 +624,25 @@ function cmykToRgb(c, m, y, k)
         b: Math.round(b)
     };
 }
+
+const faqItems = computed(() => [
+    {
+        question: t('page.tools.tool.color-converter.faq.1.q'),
+        answer: t('page.tools.tool.color-converter.faq.1.a')
+    },
+    {
+        question: t('page.tools.tool.color-converter.faq.2.q'),
+        answer: t('page.tools.tool.color-converter.faq.2.a')
+    },
+    {
+        question: t('page.tools.tool.color-converter.faq.3.q'),
+        answer: t('page.tools.tool.color-converter.faq.3.a')
+    },
+    {
+        question: t('page.tools.tool.color-converter.faq.4.q'),
+        answer: t('page.tools.tool.color-converter.faq.4.a')
+    }
+]);
 
 definePageMeta({
     title: 'page.tools.tool.color-converter.title',

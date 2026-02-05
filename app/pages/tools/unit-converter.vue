@@ -2,9 +2,9 @@
     <GoogleAd adSlot="7373127864" customClass="mb-8" />
 
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1>{{ $t('page.tools.tool.unit-converter.title') }}</h1>
-        <P>{{ $t('page.tools.tool.unit-converter.description') }}</P>
-        <div class="w-full max-w-2xl p-6 glass-effect border-2 rounded-lg space-y-4">
+        <h1>{{ $t('page.tools.tool.unit-converter.heading') }}</h1>
+        <P class="whitespace-pre-wrap mb-4 max-w-4xl text-center">{{ $t('page.tools.tool.unit-converter.description') }}</P>
+        <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                 <label>{{ $t('page.tools.tool.unit-converter.category') }}</label>
                 <SelectField v-model="category" class="flex-1">
@@ -51,14 +51,80 @@
     </div>
 
     <GoogleAd adSlot="8111193145" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.tools.tool.unit-converter.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
+const { t } = useI18n();
 const category = ref('length')
 const inputValue = ref(1)
 const fromUnit = ref('m')
 const toUnit = ref('cm')
 const copied = ref(false)
+
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.tools.tool.unit-converter.title'),
+    description: t('page.tools.tool.unit-converter.description'),
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        'Length, mass, temperature conversion',
+        'Volume, area, time conversion',
+        'Digital storage, speed conversion',
+        'Pressure, energy, power conversion',
+        '50+ different units supported'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.unit-converter.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.unit-converter.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.unit-converter.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.unit-converter.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.unit-converter.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.unit-converter.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.unit-converter.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.unit-converter.faq.4.a')
+            }
+        }
+    ]
+});
 
 const lengthToMeters = {
     mm: 0.001,
@@ -335,6 +401,25 @@ const copyToClipboard = () => {
     copied.value = true
     setTimeout(() => copied.value = false, 2000)
 }
+
+const faqItems = computed(() => [
+    {
+        question: t('page.tools.tool.unit-converter.faq.1.q'),
+        answer: t('page.tools.tool.unit-converter.faq.1.a')
+    },
+    {
+        question: t('page.tools.tool.unit-converter.faq.2.q'),
+        answer: t('page.tools.tool.unit-converter.faq.2.a')
+    },
+    {
+        question: t('page.tools.tool.unit-converter.faq.3.q'),
+        answer: t('page.tools.tool.unit-converter.faq.3.a')
+    },
+    {
+        question: t('page.tools.tool.unit-converter.faq.4.q'),
+        answer: t('page.tools.tool.unit-converter.faq.4.a')
+    }
+])
 
 definePageMeta({
     title: 'page.tools.tool.unit-converter.title',

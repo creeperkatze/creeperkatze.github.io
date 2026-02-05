@@ -2,8 +2,8 @@
     <GoogleAd adSlot="8657632835" customClass="mb-8" />
 
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1>{{ $t('page.tools.tool.stopwatch.title') }}</h1>
-        <p>{{ $t('page.tools.tool.stopwatch.description') }}</p>
+        <h1>{{ $t('page.tools.tool.stopwatch.heading') }}</h1>
+        <p class="whitespace-pre-wrap mb-4 max-w-4xl text-center">{{ $t('page.tools.tool.stopwatch.description') }}</p>
         <div class="w-full max-w-md p-8 glass-effect border-2 rounded-lg flex flex-col items-center space-y-6">
             <div class="text-6xl font-mono text-white">
                 {{ formattedTime }}
@@ -35,13 +35,79 @@
     </div>
 
     <GoogleAd adSlot="1932797606" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.tools.tool.stopwatch.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
+const { t } = useI18n();
 const time = ref(0);
 const isRunning = ref(false);
 const rounds = ref([]);
 let interval = null;
+
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.tools.tool.stopwatch.title'),
+    description: t('page.tools.tool.stopwatch.description'),
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        'Start, stop, reset functions',
+        'Lap time recording',
+        'Millisecond precision',
+        'Works offline',
+        'Mobile-friendly touch controls'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.stopwatch.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.stopwatch.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.stopwatch.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.stopwatch.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.stopwatch.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.stopwatch.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.stopwatch.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.stopwatch.faq.4.a')
+            }
+        }
+    ]
+});
 
 const formatTime = (ms) =>
 {
@@ -82,6 +148,25 @@ const resetTimer = () =>
     time.value = 0;
     rounds.value = [];
 };
+
+const faqItems = computed(() => [
+    {
+        question: t('page.tools.tool.stopwatch.faq.1.q'),
+        answer: t('page.tools.tool.stopwatch.faq.1.a')
+    },
+    {
+        question: t('page.tools.tool.stopwatch.faq.2.q'),
+        answer: t('page.tools.tool.stopwatch.faq.2.a')
+    },
+    {
+        question: t('page.tools.tool.stopwatch.faq.3.q'),
+        answer: t('page.tools.tool.stopwatch.faq.3.a')
+    },
+    {
+        question: t('page.tools.tool.stopwatch.faq.4.q'),
+        answer: t('page.tools.tool.stopwatch.faq.4.a')
+    }
+]);
 
 onUnmounted(() =>
 {

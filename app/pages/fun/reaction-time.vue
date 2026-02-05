@@ -76,9 +76,17 @@
         </div>
     </div>
     <GoogleAd adSlot="9501431902" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.reaction-time.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
+const { t } = useI18n();
 const state = ref("idle");
 const lastMs = ref(null);
 const bestMs = ref(null);
@@ -201,7 +209,64 @@ const primaryAction = () =>
     startRound();
 };
 
-const { t } = useI18n();
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.reaction-time.title'),
+    description: t('page.reaction-time.description'),
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        'Millisecond-accurate timing',
+        'Visual reaction testing',
+        'Performance comparison chart',
+        'Track your best time',
+        'See your ranking percentile',
+        'Works on desktop and mobile'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.reaction-time.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.reaction-time.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.reaction-time.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.reaction-time.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.reaction-time.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.reaction-time.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.reaction-time.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.reaction-time.faq.4.a')
+            }
+        }
+    ]
+});
 
 const referenceMeanMs = 250;
 const referenceStdMs = 50;
@@ -355,6 +420,25 @@ const lightClass = (index) =>
         ? "bg-red-600 border-red-300"
         : "bg-neutral-900/40 border-white/20";
 };
+
+const faqItems = computed(() => [
+    {
+        question: t('page.reaction-time.faq.1.q'),
+        answer: t('page.reaction-time.faq.1.a')
+    },
+    {
+        question: t('page.reaction-time.faq.2.q'),
+        answer: t('page.reaction-time.faq.2.a')
+    },
+    {
+        question: t('page.reaction-time.faq.3.q'),
+        answer: t('page.reaction-time.faq.3.a')
+    },
+    {
+        question: t('page.reaction-time.faq.4.q'),
+        answer: t('page.reaction-time.faq.4.a')
+    }
+]);
 
 onUnmounted(() =>
 {

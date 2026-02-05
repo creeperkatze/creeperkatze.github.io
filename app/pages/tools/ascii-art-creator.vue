@@ -2,8 +2,8 @@
     <GoogleAd adSlot="2157278442" customClass="mb-8" />
 
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1>{{ $t('page.tools.tool.ascii-art-creator.title') }}</h1>
-        <p>{{ $t('page.tools.tool.ascii-art-creator.description') }}</p>
+        <h1>{{ $t('page.tools.tool.ascii-art-creator.heading') }}</h1>
+        <p class="whitespace-pre-wrap mb-4 max-w-4xl text-center">{{ $t('page.tools.tool.ascii-art-creator.description') }}</p>
 
         <div class="w-full max-w-6xl p-6 glass-effect border-2 rounded-lg">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -190,12 +190,98 @@
             </div>
         </div>
     </div>
-    
+
     <GoogleAd adSlot="1673954919" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.tools.tool.ascii-art-creator.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 const { t } = useI18n()
+
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.tools.tool.ascii-art-creator.title'),
+    description: t('page.tools.tool.ascii-art-creator.description'),
+    applicationCategory: 'MultimediaApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        'Convert JPG, PNG, GIF, WEBP to ASCII',
+        'Customizable width and height',
+        'Multiple character sets (Standard, Dense, Blocks, Binary)',
+        'Aspect correction for proper proportions',
+        'Contrast and brightness adjustments',
+        'Download or copy to clipboard'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.ascii-art-creator.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.ascii-art-creator.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.ascii-art-creator.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.ascii-art-creator.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.ascii-art-creator.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.ascii-art-creator.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.ascii-art-creator.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.ascii-art-creator.faq.4.a')
+            }
+        }
+    ]
+});
+
+const faqItems = computed(() => [
+    {
+        question: t('page.tools.tool.ascii-art-creator.faq.1.q'),
+        answer: t('page.tools.tool.ascii-art-creator.faq.1.a')
+    },
+    {
+        question: t('page.tools.tool.ascii-art-creator.faq.2.q'),
+        answer: t('page.tools.tool.ascii-art-creator.faq.2.a')
+    },
+    {
+        question: t('page.tools.tool.ascii-art-creator.faq.3.q'),
+        answer: t('page.tools.tool.ascii-art-creator.faq.3.a')
+    },
+    {
+        question: t('page.tools.tool.ascii-art-creator.faq.4.q'),
+        answer: t('page.tools.tool.ascii-art-creator.faq.4.a')
+    }
+]);
 
 definePageMeta({
     title: 'page.tools.tool.ascii-art-creator.title',

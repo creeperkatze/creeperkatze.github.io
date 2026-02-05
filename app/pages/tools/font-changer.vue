@@ -2,8 +2,8 @@
     <GoogleAd adSlot="3792975509" customClass="mb-8" />
 
     <div class="flex flex-col items-center justify-center space-y-4">
-        <h1>{{ $t('page.tools.tool.font-changer.title') }}</h1>
-        <p>{{ $t('page.tools.tool.font-changer.description') }}</p>
+        <h1>{{ $t('page.tools.tool.font-changer.heading') }}</h1>
+        <p class="whitespace-pre-wrap mb-4 max-w-4xl text-center">{{ $t('page.tools.tool.font-changer.description') }}</p>
         <div class="w-full max-w-4xl p-6 glass-effect border-2 rounded-lg space-y-4">
             <TextareaField ref="inputRef" v-model="input" class="h-60"
                 :placeholder="$t('page.tools.tool.font-changer.input.placeholder')" @scroll="onInputScroll" />
@@ -62,9 +62,17 @@
     </div>
 
     <GoogleAd adSlot="4498895974" customClass="mt-8" />
+
+    <div class="flex flex-col items-center justify-center pt-8">
+        <FaqSection
+            :title="$t('page.tools.tool.font-changer.faq.title')"
+            :items="faqItems"
+        />
+    </div>
 </template>
 
 <script setup>
+const { t } = useI18n();
 const input = ref('');
 const font = ref('bold');
 const copied = ref(false);
@@ -72,6 +80,65 @@ const syncScroll = ref(true);
 const inputRef = ref(null);
 const outputRef = ref(null);
 let isSyncing = false;
+
+defineWebPage({
+    '@type': 'SoftwareApplication',
+    name: t('page.tools.tool.font-changer.title'),
+    description: t('page.tools.tool.font-changer.description'),
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD'
+    },
+    featureList: [
+        '30+ Unicode font styles',
+        'Bold, Italic, Script, Fraktur, Monospace',
+        'Small Caps, Circled, Squared letters',
+        'Strikethrough, Underline, Glitch effects',
+        'Instant copy and paste',
+        'Works on all platforms'
+    ].join(', ')
+});
+
+defineWebPage({
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.font-changer.faq.1.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.font-changer.faq.1.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.font-changer.faq.2.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.font-changer.faq.2.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.font-changer.faq.3.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.font-changer.faq.3.a')
+            }
+        },
+        {
+            '@type': 'Question',
+            name: t('page.tools.tool.font-changer.faq.4.q'),
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: t('page.tools.tool.font-changer.faq.4.a')
+            }
+        }
+    ]
+});
 
 const onInputScroll = (e) =>
 {
@@ -356,6 +423,25 @@ const copyToClipboard = () =>
     copied.value = true;
     setTimeout(() => copied.value = false, 2000);
 };
+
+const faqItems = computed(() => [
+    {
+        question: t('page.tools.tool.font-changer.faq.1.q'),
+        answer: t('page.tools.tool.font-changer.faq.1.a')
+    },
+    {
+        question: t('page.tools.tool.font-changer.faq.2.q'),
+        answer: t('page.tools.tool.font-changer.faq.2.a')
+    },
+    {
+        question: t('page.tools.tool.font-changer.faq.3.q'),
+        answer: t('page.tools.tool.font-changer.faq.3.a')
+    },
+    {
+        question: t('page.tools.tool.font-changer.faq.4.q'),
+        answer: t('page.tools.tool.font-changer.faq.4.a')
+    }
+]);
 
 definePageMeta({
     title: 'page.tools.tool.font-changer.title',
