@@ -42,6 +42,19 @@ We use this information to evaluate your use of the website, compile reports on 
 
 For more information on how Google Analytics collects and processes data, please visit [Google's Privacy Policy](https://policies.google.com/privacy).
 
+## PostHog
+
+This website uses PostHog, a product analytics platform that helps us understand how you use our website. PostHog may collect information such as:
+
+- Pages visited and actions taken on the website
+- Browser type, operating system, and device information
+- Approximate location based on IP address
+- Referrer information (how you found our website)
+
+We use this data to improve our website's functionality, user experience, and to identify and fix any technical issues. PostHog allows us to analyze user behavior patterns without storing personally identifiable information.
+
+For more information about PostHog's data practices, please visit [PostHog's Privacy Policy](https://posthog.com/privacy).
+
 ## Managing Cookies and Consent
 
 You can manage your privacy preferences and cookie consent at any time using the link below:
