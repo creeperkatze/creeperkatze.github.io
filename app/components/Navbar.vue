@@ -47,11 +47,11 @@
                 </div>
             </nav>
             <div class="flex flex-row items-center justify-between space-x-3">
+                <NuxtLink href="https://fiverr.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                    <IconFiverr class="w-8 h-8 text-white hover:text-gift" />
+                </NuxtLink>
                 <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
                     <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
-                </NuxtLink>
-                <NuxtLink to="https://www.tiktok.com/@creeperkatze" target="_blank" class="hover-lift-icon">
-                    <IconTikTok class="w-7 h-7 text-white hover:text-gift" />
                 </NuxtLink>
                 <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
                     <IconItch class="w-8 h-8 text-white hover:text-gift" />
@@ -75,11 +75,11 @@
                 </button>
             </div>
             <div class="flex flex-row items-center justify-end flex-1 space-x-3 mr-2">
+                <NuxtLink href="https://fiverr.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                    <IconFiverr class="w-8 h-8 text-white hover:text-gift" />
+                </NuxtLink>
                 <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
                     <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
-                </NuxtLink>
-                <NuxtLink to="https://www.tiktok.com/@creeperkatze" target="_blank" class="hover-lift-icon">
-                    <IconTikTok class="w-7 h-7 text-white hover:text-gift" />
                 </NuxtLink>
                 <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
                     <IconItch class="w-8 h-8 text-white hover:text-gift" />
