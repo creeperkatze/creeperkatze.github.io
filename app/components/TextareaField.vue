@@ -4,6 +4,7 @@
         :class="wrapperClass"
     >
         <textarea
+            ref="textareaEl"
             v-bind="textareaAttrs"
             :value="modelValue"
             class="text-white w-full h-full p-4 bg-transparent resize-none focus:outline-none"
@@ -39,6 +40,8 @@ const textareaAttrs = computed(() => {
     return cloned
 })
 
+const textareaEl = ref(null)
+
 const onInput = (event) => {
     let value = event?.target?.value ?? ''
 
@@ -48,4 +51,8 @@ const onInput = (event) => {
 
     emit('update:modelValue', value)
 }
+
+defineExpose({
+    el: textareaEl
+})
 </script>

@@ -58,9 +58,9 @@ const onInputScroll = (e) =>
     if (!syncScroll.value) return;
     if (isSyncing) return;
     isSyncing = true;
-    if (outputRef.value?.el?.value)
+    if (outputRef.value?.el)
     {
-        outputRef.value.el.value.scrollTop = e.target.scrollTop;
+        outputRef.value.el.scrollTop = e.target.scrollTop;
     }
     setTimeout(() => isSyncing = false, 10);
 };
@@ -70,9 +70,9 @@ const onOutputScroll = (e) =>
     if (!syncScroll.value) return;
     if (isSyncing) return;
     isSyncing = true;
-    if (inputRef.value?.$el)
+    if (inputRef.value?.el)
     {
-        inputRef.value.$el.scrollTop = e.target.scrollTop;
+        inputRef.value.el.scrollTop = e.target.scrollTop;
     }
     setTimeout(() => isSyncing = false, 10);
 };
