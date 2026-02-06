@@ -47,16 +47,16 @@
                 </div>
             </nav>
             <div class="flex flex-row items-center justify-between space-x-3">
-                <NuxtLink href="https://fiverr.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/fiverr" target="_blank" class="hover-lift-icon">
                     <IconFiverr class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
+                <NuxtLink to="https://link.creeperkatze.de/instagram" target="_blank" class="hover-lift-icon">
                     <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/itch" target="_blank" class="hover-lift-icon">
                     <IconItch class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink href="https://github.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/github" target="_blank" class="hover-lift-icon">
                     <IconGithub class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
                 <LangSwitcher />
@@ -75,16 +75,16 @@
                 </button>
             </div>
             <div class="flex flex-row items-center justify-end flex-1 space-x-3 mr-2">
-                <NuxtLink href="https://fiverr.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/fiverr" target="_blank" class="hover-lift-icon">
                     <IconFiverr class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink to="https://www.instagram.com/creeperkatze/" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/instagram" target="_blank" class="hover-lift-icon">
                     <IconInstagram class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink href="https://creeperkatze.itch.io/" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/itch" target="_blank" class="hover-lift-icon">
                     <IconItch class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
-                <NuxtLink href="https://github.com/creeperkatze" target="_blank" class="hover-lift-icon">
+                <NuxtLink href="https://link.creeperkatze.de/github" target="_blank" class="hover-lift-icon">
                     <IconGithub class="w-8 h-8 text-white hover:text-gift" />
                 </NuxtLink>
                 <LangSwitcher />
