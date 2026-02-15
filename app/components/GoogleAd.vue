@@ -1,5 +1,5 @@
 <template>
-    <div v-if="adState !== 'blocked'" class="w-full max-w-[800px] mx-auto" :class="[
+    <div v-if="!disabled && runtimeConfig.public.adSenseEnabled !== false && adState !== 'blocked'" class="w-full max-w-[800px] mx-auto" :class="[
         adState === 'loaded'
             ? ['border-2 border-yellow-400 p-2 rounded-lg overflow-hidden', props.customClass]
             : 'relative h-0 overflow-hidden'
@@ -23,10 +23,12 @@ interface Props
     customClass: string
     type?: "display" | "infeed"
     layoutKey?: string
+    disabled?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
     type: "display",
+    disabled: false,
 })
 const runtimeConfig = useRuntimeConfig()
 
