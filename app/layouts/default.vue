@@ -62,12 +62,12 @@ function update()
 
                             gtag('config', 'G-XSCLLTBRFJ');`
             },
-            {
+            ...(runtimeConfig.public.adSenseEnabled !== false ? [{
                 key: 'adsense',
                 async: true,
                 src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${runtimeConfig.public.adSenseId}`,
                 crossorigin: 'anonymous'
-            }
+            }] : [])
         ]
     });
 
