@@ -104,6 +104,7 @@
         </Quiz>
     </div>
     <GoogleAd adSlot="9339911697" customClass="mt-8" />
+    <PageLinks currentPage="new-year-quiz" />
 </template>
 
 <script setup>

@@ -83,6 +83,8 @@
             :items="faqItems"
         />
     </div>
+
+    <PageLinks currentPage="reaction-time" />
 </template>
 
 <script setup>

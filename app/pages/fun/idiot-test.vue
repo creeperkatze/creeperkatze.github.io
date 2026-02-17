@@ -82,6 +82,7 @@
         </Quiz>
     </div>
     <GoogleAd adSlot="1659158767" customClass="mt-8" />
+    <PageLinks currentPage="idiot-test" />
 </template>
 
 <script setup>

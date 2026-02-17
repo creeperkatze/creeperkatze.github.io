@@ -91,6 +91,7 @@
         </Quiz>
     </div>
     <GoogleAd adSlot="9148038688" customClass="mt-8" />
+    <PageLinks currentPage="christmas-quiz" />
 </template>
 
 <script setup>

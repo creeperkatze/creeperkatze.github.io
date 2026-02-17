@@ -100,6 +100,7 @@
         </Quiz>
     </div>
     <GoogleAd adSlot="8475204976" customClass="mt-8" />
+    <PageLinks currentPage="common-knowledge-quiz" />
 </template>
 
 <script setup>
