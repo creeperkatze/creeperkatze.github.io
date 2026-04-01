@@ -22,7 +22,7 @@
     "nuxt": "^4.3.0",
     "nuxt-schema-org": "^5.0.10",
     "nuxt-seo-utils": "^7.0.19",
-    "posthog-js": "^1.341.0",
+    "posthog-js": "^1.364.4",
     "sharp": "^0.34.5",
     "vue": "^3.5.27",
     "vue-router": "^4.6.4"
