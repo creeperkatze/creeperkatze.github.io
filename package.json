@@ -21,7 +21,7 @@
     "better-sqlite3": "^12.6.2",
     "nuxt": "^4.3.0",
     "nuxt-schema-org": "^5.0.10",
-    "nuxt-seo-utils": "^7.0.19",
+    "nuxt-seo-utils": "^8.1.5",
     "posthog-js": "^1.341.0",
     "sharp": "^0.34.5",
     "vue": "^3.5.27",
